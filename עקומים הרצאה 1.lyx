@@ -1,0 +1,702 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+עקומים אלגבריים – הרצאה ראשונה
+\end_layout
+
+\begin_layout Standard
+הקורס יחולק לשני חלקים, וכל הרצאה תחולק לשני חלקים, הראשון יהיה על עקומים
+ והשני על יריעות ממימד כללי.
+\end_layout
+
+\begin_layout Definition
+נגדיר פולינום בשני משתנים 
+\begin_inset Formula $f\in\c\left[x,y\right]$
+\end_inset
+
+.
+ קבוצת האפסים של 
+\begin_inset Formula $f$
+\end_inset
+
+ תוגדר להיות 
+\begin_inset Formula 
+\[
+Z\left(f\right)=\left\{ \left(a,b\right)\in\c^{2}|\ f\left(a,b\right)=0\right\} \ssq\c^{2}
+\]
+
+\end_inset
+
+קבוצה מהצורה 
+\begin_inset Formula $Z\left(f\right)$
+\end_inset
+
+ תקרא עקום אלגברי אפיני, וזה יהיה אובייקט העניין המרכזי שלנו.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ניתן לשאול מדוע עובדים מעל 
+\begin_inset Formula $\c$
+\end_inset
+
+ ולא מעל 
+\begin_inset Formula $\r$
+\end_inset
+
+.
+ אכן, היסטורית הגאומטריה האלגברית התחילה עם 
+\begin_inset Formula $\r$
+\end_inset
+
+, אך הסתבר שאם עוברים למרוכבים התאוריה נהיית פשוטה יותר.
+ רבים מהמשפטים שנוכיח עבור 
+\begin_inset Formula $\c$
+\end_inset
+
+ יספקו באופן מיידי הוכחה למקרה הממשי.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula 
+\[
+Z\left(f\cdot g\right)=Z\left(f\right)\cup Z\left(g\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ולכן כדי להבין את קבוצת האפסים של 
+\begin_inset Formula $f\cdot g$
+\end_inset
+
+ מספיק להבין את של 
+\begin_inset Formula $f$
+\end_inset
+
+ ושל 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ זה נוח כי הם מדרגה נמוכה יותר, ולכן תמיד נרצה לפרק כל פולינום שעובדים איתו
+ לגורמים.
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $f$
+\end_inset
+
+ יקרא אי פריק אם הוא איננו מכפלה של פולינומים מדרגה נמוכה יותר.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+אנחנו נתעניין בפולינומים אי פריקים.
+\end_layout
+
+\begin_layout Theorem
+אם 
+\begin_inset Formula $f,g\in\c\left[x,y\right]$
+\end_inset
+
+ הם פולינומים אי פריקים ובלתי תלויים ליניארית, אזי 
+\begin_inset Formula 
+\[
+\left|Z\left(f\right)\cap Z\left(g\right)\right|<\infty
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בדרך להוכחת המשפט נוכיח את הלמה הבאה:
+\end_layout
+
+\begin_layout Lemma
+אם 
+\begin_inset Formula $f\in\q\left[x,y\right]$
+\end_inset
+
+ אי פריק )מעל 
+\begin_inset Formula $\q$
+\end_inset
+
+(, אזי 
+\begin_inset Formula 
+\[
+f\left(\pi,y\right)\in\left(\q\left(\pi\right)\right)\left[x\right]
+\]
+
+\end_inset
+
+אי פריק.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נעיר שכמובן שניתן לקחת כל מספר טרנצנדנטי במקום 
+\begin_inset Formula $\pi$
+\end_inset
+
+.
+ נניח בשלילה ש 
+\begin_inset Formula 
+\[
+f\left(\pi,y\right)=A\left(y\right)B\left(y\right)
+\]
+
+\end_inset
+
+ונראה שניתן לפרק את 
+\begin_inset Formula $f\in\q\left[x,y\right]$
+\end_inset
+
+.
+ נכפיל במכנה המשותף של המקדמים של 
+\begin_inset Formula $A$
+\end_inset
+
+ ו 
+\begin_inset Formula $B$
+\end_inset
+
+ ונקבל 
+\begin_inset Formula 
+\[
+d\left(\pi\right)f\left(\pi,y\right)=a\left(\pi,y\right)\cdot b\left(\pi,y\right)
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $d\left(x\right)\in\q\left[x\right]$
+\end_inset
+
+ ו 
+\begin_inset Formula $a,b\in\q\left[x,y\right]$
+\end_inset
+
+.
+ מהשוואת המקדמים של 
+\begin_inset Formula $y^{i}$
+\end_inset
+
+ ומכיוון ש 
+\begin_inset Formula $\pi$
+\end_inset
+
+ טרנצנדנטי נקבל 
+\begin_inset Formula 
+\begin{equation}
+d\left(x\right)\cdot f\left(x,y\right)=a(x,y)\cdot b\left(x,y\right)\label{eq:1}
+\end{equation}
+
+\end_inset
+
+ב 
+\begin_inset Formula $\q\left[x,y\right]$
+\end_inset
+
+.
+ כעת נסתכל על שורש מרוכב 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ של 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ נציב 
+\begin_inset Formula $x=\alpha$
+\end_inset
+
+ ונקבל 
+\begin_inset Formula $a\left(\alpha,y\right)=0$
+\end_inset
+
+ או 
+\begin_inset Formula $b\left(\alpha,y\right)=0$
+\end_inset
+
+.
+ )פולינום האפס(.
+ נניח בה"כ 
+\begin_inset Formula $a\left(\alpha,y\right)=0$
+\end_inset
+
+.
+ לכן כל אחד מהמקדים שווה לאפס.
+ נסמן 
+\begin_inset Formula 
+\[
+a\left(x,y\right)=a_{0}\left(x\right)+a_{1}\left(x\right)y+a_{2}\left(x\right)y^{2}+\cdots
+\]
+
+\end_inset
+
+ואז 
+\begin_inset Formula 
+\[
+a_{i}\left(\alpha\right)=0\Ra\left(x-a\right)\mid a_{i}\left(x\right)\Ra\left(x-a\right)\mid a\left(x,y\right)
+\]
+
+\end_inset
+
+נסמן את צמודי גלואה של 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ב-
+\begin_inset Formula $\alpha=\alpha_{1},\ldots,\alpha_{n}$
+\end_inset
+
+ ונסמן 
+\begin_inset Formula $m(x)=\prod(x-\alpha_{i})$
+\end_inset
+
+.
+ נובע ש 
+\begin_inset Formula $m(x)\mid a(x,y)$
+\end_inset
+
+.
+ אם נחלק את משוואה 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:1"
+
+\end_inset
+
+ ב 
+\begin_inset Formula $m(x)$
+\end_inset
+
+ נקבל משוואה דומה עבור 
+\begin_inset Formula $d$
+\end_inset
+
+ מדרגה נמוכה יותר, עד ש 
+\begin_inset Formula $\deg d=0$
+\end_inset
+
+, ואז 
+\begin_inset Formula 
+\[
+f\left(x,y\right)=a\left(x,y\right)b\left(x,y\right)
+\]
+
+\end_inset
+
+בסתירה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+)הוכחת המשפט( נוכיח למקרה ש 
+\begin_inset Formula $f,g\in\q\left[x,y\right]$
+\end_inset
+
+.
+ מהלמה, 
+\begin_inset Formula $f\left(\pi,y\right)$
+\end_inset
+
+ ו 
+\begin_inset Formula $g\left(\pi,y\right)$
+\end_inset
+
+ הם אי פריקים ובלתי תלויים ליניארית )תרגיל: למה?(.
+ לכן, 
+\begin_inset Formula 
+\[
+\text{gcd}\left(f\left(\pi,y\right),g\left(\pi.y\right)\right)=1
+\]
+
+\end_inset
+
+ולכן יש פולינומים 
+\begin_inset Formula 
+\[
+A\left(y\right),B\left(y\right)\in\q\left(\pi\right)\left[y\right]
+\]
+
+\end_inset
+
+כך ש 
+\begin_inset Formula 
+\[
+A\left(y\right)\cdot f\left(\pi,y\right)+B\left(y\right)\cdot g\left(\pi,y\right)=1
+\]
+
+\end_inset
+
+כמקודם, נכפיל במחלק המשותף של המקדמים ונקבל 
+\begin_inset Formula 
+\[
+a\left(\pi,y\right)f\left(\pi,y\right)+b\left(\pi,y\right)g\left(\pi,y\right)=d(\pi)
+\]
+
+\end_inset
+
+ כאשר 
+\begin_inset Formula $a,b\in\q\left[x,y\right]$
+\end_inset
+
+ ו 
+\begin_inset Formula $d\in\q\left[x\right]$
+\end_inset
+
+.
+ כמקודם, 
+\begin_inset Formula 
+\[
+a\left(x,y\right)f\left(x,y\right)+b\left(x,y\right)g\left(x,y\right)=d(x)
+\]
+
+\end_inset
+
+אם 
+\begin_inset Formula 
+\[
+\left(\alpha,\beta\right)\in Z\left(f\right)\cap Z\left(g\right)
+\]
+
+\end_inset
+
+אז 
+\begin_inset Formula 
+\[
+d\left(\alpha\right)=0
+\]
+
+\end_inset
+
+ולכן ל 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ יש מספר סופי של אפשרויות, וכך גם ל 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+נשאר להוכיח באופן כללי עבור 
+\begin_inset Formula $\c$
+\end_inset
+
+.
+ אין באמת משהו מיוחד ב 
+\begin_inset Formula $\q$
+\end_inset
+
+, חוץ מזה שיש לנו את 
+\begin_inset Formula $\pi$
+\end_inset
+
+ שטרנצנדנטי מעליו.
+ באופן כללי, אם 
+\begin_inset Formula $f,g\in\c\left[x,y\right]$
+\end_inset
+
+, נגדיר את 
+\begin_inset Formula $K\ssq\c$
+\end_inset
+
+ להיות השדה הנוצר ע"י המקדמים של 
+\begin_inset Formula $f,g$
+\end_inset
+
+.
+ זהו שדה נוצר סופית )נוצר ע"י מספר סופי של מקדמים(.
+ בהכרח יהיה איבר מרוכב שהוא טרנדצנדטי מעליו, ואז נוכל לחזור על כל אותם נימוקים.
+ באופן דומה נוכל לעבור עם 
+\begin_inset Formula $\c\left(X\right)$
+\end_inset
+
+ ו 
+\begin_inset Formula $X$
+\end_inset
+
+ במקום 
+\begin_inset Formula $\q,\pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+\begin_inset Formula $\text{\textbf{"Take a ways from the proof}}"$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+"עקומים אפיניים הם משפחות של קבוצות סופיות עם פרמטרים ב 
+\begin_inset Formula $\c$
+\end_inset
+
+"
+\series default
+.
+\begin_inset Formula 
+\[
+Z\left(f\right)=\bigcup_{\alpha\in\c}Z\left(f\left(\alpha,y\right)\right)
+\]
+
+\end_inset
+
+גאומטרית, ניתן להסתכל על ההטלה לציר ה 
+\begin_inset Formula $x$
+\end_inset
+
+ ולחשוב על 
+\begin_inset Formula $Z\left(f\right)$
+\end_inset
+
+ כאיחוד הסיבים 
+\begin_inset Formula $\pi^{-1}\left(t_{0}\right)$
+\end_inset
+
+ עבור 
+\begin_inset Formula $t_{0}\in\c$
+\end_inset
+
+.
+ הסיבים הם אובייקטים פשוטים יותר.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{:\textbf{"The generic point method"}}$
+\end_inset
+
+ ההתנהגות של משוואות במשתנה גנרי קובע את ההתנהגות מעל כמעט כל הפרמטרים.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\c\left[x,y\right]$
+\end_inset
+
+ הוא תחום פריקות יחידה.
+ אם 
+\begin_inset Formula $f$
+\end_inset
+
+ אי פריק ו 
+\begin_inset Formula $f\mid g\cdot h$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\mid g$
+\end_inset
+
+ או 
+\begin_inset Formula $f\mid h$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+Z\left(f\right)=Z\left(g\right)
+\]
+
+\end_inset
+
+ אם ורק אם לשני הפולינומים יש אותם גורמים אי פריקים.
+ כלומר, "האפסים קובעים את הפולינום", וזה אם ורק אם 
+\begin_inset Formula $f\mid g^{n}$
+\end_inset
+
+ ו 
+\begin_inset Formula $g\mid f^{n}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $n\gg1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+לכל עקום אפיני יש משוואה יחידה )עד כדי סקלרים(.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

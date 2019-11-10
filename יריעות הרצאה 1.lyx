@@ -1,0 +1,1167 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+יריעות אלגבריות – הרצאה ראשונה
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vector}[1]{\overrightarrow{#1}}
+{\overrightarrow{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+תהי 
+\begin_inset Formula $S\ssq\c\left[x_{1},\ldots,x_{n}\right]$
+\end_inset
+
+, נגדיר 
+\begin_inset Formula 
+\[
+Z\left(S\right)=\left\{ \overrightarrow{\alpha}\in\c\mid\forall f\in S,\ f\left(\overrightarrow{\alpha}\right)=0\right\} 
+\]
+
+\end_inset
+
+קבוצה כזו נקראת קבוצה אלגברית )אפינית(.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+במקרה של עקומים, לכל עקום מתאימה משוואה )יחידה עד כדי כפל בסקלר(.
+ במצב של מימדים גבוהים יותר, זה לא נשאר נכון.
+\end_layout
+
+\begin_layout Remarks
+\begin_inset Formula 
+\[
+Z\left(S\right)=Z\left(\left(S\right)\right)
+\]
+
+\end_inset
+
+כלומר קבוצת האפסים של 
+\begin_inset Formula $S$
+\end_inset
+
+ שווה לקבוצת האפסים של האידיאל שנוצר ע"י 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+הכלה לכיוון אחד נובעת מכך ש 
+\begin_inset Formula $S\ssq\left(S\right)$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $Z\left(\left(S\right)\right)\ssq Z\left(S\right)$
+\end_inset
+
+.
+ לכיוון השני, כל פולינום ב 
+\begin_inset Formula $\left(S\right)$
+\end_inset
+
+ הוא מהצורה 
+\begin_inset Formula 
+\[
+g=\sum\alpha_{i}f_{i}
+\]
+
+\end_inset
+
+ עבור 
+\begin_inset Formula $f_{i}\in S$
+\end_inset
+
+ ו 
+\begin_inset Formula $a\in\c\left[x_{1},\ldots,x_{n}\right]$
+\end_inset
+
+ ולכן אם 
+\begin_inset Formula $\overrightarrow{\alpha}\in Z\left(s\right)$
+\end_inset
+
+ אז 
+\begin_inset Formula $f_{i}\left(\overrightarrow{\alpha}\right)=0$
+\end_inset
+
+ ואז 
+\begin_inset Formula $g\left(\overrightarrow{\alpha}\right)=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמאות לקבוצות אלגבריות
+\end_layout
+
+\begin_layout Enumerate
+כל עקום אפיני הוא קבוצה אלגברית
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Z\left(\left\{ 1\right\} \right)=\emptyset$
+\end_inset
+
+ ו 
+\begin_inset Formula $Z\left(\left\{ 0\right\} \right)=\c^{n}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Z\left(\bigcup\limits _{i}S_{i}\right)=\bigcap Z\left(S_{i}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Z\left(S_{1}\right)\cup Z\left(S_{2}\right)=Z\left(S_{1}\cdot S_{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+נקודות 
+\begin_inset Formula $2-4$
+\end_inset
+
+ בסעיף הקודם אומרות שאוסף הקבוצות האלגבריות ב 
+\begin_inset Formula $\c^{n}$
+\end_inset
+
+ מגדיר את אוסף הקבוצות הסגורות בטופולוגיה על 
+\begin_inset Formula $\c^{n}$
+\end_inset
+
+.
+ טופולוגיה זו נקראית 
+\series bold
+טופולוגיית זריצקי
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמאות
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+הקבוצות האלגבריות ב 
+\begin_inset Formula $\c$
+\end_inset
+
+ הן בדיוק 
+\begin_inset Formula $\c$
+\end_inset
+
+ או קבוצות סופיות.
+ לכן, טופולוגיית זריצקי בו היא הטופולוגיה הקו–סופית
+\end_layout
+
+\begin_layout Enumerate
+כל קבוצה פתוחה בטופולוגיית זריצקי ב 
+\begin_inset Formula $\c^{n}$
+\end_inset
+
+ היא פתוחה, צפופה וקשירה בטופולוגיה הרגילה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+)הוכחת הנקודות האחרונה(:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+פתיחות: 
+\series default
+פולינום הוא רציף ולכן
+\begin_inset Formula $Z\left(\left\{ f\right\} \right)$
+\end_inset
+
+ סגור 
+\begin_inset Formula $\La$
+\end_inset
+
+ 
+\begin_inset Formula $Z\left(\left\{ f_{\alpha}\right\} \right)=\bigcap Z\left(\left\{ f_{\alpha}\right\} \right)$
+\end_inset
+
+ סגור.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+צפיפות: 
+\series default
+צריך להראות שאין קבוצה אלגברית לא טריוויאלית שמכילה כדור.
+ זה ברור אפילו עבור פולינום יחיד.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+קשירות: 
+\series default
+אם 
+\begin_inset Formula $U$
+\end_inset
+
+ פתוחה )בטופולוגיית זריצקי( ו 
+\begin_inset Formula $p,q\in U$
+\end_inset
+
+, יהי 
+\begin_inset Formula $\ell$
+\end_inset
+
+ הישר המרוכב שעובר דרך 
+\begin_inset Formula $p,q$
+\end_inset
+
+ ו 
+\begin_inset Formula 
+\[
+\c\cong\ell\lssq\ell\cap U
+\]
+
+\end_inset
+
+ היא קבוצה פתוחה ולא ריקה בטופולוגיית זריצקי, ולכן היא קו–סופית.
+ לכן , יש מסלול ב 
+\begin_inset Formula $U\cap\ell$
+\end_inset
+
+ בין 
+\begin_inset Formula $p$
+\end_inset
+
+ ל 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+השאלה הבאה שנרצה לשאול היא מתי למערכת משוואות יש פתרון:
+\end_layout
+
+\begin_layout Theorem
+)משפט האפסים של הילברט, 
+\begin_inset Formula $\text{Nullstellensatz}$
+\end_inset
+
+(: אם למערכת משוואות יש פתרון בהרחבת שדות כלשהי של המרוכבים, אזי יש לה פתרון
+ במרוכבים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+בגלל משפט הבסיס של הילברט, אפשר להניח ש-
+\begin_inset Formula $S$
+\end_inset
+
+ היא סופית.
+ יהי 
+\begin_inset Formula $K$
+\end_inset
+
+ השדה הנוצר ע"י המקדמים של 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ יהי 
+\begin_inset Formula $\vector{\alpha}$
+\end_inset
+
+ פתרון ב 
+\begin_inset Formula $L^{n}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $L\lssq\c$
+\end_inset
+
+.
+ נתבונן ב 
+\begin_inset Formula $K\left(\alpha_{1},\ldots,\alpha_{n}\right)$
+\end_inset
+
+.
+ באינדוקציה על 
+\begin_inset Formula $n$
+\end_inset
+
+ נראה שיש הומומורפיזם 
+\begin_inset Formula 
+\[
+\theta:K\left(\alpha_{1},...,\alpha_{n}\right)\ra\c
+\]
+
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+\theta\mid|_{K}=\text{Id}
+\]
+
+\end_inset
+
+עבור 
+\begin_inset Formula $n=0$
+\end_inset
+
+ זה ברור.
+ עבור 
+\begin_inset Formula $n=1$
+\end_inset
+
+ 
+\begin_inset Formula $K\hookrightarrow\c$
+\end_inset
+
+, ו 
+\begin_inset Formula $K\left(\alpha_{1}\right)$
+\end_inset
+
+, יש שתי אופציות:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ אלגברי מעל 
+\begin_inset Formula $K$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ פותר משוואה 
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\c$
+\end_inset
+
+ סגור אלגברית ולכן יש 
+\begin_inset Formula $\beta\in\c$
+\end_inset
+
+ שפותר את המשוואה.
+ ההעתקה 
+\begin_inset Formula 
+\[
+\alpha_{1}\mapsto\beta
+\]
+
+\end_inset
+
+ מורחבת להומומורפיזם 
+\begin_inset Formula $K\left(\alpha_{1}\right)\hookrightarrow\c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ טרנצנדנטי מעל 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ ל 
+\begin_inset Formula $\c$
+\end_inset
+
+ גם יש איבר 
+\begin_inset Formula $\beta$
+\end_inset
+
+ שטרנצנדנטי מעל 
+\begin_inset Formula $K$
+\end_inset
+
+, נתבונן בהעתקה 
+\begin_inset Formula $\alpha_{1}\mapsto\beta$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+צעד האינדוקציה זהה למקרה 
+\begin_inset Formula $n=1$
+\end_inset
+
+.
+ לבסוף, נטען ש 
+\begin_inset Formula 
+\[
+\left(\theta\left(\alpha_{1}\right),\ldots,\theta\left(\alpha_{n}\right)\right)\in\c^{n}
+\]
+
+\end_inset
+
+ הוא פתרון ל 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+f\in S\ 0=\theta\left(f\left(\alpha_{1},\ldots,\alpha_{n}\right)\right)=f\left(\theta\left(\alpha_{1}\right),\ldots,\theta\left(\alpha_{n}\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+)גרסא אחרת ל 
+\begin_inset Formula $\text{Nullstelensatz}$
+\end_inset
+
+( 
+\begin_inset Formula 
+\[
+Z\left(S\right)=\emptyset\iff\left(S\right)=\c\left[x_{1},\ldots,x_{n}\right]\iff1\in\left(S\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+כיוון אחד ברור.
+ לשני נניח ש 
+\begin_inset Formula $\left(S\right)$
+\end_inset
+
+ היא אידיאל אמיתי של 
+\begin_inset Formula $\c\left[x_{1},\ldots,x_{n}\right]$
+\end_inset
+
+.
+ נבחר אידיאל מקסימלי 
+\begin_inset Formula $M\ssn\c\left[x_{1},\ldots,x_{n}\right]$
+\end_inset
+
+ המכיל את 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ נתובןנ בשדה 
+\begin_inset Formula $L=\nicefrac{C\left[x_{1},\ldots,x_{n}\right]}{M}$
+\end_inset
+
+.
+ ה
+\begin_inset Formula $n$
+\end_inset
+
+–יה 
+\begin_inset Formula 
+\[
+\left(x_{1}+M,\ldots,x_{n}+M\right)
+\]
+
+\end_inset
+
+ היא פתרון ל 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $f\in S$
+\end_inset
+
+ אז 
+\begin_inset Formula 
+\[
+f\left(x_{1}+M,\ldots,x_{n}+M\right)=f\left(x_{1},\ldots,x_{n}\right)+M=0+M
+\]
+
+\end_inset
+
+ממשפט קודם, 
+\begin_inset Formula $Z\left(S\right)\neq\emptyset$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+)עוד גרסא ל 
+\begin_inset Formula $\text{Nullstelensatz}$
+\end_inset
+
+, יותר "פנסית"(: 
+\begin_inset Formula $f$
+\end_inset
+
+ מתאפס על 
+\begin_inset Formula $Z\left(S\right)$
+\end_inset
+
+ אם ורק אם 
+\begin_inset Formula $f^{n}\in\left(S\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f$
+\end_inset
+
+ מתאפס על 
+\begin_inset Formula $Z\left(S\right)$
+\end_inset
+
+ אם ורק אם למערכת 
+\begin_inset Formula $\left\{ f\left(x_{1},\ldots,x_{n}\right)\cdot g-1\right\} \cup S$
+\end_inset
+
+ אין פתרון וממשפט האפסים האידיאל שנוצר ע"י 
+\begin_inset Formula $1\in\left(\left\{ f\left(x_{1},\ldots,x_{n}\right)\cdot g-1\right\} \cup S\right)$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)כלומר האידיאל הוא הכל(.
+ לכן, עבור פולינומים 
+\begin_inset Formula 
+\[
+h,h_{1},\ldots,h_{m}\in\c\left[x_{1},...,x_{n},y\right]
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+f_{1},\ldots,f_{n}\in S
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+1=h\cdot\left(f\left(x_{1},...,x_{n}\right)\cdot y-1\right)+h_{1}f_{1}+\ldots+h_{m}f_{m}
+\]
+
+\end_inset
+
+זה שוויון של פולינומים.
+ ניתן להציב כל משתנה שנרצה, ובפרט נציב 
+\begin_inset Formula $y=\frac{1}{f\left(x_{1},\ldots,x_{n}\right)}$
+\end_inset
+
+ ונקבל 
+\begin_inset Formula 
+\[
+1=h_{1}\left(x_{1},\ldots,x_{n},\frac{1}{f}\right)f_{1}+\cdots+h_{m}\left(x_{1},\ldots,x_{n},\frac{1}{f\left(x_{1},\ldots,x_{n}\right)}\right)\cdot f_{m}
+\]
+
+\end_inset
+
+ושוויון זה מתקיים בחוג 
+\begin_inset Formula $\c\left[x_{1},\ldots,x_{n}\right]\left[\frac{1}{f}\right]$
+\end_inset
+
+.
+ נכפיל ב 
+\begin_inset Formula $f^{n}$
+\end_inset
+
+ ונקבל 
+\begin_inset Formula 
+\[
+f^{n}=H\left(x_{1},\ldots,x_{n}\right)f_{1}+\cdots+H_{m}\left(x_{1},\ldots,x_{n}\right)f_{m}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{i}\in\c\left[x_{1},\ldots,x_{n}\right]
+\]
+
+\end_inset
+
+ושוויון זה מתקיים גם ב 
+\begin_inset Formula $\c\left[x_{1},\ldots,x_{n}\right]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+יהי 
+\begin_inset Formula $I\ssn\c\left[x_{1},\ldots,x_{n}\right]$
+\end_inset
+
+.
+ נגדיר את הרדיקל של 
+\begin_inset Formula $I$
+\end_inset
+
+ להיות 
+\begin_inset Formula 
+\[
+\sqrt{I}=\left\{ f\in\c\left[x_{1},\ldots,x_{n}\right]\mid f^{m}\in I\right\} 
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula 
+\[
+Z\left(I_{1}\right)=Z\left(I_{2}\right)\iff\sqrt{I_{1}}=\sqrt{I_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+לכיוון אחד, נובע מכך ש 
+\begin_inset Formula $Z\left(I\right)=Z\left(\sqrt{I}\right)$
+\end_inset
+
+.
+ לכיוון השני, אם 
+\begin_inset Formula $f\in\sqrt{I_{1}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ מתאפס על 
+\begin_inset Formula $Z\left(I_{1}\right)$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $f$
+\end_inset
+
+ מתאפס על 
+\begin_inset Formula $Z\left(I_{2}\right)$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $f\in\sqrt{I_{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+משפט הבסיס של הילברט )מקרה פרטי, ההוכחה באינדוקציה(: כל אידיאל ב 
+\begin_inset Formula $\c\left[x,y\right]$
+\end_inset
+
+ נוצר סופית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+אם 
+\begin_inset Formula 
+\[
+V\subseteq\c\left[x\right]^{n}
+\]
+
+\end_inset
+
+הוא 
+\begin_inset Formula $\c\left[x\right]$
+\end_inset
+
+ – תת מודול, אזי 
+\begin_inset Formula $V$
+\end_inset
+
+ נוצר סופית )כמודול(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נוכיח באינדוקציה על 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ 
+\begin_inset Formula $V\ssq\c\left[x\right]$
+\end_inset
+
+ הוא תת מודול, כלומר אידיאל.
+ אידיאלים ב 
+\begin_inset Formula $\c\left[x\right]$
+\end_inset
+
+ הם נוצרים סופית.
+ נניח עבור 
+\begin_inset Formula $n$
+\end_inset
+
+ ונוכיח עבור 
+\begin_inset Formula $n+1$
+\end_inset
+
+.
+ יהי 
+\begin_inset Formula 
+\[
+\pi:V\ra\c\left[x\right]
+\]
+
+\end_inset
+
+ ההטלה על שתי הקוארדינטות האחרונות.
+ נתבונן בסדרה הקצרה המדוייקת 
+\begin_inset Formula 
+\[
+0\ra\ker\pi\ra V\ra\text{Im}\left(\pi\right)\ra0
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\ker\pi$
+\end_inset
+
+ נמצא ב 
+\begin_inset Formula $\c\left[x\right]^{n-1}$
+\end_inset
+
+ ונוצר סופית.
+ 
+\begin_inset Formula $\text{Im\left(\pi\right)}$
+\end_inset
+
+ מוכל ב 
+\begin_inset Formula $\c\left[x\right]$
+\end_inset
+
+ ונוצר סופית.
+ הרחבה של מודול נוצר סופית היא נוצרת סופית, והוכחנו את הלמה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+)הוכחת המשפט( יהי 
+\begin_inset Formula $I\ssn\c\left[x,y\right]$
+\end_inset
+
+.
+ עבור 
+\begin_inset Formula $f\in I$
+\end_inset
+
+, נכתוב 
+\begin_inset Formula 
+\[
+f\left(x,y\right)=a_{0}\left(x\right)+a_{1}\left(x\right)y+\cdots+a_{m}\left(x\right)y^{m}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $a_{m}^{f}\left(x\right)\neq0$
+\end_inset
+
+.
+ נקרא ל 
+\begin_inset Formula $a_{m}^{f}\left(x\right)$
+\end_inset
+
+ המקדם המוביל של 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ נסמן אותו ב 
+\begin_inset Formula $a_{f}$
+\end_inset
+
+.
+ נתבונן באידיאל הנוצר ע"י כל ה 
+\begin_inset Formula $\left\{ a_{f}\mid f\in I\right\} $
+\end_inset
+
+.
+ נתבונן באידיאל הנוצר ע"י כל ה 
+\begin_inset Formula $a_{f}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $f\in I$
+\end_inset
+
+.
+ 
+\begin_inset Formula $J$
+\end_inset
+
+ נוצר סופית, ע"י 
+\begin_inset Formula $\left(a_{f_{1}},\ldots,a_{f_{n}}\right)$
+\end_inset
+
+.
+ תרגיל: 
+\begin_inset Formula $J=\left\{ a_{f}\mid f\in I\right\} $
+\end_inset
+
+.
+ יהי 
+\begin_inset Formula $d$
+\end_inset
+
+ הדרגה המקסימלית של 
+\begin_inset Formula $y$
+\end_inset
+
+ ב 
+\begin_inset Formula $f_{1},...,f_{n}$
+\end_inset
+
+.
+ נטען כי אם 
+\begin_inset Formula $f\in I$
+\end_inset
+
+ אז יש 
+\begin_inset Formula $h_{1},\ldots,h_{n}$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $g-\sum h_{i}f_{i}$
+\end_inset
+
+ הם מדרגת 
+\begin_inset Formula $y$
+\end_inset
+
+ קטנה מ 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ בהנתן הטענה, 
+\begin_inset Formula $I$
+\end_inset
+
+ נוצר ע"י 
+\begin_inset Formula $f_{1},\ldots,f_{n}$
+\end_inset
+
+ ויוצרים של המודול 
+\begin_inset Formula 
+\[
+I\cap\left\{ \text{polynomials of \ensuremath{y} of degree <\ensuremath{d}}\right\} \cong\c\left[x\right]^{d}
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document
