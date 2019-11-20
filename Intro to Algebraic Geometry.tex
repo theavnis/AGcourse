@@ -1,0 +1,516 @@
+
+\documentclass[12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{tikz-cd}
+\usepackage{mathrsfs}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{enumitem}
+\usepackage{yfonts}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\title{Intro to Algebraic Geometry - Nir Avni}
+
+\author{Raz Slutsky}
+
+\date{}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem*{theorem*}{Theorem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}{Question}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+\newcommand{\ie}{\emph{i.e.} }
+\newcommand{\cf}{\emph{cf.} }
+\newcommand{\into}{\hookrightarrow}
+\newcommand{\dirac}{\slashed{\partial}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Hy}{\mathbb{H}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Qbar}{(\bar{\Q}^*)^n}
+\newcommand{\LieT}{\mathfrak{t}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\Sl}{SL_2(\mathbb{R})}
+\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
+\newcommand{\acts}{\curvearrowright}
+\newcommand{\sub}{\operatorname{Sub}_G}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Notes for a course on Algebraic Geometry given by Prof. Nir Avni at the Weizmann Institute of Science, Fall 2019. \\ 
+This course is going to present some of the fundamental theorems and notions. The price we pay for that is that we're going to work with some more basic (that is, old) definitions of the objects we deal with. The course is divided into two parts. Every lecture will be divided into two parts. The first one on Algebraic curves (that is, algebraic geometry in one dimension), and the second part will be more general algebraic geometry. Notes can be found \href{github.com/theavnis/AGcourse}{here}.
+\end{abstract}
+
+
+
+
+\section{Lecture 1 - Part 1}
+\begin{definition}
+Let $f \in \C[x,y]$. Then the locus of $f$, denoted by $$Z(f) =\{ (a,b) \in \C^2 \; | \; f(a,b) = 0 \}$$ is called an \textbf{affine algebraic curve}.
+\end{definition}
+
+We work over $\C$ because it turns out to be easier, and many times will imply the real case. An easy property is the following-
+
+\begin{itemize}
+\item $Z(f \cdot g) = Z(f) \cup Z(g)$
+
+\end{itemize}
+
+$f \in \C[x,y]$ is called irreducible if it is not a product of two lower degree polynomials.
+
+\begin{theorem}
+If $f,g \in \C[x,y]$ are irreducible and not co-linear then $|Z(f) \cap Z(g)| < \infty$
+\end{theorem}
+
+\begin{remark}
+Note that this implies the real case as well.
+\end{remark}
+
+For the we will need the following lemma.
+
+\begin{lemma}
+If $f \in \Q[x,y]$ is irreducible, then $f(\pi,y) \in \Q(\pi)[y]$ is irreducible.
+
+\end{lemma}
+\begin{proof}
+Assume the contrary, that is, $f(\pi,y) = A(y)B(y)$. Multiply by the common denominator of the coefficients of $A$ and $B$, so we get $$ d(\pi) \cdot f(\pi,y) = a(\pi,y) \cdot b(\pi,y)$$ for some $d \in \Q[x]$ and $a,b \in \Q[x,y]$. \\
+
+Looking at the coefficients of the LHS and RHS, we get polynomials with rational coefficients that agree on $\pi$. But $\pi$ is transcendental, so this means every coefficient in the LHS is the same as the coefficient in the RHS, and so the polynomials are the same.\\
+
+
+Now look at a complex root, $\alpha$, of $d$. Let's plug it in the previous equality instead of $x$. We get that the LHS is zero, and so either $a(\alpha,y) = 0$ or $b(\alpha,y)=0$ (The zero polynomial). If $a(\alpha,y) = 0$ then for $a(x,y) = a_0(x)+a_1(x)y + ...$ this means that $a_i(\alpha) = 0$ for all $i$, and so $(x-\alpha)$ divides $a(x,y)$. We can thus divide both sides of the previous equation by $(x-\alpha)$ and get a lower degree equation. Continue until $\deg(d) = 0$, and then we get $f(x,y) = a(x,y) \cdot b(x,y)$. A contradiction.
+\end{proof}
+
+\begin{remark}
+Formally, to make sure that when we divide by $(x-\alpha)$ we still get rational polynomials, we need to divide by all Galois conjugates of $\alpha$.
+\end{remark}
+
+\begin{proof}[Proof of Theorem]
+We start with the case where $f,g \in \Q[x,y]$. \\
+
+By the Lemma, $f(\pi, y) , g(\pi,y)$ are irreducible and (prove at home) they are not co-linear.
+ Therefore, $gcd(f(\pi,y), g(\pi,y))=1$, therefore there are polynomials
+  $A,B \in \Q(\pi)[y]$ such tha
+  t $A(y)\cdot f(\pi,y) + B(y) \cdot g(\pi,y) = 1$. Multiply by the denominators of the coefficients of $A,B$ and get
+   $$a(\pi,y) \cdot f(\pi, y) + b(\pi,y)\cdot g(\pi,y) = d(\pi)$$ where all polynomials are now over the rationals.
+    As before, since we have equality at $\pi$, we have equality everywhere, that is,
+     $a(x,y) \cdot f(x,y) + b(x,y) \cdot g(x,y) = d(x)$. 
+     Now, if $(\alpha, \beta) \in Z(f) \cap Z(g)$ then $d(\alpha) = 0$, but $d$ has only finitely many roots. Similarly, $\beta$ has only finitely many possibilities.
+
+\end{proof}
+
+In general, this argument works the same, the only special thing about $\Q$ and $\pi$ is that $\pi$ is transcendental over $\Q$. Given $f,g$ we let $k \subset \C$ be the field generated by the coefficients of $f,g$ over $\Q$. Pick $\theta \in \C$, a transcendental element over $k$ and run the same argument.\\
+
+Alternatively, work with $\C(x), x$ instead of $\Q , \pi$.
+
+\subsection{Takeaways from the proof}
+
+\begin{itemize}
+\item The first idea was to take a polynomial and plug into the first variable some number, so we reduced the problem from a two variable problem to a one variable problem. In general, 
+$$Z(f(x,y)) = \bigcup_{\alpha \in \C} Z(f(\alpha,y)) $$  Geometrically, we look at the projection to the $x-$axis and think about $Z(f)$ as the union of the fibres of this projection. In other words, affine curves are families of finite sets varying with parameter in $\C$.
+
+
+\item What we showed is that over a generic point, $\pi$, the curves don't intersect, and we found out algebraically, that at almost all other points they also don't intersect. In other words, the behaviour of equations at a generic parameter controls the behaviour over almost all parameters. This method is called the generic point method.
+
+
+\end{itemize}
+
+
+\begin{corollary}
+\begin{itemize}
+
+\item $C[x,y]$ is a unique factorization domain. If $f$ is irreducible, then if $f$ divides $g \cdot h$ then $f$ divides $g$ or $f$ divides $h$, because the zero locus of $f$ is contained in the union of the loci of $g,h$. But one of them must be infinite, so $f$ mus be co-linear with one of them.
+
+\item If $Z(f) = Z(g)$ then $f,g$ have the same irreducible factors. In other words, $f$ divides $g^n$ or $g$ divides $f^n$ for $n$ large enough. 
+
+\item Every affine curve has a canonical (up to scalar) equation.
+
+
+\end{itemize}
+\end{corollary}
+
+\section{Lecture 1 - Part 2}
+
+\begin{definition}
+Let $S \subset \C[x_1,...,x_n]$. The common zero locus of $S$,
+$$Z(S) = \{ \alpha \in \C^n \; | \; f(\alpha) = 0 \; \forall f \in S \} $$
+is called an \textbf{Algebraic Set}.
+\end{definition}
+
+\begin{remark}
+$Z(S) = Z((S))$ where $(S)$ is the ideal generated by $S$.
+\end{remark}
+
+\begin{theorem}[Hilbert Basis Theorem]
+Any ideal in $\C[x_1,...,x_n]$ is generated by a finite set
+\end{theorem}
+
+\begin{corollary}
+Any system of polynomial equations is equivalent to a finite system of equations
+\end{corollary}
+
+\begin{proof}
+\begin{lemma}
+If $V \subset \C[x]^n$ is a $\C[x]$-submodule, then $V$ is finitely generated
+\end{lemma}
+\begin{proof}
+Induction on $n$: for $n=1$ a sub-module just means an ideal, and ideals are finitely generated. \\
+
+For the induction step, $n+1$, look at $\pi: V \rightarrow \C[x]$, the projection to the last coordinate. We have the short exact sequence $$
+0 \rightarrow \ker(\pi) \rightarrow V \rightarrow \pi(V) \rightarrow 0 $$
+And the kernel is contained in $\C[x]^{n-1}$ so it is finitely generated. An extension of f.g. modules is finitely generated.
+\end{proof}
+Look at $I \lhd \C[x,y]$. For $f \in I$ we can write $f(x,y) = a_0^f(x)+a_1(x)\cdot y +... +a_m^f(x) \cdot y^m$. Where the leading coefficient is non-zero, that is, $a_f:= a_m^f(x) \neq 0$. Consider the ideal $J \lhd \C[x,y]$ generated by all $a_f, f \in I$. By induction, $J$ is finitely generated, so $J = (a_{f_1},...,a_{f_n})$. Exercise: $J = \{ a_f \; | \; f \in I\}$. Let $d$ be the maximal $y-$degree of $f_1,...,f_n$. We claim that if $g \in I$, then there are $h_1,...,h_n$ such that $g - \sum h_i f_i$ has $y-$degree less than $d$. Given the claim, $I$ is generated by $f_1,...,f_n$ and generators of the module $I \cap \{ \; \text{polynomials of} \; y- \text{degree} < d  \} \cong I \cap \C[x]^d$.
+\end{proof}
+\begin{example}
+\begin{itemize}
+\item Every affine curve is an algebraic set
+\item $Z(\{ 1 \}) = \emptyset, Z(\{ 0 \}) = \C^n $ are algebraic sets.
+\item $Z(\cup_i S_i) = \cap_i Z(S_i)$
+\item $Z(S_1) \cup Z(S_2) = Z(S_1 \cdot S_2)$.
+
+\end{itemize}
+
+
+
+\end{example}
+
+\begin{remark}
+These properties say that the collection of algebraic subsets of $\C^n$ defines a topology called "Zariski Topology" where algebraic sets are the basic closed sets.
+\end{remark}
+
+Algebraic sets in $\C$ are either $\C$ or finite sets (that is, the Zariski topology on $\C$ is the co-fonite topology).\\
+
+Any Zariski open set in $\C^n$ is open, dense, connected in the usual topology.
+
+\begin{proof}
+Let's prove that it is connected. If $U$ is a Zariski open set, and $p,q \in U$, let $l$ be the complex line incident to $p,q$. Then we have that $\C \cong l \supset l \cap U$ is a non-empty Zariski open subset of $\C$, so it is co-finite. Hence there is a path in $U \cap l$ between $p$ and $q$.
+\end{proof}
+
+
+\begin{theorem}[Hilbert's Nullstellensatz]
+
+If a system of equations $S$ has a solution in some field extension of $\C$, then it has a solution in $\C$.
+\end{theorem}
+
+\begin{proof}
+W.L.O.G we can assume that $S$ is finite. Let $k \subset \C$ be the field generated by the coefficients of the elements in $S$. Let $\alpha$ be a solution in $L^n$ where $L \supset \C$. Consider $K(\alpha_1,...,\alpha_n) \subset L$. By induction on $n$, we will show that there is a homomorphism $\theta: k(\alpha_1,...,\alpha_n) \rightarrow \C$ such that $\theta|_k = id$. \\
+
+$n = 0$ is clear. Let's do $n=1$. Look at $k(\alpha_1)$. There are two options: 
+\begin{itemize}
+
+\item either $\alpha_1$ is algebraic over $k$, and so $\alpha_1$ solves an equation $f(x) = 0$. 
+Since $\C$ is algebraically closed, there is $\beta \in \C$ solving the same equation. 
+Now the map $\alpha_1 \mapsto \beta$ extends to a homomorphism of $k(\alpha_1) \hookrightarrow \C$
+
+\item $\alpha_1$ is transcendental over $k$. 
+Now we take $\beta \in \C$ a transcendental element over $k$, and map $\alpha_1 \mapsto \beta$.
+\end{itemize}
+
+Now $\theta(\alpha_1,...,\alpha_n) \in \C^n$ is a solution of $S$, since $$0 = \theta(f(\alpha_1,...,\alpha_n)) = f(\theta(\alpha_1),...,\theta(\alpha_n))$$
+\end{proof}
+
+Another version of the theorem is that $Z(S) = \emptyset \iff (S) = \C[x_1,...,x_n] \iff 1 \in (S)$.
+
+\begin{proof}
+
+Assume that $(S)$ is a proper ideal. Choose $\mathfrak{m}$ a maximal ideal containing $(S)$. Look at the field $L = \C[x_1,...,x_n]/ \mathfrak{m}$. We have a solution there since $(x_1+\mathfrak{m}, ... ,x_n+ \mathfrak{m})$ is a solution of $S$, and for $f \in S$ we have
+$f(\overline{x_1}, \overline{x_2}, ..., \overline{x_n}) = \overline{f(x_1,...,x_n)}  = 0$.
+\end{proof}
+
+An even fancier version is the following: $f$ vanishes on $Z(S) \iff  f^n \in (S)$ for some $n>0$.
+
+\begin{proof}[Rabinowitz Trick]
+$f$ vanishes on $Z(S) \iff \{ f(x_1,...,x_n) \cdot y - 1 \} \cup S$ has no solution. But this implies by Hilbert's Nullstellensatz that $1 \in \{f(x_1,...,x_n) \cdot y - 1 \} \cup S$ and so $$1 = h(f(x_1,...,x_n)\cdot y -1) + h_1 f_1 +...h_m f_m$$ for some $f_1,...,f_m \in S$ and $h,h_1,...,h_m \in \C[x_1,...,x_n,y]$. If we plug $y = \frac{1}{f(x_1,...,x_n)}$ we get 
+$$1 = h_1(x_1,...,x_n,\frac{1}{f}) \cdot f_1+...+h_m(x_1,...,x_n,\frac{1}{f}) \cdot f_m $$
+
+Where this equation is in the ring $\C[x_1,...,x_n][\frac{1}{f}]$. Now multiply by $f^n$ for $n>0$ big enough. So we get that $f^n = H(x_1,...,x_m)f_1 + ... +H_m(x_1,...,x_m)f_m$ where now this equality can be considered in $\C[x_1,...,x_n]$.
+\end{proof}
+
+\begin{definition}
+$I \lhd \C[x_1,...,x_n]$. Define 
+$$\sqrt{I} = \{ f \in \C[x_1,...,x_n] \; | \; f^m \in I \; \text{for some} \; m>0 \} $$
+\end{definition}
+
+\begin{corollary}
+$Z(I_1) = Z(I_2) \iff \sqrt{I_1} = \sqrt{I_2}$
+\end{corollary}
+
+\begin{proof}
+If $f \in \sqrt{I_1}$ then $f$ vanishes on $Z(I_1)= Z(I_2)$. By the fancier version, $f^m \in I_2$ for some $m>0$, \ie $f \in \sqrt{I_2}$. The other direction is due to the fact that $Z(I) = Z(\sqrt{I})$.
+\end{proof}
+
+\section{Lecture 2- Part One}
+
+\begin{theorem}[Bezout]
+If $f, g \in \C[x,y]$ are relatively prime, then $$|Z(f) \cap Z(g)| \leq (\deg f ) ( \deg g)$$
+\end{theorem}
+
+\begin{proof}
+We can write $f(x,y) = a_0(x) + a_1(x) \cdot y+ ... +a_n(x) \cdot y^n$
+where $\deg a_i(x) \leq n-i$, and $g(x,y) = b_0(x) + ... +b_m(x) \cdot y^m$. After a linear change of coordinates, we can assume that $a_n, b_m \neq 0$. Fix $x_0 \in \C$. We claim that TFAE:
+
+\begin{itemize}
+\item $f(x_0,y) , g(x_0,y)$ have a common root
+\item $\deg ( \text{gcd}(f(x_0,y), g(x_0,y))) > 0 $
+\item $\deg ( \text{lcm}(f(x_0, y), g(x_0,y))) < n+m$
+\item $\exists \;$ polynomials $\alpha(y), \beta(y)$ of degrees $< m,n$ respectively, such that $$\alpha(y) \cdot f(x_0,y) + \beta(y) \cdot g(x_0,y) = 0 $$
+\item The polynomials $$f(x_0,y), y \cdot f(x_0,y), ..., y^{m-1}f(x_0,y), 
+ g(x_0,y), ... , y^{n-1}g(x_0,y)$$ are linearly dependent.
+\item The determinant of the  $(m+n+2, m+n+2)$ matrix corresponding to the previous assertion is zero. This determinant is called the Resultant of $f(x_0,y), g(x_0,y)$, denoted $\text{Res}(f(x_0,y),g(x_0,y))$.
+\end{itemize}
+
+\begin{claim}
+$\text{Res}(f(x_0,y),g(x_0,y))$ is a polynomial in $x_0$ of degree $\leq m \cdot n$. By our assumption that $a_n,b_m \neq 0$ this is a non-zero polynomial.
+\end{claim}
+
+By this claim, the projection to the $x-$axis of $Z(f) \cap Z(g)$ has size at most $n \cdot m$.
+
+\end{proof}
+
+\subsection{How do curves look like?}
+
+Let $f(x,y) \in \C[x,y]$, and assume $f(0,0) = 0$ (\ie has no free coefficient). Look at the gradient of $f$ and assume it is non-zero. 
+
+$$\nabla f(0,0) = (\frac{\partial f}{\partial x}(0,0), \frac{\partial f}{\partial y}(0,0)) \neq (0,0) $$
+
+which means $f$ has a linear term.\\
+
+By the Implicit function theorem, if $0 < \epsilon << 1$, then $Z(f) \cap B((0,0), \epsilon)$ is a holomorphic manifold. More precisely, if $\frac{\partial f}{\partial x}(0,0) \neq 0$, 
+the projection to the $y-$axis, $$y: \C^2 \rightarrow \C$$
+restricted to $Z(f)$ is a local homeomorphism with a holomorphic inverse, \ie there is a holomorphic map $\varphi : U \rightarrow \C$ where $U$ is open in $\C$, such that 
+$$ Z(f) \cap B((0,0), \epsilon) = \{(\phi(t), t) \; | \; t \in U  \} $$
+
+Assume from now on that $f$ is irreducible.
+
+\begin{definition}
+A point $p \in Z(f)$ is called singular if $\nabla f(p) = (0,0)$, otherwise it is called non-singular.
+\end{definition}
+
+\begin{proposition}
+There are only finitely many singular points.
+\end{proposition}
+
+\begin{proof}
+if $p$ is singular, then $p \in Z(f) \cap Z(\frac{\partial f}{\partial x}$. Since $f$ is irreducible, $\deg (\frac{\partial f}{\partial x}) < \deg(f)$. They are relatively prime, except for $\frac{\partial f}{\partial x} \equiv 0$. In this case, work with $y$. If its derivative is constant zero as well, then $f$ is constant.
+\end{proof}
+
+\begin{observation}
+ $y: Z(f) \setminus Z(\frac{\partial f}{\partial x)} \rightarrow \C$ is a covering map. 
+\end{observation}
+
+What happens for non-singular points for which $\frac{\partial f}{\partial x}(p) = 0$? \\
+
+We have the projections from $Z(f)$, $x$ and $y$, and a holomorphic function $\varphi$ such that $Z(f) = (t, \varphi(t))$ locally.\\ 
+
+How does a holomorphic map look like near a point? 
+
+$$\varphi: B(0, \epsilon)  \rightarrow \C  $$
+
+holomorphic, and so it is either
+\begin{itemize}
+\item  constant
+\item If $\varphi '(0) \neq 0$, and so $\varphi$ looks like $t \mapsto \varphi '(0) \cdot t$
+\item If $\varphi'(0) =0$ but $\varphi''(0) \neq 0$ then $\varphi$ looks like $t \mapsto \frac{\varphi''(0)}{2} t^2$
+\end{itemize}
+
+\subsection{Singular points}
+
+Let $p \in Z(f)$. Assume $p = (0,0)$ is singular, then there exists $\epsilon$ such that $p$ is the only singular point in $Z(f) \cap B(p, \epsilon)$. By taking smaller $\epsilon$ we can assume no other point in $Z(f) \cap B(p, \epsilon)$ has $x-$coordinate $0$.\\
+
+$x: Z(f) \cap B(p,\epsilon) \setminus \{ p \} \rightarrow \C$ is a covering map. Take smaller and smaller circles around $p$, the pre-image is some number of circles (depending on the degree), but these circles become closer and closer to $p$ which has only one pre-image, so the picture looks (topologically) like a few cones with $p$ as their shared tip.
+
+\begin{lemma}
+For every polynomial $f(y)$ of degree $n$ with roots $\alpha_1,...,\alpha_m$, there is $\epsilon$ such that for every polynomial $g(y)$ of degree at most $n$ whose coefficients are at most $\epsilon$ we have that 
+\begin{itemize}
+\item Every root of $f+g$ is within $\delta$ of a root of $f$.
+\item Every root of $f$ is within $\delta$ of a root of $f+g$.
+\end{itemize}
+\end{lemma}
+
+\begin{proof}
+By Rouche's Theorem which says that the number of roots of a polynomial $f$ in $B(z_0, \epsilon)$ is equal to $ \frac{1}{2 \pi i } \oint_{\partial B(z, \epsilon)} \frac{d f(z)}{f(z)}$
+\end{proof}
+
+
+\section{Lecture 2 - Part 2}
+
+\subsection{Polynomials}
+
+\subsubsection{Euclid's algorithm}
+ Input: $(n,m, f(x), g(x))$ with $\deg f \leq n $ and $\deg g \leq m$.\\
+ Output: the g.c.d of $f,g$. \\
+ 
+ \begin{itemize}
+\item If $\deg f < n$, call EA$(n-1,m,f,g)$
+\item if $\deg g < m $, call EA$(n, m-1, f, g)$
+\item If $n=-1$ output $g$.
+\item if $m = -1$ output $f$.
+\item if $n=0$ or $m=0$ output 1.
+\item if $n \leq m$, call $EA(n,m, f, a_ng-b_m \cdot x^{m-n}f)$ 
+\item if $n >m$, similar.
+ \end{itemize}
+
+
+When you write EA as a decision tree: 
+\begin{itemize}
+\item At each stage, the coefficients of the polynomials you work with are polynomials in $a_0, ..., a_n, b_0, ..., b_m$.
+\item Each branching is according to whether some polynomial in $a_0,...,a_n,b_0,...,b_m$ is zero or not.
+\item These polynomials have $\Z-$coefficients.
+\end{itemize}
+
+
+\begin{definition}
+A Boolean combination of algebraic sets is called a constructible set. If each one of the relevant polynomials has coefficients in $\Z$ we say that the constructible set is defined over $\Z$.
+\end{definition}
+
+\begin{corollary}
+The function $$\text{Poly}_{\leq n} \times \text{Poly}_{\leq m} \rightarrow \text{Poly}_{\leq m} $$
+defined by $(f,g) \mapsto \text{g.c.d}(f,g)$ is piecewise polynomial, and the pieces are constructible.
+\end{corollary}
+
+\begin{corollary}
+The subset  
+$$ \{(f,g) \in \text{Poly}_{\leq n} \times \text{Poly}_{\leq m} \; | \; f,g \; \text{have a common root} \: \} \subset \C^{n+m+2}$$
+is constructible
+\end{corollary}
+
+\begin{corollary}
+If $f(x_1,...,x_n,y) , g(x_1,...,x_n,y)$ and let $\Pi: \C^{n+1} \rightarrow \C^n$ given by $(x_1,...,x_n,y) \mapsto (x_1,...,x_n)$. Then $\Pi(Z(\{f , g \}))$ is constructible. (Because having a common root can be understood as having non-zero degree of their g.c.d.).
+\end{corollary}
+
+Similarly, we have 
+
+\begin{corollary}
+If $X \subset \C^{n+1}$ is an algebraic set, $\Pi: \C^{n+1} \rightarrow \C^n$ is the projection, then $\Pi(X)$ is constructible.
+\end{corollary}
+
+This leads us to one of the most important theorems in classical algebraic geometry:
+
+\begin{theorem}[Chevalley]
+If $X \subset \C^{n+1}$ is constructible, $\Pi: \C^{n+1} \rightarrow \C^n$ the projection, then $\Pi(X)$ is constructible.
+\end{theorem}
+
+This follows from- 
+
+\begin{claim}
+If $f_1,...,f_n, g_1,...,g_m \in \C[x]$ then 
+
+$$\{t \; | \; f_i(t) = 0 , g_j(t) \neq 0 \} = \emptyset $$ if and only if $\text{gcd}(f_i) | \prod g_j $ if and only if $\text{gcd}(\text{gcd}(f_i), \prod g_j) = \text{gcd}(f_i)$.
+\end{claim}
+
+Now use induction. \\
+
+\begin{definition}
+A first order formula is any grammatically correct expression you can write using: variables,$0,1$, addition, multiplication, parentheses, equality, $\forall, \exists$, and logical connectors.
+\end{definition}
+\begin{example}
+$(\forall a) (\forall b) (\forall c) ( a \neq 0 \implies (\exists x ) (ax^2+bx+c = 0 ))$.
+\end{example}
+\begin{itemize}
+\item If a formula has no quantifiers it is called quantifier-free. 
+\item If a formula has no free variables, we call it a statement.
+
+\end{itemize}
+
+\begin{remark}
+A quantifier-free formula is a Boolean combination of formulas of the form $f(x_1,...,x_n)=0$ where $f \in \Z[x_1,...,x_n]$. Quantifier-free formulas define constructible sets.
+\end{remark}
+
+Now we can reformulate Chevalley's theorem:\\
+
+If $\phi(x_1,...,x_n,y)$ is quantifier-free, then there is a quantifier-free formula $\psi(x_1,...,x_n)$ such that for any algebraically closed field $F$, the formulas $(\exists y)(\phi(x_1,...,x_n,y))$ and $\psi(x_1,...,x_n)$ are equivalent. By induction we get 
+\begin{corollary}
+Every formula is equivalent to a quantifier-free formula.
+\end{corollary}
+
+\begin{corollary}
+Every statement is equivalent to a statement without variables (or quantifiers), with only parentheses, $\cdot$, $+$, $0$, $1$, $\neg$.
+\end{corollary}
+
+Every such statement is thus a Boolean combination of statements of the form $1+1+...+1 = 0$.
+
+\begin{corollary}
+If $\phi$ is a first-order statement which is true in an algebraically closed $F$ then it is true in all algebraically closed fields of the same characteristic. 
+\end{corollary}
+This is an instance of the Lefschetz principle). \\
+
+
+For example, the nullstellensatz is not a first-order statement, as we quantify over all polynomials, but if we restrict to polynomials of degree at most $500$ for example, then it is true for all alg. closed fields of char. 0.
+
+\begin{corollary}
+If $\phi$ is a first-order statement that is true for all $\overline{\mathbb{F}_p}$, $p$ is prime, then is is true for $\C$.
+\end{corollary}
+
+This is because this statement is equivalent to some Boolean combination of addition of $1$s, and if it is true for all primes, it must reduce to $0=0$.
+
+Let's see a very cool application of this:
+
+\begin{theorem}[Ax-Grothendieck]
+If $f: \C^n \rightarrow \C^n$ is a polynomial map which is injective, then it is onto.
+\end{theorem}
+\begin{proof}
+It is enough to prove the statement for $f: \overline{\mathbb{F}_p} \rightarrow  \overline{\mathbb{F}_p}$. There is $q$ such that $f \in \mathbb{F}_q[x]$ since all the coefficients are in some finite extension, and in this case it is clearly onto if it is one to one. It is also true for $\mathbb{F}_{q^2}$ and so on. But the union of all of these is the algebraic closure.
+\end{proof}
+
+\begin{thebibliography}{9}
+
+\bibliographystyle{alpha}
+
+
+%\bibitem[ABBGNRS17]{7samurais_part_one}
+%Abert, M., Bergeron, N., Biringer, I., Gelander, T., Nikolov, N., Raimbault, J., Samet, I. (2017). On the growth of $L^2$-invariants for sequences of lattices in Lie groups. Annals of Mathematics, 711-790.
+
+%\bibitem[ABBGNRS16]{7samurais}
+%Abert, M., Bergeron, N., Biringer, I., Gelander, T., Nikolov, N., Raimbault, J., Samet, I. (2016). On the growth of $L^2$-invariants of locally symmetric spaces, II: exotic invariant random subgroups in rank one. arXiv preprint arXiv:1612.09510.
+
+%\bibitem[AGN17]{agn_17}
+%Abert, M., Gelander, T.,  Nikolov, N. (2017). Rank, combinatorial cost, and homology torsion growth in higher rank lattices. Duke Mathematical Journal, 166(15), 2925-2964.
+
+
+%\bibitem[Gr87]{gromov_87}
+%Gromov, M. (1987). Hyperbolic groups, in “Essays in group theory”. Edited by SM Gersten, MSRI Publ. 8.
+
+%\bibitem[GPS87]{gps_87}
+%Gromov, M., Piatetski-Shapiro, I. (1987). Non-arithmetic groups in Lobachevsky spaces. Publications Mathématiques de l'IHÉS, 66, 93-103.
+
+%\bibitem[LBB17]{lbb_17}
+%Boudec, A. L., Bon, N. M. (2017). Locally compact groups whose ergodic or minimal actions are all free. arXiv preprint arXiv:1709.06733.
+
+%\bibitem[Zh19]{zheng19}
+%Zheng, T. (2019). Neretin groups admit no non-trivial invariant random subgroups. arXiv preprint arXiv:1905.07605.
+
+\end{thebibliography}
+
+\end{document}
+
+              
+            
