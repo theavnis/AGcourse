@@ -1,0 +1,706 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+עקומים אלגבריים – הרצאה שנייה
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+)בזו(.
+
+\series default
+ אם 
+\begin_inset Formula $f,g\in\c\left[x,y\right]$
+\end_inset
+
+ זרים, אזי 
+\begin_inset Formula 
+\[
+\left|Z\left(f\right)\cap Z\left(g\right)\right|\leq\left(\deg f\right)\left(\deg g\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נכתוב את 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ כפולינום ב 
+\begin_inset Formula $y$
+\end_inset
+
+ עם מקדמים ב 
+\begin_inset Formula $\c\left(x\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+f\left(x,y\right)=a_{0}\left(x\right)+a_{1}\left(x\right)\cdot y+\cdots+a_{n}\left(x\right)y^{n}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+g\left(x,y\right)=b_{0}\left(x\right)+b_{1}\left(x\right)y+\cdots+b_{m}\left(x\right)y^{m}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula 
+\[
+\deg a_{i}\left(x\right)\leq n-i,\ \deg b_{i}\left(x\right)\leq m-i
+\]
+
+\end_inset
+
+ לאחר שינוי קוארדינטות ליניארי, ניתן להניח ש 
+\begin_inset Formula $a_{n},b_{m}\neq0$
+\end_inset
+
+.
+ )תרגיל: למה?(.
+ נקבע 
+\begin_inset Formula $x_{0}\in\c$
+\end_inset
+
+.
+ התנאים הבאים שקולים:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+ל 
+\begin_inset Formula $f\left(x_{0},y\right)$
+\end_inset
+
+ ו 
+\begin_inset Formula $g\left(x_{0}.y\right)$
+\end_inset
+
+ יש שורש משותף.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\deg\left(\gcd\left(f\left(x_{0},y\right),g\left(x_{0},y\right)\right)\right)>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\deg\left(\text{lcm}\left(f\left(x_{0},y\right),g\left(x_{0},y\right)\right)\right)<n+m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+קיימים פולינומים 
+\begin_inset Formula $\alpha\left(y\right)$
+\end_inset
+
+ ו 
+\begin_inset Formula $\beta\left(y\right)$
+\end_inset
+
+ מדרגות קטנות/שוות ל 
+\begin_inset Formula $m,n$
+\end_inset
+
+ בהתאמה כך ש 
+\begin_inset Formula 
+\[
+\alpha\left(y\right)f\left(x_{0},y\right)+\beta\left(y\right)\cdot g\left(x_{0},y\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+הפולינומים 
+\begin_inset Formula 
+\[
+f\left(x_{0},y\right),y\cdot f\left(x_{0},y\right),\ldots,y^{m-1}f\left(x_{0},y\right),g\left(x_{0},y\right),\ldots,y^{n-1}g\left(x_{0},y\right)
+\]
+
+\end_inset
+
+ בלתי תלויים ליניארית.
+ 
+\end_layout
+
+\begin_layout Enumerate
+כעת מ 
+\begin_inset Formula $6$
+\end_inset
+
+ נוכל להשתמש באלגברה ליניארית ולקבל את הרזולטנטה 
+\begin_inset Formula 
+\[
+\text{Res}\left(f\left(x_{0},y\right),g\left(x_{0},y\right)\right):=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\det\begin{pmatrix}a_{0}\left(x_{0}\right) & a_{1}\left(x_{0}\right) & a_{2}\left(x_{0}\right) & \cdots & a_{n}\left(x_{0}\right) & 0 & \cdots & 0\\
+0 & a_{0}\left(x_{0}\right) & a_{1}\left(x_{0}\right) & \cdots & \cdots & a_{n}\left(x_{0}\right) & 0\cdots & 0\\
+\vdots\\
+b_{0}\left(x_{0}\right) & b_{1}\left(x_{0}\right) & \cdots & \cdots & b_{m}\left(x_{0}\right)\\
+\vdots\\
+ &  &  &  &  & b_{0}\left(x_{0}\right) & \cdots & b_{m-1}\left(x_{0}\right)
+\end{pmatrix}
+\]
+
+\end_inset
+
+ונטען כי הרזולטנטה היא פולינום ב 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ ממעלה קטנה/שווה ל 
+\begin_inset Formula $n\cdot m$
+\end_inset
+
+.
+ מההנחה כי 
+\begin_inset Formula $a_{n},b_{m}\neq0$
+\end_inset
+
+ נקבל שזהו פולינום לא אפסי.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+מהטענה, להטלה לציר 
+\begin_inset Formula $x$
+\end_inset
+
+ של 
+\begin_inset Formula $Z\left(f\right)\cap Z\left(g\right)$
+\end_inset
+
+ יש לכל היותר 
+\begin_inset Formula $n\cdot m$
+\end_inset
+
+ נקודות.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת נעבור לנסיון ללמוד עקומים אלגבריים מבחינה טופולוגית.
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $f\left(x,y\right)\in\c\left[x,y\right]$
+\end_inset
+
+ ונניח ש 
+\begin_inset Formula $f\left(0,0\right)=0$
+\end_inset
+
+.
+ נניח כי 
+\begin_inset Formula 
+\[
+\gr f\left(0,0\right)=\left(\pd fx\left(0,0\right),\pd fy\left(0,0\right)\right)\neq\left(0,0\right)
+\]
+
+\end_inset
+
+)כלומר, ל 
+\begin_inset Formula $f$
+\end_inset
+
+ אין מקדם חופשי אך יש גורם ליניארי(.
+ ממשפט הפונקצייה הסתומה, 
+\begin_inset Formula $Z\left(f\right)\cap\left(B\left(0,0\right),\e\right)$
+\end_inset
+
+ הוא משטח הולומורפי.
+ בצורה יותר מדוייקת, אם 
+\begin_inset Formula $\pd fx\left(0,0\right)\neq0$
+\end_inset
+
+ אזי ההטלה לציר ה 
+\begin_inset Formula $y$
+\end_inset
+
+ )שנסמן 
+\begin_inset Formula $y:\c^{2}\ra\c$
+\end_inset
+
+( 
+\begin_inset Formula $y\mid_{Z\left(f\right)}Z\left(f\right)$
+\end_inset
+
+ היא הומואמורפיזם מקומית עם הומאומורפיזם הופכי, כלומר יש העתקה הולומורפית
+ 
+\begin_inset Formula 
+\[
+\varphi:U\ra\c
+\]
+
+\end_inset
+
+ עבור 
+\begin_inset Formula $U$
+\end_inset
+
+ פתוחה ב 
+\begin_inset Formula $\c$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+Z\left(f\right)\cap B\left(\left(0,0\right),\e\right)=\left\{ \left(\p\left(f\right),f\right)\mid f\in B\left(0,\e\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+יהי 
+\begin_inset Formula $f$
+\end_inset
+
+ אי פריק.
+ נקודה 
+\begin_inset Formula $p\in Z\left(f\right)$
+\end_inset
+
+ נקראת סינגולרית אם 
+\begin_inset Formula 
+\[
+\gr f\left(p\right)=\left(0,0\right)
+\]
+
+\end_inset
+
+ ואחרת נקראת לא–סינגולרית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+יש מספר סופי של נקודות סינגולריות.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $p$
+\end_inset
+
+ סינגולרית, אזי 
+\begin_inset Formula 
+\[
+p\in Z\left(f\right)\cap Z\left(\pd fx\right)
+\]
+
+\end_inset
+
+ומכיוון שפולינומים אלו זרים )כי 
+\begin_inset Formula $f$
+\end_inset
+
+ אי פריק ו 
+\begin_inset Formula $\deg\left(\pd fg\right)<\deg f$
+\end_inset
+
+( ניתן לחסום את כמות נקודות החיתוך ממשפט בזו.
+ זה אינו עובד כאשר 
+\begin_inset Formula $\pd fx\equiv0$
+\end_inset
+
+.במקרה הזה, נסתכל על 
+\begin_inset Formula $Z\left(f\right)\cap Z\left(\pd fy\right)$
+\end_inset
+
+.
+ אם שניהם זהותית אפס, 
+\begin_inset Formula $f$
+\end_inset
+
+ קבועה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+הבחנה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y:Z\left(f\right)-Z\left(\pd fx\right)\ra\c
+\]
+
+\end_inset
+
+ היא העתקת כיסוי.
+ מה קורה עבור נקודות לא סינגולריות עבורן 
+\begin_inset Formula $\pd fx\left(p\right)=0$
+\end_inset
+
+? נזכר כיצד מתנהגות העתקות הולומורפיות בסביבת נקודה: 
+\begin_inset Formula 
+\[
+\p:B\left(0,\e\right)\ra\c
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\p$
+\end_inset
+
+ יכולה להיות קבועה.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\p'\left(0\right)\neq0$
+\end_inset
+
+ ניתן לתאר אותה כפונקציה ליניארית 
+\begin_inset Formula 
+\[
+t\mapsto\p'\left(0\right)\cd t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\p'\left(0\right)=0$
+\end_inset
+
+ ו 
+\begin_inset Formula $\p''\left(0\right)\neq0$
+\end_inset
+
+ אזי ניתן לקרב 
+\begin_inset Formula 
+\[
+t\mapsto\frac{\p''\left(0\right)}{2}t^{2}
+\]
+
+\end_inset
+
+וכך הלאה.
+\end_layout
+
+\begin_layout Standard
+נשם לב שההעתקה 
+\begin_inset Formula $t\to t^{2}$
+\end_inset
+
+ מ 
+\begin_inset Formula $\c-\left\{ 0\right\} \ra\c-\left\{ 0\right\} $
+\end_inset
+
+ היא העתקת כיסוי מאינדקס 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+תהי 
+\begin_inset Formula $p\in Z\left(f\right)$
+\end_inset
+
+.
+ נניח כי 
+\begin_inset Formula $p=\left(0,0\right)$
+\end_inset
+
+ היא נקודה סינגולרית.
+ אזי יש 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $p$
+\end_inset
+
+ היא נקודת הסינגולריות היחידה ב 
+\begin_inset Formula $Z\left(f\right)\cap B\left(p,\e\right)$
+\end_inset
+
+.
+ עבור 
+\begin_inset Formula $\e$
+\end_inset
+
+ קטן מספיק, נוכל להניח שאין נקודות נוספות ב 
+\begin_inset Formula $Z\left(f\right)\cap B\left(p,\e\right)$
+\end_inset
+
+ אין קוארדינטת 
+\begin_inset Formula $x$
+\end_inset
+
+ שווה לאפס.
+ 
+\begin_inset Formula 
+\[
+x:Z\left(f\right)\cap B\left(p,\e\right)\ra\c
+\]
+
+\end_inset
+
+ היא העתקת כיסוי.
+ נתבונן בהעתקה 
+\begin_inset Formula 
+\[
+t_{0}\mapsto Z\left(f\left(t_{0},y\right)\right)
+\]
+
+\end_inset
+
+ע"י 
+\begin_inset Formula 
+\[
+t_{0}\to\left\{ \left(t_{0},y_{1}\right),\ldots,\left(t_{0},y_{m}\right)\right\} 
+\]
+
+\end_inset
+
+נתבונן בלמה הבאה:
+\end_layout
+
+\begin_layout Lemma
+לכל פולינום 
+\begin_inset Formula $f\left(y\right)$
+\end_inset
+
+ ממעלה 
+\begin_inset Formula $n$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\delta$
+\end_inset
+
+ יש 
+\begin_inset Formula $\e$
+\end_inset
+
+ כך שלכל פולינום 
+\begin_inset Formula $g\left(y\right)$
+\end_inset
+
+ מדרגה קטנה/שווה ל 
+\begin_inset Formula $n$
+\end_inset
+
+ עם מקדמים קטנים/שווים ל 
+\begin_inset Formula $\e$
+\end_inset
+
+: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+כל שורש של 
+\begin_inset Formula $f+g$
+\end_inset
+
+ הוא ממרחק 
+\begin_inset Formula $\delta$
+\end_inset
+
+ משורש של 
+\begin_inset Formula $f$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+כל שורש של 
+\begin_inset Formula $f$
+\end_inset
+
+ הוא ממרחק 
+\begin_inset Formula $\delta$
+\end_inset
+
+ משורש של 
+\begin_inset Formula $f+g$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+ממשפט רושה באנליזה מרוכבת, כמות השורשים של 
+\begin_inset Formula $f$
+\end_inset
+
+ ב 
+\begin_inset Formula $B\left(z_{0},\e\right)$
+\end_inset
+
+ שווה ל 
+\begin_inset Formula 
+\[
+\frac{1}{2\pi i}\varoint\limits_{\do B\left(z,\e\right)}\frac{df\left(\zeta\right)}{f\left(\zeta\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

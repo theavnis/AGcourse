@@ -1,0 +1,525 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+עקומים אלגבריים – הרצאה שלישית
+\end_layout
+
+\begin_layout Standard
+בשיעור שעבר התחלנו עם נקודה 
+\begin_inset Formula $p\in C=Z\left(f\right)$
+\end_inset
+
+ והטלנו את זה על ציר ה 
+\begin_inset Formula $x$
+\end_inset
+
+ )נסמן את ההטלה ב 
+\begin_inset Formula $\pi$
+\end_inset
+
+(.
+ מכיוון שיש רק מספר סופי של נקודות סינגולריות, נוכל לקחת סביבה 
+\begin_inset Formula $U$
+\end_inset
+
+ של 
+\begin_inset Formula $p$
+\end_inset
+
+ כך ש:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pd fy\mid_{C\cap U-\left\{ p\right\} }\neq0$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $p$
+\end_inset
+
+ נקודה סינגולרית יחידה ב 
+\begin_inset Formula $U\cap C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi^{-1}\left(\pi\left(p\right)\right)\cap U\cap C=\left\{ p\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+הבחנה
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi:U\cap C-\left\{ p\right\} \ra\c-\left\{ \pi\left(p\right)\right\} 
+\]
+
+\end_inset
+
+ היא העתקת כיסוי
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula 
+\[
+\pi^{-1}\left(B\left(\pi\left(p\right)\right),\e\right)=\nicefrac{\amalg S^{1}\times\left[0,\e\right]}{\left(\theta,0\right)\sim p}
+\]
+
+\end_inset
+
+)כאשר 
+\begin_inset Formula $\amalg$
+\end_inset
+
+ מסמן איחוד זר(, אשכול של דיסקים מודבקים בראשית שלהם.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C=Z\left(x^{2}-y^{3}\right)$
+\end_inset
+
+ היא יריעה טופולוגית, אך לא יריעה דיפרנציאלית.
+ ההבדל הוא הדרישה של חוסר סינגולריות.
+ בנפנוף ידיים: תהי 
+\begin_inset Formula 
+\[
+\left\{ \left(z,w\right)=\left|z\right|^{2}+\left|w\right|^{2}=\e\right\} =S_{\e}\ssq\c^{2}\left(\cong\r^{4}\right)
+\]
+
+\end_inset
+
+ ספירה תלת מימדית )ב 
+\begin_inset Formula $\r^{4}$
+\end_inset
+
+( קטנה מסביב ל 
+\begin_inset Formula $\left(0,0\right)$
+\end_inset
+
+.
+ אזי 
+\begin_inset Formula 
+\[
+S_{\e}\cap C=\left\{ \left(z,w\right)\mid\left|z\right|^{2}+\left|w\right|^{2}=\e,\ z^{2}=w^{3}\right\} =
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left\{ \left(r_{1}e^{i\theta},r_{2}e^{i\tau}\right)\mid2\theta=3\tau\ \mod2\pi\right\} =
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left\{ \left(r_{1}e^{3it},r_{2}e^{2it}\right)\mid t\in\left[0,2\pi\right]\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula $S_{\e}\cap C$
+\end_inset
+
+ הומאומורפי לטורוס ב 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+.
+ בפרט, לכל הטלה ליניארית 
+\begin_inset Formula 
+\[
+\pi:\c^{2}=\r^{4}\ra\r^{2}
+\]
+
+\end_inset
+
+ נקבל ש 
+\begin_inset Formula 
+\[
+\pi\mid_{S_{\e}\cap C}
+\]
+
+\end_inset
+
+לא חד חד ערכית.
+ 
+\series bold
+אבל
+\series default
+ אם 
+\begin_inset Formula $X\ssq\r^{n}$
+\end_inset
+
+ היא יריעה דיפרנציאלית עם מרחב משיק 
+\begin_inset Formula $T_{p}X$
+\end_inset
+
+ בנקודה 
+\begin_inset Formula $p$
+\end_inset
+
+, אזי ההטלה ל 
+\begin_inset Formula $T_{p}X$
+\end_inset
+
+ הוא הומאומורפיזם בסביבת 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section*
+מרחבים פרוייקטיבים
+\end_layout
+
+\begin_layout Definition
+הישר הפרוייקטיבי במישור 
+\begin_inset Formula $\mathbb{P}^{2}\left(\r\right)$
+\end_inset
+
+ הוא אוסף הישרים העוברים דרך הראשית ב 
+\begin_inset Formula $\r^{3}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מהתבוננות בישרים החותכים את המישור 
+\begin_inset Formula $z=1$
+\end_inset
+
+ נקבל עותק של 
+\begin_inset Formula $\r^{2}$
+\end_inset
+
+ בתוך 
+\begin_inset Formula $\p^{2}\left(\r\right)$
+\end_inset
+
+.
+ המשלים הוא 
+\begin_inset Formula $\p^{1}\left(\r\right)$
+\end_inset
+
+ )כל הישרים דרך הראשית ב 
+\begin_inset Formula $\r^{2}$
+\end_inset
+
+(.
+ לכן נקבל ש 
+\begin_inset Formula 
+\[
+\p^{2}\left(\r\right)=\r^{2}\cup\p^{1}\left(\r\right)-\r^{2}\cup\r^{1}\cup\r^{0}
+\]
+
+\end_inset
+
+מה היה קורה אם היינו בוחרים במישור 
+\begin_inset Formula $y=1$
+\end_inset
+
+ במקום במישור 
+\begin_inset Formula $z=1$
+\end_inset
+
+? נקבל "אותה תמונה" בקוארדינטות שונות.
+ נרצה לעבור מקוארדינטות 
+\begin_inset Formula $\left(x,y,1\right)$
+\end_inset
+
+ לקוארדינטות 
+\begin_inset Formula $\left(X,1,Z\right)$
+\end_inset
+
+.
+ זאת נעשה ע"י 
+\begin_inset Formula 
+\[
+X=\frac{x}{y},\ Z=\frac{1}{y}
+\]
+
+\end_inset
+
+ לכן נוכל לעבוד ב
+\series bold
+קוארדינטות הומוגניות
+\series default
+, כלומר דברים מהצורה 
+\begin_inset Formula 
+\[
+\left[a:b:c\right]
+\]
+
+\end_inset
+
+ המתאימות לישר 
+\begin_inset Formula $\r\left(a,b,c\right)$
+\end_inset
+
+ תחת יחס השקילות 
+\begin_inset Formula 
+\[
+\left[a,b,c\right]=\left[za,zb,zc\right]
+\]
+
+\end_inset
+
+אנו נעבוד עם 
+\begin_inset Formula 
+\[
+\p^{2}\left(\c\right)=\c^{2}\cup\p^{1}\left(\c\right)=\c^{2}\cup\c\cup\left\{ \infty\right\} 
+\]
+
+\end_inset
+
+כעת נניח ש 
+\begin_inset Formula $Z\left(f\left(x,y\right)\right)\ssq\c^{2}\ssq\p^{2}\left(\c\right)$
+\end_inset
+
+ הוא עקום אפיני.
+ מה הסגור של 
+\begin_inset Formula $Z\left(f\right)$
+\end_inset
+
+ ב 
+\begin_inset Formula $\p^{2}\left(\c\right)$
+\end_inset
+
+? יהי 
+\begin_inset Formula 
+\[
+F\left(x,y,z\right)
+\]
+
+\end_inset
+
+ההומוגניזציה של 
+\begin_inset Formula $f$
+\end_inset
+
+: כלומר, פולינום מדרגה שווה לשל 
+\begin_inset Formula $f$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+F\left(x,y,1\right)=f\left(x,y\right)
+\]
+
+\end_inset
+
+ ונחליף כל מונום מהצורה 
+\begin_inset Formula $x^{n}y^{m}$
+\end_inset
+
+ ב 
+\begin_inset Formula $f$
+\end_inset
+
+ ב 
+\begin_inset Formula $x^{n}y^{m}z^{\deg f-n-m}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Z\left(F\right)$
+\end_inset
+
+ היא חרוט 
+\begin_inset Formula 
+\[
+\left(p\in Z\left(f\right)\Ra\alpha p\in Z\left(f\right)\ \alpha\in\c^{\times}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Z\left(F\right)\cap\left\{ z=1\right\} =Z\left(f\left(x,y\right)\right)
+\]
+
+\end_inset
+
+כעת 
+\begin_inset Formula 
+\[
+Z\left(F\right)\cap\left\{ y=1\right\} 
+\]
+
+\end_inset
+
+נתון ע"י 
+\begin_inset Formula $f\left(x,y\right)=0$
+\end_inset
+
+ ו 
+\begin_inset Formula 
+\[
+f\left(\frac{X}{Z},\frac{1}{Z}\right)=Z^{-\deg f}\cdot g\left(X,Z\right)
+\]
+
+\end_inset
+
+באופן שקול, אלו שתי קבוצות אפסים של 
+\begin_inset Formula 
+\[
+F\left(X,1,Z\right)=Z^{\deg f}F\left(\frac{X}{Z},\frac{1}{Z},1\right)=Z^{\deg f}\cdot f\left(\frac{X}{Z},\frac{1}{Z}\right)=g\left(x,Z\right)
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+תוצאה
+\end_layout
+
+\begin_layout Standard
+הסגור הפרוייקטיבי של עקום אפיני זו כל בחירת קוארדינטות.
+ הסגור הפרוייקטיבי של 
+\begin_inset Formula $Z\left(f\right)$
+\end_inset
+
+ נחתך עם 
+\begin_inset Formula $\p^{1}\left(\c\right)=\p^{2}\left(\c\right)-\c^{2}$
+\end_inset
+
+ במספר סופי של נקודות.
+\end_layout
+
+\end_body
+\end_document

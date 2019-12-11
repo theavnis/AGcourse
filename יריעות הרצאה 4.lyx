@@ -1,0 +1,581 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+יריעות אלגבריות – הרצאה רביעית
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vector}[1]{\overrightarrow{#1}}
+{\overrightarrow{#1}}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בהרצאה שעברה התחלנו לדבר על ההתאמה בין העולם הגאומטרי לאלגברי.
+ נדגים זאת עם ניסוח של ה 
+\begin_inset Formula $\text{Nullstellensatz}$
+\end_inset
+
+ עבור קבוצות אלגבריות:
+\end_layout
+
+\begin_layout Theorem
+תהי 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אלגברית, ישנה התאמה )חח"ע ועל( שומרת סדר בין תתי קבוצות סגורות של
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ ואידיאלים רדיקלים של 
+\begin_inset Formula $\o\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נכתוב 
+\begin_inset Formula $X\ssq\c^{n}$
+\end_inset
+
+.
+ ניתן לראות ששניהם בהתאמה לקבוצות האידיאלים הרדיקלים 
+\begin_inset Formula $J\ssn\c\left[x_{1},\ldots,x_{n}\right]$
+\end_inset
+
+ המכילים את 
+\begin_inset Formula $I\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+ההתאמה בין קבוצות הנקודות של 
+\begin_inset Formula $X$
+\end_inset
+
+ לקבוצת האידיאלים המקסימליים של 
+\begin_inset Formula $\o\left(X\right)$
+\end_inset
+
+ ע"י 
+\begin_inset Formula 
+\[
+x_{0}\mapsto\left\{ f\in\o\left(X\right)\mid f\left(x_{0}\right)=0\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+זוהי מהות הגאומטריה אלגברית, היכולת לעבור מייצוג גאומטרי לייצוג אלגברי.
+ אף שבתחילת דרכה של הגאומטריה האלגברית היא שימשה בעיקר לפתרון בעיות גאומטריות
+ בעזרת אלגברה, בגאומטריה אלגברית מודרנית משתמשים גם בגאומטריה לפתרון בעיות
+ אלגבריות.
+\end_layout
+
+\begin_layout Subsection*
+מכפלה של יריעות אלגבריות
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula 
+\[
+Z\left(f_{i}\left(x_{1},\ldots,x_{n}\right)\right)=X\ssq\c^{n}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Z\left(g_{j}\left(y_{1},\ldots,y_{m}\right)\right)=Y\ssq\c^{m}
+\]
+
+\end_inset
+
+נוכל להגדיר 
+\begin_inset Formula 
+\[
+X\times Y\ss\c^{n}\times\c^{m}=\c^{n+m}
+\]
+
+\end_inset
+
+וזוהי קבוצה אלגברית הנתונה ע"י 
+\begin_inset Formula 
+\[
+X\times Y=Z\left(f_{i},g_{j}\right)
+\]
+
+\end_inset
+
+כעת נרצה לתרגם תוצאות אלו לשפה של חוגי קוארדינטות, ונקבל:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula 
+\[
+\o\left(X\times Y\right)=\o\left(X\right)\otimes_{\c}\o\left(Y\right)
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+ניתן להוכיח טענה זו ישירות מהגדרת מכפלה טנזזורית.
+ אנחנו מגניבים ולכן נוכיח זאת קטגורית:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\times$
+\end_inset
+
+ היא מכפלה בקטגוריה של יריעות אלגבריות
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\otimes$
+\end_inset
+
+ היא מכפלה בקטגוריה של אלגברות מצומצמות נוצרות סופית מעל 
+\begin_inset Formula $\c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+קטגוריות אלו שקולות.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+מרחבים פרוייקטיבים
+\end_layout
+
+\begin_layout Standard
+כמו במקרה של עקומים, גם כאן נרצה לעבור לדבר על מרחבים פרוייקטיבים.
+\end_layout
+
+\begin_layout Definition
+)מרחב פרוייקטיבי(.
+ 
+\begin_inset Formula $\p^{n}\left(\c\right)$
+\end_inset
+
+ הוא מרחב הישרים העוברים דרך ראשית הצירים ב 
+\begin_inset Formula $\c^{n+1}$
+\end_inset
+
+, כלומר 
+\begin_inset Formula 
+\[
+\p^{n}\left(\c\right)=\nf{\c^{n+1}-\left\{ 0\right\} }{\c-\left\{ 0\right\} }
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+)קבוצה אלגברית פרוייקטיבית(.
+ קבוצה אלגברית פרוייקטיבית היא קבוצת האפסים של קבוצת פולינומים הומוגנים
+ ב 
+\begin_inset Formula $n+1$
+\end_inset
+
+ משתנים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+סימונים
+\end_layout
+
+\begin_layout Standard
+ֵ
+\begin_inset Formula 
+\[
+\p_{i}^{n}\left(\c\right)=\left\{ \left[x_{0}:\cdots:x_{n}\right]\mid x_{i}\neq0\right\} \ss\p^{n}\left(\c\right)
+\]
+
+\end_inset
+
+אלו עותקים שך 
+\begin_inset Formula $\c^{n}$
+\end_inset
+
+ שביחד מכסים את 
+\begin_inset Formula $\p^{n}\left(\c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $X\ssq\p^{n}\left(\c\right)$
+\end_inset
+
+ היא קבוצה אלגברית 
+\bar under
+פרוייקטיבית
+\bar default
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $X\cap\p_{i}^{n}\left(\c\right)$
+\end_inset
+
+ היא קבוצה אלגברית 
+\bar under
+אפינית
+\bar default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $X$
+\end_inset
+
+ נתונה ע"י 
+\begin_inset Formula $Z\left(F_{i}\left(x_{0},\ldots,x_{n}\right)\right)$
+\end_inset
+
+ עבור 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+ הומוגנים, אזי 
+\begin_inset Formula 
+\[
+X\cap P_{0}^{n}\left(\c\right)=Z\left(F_{i}\left(1,x_{1},x_{2},\ldots,x_{n}\right)\right)
+\]
+
+\end_inset
+
+לכיוון השני 
+\begin_inset Formula 
+\[
+X\cap\p_{i}^{n}\left(\c\right)=Z\left(f_{ij}\left(x_{1},\ldots,\widehat{x_{i}},\ldots,x_{n}\right)\right)
+\]
+
+\end_inset
+
+כעת לכל 
+\begin_inset Formula $i,j$
+\end_inset
+
+, נגדיר  
+\begin_inset Formula 
+\[
+F_{ij}=x_{i}^{\deg f_{i}+1}f_{ij}\left(\frac{x_{0}}{x_{i}},\ldots,\frac{x_{n}}{x_{i}}\right)
+\]
+
+\end_inset
+
+כעת נטען ש 
+\begin_inset Formula $X=Z\left(F_{ij}\right)$
+\end_inset
+
+, ונשאיר זאת כתרגיל לבית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+)קבוצה 
+\begin_inset Formula $\text{constructible}$
+\end_inset
+
+(.
+ 
+\begin_inset Formula $X\ssq\p^{n}\left(\c\right)$
+\end_inset
+
+ היא קבוצה קונסטרוקטיבית אם היא צירוף בוליאני של קבוצות אלגבריות פרוייקטיביות.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $X\ssq\p^{n}\left(\c\right)$
+\end_inset
+
+ קונסטרוקטיבית אם ורק אם לכל 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $X\cap\p_{i}^{n}\left(\c\right)$
+\end_inset
+
+ היא קונסטרוקטיבית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+אם 
+\begin_inset Formula $X\ssq\p^{n}\left(\c\right)\times\p^{n}\left(\c\right)$
+\end_inset
+
+ קונסטרוקטיבית אזי ההטלה שלה על 
+\begin_inset Formula $\p^{n}\left(\c\right)$
+\end_inset
+
+ קונסטרוקטיבית.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+אבל לא הגדרנו מכפלה של מרחבים פרוייקטיבים! נגדיר זאת בעזרת הטריק הבא:
+\end_layout
+
+\begin_layout Subsubsection*
+שיכון 
+\begin_inset Formula $\boldsymbol{\text{Segre}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+נתבונן בהעתקה 
+\begin_inset Formula 
+\[
+\c^{n+1}\times\c^{m+1}\ra\text{Mat}_{\left(n+1\right)\times\left(m+1\right)}\left(\c\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(v,w\right)\mapsto v\cdot w^{t}=\matn{v_{0}w_{0}}{v_{n}w_{0}}{v_{n}w_{m}}{v_{0}w_{m}}
+\]
+
+\end_inset
+
+ ולכן ניתן להגדיר העתקה 
+\begin_inset Formula 
+\[
+\p^{n}\left(\c\right)\times\p^{m}\left(\c\right)\ra\p^{n\cdot m+n+m}\left(\c\right)
+\]
+
+\end_inset
+
+ ע"י 
+\begin_inset Formula 
+\[
+\p\left(\c^{n+1}\right)\times\p\left(\c^{m+1}\right)\ra\p\left(\text{Mat}_{\left(n+1\right)\times\left(m+1\right)}\left(\c\right)\right)
+\]
+
+\end_inset
+
+ההעתקה היא בבירור חד חד ערכית.
+ התמונה היא הסגור הפרוייקטיבי של המטריצות מדרגה 
+\begin_inset Formula $1$
+\end_inset
+
+, וזוהי קבוצה אלגברית )היא קבוצת האפסים של כל המינורים 
+\begin_inset Formula $2\times2$
+\end_inset
+
+, ואלו פולינומים הומוגנים(.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document

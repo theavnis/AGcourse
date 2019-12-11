@@ -1,0 +1,814 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+יריעות אלגבריות – הרצאה שנייה
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vector}[1]{\overrightarrow{#1}}
+{\overrightarrow{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בהרצאה זו נדבר על רזולטנטות במימדים גבוהים.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+אלגוריתם אוקלידס:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קלט
+\series default
+: 
+\begin_inset Formula $\left(n,m,f(x),g(x)\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\deg f\leq n,\ \deg f\leq m$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+פלט
+\series default
+: ה 
+\begin_inset Formula $\gcd$
+\end_inset
+
+ של 
+\begin_inset Formula $f$
+\end_inset
+
+ ו 
+\begin_inset Formula $g$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $\deg f<n$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+נפעיל את האלגוריתם עם 
+\begin_inset Formula $\left(n-1,m,f,g\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $\deg g<m$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+נפעיל את האלגוריתם עם 
+\begin_inset Formula $\left(n,m-1,f,g\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $n=-1$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+נחזיר 
+\begin_inset Formula $g$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $m=-1$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+נחזיר 
+\begin_inset Formula $f$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $n=0$
+\end_inset
+
+ או 
+\begin_inset Formula $m=0$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+נחזיר 
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $n\leq m$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+נקרא ל 
+\begin_inset Formula $\left(n,m,f,a_{n}g-b_{m}x^{m-n}f\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $n>m$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+באופן דומה..
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+באופן דומה, ניתן לכתוב את האלגוריתם כ 
+\begin_inset Formula $\text{decision tree}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+בכל שלב, המקדמים של הפולינומים שעובדים איתם הם פולינומים ב 
+\begin_inset Formula $a_{0},\ldots,a_{n},b_{0},\ldots,b_{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+כל הסתעפות מייצגת האם פולינום כלשהו ב 
+\begin_inset Formula $a_{0},\ldots,a_{n},b_{0},\ldots,b_{m}$
+\end_inset
+
+ הוא אפס או לא.
+\end_layout
+
+\begin_layout Enumerate
+הפולינומים במקדמים אלו הם עם מקדמים ב 
+\begin_inset Formula $\z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+צירוף בוליאני של קבוצות אלגבריות נקרא 
+\begin_inset Formula $\text{constructible set}$
+\end_inset
+
+.
+ אם כל אחד מהפולינומים הרלוונטים בעל מקדמים ב 
+\begin_inset Formula $\z$
+\end_inset
+
+ נאמר שהקבוצה מוגדרת מעל 
+\begin_inset Formula $\z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+הפונקציה 
+\begin_inset Formula 
+\[
+\text{Poly}_{\leq n}\times\text{Poly}_{\leq m}\ra\text{Poly}_{\leq n}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(f,g\right)\mapsto\gcd\left(f,g\right)
+\]
+
+\end_inset
+
+ היא פולינומיאלית למקוטעין, וכל מקטע הוא 
+\begin_inset Formula $\text{constructible}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+הקבוצה 
+\begin_inset Formula 
+\[
+\left\{ \left(f,g\right)\in\text{Poly}_{\leq n}\times\text{Poly}_{\leq m}\mid\text{There is a common root of }f,g\right\} 
+\]
+
+\end_inset
+
+ היא 
+\begin_inset Formula $\text{constructible}$
+\end_inset
+
+ כתת קבוצה של 
+\begin_inset Formula $\text{Poly}_{\leq n}\times\text{Poly}_{\leq m}\ssq\c^{n+m+2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+אם 
+\begin_inset Formula $f\left(x_{1},\ldots,x_{n},y\right)$
+\end_inset
+
+ ו 
+\begin_inset Formula $g\left(x_{1},\ldots,x_{n},y\right)$
+\end_inset
+
+ ב 
+\begin_inset Formula $\c\left[x_{1},\ldots,x_{n},y\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula 
+\[
+\pi:\c^{n+1}\ra\c^{n}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(x_{1},\ldots,x_{n},y\right)\mapsto\left(x_{1},\ldots,x_{n}\right)
+\]
+
+\end_inset
+
+אזי 
+\begin_inset Formula 
+\[
+\pi\left(Z\left(\left\{ f,g\right\} \right)\right)
+\]
+
+\end_inset
+
+היא קונסטרוקטיבית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+באופן דומה נוכל לנסח את המסקנה הבאה:
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+)משפט 
+\begin_inset Formula $\text{\textbf{(Chevalley}}$
+\end_inset
+
+
+\series default
+.
+ אם 
+\begin_inset Formula $X\ssq\c^{n+1}$
+\end_inset
+
+ היא קבוצה אלגברית ו 
+\begin_inset Formula $\pi:\c^{n+1}\ra\c^{n}$
+\end_inset
+
+ היא ההטלה, אזי 
+\begin_inset Formula $\pi\left(X\right)$
+\end_inset
+
+ קונסטרוקטיבית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+משפט זה נובע מהטענה הבאה:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $f_{1},\ldots,f_{n},g_{1},\ldots,g_{m}\in\c\left[x\right]$
+\end_inset
+
+, אזי 
+\begin_inset Formula 
+\[
+\left\{ t\mid f_{i}\left(t\right)=0,\ g_{j}\left(t\right)\neq0\right\} =\emptyset
+\]
+
+\end_inset
+
+אם ורק אם 
+\begin_inset Formula 
+\[
+\gcd\left(f_{i}\right)\mid\prod g_{i}\iff\gcd\left(f_{i},\prod g_{j}\right)=\gcd\left(f_{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+)הגדרה גרועה(: לוגיקה מסדר ראשון היא כל נוסחה שניתן לכתוב באמצעות משתנים,
+ 
+\begin_inset Formula $0$
+\end_inset
+
+, 
+\begin_inset Formula $1$
+\end_inset
+
+, חיבור, כפל, סוגריים, 
+\begin_inset Formula $\forall,\exists$
+\end_inset
+
+ ומקשרים לוגיים.
+ לדוגמא, 
+\begin_inset Formula 
+\[
+\left(\forall a\right)\left(\forall b\right)\left(\forall c\right)\left(a\neq0\ra\left(\exists x\right)\left(ax^{2}+bx+c=0\right)\right)
+\]
+
+\end_inset
+
+היא נוסחה תקינה, אבל רק לכתוב 
+\begin_inset Formula $\forall a$
+\end_inset
+
+ זה לא תקין.
+ אם לנוסחא אין כמתים, היא נקראת "חופשייה מכמתים".
+ אם לנוסחא אין משתנים חופשיים, היא נקראת "משפט".
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+נוסחא חופשייה מכמתים היא קמובינציה בוליאנית של נוסחאות מהצורה 
+\begin_inset Formula $f\left(x_{1},\ldots,x_{n}\right)=0$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $f\in\z\left[x_{1},\ldots,x_{n}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+)ניסוח מחדש של 
+\begin_inset Formula $\text{Chevalley}$
+\end_inset
+
+(.
+ אם 
+\begin_inset Formula $\phi\left(x_{1},\ldots,x_{n},y\right)$
+\end_inset
+
+ היא נוסחא חופשייה מכמתים, אזי יש נוסחא חופשייה מכמתים 
+\begin_inset Formula $\psi\left(x_{1},\ldots,x_{n}\right)$
+\end_inset
+
+ כך שלכל שדה סגור אלגברית 
+\begin_inset Formula $F$
+\end_inset
+
+, הנוסחאות 
+\begin_inset Formula $\left(\exists y\right)\phi\left(x_{1},\ldots,x_{n},y\right)$
+\end_inset
+
+ ו 
+\begin_inset Formula $\psi\left(x_{1},\ldots,x_{n}\right)$
+\end_inset
+
+ שקולות.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מאינדוקציה ניתן להוכיח את המסקנה הבאה:
+\end_layout
+
+\begin_layout Corollary
+כל נוסחא שקולה לנוסחה חופשייה מכמתים.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+כל משפט שקול למשפט ללא כמתים ומשתנים 
+\begin_inset Formula $\left(\ ,\!,\cdot,+,0,1,\sim,\land\right)$
+\end_inset
+
+.
+ כל משפט כזה הוא קומיבנציה בוליאנית של מהצורה 
+\begin_inset Formula 
+\[
+1+1+\cdots+1=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+)עקרון 
+\begin_inset Formula $\text{Lefscholts}$
+\end_inset
+
+(.
+ אם 
+\begin_inset Formula $\phi$
+\end_inset
+
+ היא משפט מסדר ראשון שנכונה בשדה סגור אלגברית 
+\begin_inset Formula $F$
+\end_inset
+
+, אזי היא נכונה בכל השדות הסגורים אלגברית מאותו מציין.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+אם שאת ה 
+\begin_inset Formula $\text{Nullstelenzats}$
+\end_inset
+
+ לא ניתן לנסח כלוגיקה מסדר ראשון, אם נחסום את דרגות הפולינומים זה אפשרי,
+ ולכן בפועל הוא נכון לכל שדה ממאפיין 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+אם 
+\begin_inset Formula $\phi$
+\end_inset
+
+ הוא משפט מסדר ראשון שנכון עבור 
+\begin_inset Formula $\overline{\mathbb{F}_{p}}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $p$
+\end_inset
+
+ ראשוני, אזי הוא נכון עבור 
+\begin_inset Formula $\c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+כי אם 
+\begin_inset Formula $1+\cdots+1=0$
+\end_inset
+
+ עבור מספר מסויים של אחדות, זה לא יהיה נכון עבור מאפיין שונה...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+אם 
+\begin_inset Formula $f:\c^{n}\ra\c^{n}$
+\end_inset
+
+ היא העתקה פולינומיאלית חד חד ערכית, אזי היא גם על!
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+מספיק להוכיח את המשפט עבור פולינום 
+\begin_inset Formula 
+\[
+f:\overline{\mathbb{F}_{p}}^{n}\ra\overline{\mathbb{F}_{p}}^{n}
+\]
+
+\end_inset
+
+יש 
+\begin_inset Formula $q=p^{k}$
+\end_inset
+
+ כך שבפועל 
+\begin_inset Formula $f$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f:\mathbb{F}_{q}^{n}\ra\mathbb{F}_{q}^{n}
+\]
+
+\end_inset
+
+כעת עבור העתקה פולינומיאלית כזו, העובדה שהיא חח"ע גוררת שהיא על )כי השדה
+ סופי(.
+ לכן ניתן להרחיב את זה ל 
+\begin_inset Formula $\mathbb{F}_{q^{i}}^{n}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i$
+\end_inset
+
+, ומכיוון ש 
+\begin_inset Formula 
+\[
+\overline{\mathbb{F}_{q}}^{n}=\bigcup_{i}\mathbb{F}_{q^{i}}^{n}\ra\overline{\mathbb{F}_{q}}^{n}
+\]
+
+\end_inset
+
+כי אם יש איחוד של העתקות על, האיחוד הוא על.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+ההפך לא נכון, יש העתקות על שאינן חח"ע.
+ איפה זה נופל?
+\end_layout
+
+\end_body
+\end_document

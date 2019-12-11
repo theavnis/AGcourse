@@ -1,0 +1,837 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+יריעות אלגבריות – הרצאה שלישית
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vector}[1]{\overrightarrow{#1}}
+{\overrightarrow{#1}}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+)פונקציה רגולרית(.
+ תהי 
+\begin_inset Formula $X\ssq\c^{n}$
+\end_inset
+
+ קבוצה אלגברית ותהי 
+\begin_inset Formula $f\in\c\left[x_{1},\ldots,x_{n}\right]$
+\end_inset
+
+ פונקצייה )נתייחס לפולינום כאל פונקציה(.
+ 
+\begin_inset Formula $f\mid_{X}$
+\end_inset
+
+ נקראת פונקציה רגולרית על 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ כלומר, פונקציה רגולרית על 
+\begin_inset Formula $X$
+\end_inset
+
+ היא צמצום של פולינום כלשהו.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+)חוג הפונקציות הרגולריות(.
+ יהי 
+\begin_inset Formula $\mathcal{O}\left(X\right)$
+\end_inset
+
+ חוג הפונקציות הרגולריות על 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ ניתן להגדיר הומומורפיזם 
+\begin_inset Formula 
+\[
+\c\left[x_{1},\ldots,x_{n}\right]\ra\o\left(X\right)
+\]
+
+\end_inset
+
+מה הגרעין שלו? זהו האידיאל 
+\begin_inset Formula $I\left(X\right)$
+\end_inset
+
+! לכן 
+\begin_inset Formula 
+\[
+\o\left(X\right)=\nf{\c\left[x_{1},\ldots,x_{n}\right]}{I\left(X\right)}
+\]
+
+\end_inset
+
+ובפרט 
+\begin_inset Formula $\o\left(X\right)$
+\end_inset
+
+ היא אלגברה נוצרת סופית מעל 
+\begin_inset Formula $\c$
+\end_inset
+
+.
+ הוכחנו ש 
+\begin_inset Formula $I\left(X\right)$
+\end_inset
+
+ אידאל רדיקלי, ולכן 
+\begin_inset Formula $\o\left(X\right)$
+\end_inset
+
+ חסרת נילפוטנטים.
+ אלגברה כזו נקראת אלגברה מוצמצמת 
+\begin_inset Formula $\text{(reduced)}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\o\left(X\right)$
+\end_inset
+
+ נקראת גם חוג הקוארדינטות של 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+כל אלגברה מצומצמת נוצרת סופית מעל 
+\begin_inset Formula $\c$
+\end_inset
+
+ היא חוג קוארדינטות של קבוצה אלגברית.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+תהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אלגברה מצומצמת נוצרת סופית מעל 
+\begin_inset Formula $\c$
+\end_inset
+
+.
+ נניח 
+\begin_inset Formula $A$
+\end_inset
+
+ נוצרת ע"י 
+\begin_inset Formula $a_{1},\ldots,a_{n}$
+\end_inset
+
+.
+ יהי 
+\begin_inset Formula 
+\[
+\varphi:\c\left[x_{1},\ldots,x_{n}\right]\ra A
+\]
+
+\end_inset
+
+ע"י 
+\begin_inset Formula 
+\[
+\varphi\left(x_{i}\right)=a_{i}
+\]
+
+\end_inset
+
+ויהי 
+\begin_inset Formula 
+\[
+I=\ker\varphi
+\]
+
+\end_inset
+
+ויהי 
+\begin_inset Formula 
+\[
+Z\left(I\right)=X\ssq\c^{n}
+\]
+
+\end_inset
+
+כעת 
+\begin_inset Formula $I$
+\end_inset
+
+ רדיקלי כי האלגברה מצומצמתת ולכן 
+\begin_inset Formula 
+\[
+\o\left(X\right)=\nf{\c\left[x_{1},\ldots,x_{n}\right]}{\sqrt{I}}=\nf{\c\left[x_{1},\ldots,x_{n}\right]}I=A.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+)מורפיזם(.
+ יהיו 
+\begin_inset Formula $X\ssq\c^{n}$
+\end_inset
+
+ ו 
+\begin_inset Formula $Y\ssq\c^{m}$
+\end_inset
+
+ קבוצות אלגבריות.
+ מורפיזם בין 
+\begin_inset Formula $X$
+\end_inset
+
+ ל 
+\begin_inset Formula $Y$
+\end_inset
+
+ הוא קבוצה סדורה 
+\begin_inset Formula $m$
+\end_inset
+
+ של פונקציות רגולריות 
+\begin_inset Formula $f_{1},\ldots,f_{m}\in\o\left(X\right)$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+\left(\forall x\in X\right)\left(f_{1}\left(x\right),\ldots,f_{m}\left(x\right)\right)\in Y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמאות
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\c\ra\left\{ x^{2}=y^{3}\right\} $
+\end_inset
+
+ ע"י 
+\begin_inset Formula $t\mapsto\left(t^{3},t^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $F=\overline{\mathbb{F}_{p}}$
+\end_inset
+
+ שדה ממאפיין 
+\begin_inset Formula $p$
+\end_inset
+
+ ו 
+\begin_inset Formula $X\ss F^{n}$
+\end_inset
+
+ הוא קבוצת אפסים של פולינומים עם מקדמים ב 
+\begin_inset Formula $\mathbb{F}_{p}$
+\end_inset
+
+, ההעתקה 
+\begin_inset Formula 
+\[
+X\longrightarrow X
+\]
+
+\end_inset
+
+הנתונה ע"י 
+\begin_inset Formula 
+\[
+\left(a_{1},\ldots,a_{n}\right)\mapsto\left(a_{1}^{p},\ldots,a_{n}^{p}\right)
+\]
+
+\end_inset
+
+ אם 
+\begin_inset Formula $X=Z\left(f_{j}\right)$
+\end_inset
+
+ ו 
+\begin_inset Formula $f_{j}\left(a_{1},\ldots,a_{n}\right)=0$
+\end_inset
+
+ גם 
+\begin_inset Formula $f_{j}\left(a_{1}^{p},\ldots,a_{n}^{p}\right)=f_{j}\left(a_{1},\ldots,a_{n}\right)^{p}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דיון – ה 
+\begin_inset Formula $\text{\textbf{pullback}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+תהי 
+\begin_inset Formula $f:X\ra Y$
+\end_inset
+
+ העתקה רגולרית ותהי 
+\begin_inset Formula $\p\in\o\left(Y\right)$
+\end_inset
+
+.
+ נגדיר 
+\begin_inset Formula 
+\[
+f^{\ast}\p:=\varphi\circ f:X\ra\c\ \ \in\o\left(X\right)
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $f^{\ast}\p$
+\end_inset
+
+ נקראת ה 
+\begin_inset Formula $\text{pullback}$
+\end_inset
+
+ של 
+\begin_inset Formula $\p$
+\end_inset
+
+.
+ נקבל כך העתקה 
+\begin_inset Formula 
+\[
+f^{\ast}:\o\left(Y\right)\ra\o\left(X\right)
+\]
+
+\end_inset
+
+המהווה הומומורפיזם של חוגים.
+ 
+\end_layout
+
+\begin_layout Claim
+בהנתן קבוצות אלגריות 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ והומומורפיזם של חוגים 
+\begin_inset Formula 
+\[
+\rho:\o\left(Y\right)\ra\o\left(X\right)
+\]
+
+\end_inset
+
+אזי, יש העתקה רגולרית יחידה 
+\begin_inset Formula $f:X\ra Y$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+f^{\ast}=\rho
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $X\ssq\c^{n}$
+\end_inset
+
+ נתון ע"י 
+\begin_inset Formula 
+\[
+X=Z\left(f_{i}\left(x_{1},\ldots,x_{n}\right)\right)
+\]
+
+\end_inset
+
+ו 
+\begin_inset Formula $Y\ssq\c^{m}$
+\end_inset
+
+ נתון ע"י 
+\begin_inset Formula 
+\[
+Y=Z\left(g_{j}\left(y_{1},\ldots,y_{m}\right)\right)
+\]
+
+\end_inset
+
+נזכיר ש 
+\begin_inset Formula $\o\left(X\right)=\nf{\c\left[x_{1},\ldots,x_{n}\right]}{\left(f_{i}\right)}$
+\end_inset
+
+ ו 
+\begin_inset Formula $\o\left(Y\right)=\nf{\c\left[y_{1},\ldots,y_{m}\right]}{\left(g_{j}\right)}$
+\end_inset
+
+ ונתון 
+\begin_inset Formula $\rho$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+\rho\left(y_{1}\right)=h_{1}+\left(f_{i}\right),\ldots,\rho\left(y_{m}\right)=h_{m}+\left(f_{i}\right)
+\]
+
+\end_inset
+
+ תהי 
+\begin_inset Formula $r$
+\end_inset
+
+ קבוצה סדורה 
+\begin_inset Formula $\left(h_{1},\ldots,h_{m}\right)$
+\end_inset
+
+.
+ נטען:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $r$
+\end_inset
+
+ היא העתקה רגולרית 
+\begin_inset Formula $X\ra Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $r^{\ast}=\rho$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $r^{\ast}$
+\end_inset
+
+ היא יחידה כזו.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+כעת 
+\begin_inset Formula $1$
+\end_inset
+
+ נכון מכיוון שאם 
+\begin_inset Formula $\left(\alpha_{1},\ldots,\alpha_{n}\right)\in X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g_{j}\left(h_{1}\left(\vector{\alpha}_{1}\right),\ldots,h_{m}\left(\vector{\alpha}\right)\right)$
+\end_inset
+
+.
+ מכיוון ש 
+\begin_inset Formula $\rho$
+\end_inset
+
+ הומומורפיזם, 
+\begin_inset Formula 
+\[
+\rho\left(g_{j}\left(h_{1}\left(\vector{\alpha}_{1}\right),\ldots,h_{m}\left(\vector{\alpha}\right)\right)+\left(g_{j}\right)\right)=g_{j}\left(\rho\left(y_{1}\right),\ldots\rho\left(y_{m}\right)\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=g_{j}\left(g_{j}\left(h_{1}\left(\vector x\right),\ldots,h_{m}\left(\vector x\right)\right)\right)+\left(f_{i}\right)
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula 
+\[
+g_{j}\left(g_{j}\left(h_{1}\left(\vector x\right),\ldots,h_{m}\left(\vector x\right)\right)\right)\in\left(f_{i}\right)
+\]
+
+\end_inset
+
+ולכן
+\begin_inset Formula 
+\[
+g_{j}\left(g_{j}\left(h_{1}\left(\vector x\right),\ldots,h_{m}\left(\vector x\right)\right)\right)
+\]
+
+\end_inset
+
+מתאפס על 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ סעיפים 
+\begin_inset Formula $2$
+\end_inset
+
+ ו 
+\begin_inset Formula $3$
+\end_inset
+
+ נשארים כתרגיל, המשחקים דומים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+)איזומורפיזם(.
+ העתקה רגולרית 
+\begin_inset Formula $f:X\ra Y$
+\end_inset
+
+ בין שתי קבוצות אלגבריות תקרא איזומורפיזם אם יש העתקה רגולרית 
+\begin_inset Formula $g:Y\ra X$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+f\circ g=Id_{Y}\ g\circ f=Id_{X}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+)הקטגוריה של יריעות אפיניות(.
+ קיבלנו קטגוריה שהאובייקטים בה הן קבוצות אלגבריות והמורפיזמים הם העתקות
+ רגולריות.
+ קטגוריה זו נקראת 
+\series bold
+הקטגוריה של יריעות אפיניות.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+הקטגוריה של יריעות אפיניות עם מורפיזמים ביניהן שקולה לקטגוריה של אלגברות
+ מצומצמות נוצרות סופית מעל 
+\begin_inset Formula $\c$
+\end_inset
+
+ עם הומומורפיזמים ביניהן.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא
+\end_layout
+
+\begin_layout Standard
+ההעתקה 
+\begin_inset Formula $\c\ra\left(x^{2}=y^{3}\right)$
+\end_inset
+
+ הנתונה ע"י 
+\begin_inset Formula $t\mapsto\left(t^{3},t^{2}\right)$
+\end_inset
+
+ היא רגולרית, חח"ע ועל, אך היא 
+\bar under
+אינה
+\bar default
+ איזומורפיזם.
+ אם היה הופכי, הוא היה נתון ע"י צמצום של פולינום 
+\begin_inset Formula $F\left(x,y\right)$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+\left(x,y\right)\mapsto F\left(x,y\right)\mapsto\left(F\left(x,y\right)^{3},F\left(x,y\right)^{2}\right)
+\]
+
+\end_inset
+
+שקול לזהות.
+ כלומר, 
+\begin_inset Formula 
+\[
+F\left(x,y\right)^{3}+\left(x^{2}-y^{3}\right)=x+\left(x^{2}-y^{3}\right)
+\]
+
+\end_inset
+
+ וכן 
+\begin_inset Formula 
+\[
+F\left(x,y\right)^{2}+\left(x^{2}-y^{3}\right)=y+\left(x^{2}-y^{3}\right)
+\]
+
+\end_inset
+
+אם 
+\begin_inset Formula $F\left(0,0\right)\neq0$
+\end_inset
+
+ זה לא ייתכן.
+ אבל אם 
+\begin_inset Formula $F\left(0,0\right)=0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $F^{2},F^{3}$
+\end_inset
+
+ לא יכולים להכיל גורמים ליניארים, בסתירה.
+ 
+\end_layout
+
+\begin_layout Standard
+נימוק אפשרי נוסף, הפעם בשפה אלגברית: הטענה היא שאלגברות מעל 
+\begin_inset Formula $\c$
+\end_inset
+
+ 
+\begin_inset Formula $\c\left[t\right]$
+\end_inset
+
+ והאלגברה 
+\begin_inset Formula $\nf{\c\left[x,y\right]}{\left\langle x^{2}-y^{3}\right\rangle }$
+\end_inset
+
+ איזומורפיות, אך זה לא נכון.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+הבחנה
+\end_layout
+
+\begin_layout Standard
+כל נקודה 
+\begin_inset Formula $x_{0}\in X$
+\end_inset
+
+ עבור יריעה אפינית 
+\begin_inset Formula $X$
+\end_inset
+
+ מביאה לנו אידיאל מקסימלי של 
+\begin_inset Formula $\o\left(X\right)$
+\end_inset
+
+ ע"י 
+\begin_inset Formula 
+\[
+\left\{ f\in\o\left(X\right)\mid f\left(x_{0}\right)=0\right\} 
+\]
+
+\end_inset
+
+וזהו אידיאל מקסימלי מכיוון שהוא הגרעין של 
+\begin_inset Formula 
+\[
+\o\left(X\right)\ra\c
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f\mapsto f\left(x_{0}\right)
+\]
+
+\end_inset
+
+וגם הכיוון השני נכון: כל אידיאל מקסימלי הוא מהצורה הזו.
+\end_layout
+
+\end_body
+\end_document
