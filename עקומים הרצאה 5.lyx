@@ -1,0 +1,805 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+עקומים אלגבריים – הרצאה חמישית
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+)קבוצות נחתכות רוחבית(.
+ נאמר שהקבוצות 
+\begin_inset Formula $Z\left(f\right)$
+\end_inset
+
+ ו 
+\begin_inset Formula $Z\left(g\right)$
+\end_inset
+
+ נחתכות רוחבית ב 
+\begin_inset Formula $p\in\p^{2}$
+\end_inset
+
+ אם 
+\begin_inset Formula $f\left(p\right)=g\left(p\right)$
+\end_inset
+
+ ו 
+\begin_inset Formula $\gr f\left(p\right)$
+\end_inset
+
+ ו 
+\begin_inset Formula $\gr g\left(p\right)$
+\end_inset
+
+ הם בלתי תלויים ליניארית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+האינטואיציה הגאומטרית לחיתוך רוחבי הוא שהמשיקים ל 
+\begin_inset Formula $Z\left(f\right)$
+\end_inset
+
+ ול 
+\begin_inset Formula $Z\left(g\right)$
+\end_inset
+
+ ב 
+\begin_inset Formula $p$
+\end_inset
+
+ זרים.
+\end_layout
+
+\begin_layout Theorem
+)גרסא של משפט בזו(.
+ יהיו 
+\begin_inset Formula $f,g\in\c\left[x,y,z\right]$
+\end_inset
+
+ פולינומים הומוגנים מדרגות 
+\begin_inset Formula $n,m$
+\end_inset
+
+ בהתאמה כך שכל נקודה ב 
+\begin_inset Formula $Z\left(f\right)\cap Z\left(g\right)$
+\end_inset
+
+ נחתכת רוחבית, אזי 
+\begin_inset Formula 
+\[
+\left|Z\left(f\right)\cap Z\left(g\right)\right|=nm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מטרה הרצאה זו תהיה להוכיח את המשפט.
+ נרצה להוכיח זאת ע"י כך שנוכיח זאת בנקודה ספציפית, ואז "להזיז מעט" את 
+\begin_inset Formula $f$
+\end_inset
+
+ ולהראות שזה רציף.
+ להוכיח בנקודה ספציפית זה פשוט, נסתכל על 
+\begin_inset Formula $f$
+\end_inset
+
+ ו 
+\begin_inset Formula $g$
+\end_inset
+
+ כמכפלות של גורמים ליניאריים ואז מספר החיתוכים יהיה 
+\begin_inset Formula $nm$
+\end_inset
+
+.
+ נוכיח כעת ביתר פירוט, וראשית נציג מספר למות עזר:
+\end_layout
+
+\begin_layout Lemma
+נניח כי 
+\begin_inset Formula $\pi:X\ra Y$
+\end_inset
+
+ היא העתקת כיסוי של יריעות ו 
+\begin_inset Formula $X$
+\end_inset
+
+ קומפקטי, אזי הפונקציה 
+\begin_inset Formula $Y\ra\n$
+\end_inset
+
+ המוגדרת ע"י 
+\begin_inset Formula $y\mapsto\left|\pi^{-1}\left(y\right)\right|$
+\end_inset
+
+ היא קבועה מקומית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\pi^{-1}\left(y\right)\ssq X$
+\end_inset
+
+ דיסקרטית ולכן 
+\begin_inset Formula $\left|\pi^{-1}\left(y\right)\right|<\infty$
+\end_inset
+
+.
+ צריך להראות ש 
+\begin_inset Formula $\left\{ y\mid\left|\pi^{-1}\left(y\right)\right|=7\right\} $
+\end_inset
+
+ היא קבוצה פתוחה וסגורה.
+ 
+\bar under
+זוהי קבוצה פתוחה
+\bar default
+ כי נכתוב 
+\begin_inset Formula $\pi^{-1}\left(y\right)=x_{1},\ldots,x_{7}$
+\end_inset
+
+.
+ אזי, יש סביבה 
+\begin_inset Formula $V_{i}$
+\end_inset
+
+ של 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $\pi\mid_{V_{i}}$
+\end_inset
+
+ הוא הומאומורפיזם.
+ תהי 
+\begin_inset Formula 
+\[
+U=\bigcap_{i=1}^{7}\pi\left(V_{i}\right)
+\]
+
+\end_inset
+
+סביבה פתוחה, ולכן 
+\begin_inset Formula $V_{i}\cap\pi^{-1}\left(U\right)\os{\ra}{\pi}U$
+\end_inset
+
+ הומאומורפיזם, ולכן 
+\begin_inset Formula 
+\[
+\left|\pi^{-1}\left(z\right)\right|\geq7
+\]
+
+\end_inset
+
+ לכל 
+\begin_inset Formula $z\in U$
+\end_inset
+
+.
+ מנימוק דומה נקבל את הכיוון השני.
+ 
+\bar under
+כעת זוהי גם קבוצה סגורה
+\bar default
+ כי היא המשלים של האיחוד של 
+\begin_inset Formula $\left\{ y\mid\left|\pi^{-1}\left(y\right)\right|\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+)פונקציה אטלית( פונקציה 
+\begin_inset Formula $f\in C^{1}$
+\end_inset
+
+ בין יריעות 
+\begin_inset Formula $M$
+\end_inset
+
+ ו 
+\begin_inset Formula $N$
+\end_inset
+
+ נקראת אטלית ב 
+\begin_inset Formula $p\in M$
+\end_inset
+
+ אם 
+\begin_inset Formula $df\mid_{p}:T_{p}M\ra T_{f\left(p\right)}N$
+\end_inset
+
+ היא איזומורפיזם.
+ העתקה נקראת אטלית אם היא אטלית בכל נקודה.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+לפי משפט הפונקציה ההפוכה, קל לראות שאם העתקה היא אטלית אזי היא הומומורפיזם
+ מקומי.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+אם 
+\begin_inset Formula $M$
+\end_inset
+
+ קומפקטית ו 
+\begin_inset Formula $f$
+\end_inset
+
+ אטלית, אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ היא כיסוי.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+על מנת להוכיח את המשפט שהצגנו בתחילת ההרצאה, נצטרך לחשב הרבה נגזרות.
+ לכן נציג את הטריק הבא:
+\end_layout
+
+\begin_layout Claim
+תהי 
+\begin_inset Formula $D=\nf{\c\left[\e\right]}{\e^{2}}$
+\end_inset
+
+, אזי
+\begin_inset Formula 
+\[
+\left(a+b\e\right)^{n}=a^{n}+\e na^{n-1}b
+\]
+
+\end_inset
+
+כעת אם 
+\begin_inset Formula $f$
+\end_inset
+
+ פולינום, אזי 
+\begin_inset Formula 
+\[
+f\left(a+b\e\right)=f\left(a\right)+\e f'\left(a\right)b
+\]
+
+\end_inset
+
+ואם 
+\begin_inset Formula $f\in\c\left[x_{1},\ldots,x_{n}\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula 
+\[
+f\left(\overrightarrow{a}+\overrightarrow{b}\e\right)=f\left(\overrightarrow{a}\right)+\e\left\langle \gr f\left(\overrightarrow{a}\right),\overrightarrow{b}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נשם לב כעת שניתן להציג פרמטריזציה של פולינומים הומוגנים מדרגה 
+\begin_inset Formula $n$
+\end_inset
+
+ ע"י 
+\begin_inset Formula $\p^{\binom{n+2}{2}-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+הקבוצה
+\begin_inset Formula 
+\[
+\left\{ \left(f,g\right)\in\p^{\binom{n+2}{2}-1}.\times\p^{\binom{m+2}{2}-1}\mid\text{each intersection point is transversely}\right\} 
+\]
+
+\end_inset
+
+היא פתוחה, צפופה וקשירה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left\{ \left(f,g,p\right)\in\p^{\binom{n+2}{2}-1}.\times\p^{\binom{m+2}{2}-1}\times\p^{2}\mid p\,\text{is a non-transervers intersection}\right\} 
+\]
+
+\end_inset
+
+היא סגורה.
+ ההטלה 
+\begin_inset Formula $\pi:X\ra\p^{N}\times\p^{M}$
+\end_inset
+
+ היא קונסטרוקטיבית, סגורה ולא הכל, ולכן 
+\begin_inset Formula $\pi\left(X\right)^{c}$
+\end_inset
+
+ פתוחה, צפופה וקשירה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula 
+\[
+Y=\left\{ \left(f,g,p\right)\in\p^{\binom{n+2}{2}-1}.\times\p^{\binom{m+2}{2}-1}\times\p^{2}\mid\text{\ensuremath{f,g} intersect transversely in \ensuremath{Z\left(f\right)\cap Z\left(g\right)}}\right\} 
+\]
+
+\end_inset
+
+ היא יריעה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נסמן 
+\begin_inset Formula $N=\binom{n+2}{2}-1,\ M=\binom{m+2}{2}-1$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Y$
+\end_inset
+
+ היא קבוצה אפסים של החיתוך של ההעתקה 
+\begin_inset Formula 
+\[
+\left(f,g,p\right)\overset{\phi}{\mapsto}\left(f\left(p\right),g\left(p\right)\right)
+\]
+
+\end_inset
+
+עם 
+\begin_inset Formula $\pi\left(X\right)^{c}\times\p^{2}$
+\end_inset
+
+.
+ מספיק להראות שהנגזרת של 
+\begin_inset Formula $\phi$
+\end_inset
+
+ היא על.
+ נשתמש בטריק מקודם, 
+\begin_inset Formula 
+\[
+\left(f+\e F,g+\e G,p+\e P\right)\mapsto\left(\left(f+\e F\right)\left(p+\e P\right),\left(g+\e G\right)\left(p+\e P\right)\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(f+\e F\right)\left(p+\e P\right)=f\left(p+\e P\right)+\e F\left(p+\e P\right)=f\left(p\right)+\e\left\langle \gr f\left(p\right),P\right\rangle +\e F\left(p\right)
+\]
+
+\end_inset
+
+כעת הנגזרת של 
+\begin_inset Formula $\phi$
+\end_inset
+
+ היא ההעתקה 
+\begin_inset Formula 
+\[
+\left(F,G,p\right)\mapsto\left(\left\langle \gr f\left(p\right),P\right\rangle +F\left(p\right),\left\langle \gr g\left(p\right),P\right\rangle +G\left(p\right)\right)
+\]
+
+\end_inset
+
+ והצמצום ל 
+\begin_inset Formula $\left(0,0,p\right)$
+\end_inset
+
+ הוא על, מכיוון ש 
+\begin_inset Formula $\gr f\left(p\right)$
+\end_inset
+
+ ו 
+\begin_inset Formula $\gr g\left(p\right)$
+\end_inset
+
+ הם בלתי תלויים ליניארית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+ההטלה 
+\begin_inset Formula 
+\[
+Y\overset{\pi}{\mapsto}\p^{N}\times\p^{M}
+\]
+
+\end_inset
+
+ היא אטלית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נגדיר 
+\begin_inset Formula $Y$
+\end_inset
+
+ כמו בלמה הקודמת.
+ אזי 
+\begin_inset Formula 
+\[
+T_{\left(f,g,p\right)}Y=\left\{ \left(F,G,p\right)\mid\left\langle \gr f\left(p\right),p\right\rangle +F\left(p\right)=\left\langle \gr g\left(p\right),p\right\rangle +G\left(p\right)=0\right\} \overset{d\pi}{\ra}T_{f}\p^{N}\times T_{g}\p^{M}
+\]
+
+\end_inset
+
+מכיוון שיש להם אותו המימד, מספיק להוכיח ש 
+\begin_inset Formula $d\pi$
+\end_inset
+
+ היא על.
+ בהנתן 
+\begin_inset Formula $f,g,p,F,G$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+d\pi^{-1}\left(F,G\right)=\left(F,G,p\right)
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $p$
+\end_inset
+
+ פתרון למערכת 
+\begin_inset Formula 
+\begin{align*}
+\left\langle \gr f\left(p\right),p\right\rangle  & =-F\left(p\right)\\
+\left\langle \gr g\left(p\right),p\right\rangle  & =-G\left(p\right)
+\end{align*}
+
+\end_inset
+
+ופתרון זה קיים מכיוון ש 
+\begin_inset Formula $\gr f\left(p\right)$
+\end_inset
+
+ ו 
+\begin_inset Formula $\gr g\left(p\right)$
+\end_inset
+
+ בלתי תלויים ליניארית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula 
+\begin{align*}
+Y & =\left\{ \left(f,g,p\right)\in\p^{\binom{n+2}{2}-1}.\times\p^{\binom{m+2}{2}-1}\times\p^{2}\mid\text{\ensuremath{f,g} intersect transversely in \ensuremath{Z\left(f\right)\cap Z\left(g\right)}}\right\} \ra\\
+\ra & \left\{ \left(f,g\right)\in\p^{\binom{n+2}{2}-1}.\times\p^{\binom{m+2}{2}-1}\mid\text{\ensuremath{f,g} intersect transversely}\right\} 
+\end{align*}
+
+\end_inset
+
+היא העתקת כיסוי.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+תהי 
+\begin_inset Formula $\pi:\p^{N}\times\p^{M}\times\p^{2}\ra\p^{N}\times\p^{N}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $U$
+\end_inset
+
+ היא איחוד של יריעות עם שפה )כלומר צמצום של הזוויות בין המישורים המשיקים
+ בנקודות חיתוך( 
+\begin_inset Formula $U=\bigcup U_{i}$
+\end_inset
+
+.
+ לכל 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $\pi^{-1}\left(U_{i}\right)$
+\end_inset
+
+ היא קומפקטית, 
+\begin_inset Formula 
+\[
+\pi:\pi^{-1}\left(U_{i}\right)\ra U_{i}
+\]
+
+\end_inset
+
+ היא אטלית ולכן כיסוי.
+ לכן, 
+\begin_inset Formula 
+\[
+\pi:\bigcup\pi^{-1}\left(U_{i}\right)\ra\bigcup U_{i}=U
+\]
+
+\end_inset
+
+ היא העתקת כיסוי.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת נסיים עם הוכחת משפט בזו:
+\end_layout
+
+\begin_layout Proof
+נתונים 
+\begin_inset Formula $n,m$
+\end_inset
+
+.
+ נבחר שני נקודות 
+\begin_inset Formula $p\neq q\in\p^{2}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\ell_{1},\ell_{2},\ldots,\ell_{n}$
+\end_inset
+
+ ישרים העוברים דרך 
+\begin_inset Formula $p$
+\end_inset
+
+, 
+\begin_inset Formula $\ell_{i}\neq\overline{pq}$
+\end_inset
+
+.
+ יהיו 
+\begin_inset Formula $\lambda_{1},\ldots,\lambda_{m}$
+\end_inset
+
+ ישרים העוברים דרך 
+\begin_inset Formula $q$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $\lambda_{j}\neq\overline{pq}$
+\end_inset
+
+.
+ כעת יהיו 
+\begin_inset Formula 
+\begin{align*}
+X & =\bigcup\ell_{i}\\
+Y & =\bigcup\lambda_{j}
+\end{align*}
+
+\end_inset
+
+ומתקיים 
+\begin_inset Formula $\deg X=n,\ \deg Y=m$
+\end_inset
+
+ ו 
+\begin_inset Formula $\ell_{i}\cap\lambda_{j}$
+\end_inset
+
+ נחתכים רוחבית בנקודה אחת.
+\end_layout
+
+\end_body
+\end_document

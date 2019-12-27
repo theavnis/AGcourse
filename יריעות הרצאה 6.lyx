@@ -1,0 +1,568 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage[all,cmtip]{xy}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+יריעות אלגבריות – הרצאה שישית
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vector}[1]{\overrightarrow{#1}}
+{\overrightarrow{#1}}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+מורפיזם 
+\begin_inset Formula $f:X\ra Y$
+\end_inset
+
+ נקרא סגור אם לכל קבוצה סגורה זריצקי 
+\begin_inset Formula $Z\ss X$
+\end_inset
+
+ התמונה 
+\begin_inset Formula $f\left(Z\right)$
+\end_inset
+
+ היא סגורה זריצקי.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+כל העתקה מיריעה פרוייקטיבית היא סגורה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+לפני הוכחת המשפט נוכיח למה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+יהיו 
+\begin_inset Formula $g_{1},\ldots,g_{r}$
+\end_inset
+
+ ב 
+\begin_inset Formula $\c\left[x_{0},\ldots,x_{n}\right]$
+\end_inset
+
+, אזי התנאים הבאים שקולים:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+ל 
+\begin_inset Formula $g_{1},\ldots,g_{r}$
+\end_inset
+
+ אין פתרונות ב 
+\begin_inset Formula $\p^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+הפתרונות היחידים למערכת 
+\begin_inset Formula $g_{i}=0$
+\end_inset
+
+ ב 
+\begin_inset Formula $\c^{n+1}$
+\end_inset
+
+ זה 
+\begin_inset Formula $\left(0,\ldots,0\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x_{0},\ldots,x_{n}\in\sqrt{\left(g_{i}\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+קיים 
+\begin_inset Formula $N$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $x_{0}^{N},\ldots,x_{n}^{N}\in\left(g_{i}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+קיים 
+\begin_inset Formula $M$
+\end_inset
+
+ כך שקבוצת הפולינומים ההומוגנים מדרגה 
+\begin_inset Formula $M$
+\end_inset
+
+ מוכלת ב 
+\begin_inset Formula $\left(g_{i}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+קיים 
+\begin_inset Formula $M$
+\end_inset
+
+ כך שאוסף הפולינומים מהצורה 
+\begin_inset Formula $x_{0}^{a_{0}}\cdots x_{n}^{a_{n}}\cdot g$
+\end_inset
+
+ עבור 
+\begin_inset Formula $a_{0}+\cdots+a_{n}=M-\deg g$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+)הוכחת המשפט(.
+ תהי 
+\begin_inset Formula $f:X\ra Y$
+\end_inset
+
+ עבור 
+\begin_inset Formula $X\ssq\p^{n}$
+\end_inset
+
+ ו 
+\begin_inset Formula $Z\ss X$
+\end_inset
+
+ סגורה.
+ צריך להראות ש 
+\begin_inset Formula $f\left(Z\right)$
+\end_inset
+
+ סגורה.
+ מספיק להוכיח זאת עבור 
+\begin_inset Formula $Z=X$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $X\ssq\p^{n}\times Y$
+\end_inset
+
+ ו 
+\begin_inset Formula $f$
+\end_inset
+
+ היא ההטלה, כי 
+\begin_inset Formula 
+\[
+X\cong\left\{ \left(x,y\right)\mid f\left(x\right)=y\right\} \ssq\p^{n}\times Y
+\]
+
+\end_inset
+
+ואז 
+\begin_inset Formula $f$
+\end_inset
+
+ היא ההטלה 
+\begin_inset Formula $\left\{ \left(x,y\right)\mid f\left(x\right)=y\right\} \os{\ra}{\pi}Y$
+\end_inset
+
+ )כלומר, כל העתקה ניתן לייצג כהטלה(.
+ כמו כן ניתן להניח ש 
+\begin_inset Formula $Y=\c^{m}$
+\end_inset
+
+ )כי לא דרשנו ש 
+\begin_inset Formula $f$
+\end_inset
+
+ על, לכן 
+\begin_inset Formula $X\ra Y\ssq\c^{m}$
+\end_inset
+
+(.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ נתון כקבוצת האפסים של פולינומים 
+\begin_inset Formula $f_{i}\left(x,y\right)$
+\end_inset
+
+ כאשר כל 
+\begin_inset Formula $f_{i}\left(x,y\right)$
+\end_inset
+
+ הוא הומוגני מדרגה 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+ בקוארדינטת 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\pi\left(X\right)$
+\end_inset
+
+ היא קבוצת ה 
+\begin_inset Formula $y_{0}\in\c^{m}$
+\end_inset
+
+ כך של 
+\begin_inset Formula $f\left(x,y_{0}\right)$
+\end_inset
+
+ יש שורש אפס משותף.
+ מהלמה, זוהי קבוצת ה 
+\begin_inset Formula $y_{0}\in\c^{m}$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $x^{I}\cdot f_{i}\left(x,y_{0}\right)$
+\end_inset
+
+ פורשת את המרחב הוקטורי של פולינומים הומוגנים מדרגה 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ נכתוב את הפולינומים 
+\begin_inset Formula 
+\[
+x^{I}\cdot f_{1}\left(x,y_{0}\right)
+\]
+
+\end_inset
+
+ בבסיס קבוע.
+ 
+\begin_inset Formula 
+\[
+X^{I_{1}}\cdot f_{1}=\left(\cdots\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X^{I_{2}}\cdot f_{1}=\left(\cdots\right)
+\]
+
+\end_inset
+
+וקטור עם איברים פולינומים ב 
+\begin_inset Formula $y_{0}$
+\end_inset
+
+.
+ נתבונן בהעתקה 
+\begin_inset Formula 
+\[
+y\mapsto M\left(y\right)\in Mat_{A,B}\left(\c\right)
+\]
+
+\end_inset
+
+ התנאי 
+\begin_inset Formula 
+\[
+\pi\left(X\right)=\left\{ y\mid x^{I}f_{i}\ \text{not span}\right\} =
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left\{ y\mid\text{rows of \ensuremath{M\left(Y\right)} not span}\right\} =\left\{ y\mid\text{rank}M<B\right\} 
+\]
+
+\end_inset
+
+וזהו תנאי פולינומיאלי.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+אם 
+\begin_inset Formula $X$
+\end_inset
+
+ פרוייקטיבי ו 
+\begin_inset Formula $Y$
+\end_inset
+
+ אפיני, כל מורפיזם 
+\begin_inset Formula $X\ra Y$
+\end_inset
+
+ הוא קבוע מקומית )כלומר קבוע על כל רכיב קשירות(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+בלי הגבלת הכלליות נניח 
+\begin_inset Formula $Y=\c^{n}$
+\end_inset
+
+, ולמעשה מספיק להניח 
+\begin_inset Formula $Y=\c$
+\end_inset
+
+ כי אם ההעתקה קבועה על כל קוארדינטה אז היא קבועה.
+ 
+\begin_inset Formula $f\left(X\right)$
+\end_inset
+
+ סגורה זריצקי, ולכן ניתן להרחיב את 
+\begin_inset Formula $f$
+\end_inset
+
+ להעתקה 
+\begin_inset Formula 
+\[
+f:X\ra\c\ra\p^{1}\left(\c\right)
+\]
+
+\end_inset
+
+ההעתקה סגורה אבל לא הכל )כי הנקודה באינסוף לא מתקבלת(.
+ לכן בהכרח 
+\begin_inset Formula $f\left(X\right)$
+\end_inset
+
+ סופית )כי הקבוצות הסגורות ב 
+\begin_inset Formula $\p^{1}\left(\c\right)$
+\end_inset
+
+ הן הכל או הקבוצות הסופיות(.
+ אבל 
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה ולכן קבועה מקומית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+)הוכחה נוספת(.
+ 
+\begin_inset Formula $f\left(X\right)$
+\end_inset
+
+ הוא קונסטרוקטיבית ב 
+\begin_inset Formula $\c$
+\end_inset
+
+ ולכן קומפקטית בטופולוגיה האוקלידית ולכן סופית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נניח כי 
+\begin_inset Formula $X\ssq\p^{n}$
+\end_inset
+
+ היא יריעה פרוייקטיבית.
+ נניח כי 
+\begin_inset Formula $f_{0},\ldots,f_{r}\in\c\left[x_{0},\ldots,x_{n}\right]$
+\end_inset
+
+ הם פולינומים הומוגנים מאותה דרגה ו 
+\begin_inset Formula 
+\[
+Z\left(f_{0},\ldots,f_{r}\right)\cap X=\emptyset
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X\ra\p^{r}
+\]
+
+\end_inset
+
+אזי
+\begin_inset Formula 
+\[
+\left[x\right]\mapsto\left[f_{0}\left(x\right):\ldots:f_{r}\left(x\right)\right]
+\]
+
+\end_inset
+
+מוגדרת היטב והיא דוגמא למורפיזם 
+\begin_inset Formula $X\ra\p^{r}$
+\end_inset
+
+.
+ מסתבר שזוהי הצורה הכללית להעתקות למרחבים פרוייקטיבים.
+ 
+\end_layout
+
+\end_body
+\end_document

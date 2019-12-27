@@ -1,0 +1,936 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ind}{\text{ind}}
+{\text{ind}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+עקומים אלגבריים – הרצאה שביעית
+\end_layout
+
+\begin_layout Subsection*
+קצת מוטיבציה היסטורית
+\end_layout
+
+\begin_layout Standard
+נתחיל מלדבר על אינטגרלים.
+ נתבונן באינטגרל 
+\begin_inset Formula 
+\[
+\intop_{0}^{x}\frac{dt}{\sqrt{1-t^{2}}}=\arcsin\left(x\right)=A\left(x\right)
+\]
+
+\end_inset
+
+אמנם 
+\begin_inset Formula $A\left(x\right)$
+\end_inset
+
+ טרנסצנדנטית, אבל היא מקיימת יחס אלגברי: 
+\begin_inset Formula 
+\[
+A\left(x\right)+A\left(y\right)=A\left(x\sqrt{1-y^{2}}+y\sqrt{1-x^{2}}\right)
+\]
+
+\end_inset
+
+ניסו להבין האם ניתן להכליל התנהגויות כאלו.
+ התחילו להסתכל על דברים מהצורה 
+\begin_inset Formula 
+\[
+\intop\frac{dt}{\sqrt{f\left(\ast\right)}}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $f$
+\end_inset
+
+ פולינום מדרגה שלישית.
+ מהר הבינו שמדובר ביצור מוזר מאוד.
+ באופן כללי, התקשו למצוא תשובה, אך הצליחו לעשות מעט הכללות.
+ הבחנה ראשונה היא שהפונקציה שלנו היא בעצם מעגל.
+ היעד הבא זה להכליל לאליפסות, וכך נולדו האינטגרלים האליפטים: 
+\begin_inset Formula 
+\[
+\intop\frac{\sqrt{1-k^{2}x^{2}}}{\sqrt{1-x^{2}}}dx=\intop\frac{\left(1-k^{2}x^{2}\right)dx}{\sqrt{\left(1-x^{2}\right)\left(1-k^{2}x^{2}\right)}}=I\left(x\right)
+\]
+
+\end_inset
+
+ לג'נדר קיבל נוסחא מהצורה: 
+\begin_inset Formula 
+\[
+I\left(x\right)+I\left(y\right)=I\left(z\right)
+\]
+
+\end_inset
+
+ כאשר 
+\begin_inset Formula $z$
+\end_inset
+
+ פונקציה רציונלית ב 
+\begin_inset Formula $x,\sqrt{\left(1-x^{2}\right)\left(1-k^{2}x^{2}\right)},y,\sqrt{\left(1-y^{2}\right)\left(1-k^{2}y^{2}\right)}$
+\end_inset
+
+.
+ אח"כ, אוילר הוכיח נוסחא דומה עבור אינטגרלים מהצורה 
+\begin_inset Formula 
+\[
+\intop\frac{dt}{\sqrt{f\left(t\right)}}
+\]
+
+\end_inset
+
+עבור 
+\begin_inset Formula $f$
+\end_inset
+
+ ממעלה שלישית.
+ לאחר כמה שנים 
+\begin_inset Formula $(1910)$
+\end_inset
+
+, אבל הוכיח שאם 
+\begin_inset Formula $F\left(x,y\right)$
+\end_inset
+
+ פולינום מדרגה 
+\begin_inset Formula $d$
+\end_inset
+
+ ו 
+\begin_inset Formula $y\left(x\right)$
+\end_inset
+
+ רציפה המקיימת 
+\begin_inset Formula $F\left(x,y\left(x\right)\right)=0$
+\end_inset
+
+ ו 
+\begin_inset Formula $r\left(x,y\right)$
+\end_inset
+
+ פונקציה רציונלית ו 
+\begin_inset Formula $I\left(x\right)$
+\end_inset
+
+ אינטגרל אבלי: 
+\begin_inset Formula 
+\[
+I\left(x\right):=\intop_{0}^{x}r\left(t,y\left(t\right)\right)dt
+\]
+
+\end_inset
+
+אזי, לכל 
+\begin_inset Formula $\binom{d+1}{2}+1$
+\end_inset
+
+ משתנים 
+\begin_inset Formula $x_{1},\ldots,x_{\binom{d-1}{2}+1}$
+\end_inset
+
+ קיימים 
+\begin_inset Formula $y_{1},\ldots,y_{\binom{d-1}{2}+1}$
+\end_inset
+
+ התלויים רציונלית ב 
+\begin_inset Formula $x_{i},y\left(x_{i}\right)$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+\sum I\left(x_{j}\right)=\sum I\left(y_{j}\right)
+\]
+
+\end_inset
+
+נוכיח משפט זה בהמשך הסמסטר.
+ בנתיים נחזור לדברים אמיתיים.
+ 
+\end_layout
+
+\begin_layout Section*
+יעקוביאנים ודיפרנציאלים
+\end_layout
+
+\begin_layout Standard
+נזכר במושג של שדות וקטורים רגולריים על 
+\begin_inset Formula $\c^{n}$
+\end_inset
+
+.
+ אלו דברים מהצורה 
+\begin_inset Formula 
+\[
+\sum f_{i}\pd{}{x_{i}}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ הם פולינומים.
+ כעת תהי 
+\begin_inset Formula $X\ssq\c^{n}$
+\end_inset
+
+ יריעה אלגברית אפינית ולא סינגולרית, אזי בכל נקודה יש מרחב משיק, ושדה וקטורי
+ על 
+\begin_inset Formula $X$
+\end_inset
+
+ ניתן ע"י 
+\begin_inset Formula 
+\[
+\sum f_{i}\pd{}{x_{i}}
+\]
+
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $x_{0}\in X$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula 
+\[
+\sum f_{i}\left(x_{0}\right)\pd{}{x_{i}}\in T_{x_{0}}X
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא על 
+\begin_inset Formula $\p^{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נוכל לחשוב על 
+\begin_inset Formula $\p^{1}$
+\end_inset
+
+ כעל יריעה.
+ איך יראה השדה הוקטורי מעליה? זהו שדה וקטורי 
+\begin_inset Formula $V$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+V\mid_{\p_{0}^{1}},\ V\mid_{\p_{1}^{1}}
+\]
+
+\end_inset
+
+ הם רגולרים.
+ כעת 
+\begin_inset Formula 
+\[
+\p_{0}^{1}=\left\{ \left[1:z\right]\right\} \rightsquigarrow\pd{}z
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\p_{1}^{1}=\left\{ \left[w:1\right]\right\} \rightsquigarrow\pd{}w
+\]
+
+\end_inset
+
+שדה וקטורי על 
+\begin_inset Formula $\p^{1}$
+\end_inset
+
+ הוא זוג 
+\begin_inset Formula 
+\[
+f_{0}\left(z\right)\pd{}z,f_{1}\left(w\right)\pd{}w
+\]
+
+\end_inset
+
+שמתלכדים על 
+\begin_inset Formula 
+\[
+\p_{0}^{1}\cap\p_{1}^{1}
+\]
+
+\end_inset
+
+כעת נשאל על החיתוך, 
+\begin_inset Formula 
+\[
+\pd{}z=g\left(w\right)\pd{}w
+\]
+
+\end_inset
+
+מהו 
+\begin_inset Formula $g\left(w\right)$
+\end_inset
+
+? נכתוב 
+\begin_inset Formula $z=\frac{1}{w}$
+\end_inset
+
+, ואז: 
+\begin_inset Formula 
+\[
+1=\left\langle \pd{}z,z\right\rangle =\left\langle g\left(w\right)\pd{}w,\frac{1}{w}\right\rangle =g\left(w\right)-\frac{1}{w^{2}}
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula 
+\[
+g\left(w\right)=-w^{2}
+\]
+
+\end_inset
+
+ בפרט, 
+\begin_inset Formula $\pd{}z$
+\end_inset
+
+ מתרחב לשדה וקטורי רגולרי: 
+\begin_inset Formula 
+\[
+\left(\pd{}z,-w^{2}\pd{}w\right)
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula $z\pd{}z$
+\end_inset
+
+ מתרחב לשדה וקטורי רגולרי: 
+\begin_inset Formula 
+\[
+\left(z\pd{}z,-w\pd{}w\right)
+\]
+
+\end_inset
+
+ ו 
+\begin_inset Formula $z^{2}\pd{}z$
+\end_inset
+
+ מתרחב לשדה וקטורי רגולרי 
+\begin_inset Formula 
+\[
+\left(z^{2}\pd{}z,-\pd{}w\right)
+\]
+
+\end_inset
+
+ונוכיח שכל שדה וקטורי על היריעה הוא צירוף ליניארי של השדות האלו.
+\end_layout
+
+\begin_layout Standard
+נעבור ל "שפה דואלית":
+\end_layout
+
+\begin_layout Subsection*
+דיפרנציאלים רגולריים על 
+\begin_inset Formula $\c^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+דיפרנציאל רגולרי על 
+\begin_inset Formula $\c^{n}$
+\end_inset
+
+ הוא מהצורה 
+\begin_inset Formula $\sum f_{i}dx_{i}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ פולינומים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+אם 
+\begin_inset Formula $f$
+\end_inset
+
+ פונקציה על 
+\begin_inset Formula $\c^{n}$
+\end_inset
+
+ אזי יש לנו את 
+\begin_inset Formula $df$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}:\c^{n}\ra\c$
+\end_inset
+
+, 
+\begin_inset Formula $dx_{i}$
+\end_inset
+
+ דיפרנציאל.
+ 
+\begin_inset Formula 
+\[
+dx_{i}\mid_{p_{0}}\in\left(T_{p_{0}}\c^{n}\right)^{\ast}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $T_{p_{0}}\c^{n}\cong\c^{n}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+dx_{i}\mid_{p_{0}}\left(v_{1},\ldots,v_{n}\right)=v_{i}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+d\left(fg\right)=fdg+gdf
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+אם 
+\begin_inset Formula $X\ssq\c^{n}$
+\end_inset
+
+ יריעה אפינית, כל דיפרנציאל על 
+\begin_inset Formula $X$
+\end_inset
+
+ ניתן ע"י 
+\begin_inset Formula $\sum f_{i}dx_{i}$
+\end_inset
+
+ )בניגוד למקרה של שדות וקטורים, כאן אין צורך בתנאי נוסף(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+\begin_inset Formula $dx_{i}$
+\end_inset
+
+ הם דיפרנציאלים על 
+\begin_inset Formula $\c^{n}$
+\end_inset
+
+.
+ כעת אם 
+\begin_inset Formula $X\ssq\c^{n}$
+\end_inset
+
+ נוכל לצמצם את 
+\begin_inset Formula $dx_{i}$
+\end_inset
+
+ ולהסתכל עליו כעל דיפרנציאל על 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ הוא יוגדר ע"י כך שלכל נקודה 
+\begin_inset Formula $p\in X$
+\end_inset
+
+ ווקטור משיק 
+\begin_inset Formula $v\in T_{p}X\ss T_{p}\c^{n}$
+\end_inset
+
+, יתקיים 
+\begin_inset Formula 
+\[
+dx_{i}\mid_{p}\left(v\right)=v_{i}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ הוא הרכיב ה 
+\begin_inset Formula $i$
+\end_inset
+
+ של 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ כלומר ניתן לדבר אך ורק על נקודות על היריעה ועל וקטורים במרחב המשיק לנקודה,
+ ואז הדיפרנציאל יחזיר את הרכיב המתאים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת נחזור לדוגמא שלנו:
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא על 
+\begin_inset Formula $\p^{1}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dz=-\frac{1}{w^{2}}dw
+\]
+
+\end_inset
+
+כי 
+\begin_inset Formula 
+\[
+1=\left\langle dz,\pd{}z\right\rangle =\left\langle h\left(w\right)dw,-w^{2}\pd{}w\right\rangle =-w^{2}h\left(w\right)\left\langle dw,\pd{}w\right\rangle 
+\]
+
+\end_inset
+
+ונטען כי אם 
+\begin_inset Formula $\left(f\left(z\right)dz,g\left(w\right)dw\right)$
+\end_inset
+
+ דיפרנציאל רגולרי על 
+\begin_inset Formula $\p^{1}$
+\end_inset
+
+, אזי מתקיים היחס הבא: 
+\begin_inset Formula 
+\[
+g\left(w\right)dw=-f\left(\frac{1}{w}\right)\cdot\frac{1}{w^{2}}dw
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula 
+\[
+g\left(w\right)=-f\left(\frac{1}{w}\right)\cdot\frac{1}{w^{2}}
+\]
+
+\end_inset
+
+ואין כאלו! )מלבד אפס(.
+ לכן, 
+\bar under
+אין דיפרנציאלים רגולריים על 
+\begin_inset Formula $\p^{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remarks
+הדוגמא האחרונה עלולה לגרום למחשבה שהשפה הדיפרנציאלית היא שגוייה.
+ המצב הוא הפוך )"הבעיה ב 
+\begin_inset Formula $\p^{1}$
+\end_inset
+
+"(.
+ אם 
+\begin_inset Formula $C$
+\end_inset
+
+ עקום פרוייקטיבי לא סינגולרי מגנוב גדול/שווה ל 
+\begin_inset Formula $2$
+\end_inset
+
+, אזי על 
+\begin_inset Formula $C$
+\end_inset
+
+ 
+\bar under
+אין
+\bar default
+ שדות וקטורים ודווקא יש דיפרנציאלים רגולרים.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+יהי שדה וקטורי ותהי 
+\begin_inset Formula $p$
+\end_inset
+
+ נקודה בה השדה מתאפס.
+ סביב הנקודה, נבחר מעגל קטן ונתבונן בעקום הנוצר משינוי הוקטורים עליו.
+ לדוגמא, עבור 
+\begin_inset Formula $z\pd{}z$
+\end_inset
+
+ נקבל הקפת מעגל אחת.
+ במצב זה, נאמר שהאינדקס הוא 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ עבור 
+\begin_inset Formula $z^{2}\pd{}z$
+\end_inset
+
+ נגלה שיש שתי הקפות מעגל, ולכן האינדקס הוא 
+\begin_inset Formula $2$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+משפט מטופולוגיה אלגברית מראה שסכום האינדקסים על יריעה אינו תלוי בשדות הוקטורים
+ עצמם, והוא קבוע ושווה למאפיין אוילר:
+\end_layout
+
+\begin_layout Theorem
+)פואנקרה-הופף(.
+ 
+\begin_inset Formula 
+\[
+\sum_{x\in C}\ind\left(V,x\right)=\chi\left(C\right)
+\]
+
+\end_inset
+
+ לכל שדה וקטורי 
+\begin_inset Formula $V$
+\end_inset
+
+ על 
+\begin_inset Formula $C$
+\end_inset
+
+ )נזכיר שיש מספר סופי של נקודות בהן השדה הוקטורי מתאפס(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+אם 
+\begin_inset Formula $\chi\left(C\right)<0$
+\end_inset
+
+ אזי אין שדות וקטורים רגולרים על 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+אם 
+\begin_inset Formula $\omega$
+\end_inset
+
+ דיפרנציאל על 
+\begin_inset Formula $\c^{n}$
+\end_inset
+
+ ועקום 
+\begin_inset Formula $\gamma:\left[0,1\right]\ra\c^{n}$
+\end_inset
+
+ אז האינטגרל 
+\begin_inset Formula $\intop\limits_{\gamma}\omega=\intop\limits_{0}^{1}\omega_{\gamma\left(t\right)}\left(\dot{\gamma}\left(t\right)\right)dt$
+\end_inset
+
+ מוגדר היטב )לא תלוי בפרמטריזציה(.
+ ב 
+\begin_inset Formula $\c$
+\end_inset
+
+, זה מוכר לנו כאינטגרל מסילתי מרוכב.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא
+\end_layout
+
+\begin_layout Standard
+נתבונן בעקום 
+\begin_inset Formula $C=Z\left(y^{2}-f\left(x\right)\right)$
+\end_inset
+
+, נבחר עקום מהצורה 
+\begin_inset Formula $\gamma\left(t\right)=\left(t,\e\left(t\right)\right)$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $\gamma\left(t\right)\in C$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+\intop_{\gamma}\frac{dx}{y}=\intop_{0}^{1}\frac{dt}{\e\left(t\right)}=\intop_{0}^{1}\frac{dt}{\sqrt{f\left(t\right)}}
+\]
+
+\end_inset
+
+וכך הגענו לאינטגרלים מהמוטיבציה בתחילת השיעור.
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+ פולינום ממעלה שלישית, 
+\begin_inset Formula $C=Z\left(y^{2}-f\left(x\right)\right)$
+\end_inset
+
+ הוא טורוס.
+ אם 
+\begin_inset Formula $\w$
+\end_inset
+
+ תבנית דיפרנציאלית, אזי 
+\begin_inset Formula 
+\[
+\intop_{p_{0}}^{p}\w
+\]
+
+\end_inset
+
+ )אינטגרל על מסלול בתוך 
+\begin_inset Formula $C$
+\end_inset
+
+( מוגדר עד כדי צירופים שלמים של שני מספרים, 
+\begin_inset Formula $\intop\limits_{\gamma_{1}}\w,\intop\limits_{\gamma_{2}}\w$
+\end_inset
+
+ )הנקראים מחזורים(, כאשר 
+\begin_inset Formula $\gamma_{1},\gamma_{2}$
+\end_inset
+
+ הם העקומים היוצרים את החבורה היסודית של הטורוס.
+ בפרט הפונקציה ההפיכה ל 
+\begin_inset Formula $I$
+\end_inset
+
+ היא פונקציה על 
+\begin_inset Formula $\c$
+\end_inset
+
+ מחזורית עבור שני מספרים מרוכבים.
+ מקבלים פונקציה מ 
+\begin_inset Formula $C$
+\end_inset
+
+ לחבורת המנה של 
+\begin_inset Formula $\c$
+\end_inset
+
+ מודולו שריג המחזורים.
+ כעת מ 
+\begin_inset Formula $\c$
+\end_inset
+
+ מודולו שריג המחזורים ניתן להטיל על 
+\begin_inset Formula $C$
+\end_inset
+
+, ואז להטיל על ציר ה 
+\begin_inset Formula $x$
+\end_inset
+
+ ל 
+\begin_inset Formula $\c$
+\end_inset
+
+.
+ נקבל בעצם סדרת העתקות 
+\begin_inset Formula 
+\[
+\c\ra\nf{\c}{\left(\text{lattice}\right)}\ra C^{\times}\os{\ra}{\text{projection}}\c
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

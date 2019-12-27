@@ -1,0 +1,890 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage[all,cmtip]{xy}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+יריעות אלגבריות – הרצאה רביעית
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vector}[1]{\overrightarrow{#1}}
+{\overrightarrow{#1}}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בשיעור זה נעסוק בדברים רעים העשויים לקרות כאשר מתייחסים ליריעות ועקומים
+ כאל אוסף נקודותת וכן לדברים היכולים למנוע מהעתקה בין יריעות להיות העתקת
+ כיסוי.
+ נתחיל מלהציג שתי דוגמאות:
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא ראשונה
+\end_layout
+
+\begin_layout Standard
+נתבונן בקבוצה 
+\begin_inset Formula 
+\[
+Z\left(x^{2}-y^{2}\right)=Z\left(\left(x-y\right)\left(x+y\right)\right)=Z\left(x-y\right)\cup Z\left(x+y\right)
+\]
+
+\end_inset
+
+זהו בעצם חיתוך של שני ישרים.
+ כעת נתבונן בהטלה ל 
+\begin_inset Formula $\c$
+\end_inset
+
+ על ציר 
+\begin_inset Formula $x$
+\end_inset
+
+, כלומר תחת ההעתקה 
+\begin_inset Formula $\left(x,y\right)\mapsto x$
+\end_inset
+
+.
+ כעת נמלה הנמצאת מתחת לחיתוך תראה אוסף נקודות המתקרבות זו לזו עד שנחתכות,
+ כלומר משהו מהצורה 
+\begin_inset Formula 
+\[
+\begin{array}{ccccc}
+ &  & \cdot\\
+ & \cdot &  & \cdot\\
+\cdot &  &  &  & \cdot
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא שנייה
+\end_layout
+
+\begin_layout Standard
+נתבונן בהטלה על ציר 
+\begin_inset Formula $x$
+\end_inset
+
+ של הקבוצה 
+\begin_inset Formula $Z\left(xy-1\right)$
+\end_inset
+
+.
+ כאן תמונה ההטלה היא 
+\begin_inset Formula $\c-\left\{ 0\right\} $
+\end_inset
+
+ ולכן נמלה העומדת על ציר 
+\begin_inset Formula $x$
+\end_inset
+
+ תראה "נקודות ששואפות לאינסוף".
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+אנו נרצה להגדיר מחלקה של מורפיזמים שתאפשר את הדוגמא הראשונה אך לא את השנייה.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא )
+\begin_inset Formula $\ast$
+\end_inset
+
+(
+\end_layout
+
+\begin_layout Standard
+תהי 
+\begin_inset Formula $Y$
+\end_inset
+
+ יריעה, ויהי 
+\begin_inset Formula $f\in\o\left(Y\right)\left[t\right]$
+\end_inset
+
+ )כלומר, בפולינום במשתני 
+\begin_inset Formula $Y$
+\end_inset
+
+ וכן משתנה נוסף(.
+ נגדיר יריעה 
+\begin_inset Formula $X\ss Y\times\c$
+\end_inset
+
+ ע"י 
+\begin_inset Formula 
+\[
+X=Z\left(f\left(y,t\right)\right)=\left\{ \left(y,t\right)\mid f\left(y,t\right)=0\right\} 
+\]
+
+\end_inset
+
+ונתבונן בהטלה 
+\begin_inset Formula 
+\[
+X\ssq Y\times\c\os{\ra}{\pi}Y
+\]
+
+\end_inset
+
+מתי נראה נקודות בפולינום הולכות לאינסוף )כמו בדוגמא השנייה(? כאשר דרגת הפולינום
+ יורדת כתוצאה מההטלה! בדוגמא השנייה, עבור 
+\begin_inset Formula $y_{0}\neq0$
+\end_inset
+
+ הפלינום מוטל לפולינום 
+\begin_inset Formula $y_{0}\cdot x-1$
+\end_inset
+
+ )שדרגתו ב 
+\begin_inset Formula $x$
+\end_inset
+
+ היא 
+\begin_inset Formula $1$
+\end_inset
+
+( בעוד עבור 
+\begin_inset Formula $y_{0}$
+\end_inset
+
+ זהו הפולינום 
+\begin_inset Formula $-1$
+\end_inset
+
+ )אשר מדרגה 
+\begin_inset Formula $0$
+\end_inset
+
+(.
+ לכן העובדה שאין נקודות בסיב שהולכות לאינסוף היא שקולה לכך שהדרגה 
+\begin_inset Formula $\deg_{t}f\left(y,t\right)$
+\end_inset
+
+ היא קבועה.
+ זה שקול לכך שכאשר נכתוב 
+\begin_inset Formula 
+\[
+f\left(y,t\right)=a_{0}\left(y\right)+a_{1}\left(y\right)t+\cdots+a_{n}\left(y\right)t^{n}
+\]
+
+\end_inset
+
+נקבל ש 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ הוא אף פעם לא אפס.
+ זה שקול לכך ש 
+\begin_inset Formula $a_{n}\left(y\right)\in\o\left(Y\right)$
+\end_inset
+
+ הפיך, ולכן ניתן להניח שהוא 
+\begin_inset Formula $1$
+\end_inset
+
+, ולכן קיבלנו שהפולינום 
+\begin_inset Formula $t\mid_{x}\in\o\left(X\right)$
+\end_inset
+
+ מקיים פולינום מתוקן עם מקדמים ב 
+\begin_inset Formula $\o\left(Y\right)$
+\end_inset
+
+.
+ זה בעצם אומר, ש 
+\begin_inset Formula $\o\left(Y\right)\left[t\right]$
+\end_inset
+
+ היא הרחבה שלמה! נזכיר מה זה אומר:
+\end_layout
+
+\begin_layout Definition
+)הרחבה שלמה(.
+ תהי 
+\begin_inset Formula $S\ss R$
+\end_inset
+
+ הרחבת חוגים.
+ איבר 
+\begin_inset Formula $r\in R$
+\end_inset
+
+ יקרא שלם מעל 
+\begin_inset Formula $s$
+\end_inset
+
+ אם הוא מקיים פולינום מתוקן עם מקדמים ב 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ הרחבה נקראת שלמה אם כל איבריה שלמים.
+ באופן שקול, הרחבה 
+\begin_inset Formula $\nf RS$
+\end_inset
+
+ היא שלמה אם 
+\begin_inset Formula $R$
+\end_inset
+
+ נוצר סופית מעל 
+\begin_inset Formula $S$
+\end_inset
+
+ כמודול.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sqrt{2}+\sqrt{3}$
+\end_inset
+
+ שלם, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ לא.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+לכן נוכל לנסח את מה שעשינו עד כה: ההטלה על ציר 
+\begin_inset Formula $x$
+\end_inset
+
+ של 
+\begin_inset Formula $Z\left(f\left(y,t\right)\right)$
+\end_inset
+
+ "מתנהגת יפה" אם ורק אם ההרחבה 
+\begin_inset Formula $\nf{\o\left(Y\right)\left[t\right]}{\o\left(Y\right)}$
+\end_inset
+
+ היא הרחבה שלמה.
+ 
+\end_layout
+
+\begin_layout Definition
+)מורפיזם סופי(.
+ מורפיזם בין יריעות אפיניות 
+\begin_inset Formula $X\ra Y$
+\end_inset
+
+ נקרא סופי אם ההעתקה המושרית ממנו 
+\begin_inset Formula $\o\left(Y\right)\ra\o\left(X\right)$
+\end_inset
+
+ היא חח"ע, וכן ההרחבה 
+\begin_inset Formula $\nf{\o\left(X\right)}{\o\left(Y\right)}$
+\end_inset
+
+ שלמה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+תנאי זה שקול לקיום סדרה של העתקות 
+\begin_inset Formula 
+\begin{align*}
+X\ss Y_{1}\times\c\ra Y_{1}\\
+Y_{1}\ss Y_{2}\times\c\ra Y_{2}\\
+\vdots\\
+Y_{n-1}\ss Y_{n}\times\c\ra Y_{n}=Y
+\end{align*}
+
+\end_inset
+
+כאשר לכל 
+\begin_inset Formula $i$
+\end_inset
+
+, ההטלה 
+\begin_inset Formula 
+\[
+Y_{i}\ss Y_{i+1}\times\c\ra Y_{i+1}
+\]
+
+\end_inset
+
+ היא כמו בדוגמא )
+\begin_inset Formula $\ast$
+\end_inset
+
+(.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+העתקה סופית היא על.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+תהי העתקה סופית 
+\begin_inset Formula $f:X\ra Y$
+\end_inset
+
+.נתבונן בההעתקה המושרית
+\begin_inset Formula $\o\left(Y\right)\ra\o\left(X\right)$
+\end_inset
+
+ )שהיא שיכון, כלומר 
+\begin_inset Formula $\o\left(Y\right)\ss\o\left(X\right)$
+\end_inset
+
+(.
+ אנו צריכים להראות שלכל מקסימלי 
+\begin_inset Formula $M\ssn\o\left(Y\right)$
+\end_inset
+
+, התמונה ההפוכה, הנתונה ע"י 
+\begin_inset Formula $M\o\left(X\right)\ssn\o\left(X\right)$
+\end_inset
+
+, היא אידיאל לא טריוויאלי.
+ נניח שזהו אידיאל טריוויאלי.
+ מההנחה, 
+\begin_inset Formula $\o\left(X\right)$
+\end_inset
+
+ הרחבה שלמה של 
+\begin_inset Formula $\o\left(Y\right)$
+\end_inset
+
+ ולכן נוצרת סופית כמודול מעליה, נניח ע"י 
+\begin_inset Formula $a_{1},\ldots,a_{m}$
+\end_inset
+
+.
+ נניח כי 
+\begin_inset Formula $M\o\left(X\right)=\o\left(X\right)$
+\end_inset
+
+.
+ זה אומר ש 
+\begin_inset Formula 
+\[
+a_{i}=\sum m_{ij}a_{j}
+\]
+
+\end_inset
+
+עבור 
+\begin_inset Formula $m_{i}\in M$
+\end_inset
+
+.
+ לכן, ההעתקה 
+\begin_inset Formula 
+\[
+\o\left(Y\right)^{n}\os{\ra}{\phi}\o\left(X\right)
+\]
+
+\end_inset
+
+הנתונה ע"י 
+\begin_inset Formula 
+\[
+\left(\alpha_{1},\ldots,\alpha_{n}\right)\mapsto\alpha_{1}a_{1}+\cdots+\alpha_{n}a_{n}
+\]
+
+\end_inset
+
+היא על.
+ לכן הדיאגרמה 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+xymatrix{ 
+\backslash
+o
+\backslash
+left(Y
+\backslash
+right)^{n} 
+\backslash
+ar[d]^{I-(m_{ij})} 
+\backslash
+ar[r]^
+\backslash
+phi &
+\backslash
+o
+\backslash
+left(X
+\backslash
+right)
+\backslash
+ar[d]^0 
+\backslash
+
+\backslash
+   
+\backslash
+o
+\backslash
+left(Y
+\backslash
+right)^{n}
+\backslash
+ar[r]^
+\backslash
+phi & 
+\backslash
+o
+\backslash
+left(X
+\backslash
+right)}$$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+היא קומוטטיבית.
+ בנוסף, 
+\begin_inset Formula $0=\alpha=\det\left(I-\left(m_{ij}\right)\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha I=\left(1-\left(m_{ij}\right)\right)\text{adj}\left(1-\left(m_{ij}\right)\right)$
+\end_inset
+
+ ולכן נוכל להגדיר קומה נוספת לדיאגרמה, ע"י 
+\begin_inset Formula $\o\left(Y\right)^{n}\ra\o\left(Y\right)^{n}$
+\end_inset
+
+ ע"י 
+\begin_inset Formula $\text{adj}\left(1-m_{ij}\right)$
+\end_inset
+
+.
+ לכן נקבל 
+\begin_inset Formula 
+\[
+0=\det\left(I-\left(m_{ij}\right)\right)\equiv1\left(\mod M\right)
+\]
+
+\end_inset
+
+בסתירה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+העתקות סופיות הן סגורות )זריצקי(.
+ אם 
+\begin_inset Formula $f:X\ra Y$
+\end_inset
+
+ סופית ו 
+\begin_inset Formula $Z\ss X$
+\end_inset
+
+ קבוצת סגורה, אזי גם 
+\begin_inset Formula $f\left(Z\right)$
+\end_inset
+
+ סגורה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+הצמצום של 
+\begin_inset Formula $f$
+\end_inset
+
+ ל 
+\begin_inset Formula $Z\ra\overline{f\left(Z\right)}$
+\end_inset
+
+ זו העתקה סופית.
+ )סגור לפי טופולוגיית זריצקי(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+)העתקה פרוייקטיבית סופית(.
+ אם 
+\begin_inset Formula $X,Y\ssq\p^{n}$
+\end_inset
+
+ יריעות פרוייקטיביות ו 
+\begin_inset Formula $f:X\ra Y$
+\end_inset
+
+ מורפיזם, נאמר ש 
+\begin_inset Formula $f$
+\end_inset
+
+ סופית אם 
+\begin_inset Formula $f:f^{-1}\left(y\cap\p_{i}^{n}\right)\ra Y\cap\p_{i}^{N}$
+\end_inset
+
+ היא סופית לכל 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+על מנת שזה יהיה מוגדר היטב, נשתמש בלמה הבאה:
+\end_layout
+
+\begin_layout Lemma
+אם 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ יריעות אפיניות ו 
+\begin_inset Formula $Y=\cup Y_{i}$
+\end_inset
+
+ כיסוי אפיני, אזי 
+\begin_inset Formula $f:X\ra Y$
+\end_inset
+
+ סופית אם ורק אם 
+\begin_inset Formula $f\mid_{f^{-1}\left(Y\right)}:f^{-1}\left(Y\right)\ra Y_{i}$
+\end_inset
+
+ סופית לכל 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כלומר, סופיות הוא תנאי מקומי.
+ את הלמה נוכיח בשיעור הבא.
+ 
+\end_layout
+
+\begin_layout Definition
+תהי 
+\begin_inset Formula $p\in\p^{N}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\p^{N-1}\ss\p^{N}$
+\end_inset
+
+ עותק של 
+\begin_inset Formula $\p^{N-1}$
+\end_inset
+
+ שאינו עובר דך 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ נגדיר 
+\begin_inset Formula 
+\[
+\pi_{p}:\p^{N}-\left\{ p\right\} \ra\p^{N-1}
+\]
+
+\end_inset
+
+ע"י להגדיר את 
+\begin_inset Formula $\pi_{p}\left(q\right)$
+\end_inset
+
+ להיות שווה לכל נקודות החיתוך של 
+\begin_inset Formula $\p^{N-1}$
+\end_inset
+
+ ו 
+\begin_inset Formula $\overline{pq}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+אם 
+\begin_inset Formula $X\ss\p^{N}$
+\end_inset
+
+ פרוייקטיבי ו 
+\begin_inset Formula $p\notin x$
+\end_inset
+
+, אזי 
+\begin_inset Formula $\pi_{p}:X\ra\overline{\pi_{p}\left(X\right)}$
+\end_inset
+
+ היא העתקה סופית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+אם 
+\begin_inset Formula $X\ssq\p^{N}$
+\end_inset
+
+ אזי יש 
+\begin_inset Formula $d$
+\end_inset
+
+ והעתקה סופית 
+\begin_inset Formula $X\ra\p^{d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+יהי 
+\begin_inset Formula $X\ssq\p^{N}$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $X=\p^{N}$
+\end_inset
+
+ סיימנו.
+ אחרת, 
+\begin_inset Formula $p\notin X$
+\end_inset
+
+, נתבונן בהעתקה
+\begin_inset Formula 
+\[
+\pi_{p}:X\ra\overline{\pi_{p}\left(X\right)}\ssq\p^{N-1}
+\]
+
+\end_inset
+
+ומהאינדוקציה, יש העתקה סופית 
+\begin_inset Formula 
+\[
+f:\overline{\pi_{p}\left(X\right)}\ra\p^{d}
+\]
+
+\end_inset
+
+והרכבת ההעתקות היא ההעתקה סופית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מסקנה זו מאפשרת לנו להגדיר מימד של יריעה!
+\end_layout
+
+\end_body
+\end_document

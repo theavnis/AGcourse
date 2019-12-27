@@ -1,0 +1,989 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ind}{\text{ind}}
+{\text{ind}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+עקומים אלגבריים – הרצאה שישית
+\end_layout
+
+\begin_layout Lemma
+אם 
+\begin_inset Formula $X\os{\ra}{\pi}Y$
+\end_inset
+
+ היא העתקת כיסוי בין עקומים פרוייקטיבים לא סינגולרים מדרגה 
+\begin_inset Formula $d$
+\end_inset
+
+ ) 
+\begin_inset Formula $d=\left|\pi^{-1}\left(y\right)\right|$
+\end_inset
+
+ לכל 
+\begin_inset Formula $y$
+\end_inset
+
+( , אזי מאפיין אוילר 
+\begin_inset Formula 
+\[
+\chi\left(Y\right)=d\cdot\chi\left(X\right)
+\]
+
+\end_inset
+
+ כאשר מאפיין אוילר הוא 
+\begin_inset Formula $2\cdot\text{genus}-2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+אם 
+\begin_inset Formula $X\ra Y$
+\end_inset
+
+ מסתעפת ב 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, זה נראה מקומית כמו 
+\begin_inset Formula $z\mapsto z^{n}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $n-1$
+\end_inset
+
+ נקרא דרגת ההסתעפות 
+\begin_inset Formula $\text{ind}\left(\pi,x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+אם 
+\begin_inset Formula $X\os{\ra}{\pi}Y$
+\end_inset
+
+ היא כיסוי מסועף בין עקומים פרוייקטיבים לא סינגולריים מדרגה 
+\begin_inset Formula $d$
+\end_inset
+
+, אזי 
+\begin_inset Formula 
+\[
+\chi\left(X\right)=d\cdot\chi\left(Y\right)-\sum_{x\in X}\text{ind}\left(\pi,x\right)
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula 
+\[
+d=\left|\pi^{-1}\left(y\right)\right|
+\]
+
+\end_inset
+
+עבור כמעט כל הנקודות )פרט למספר סופי(.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נבחר שילוש של 
+\begin_inset Formula $Y$
+\end_inset
+
+ כאשר כאשר הקודקודים שלו כוללים את התמונות של נקודות 
+\begin_inset Formula $\text{branced}$
+\end_inset
+
+.
+ נרים את השילוש הזה לשילוש על 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ כמות הקודקודים בשילוש של 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $T_{X}$
+\end_inset
+
+ היא 
+\begin_inset Formula 
+\[
+d\cdot\left|\text{varices of }T_{Y}-\sum_{x\in X}\text{ind}\left(\pi,x\right)\right|
+\]
+
+\end_inset
+
+וכמות הצלעות היא
+\begin_inset Formula 
+\[
+d\cdot\left|\text{edges of }T_{Y}\right|
+\]
+
+\end_inset
+
+וכמות הפאות היא 
+\begin_inset Formula 
+\[
+d\cdot\left|\text{\ensuremath{\Delta} of }T_{Y}\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא
+\end_layout
+
+\begin_layout Standard
+נתבונן ב 
+\begin_inset Formula 
+\[
+C=x^{d}+y^{d}+z^{d}=0
+\]
+
+\end_inset
+
+ב 
+\begin_inset Formula $\p^{2}\left(\c\right)$
+\end_inset
+
+.
+ זהו עקום פרוייקטיבי חלק.
+ נתבונן בכיסוי 
+\begin_inset Formula 
+\[
+C\os{\ra}{\pi}\p^{1}\left(\c\right)=\mathbb{S}^{2}
+\]
+
+\end_inset
+
+ע"י 
+\begin_inset Formula 
+\[
+\left[x:y:z\right]\mapsto\left[x:z\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\pi$
+\end_inset
+
+ היא כיסוי מסועף מדרגה 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ נרצה להבין מהן נקודות ההסתעפות.
+ נפצל למקרה 
+\begin_inset Formula $z=0$
+\end_inset
+
+ )יש נקודה אחת כזו( ו 
+\begin_inset Formula $z\neq0$
+\end_inset
+
+.
+ עבור 
+\begin_inset Formula $z=0$
+\end_inset
+
+ נקבל
+\begin_inset Formula 
+\[
+\pi^{-1}\left(\left[1:0\right]\right)=\left\{ \left[1:y:0\right]\mid y^{d}=-1\right\} 
+\]
+
+\end_inset
+
+ולכן יש 
+\begin_inset Formula $d$
+\end_inset
+
+ מקורות לכל 
+\begin_inset Formula $y$
+\end_inset
+
+, ולכן אין סיעוף.
+ עבור 
+\begin_inset Formula $z\neq0$
+\end_inset
+
+, ניתן לצמצם להעתקה 
+\begin_inset Formula 
+\[
+\left\{ x^{d}+y^{d}=-1\right\} \ra\c
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(x,y\right)\mapsto x
+\]
+
+\end_inset
+
+כדי לבדוק נקודות סיעוף, נבדוק התאפסות של
+\begin_inset Formula 
+\[
+\pd{}y\left(x^{d}+y^{d}+1\right)=d\cdot y^{d-1}
+\]
+
+\end_inset
+
+)כדי לבדוק סיעוף בודקים התאספות של הנגזרת ביחס ל 
+\begin_inset Formula $y$
+\end_inset
+
+( ולכן נקודות הסיעוף הן כאלו עבורן 
+\begin_inset Formula $y=0$
+\end_inset
+
+.
+ יש 
+\begin_inset Formula $d$
+\end_inset
+
+ כאלו.
+ מסימטטריה, לכולם יש אותה דרגת סיעוף.
+ איך נחשב את דרגת הסיעוף? הם כולם מהצורה של 
+\begin_inset Formula 
+\[
+\left[\zeta:0:1\right]
+\]
+
+\end_inset
+
+עבור 
+\begin_inset Formula 
+\[
+\zeta^{d}=-1
+\]
+
+\end_inset
+
+ולכן נקודות הסיעוף הן 
+\begin_inset Formula 
+\[
+\left\{ \left[\zeta:0:1\right]\mid\zeta^{d}=-1\right\} 
+\]
+
+\end_inset
+
+בסביבת 
+\begin_inset Formula $\left(\zeta,0\right)$
+\end_inset
+
+ ההטלה על ציר ה 
+\begin_inset Formula $y$
+\end_inset
+
+ היא דיפאומורפיזם מקומית.
+ נכתוב מקומית 
+\begin_inset Formula 
+\[
+x=\zeta+\varphi\left(y\right)
+\]
+
+\end_inset
+
+ונקבל 
+\begin_inset Formula 
+\[
+\left(\zeta+\varphi\left(y\right)\right)^{d}+y^{d}=-1
+\]
+
+\end_inset
+
+נפתח ונקבל 
+\begin_inset Formula 
+\[
+-1+d\zeta^{d-1}\varphi\left(y\right)+\cdots+y^{d}=-1
+\]
+
+\end_inset
+
+ולכן נקבל פיתוח טיילור של 
+\begin_inset Formula $\varphi\left(y\right)$
+\end_inset
+
+ ע"י 
+\begin_inset Formula 
+\[
+\varphi\left(y\right)=\frac{y^{d}}{d\zeta^{d-1}}+...
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula 
+\[
+\ind\left(\pi,\left(\zeta,0\right)\right)=d-1
+\]
+
+\end_inset
+
+)מה הקשר? השאלה היא גודל הקוטב בסביבת 
+\begin_inset Formula $0$
+\end_inset
+
+, למעשה "כמה מקורות יש שגם ממש קרובים ל 
+\begin_inset Formula $0$
+\end_inset
+
+"(.
+ כעת ניתן לחשב את מאפיין אוילר 
+\begin_inset Formula 
+\[
+2-2\cdot\text{genus}\left(C\right)=\chi\left(C\right)=d\cdot\chi\left(\mathbb{S}^{2}\right)-d\left(d-1\right)=d\cdot2-d\cdot\left(d-1\right)
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula 
+\[
+\text{genus}\left(C\right)=\binom{d-1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+כל עקומים פרוייקטיבי לא סינגולרי מדרגה 
+\begin_inset Formula $d$
+\end_inset
+
+ הם דיפאומורפים, ובפרט לכולם יש גנוס 
+\begin_inset Formula $\binom{d-1}{2}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+זה אומר שכולם הומאומורפים, אבל זה ממש לא מורפיזם של עקומים אלגברים )ההעתקות
+ לא פולינומיאליות(.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+לא כל מספר הוא גנוס של עקום מישורי! )כי לא כל מספר ניתן לכתוב מהצורה 
+\begin_inset Formula $\binom{d-1}{2}$
+\end_inset
+
+(.
+ לדוגמא אין עקום פרוייקטיבי חלק מגנוס 
+\begin_inset Formula $4$
+\end_inset
+
+.
+ בשיכון במרחב גדול יותר אפשר לקבל.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+העתקה דיפרנציאלית בין יריעות 
+\begin_inset Formula $X\ra Y$
+\end_inset
+
+ נקראת סבמרסיה אם לכל נקודה 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ ההעתקה 
+\begin_inset Formula 
+\[
+df:T_{x}X\ra T_{f\left(x\right)}Y
+\]
+
+\end_inset
+
+היא על.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+אם 
+\begin_inset Formula $X$
+\end_inset
+
+ קומפקטי ו 
+\begin_inset Formula $Y$
+\end_inset
+
+ קשיר ו 
+\begin_inset Formula $X\os{\ra}{\pi}Y$
+\end_inset
+
+ היא סבמרסיה אזי כל הסיבים דיפאומורפים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+)קצת בנפנוף ידיים ובשלבים כלליים(.
+ נבחר שתי נקודות 
+\begin_inset Formula $y_{1},y_{2}\in X$
+\end_inset
+
+ ונבחר עקום דיפרנציאבילי 
+\begin_inset Formula 
+\[
+\gamma:\left[0,1\right]\ra Y_{1},\ \gamma\left(0\right)=g,\ \g\left(1\right)=y_{2}
+\]
+
+\end_inset
+
+נרחב את השדה הוקטורי 
+\begin_inset Formula $\dot{\gamma}\left(t\right)$
+\end_inset
+
+ לשדה וקטורי 
+\begin_inset Formula $V$
+\end_inset
+
+ על 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ כעת נמצא שדה וקטורי 
+\begin_inset Formula $U$
+\end_inset
+
+ על 
+\begin_inset Formula $X$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+df\mid_{x}\left(U\left(x\right)\right)=V\left(f\left(x\right)\right)
+\]
+
+\end_inset
+
+באופן מקומי ניתן לעשות זאת בצורה דיפרנציאבילית.
+ כעת לכל נקודה 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, נפתור את המשוואה הדיפרנציאלית הנתונה ע"י 
+\begin_inset Formula $\frac{d}{dt}g=U\left(g\left(t\right)\right)$
+\end_inset
+
+ עם 
+\begin_inset Formula $g\left(0\right)=x$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ קומפקטי ולכן קיים פתרון לכל 
+\begin_inset Formula $t,x$
+\end_inset
+
+.
+ נסמן ב 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ את ההעתקה ששולחת 
+\begin_inset Formula $x$
+\end_inset
+
+ לפתרון בזמן 
+\begin_inset Formula $t=1$
+\end_inset
+
+ ונקבל העתקה בין 
+\begin_inset Formula $\pi^{-1}\left(y_{1}\right)$
+\end_inset
+
+ ו 
+\begin_inset Formula $\pi^{-1}\left(y_{2}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ דיפרנציאבילית ולכן ההופכי של 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ נתון ע"י פתרון מד"ר, 
+\begin_inset Formula 
+\[
+\frac{d}{dt}g=-U\left(g\left(t\right)\right)
+\]
+
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ היא דפאומורפיזם.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת אנו יכולים להוכיח את המשפט שציינו )שכל העקומים הפרויקטיבים וחלקים מדרגה
+ 
+\begin_inset Formula $d$
+\end_inset
+
+ הם דיפאומורפים(:
+\end_layout
+
+\begin_layout Theorem
+כל עקומים פרוייקטיבי לא סינגולרי מדרגה 
+\begin_inset Formula $d$
+\end_inset
+
+ הם דיפאומורפים, ובפרט לכולם יש גנוס 
+\begin_inset Formula $\binom{d-1}{2}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+X=\left\{ \left(f,p\right)\in\p^{\binom{d+1}{2}-1}\times\p^{2}\mid Z\left(f\right)\ \text{nonsingular,}\ p\in Z\left(f\right)\right\} 
+\]
+
+\end_inset
+
+לאחר ההטלה 
+\begin_inset Formula $\pi$
+\end_inset
+
+ נקבל 
+\begin_inset Formula 
+\[
+Y=\left\{ f\in\p^{\binom{d+1}{2}-1}\mid Z\left(f\right)\negmedspace\text{nonsingular}\right\} 
+\]
+
+\end_inset
+
+כעת צריך להראות ש 
+\begin_inset Formula $X$
+\end_inset
+
+ יריעה ו 
+\begin_inset Formula $\pi$
+\end_inset
+
+ סבמרסיה.
+ מהלמה הסיבים של 
+\begin_inset Formula $\pi$
+\end_inset
+
+ הם עקומים לא סינגולרים מדרגה 
+\begin_inset Formula $d$
+\end_inset
+
+ וסיימנו.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+)הרנק(.
+ אם 
+\begin_inset Formula $f$
+\end_inset
+
+ פולינום הומוגני ממשי מדרגה 
+\begin_inset Formula $d$
+\end_inset
+
+ בשלושה משתנים ו 
+\begin_inset Formula $Z\left(f\right)$
+\end_inset
+
+ לא סינגולרי, אזי 
+\begin_inset Formula 
+\[
+Z\left(f\right)\cap\p^{2}\left(\r\right)
+\]
+
+\end_inset
+
+ מכיל לכל היותר 
+\begin_inset Formula $\frac{1}{2}\left(d^{2}-3d+4\right)$
+\end_inset
+
+ עותקים של 
+\begin_inset Formula $S^{1}$
+\end_inset
+
+ ב 
+\begin_inset Formula $\p^{2}\left(\r\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+אנו מדברים על עותקים של 
+\begin_inset Formula $S^{1}$
+\end_inset
+
+ כי היא היריעה הקומפקטית וסגורה החד מימדית היחידה מעל הממשיים )כי פרוייקטיבית
+ "קצוות מודבקים"( (.
+ למעשה לקחנו איזושהי יריעה מרוכבת שאנו יודעים את הגנוס שלה, חתכנו עם מישור
+ )המישור הממשי( ואנו שואלים כמה רכיבי קשירות יש לה.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+עקום שמקבל את המקסימום, כלומר מכיל 
+\begin_inset Formula $\frac{1}{2}\left(d^{2}-3d+4\right)$
+\end_inset
+
+ עותקים של 
+\begin_inset Formula $S^{1}$
+\end_inset
+
+ נקרא עקום הרנק.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נסמן 
+\begin_inset Formula $C=Z\left(f\right)\ss\p^{2}\left(\r\right)$
+\end_inset
+
+.
+ יהי 
+\begin_inset Formula $\si$
+\end_inset
+
+ הצמוד המרוכב 
+\begin_inset Formula 
+\[
+\si:C\ra C
+\]
+
+\end_inset
+
+אזי 
+\begin_inset Formula 
+\[
+\chi\left(C^{\si}\right)=0
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $C^{\si}$
+\end_inset
+
+ זה נקודות השבת של 
+\begin_inset Formula $C$
+\end_inset
+
+ תחת 
+\begin_inset Formula $\si$
+\end_inset
+
+.
+ כעת 
+\begin_inset Formula 
+\[
+C=\left(C^{\si}\right)\cup\left(\nf C{\si}\right)
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula 
+\[
+\chi\left(\nf C{\si}\right)=\frac{1}{2}\chi\left(C\right)
+\]
+
+\end_inset
+
+)כי 
+\begin_inset Formula $\chi\left(A\cup B\right)=\chi\left(A\right)+\chi\left(B\right)$
+\end_inset
+
+( כאשר 
+\begin_inset Formula $C-\sigma$
+\end_inset
+
+ היא יריעה דו מימדית עם 
+\begin_inset Formula $N$
+\end_inset
+
+ רכיבי שפה.
+ 
+\end_layout
+
+\begin_layout Proof
+אם נדביק 
+\begin_inset Formula $N$
+\end_inset
+
+ דיסקים ל 
+\begin_inset Formula $\nf C{\sigma}$
+\end_inset
+
+ נקבל יריעה 
+\begin_inset Formula $D$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+2\geq\chi\left(D\right)=\chi\left(\nf C{\si}\right)+N=\frac{1}{2}\chi\left(C\right)+N=\frac{1}{2}\left(3d-d^{2}\right)+N
+\]
+
+\end_inset
+
+)את ה 
+\begin_inset Formula $-d^{2}+3d$
+\end_inset
+
+ חישבנו קודם(.
+ ולכן 
+\begin_inset Formula 
+\[
+N\leq\frac{1}{2}\left(d^{2}-3d+4\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
