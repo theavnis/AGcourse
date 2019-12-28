@@ -1,0 +1,1113 @@
+
+\documentclass[12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{tikz-cd}
+\usepackage{mathrsfs}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{enumitem}
+\usepackage{yfonts}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\title{Intro to Algebraic Geometry - Nir Avni}
+
+\author{Raz Slutsky}
+
+\date{}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem*{theorem*}{Theorem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}{Question}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+\newcommand{\ie}{\emph{i.e.} }
+\newcommand{\cf}{\emph{cf.} }
+\newcommand{\into}{\hookrightarrow}
+\newcommand{\dirac}{\slashed{\partial}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Hy}{\mathbb{H}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Pp}{\mathbb{P}}
+\newcommand{\Qbar}{(\bar{\Q}^*)^n}
+\newcommand{\LieT}{\mathfrak{t}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\Sl}{SL_2(\mathbb{R})}
+\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
+\newcommand{\acts}{\curvearrowright}
+\newcommand{\sub}{\operatorname{Sub}_G}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Notes for a course on Algebraic Geometry given by Prof. Nir Avni at the Weizmann Institute of Science, Fall 2019. \\ 
+This course is going to present some of the fundamental theorems and notions. The price we pay for that is that we're going to work with some more basic (that is, old) definitions of the objects we deal with. The course is divided into two parts. Every lecture will be divided into two parts. The first one on Algebraic curves (that is, algebraic geometry in one dimension), and the second part will be more general algebraic geometry. Notes can be found \href{github.com/theavnis/AGcourse}{here}.
+\end{abstract}
+
+
+
+
+\section{Lecture 1 - Part 1}
+\begin{definition}
+Let $f \in \C[x,y]$. Then the locus of $f$, denoted by $$Z(f) =\{ (a,b) \in \C^2 \; | \; f(a,b) = 0 \}$$ is called an \textbf{affine algebraic curve}.
+\end{definition}
+
+We work over $\C$ because it turns out to be easier, and many times will imply the real case. An easy property is the following-
+
+\begin{itemize}
+\item $Z(f \cdot g) = Z(f) \cup Z(g)$
+
+\end{itemize}
+
+$f \in \C[x,y]$ is called irreducible if it is not a product of two lower degree polynomials.
+
+\begin{theorem}
+If $f,g \in \C[x,y]$ are irreducible and not co-linear then $|Z(f) \cap Z(g)| < \infty$
+\end{theorem}
+
+\begin{remark}
+Note that this implies the real case as well.
+\end{remark}
+
+For the we will need the following lemma.
+
+\begin{lemma}
+If $f \in \Q[x,y]$ is irreducible, then $f(\pi,y) \in \Q(\pi)[y]$ is irreducible.
+
+\end{lemma}
+\begin{proof}
+Assume the contrary, that is, $f(\pi,y) = A(y)B(y)$. Multiply by the common denominator of the coefficients of $A$ and $B$, so we get $$ d(\pi) \cdot f(\pi,y) = a(\pi,y) \cdot b(\pi,y)$$ for some $d \in \Q[x]$ and $a,b \in \Q[x,y]$. \\
+
+Looking at the coefficients of the LHS and RHS, we get polynomials with rational coefficients that agree on $\pi$. But $\pi$ is transcendental, so this means every coefficient in the LHS is the same as the coefficient in the RHS, and so the polynomials are the same.\\
+
+
+Now look at a complex root, $\alpha$, of $d$. Let's plug it in the previous equality instead of $x$. We get that the LHS is zero, and so either $a(\alpha,y) = 0$ or $b(\alpha,y)=0$ (The zero polynomial). If $a(\alpha,y) = 0$ then for $a(x,y) = a_0(x)+a_1(x)y + ...$ this means that $a_i(\alpha) = 0$ for all $i$, and so $(x-\alpha)$ divides $a(x,y)$. We can thus divide both sides of the previous equation by $(x-\alpha)$ and get a lower degree equation. Continue until $\deg(d) = 0$, and then we get $f(x,y) = a(x,y) \cdot b(x,y)$. A contradiction.
+\end{proof}
+
+\begin{remark}
+Formally, to make sure that when we divide by $(x-\alpha)$ we still get rational polynomials, we need to divide by all Galois conjugates of $\alpha$.
+\end{remark}
+
+\begin{proof}[Proof of Theorem]
+We start with the case where $f,g \in \Q[x,y]$. \\
+
+By the Lemma, $f(\pi, y) , g(\pi,y)$ are irreducible and (prove at home) they are not co-linear.
+ Therefore, $gcd(f(\pi,y), g(\pi,y))=1$, therefore there are polynomials
+  $A,B \in \Q(\pi)[y]$ such tha
+  t $A(y)\cdot f(\pi,y) + B(y) \cdot g(\pi,y) = 1$. Multiply by the denominators of the coefficients of $A,B$ and get
+   $$a(\pi,y) \cdot f(\pi, y) + b(\pi,y)\cdot g(\pi,y) = d(\pi)$$ where all polynomials are now over the rationals.
+    As before, since we have equality at $\pi$, we have equality everywhere, that is,
+     $a(x,y) \cdot f(x,y) + b(x,y) \cdot g(x,y) = d(x)$. 
+     Now, if $(\alpha, \beta) \in Z(f) \cap Z(g)$ then $d(\alpha) = 0$, but $d$ has only finitely many roots. Similarly, $\beta$ has only finitely many possibilities.
+
+\end{proof}
+
+In general, this argument works the same, the only special thing about $\Q$ and $\pi$ is that $\pi$ is transcendental over $\Q$. Given $f,g$ we let $k \subset \C$ be the field generated by the coefficients of $f,g$ over $\Q$. Pick $\theta \in \C$, a transcendental element over $k$ and run the same argument.\\
+
+Alternatively, work with $\C(x), x$ instead of $\Q , \pi$.
+
+\subsection{Takeaways from the proof}
+
+\begin{itemize}
+\item The first idea was to take a polynomial and plug into the first variable some number, so we reduced the problem from a two variable problem to a one variable problem. In general, 
+$$Z(f(x,y)) = \bigcup_{\alpha \in \C} Z(f(\alpha,y)) $$  Geometrically, we look at the projection to the $x-$axis and think about $Z(f)$ as the union of the fibres of this projection. In other words, affine curves are families of finite sets varying with parameter in $\C$.
+
+
+\item What we showed is that over a generic point, $\pi$, the curves don't intersect, and we found out algebraically, that at almost all other points they also don't intersect. In other words, the behaviour of equations at a generic parameter controls the behaviour over almost all parameters. This method is called the generic point method.
+
+
+\end{itemize}
+
+
+\begin{corollary}
+\begin{itemize}
+
+\item $C[x,y]$ is a unique factorization domain. If $f$ is irreducible, then if $f$ divides $g \cdot h$ then $f$ divides $g$ or $f$ divides $h$, because the zero locus of $f$ is contained in the union of the loci of $g,h$. But one of them must be infinite, so $f$ mus be co-linear with one of them.
+
+\item If $Z(f) = Z(g)$ then $f,g$ have the same irreducible factors. In other words, $f$ divides $g^n$ or $g$ divides $f^n$ for $n$ large enough. 
+
+\item Every affine curve has a canonical (up to scalar) equation.
+
+
+\end{itemize}
+\end{corollary}
+
+\section{Lecture 1 - Part 2}
+
+\begin{definition}
+Let $S \subset \C[x_1,...,x_n]$. The common zero locus of $S$,
+$$Z(S) = \{ \alpha \in \C^n \; | \; f(\alpha) = 0 \; \forall f \in S \} $$
+is called an \textbf{Algebraic Set}.
+\end{definition}
+
+\begin{remark}
+$Z(S) = Z((S))$ where $(S)$ is the ideal generated by $S$.
+\end{remark}
+
+\begin{theorem}[Hilbert Basis Theorem]
+Any ideal in $\C[x_1,...,x_n]$ is generated by a finite set
+\end{theorem}
+
+\begin{corollary}
+Any system of polynomial equations is equivalent to a finite system of equations
+\end{corollary}
+
+\begin{proof}
+\begin{lemma}
+If $V \subset \C[x]^n$ is a $\C[x]$-submodule, then $V$ is finitely generated
+\end{lemma}
+\begin{proof}
+Induction on $n$: for $n=1$ a sub-module just means an ideal, and ideals are finitely generated. \\
+
+For the induction step, $n+1$, look at $\pi: V \rightarrow \C[x]$, the projection to the last coordinate. We have the short exact sequence $$
+0 \rightarrow \ker(\pi) \rightarrow V \rightarrow \pi(V) \rightarrow 0 $$
+And the kernel is contained in $\C[x]^{n-1}$ so it is finitely generated. An extension of f.g. modules is finitely generated.
+\end{proof}
+Look at $I \lhd \C[x,y]$. For $f \in I$ we can write $f(x,y) = a_0^f(x)+a_1(x)\cdot y +... +a_m^f(x) \cdot y^m$. Where the leading coefficient is non-zero, that is, $a_f:= a_m^f(x) \neq 0$. Consider the ideal $J \lhd \C[x,y]$ generated by all $a_f, f \in I$. By induction, $J$ is finitely generated, so $J = (a_{f_1},...,a_{f_n})$. Exercise: $J = \{ a_f \; | \; f \in I\}$. Let $d$ be the maximal $y-$degree of $f_1,...,f_n$. We claim that if $g \in I$, then there are $h_1,...,h_n$ such that $g - \sum h_i f_i$ has $y-$degree less than $d$. Given the claim, $I$ is generated by $f_1,...,f_n$ and generators of the module $I \cap \{ \; \text{polynomials of} \; y- \text{degree} < d  \} \cong I \cap \C[x]^d$.
+\end{proof}
+\begin{example}
+\begin{itemize}
+\item Every affine curve is an algebraic set
+\item $Z(\{ 1 \}) = \emptyset, Z(\{ 0 \}) = \C^n $ are algebraic sets.
+\item $Z(\cup_i S_i) = \cap_i Z(S_i)$
+\item $Z(S_1) \cup Z(S_2) = Z(S_1 \cdot S_2)$.
+
+\end{itemize}
+
+
+
+\end{example}
+
+\begin{remark}
+These properties say that the collection of algebraic subsets of $\C^n$ defines a topology called "Zariski Topology" where algebraic sets are the basic closed sets.
+\end{remark}
+
+Algebraic sets in $\C$ are either $\C$ or finite sets (that is, the Zariski topology on $\C$ is the co-fonite topology).\\
+
+Any Zariski open set in $\C^n$ is open, dense, connected in the usual topology.
+
+\begin{proof}
+Let's prove that it is connected. If $U$ is a Zariski open set, and $p,q \in U$, let $l$ be the complex line incident to $p,q$. Then we have that $\C \cong l \supset l \cap U$ is a non-empty Zariski open subset of $\C$, so it is co-finite. Hence there is a path in $U \cap l$ between $p$ and $q$.
+\end{proof}
+
+
+\begin{theorem}[Hilbert's Nullstellensatz]
+
+If a system of equations $S$ has a solution in some field extension of $\C$, then it has a solution in $\C$.
+\end{theorem}
+
+\begin{proof}
+W.L.O.G we can assume that $S$ is finite. Let $k \subset \C$ be the field generated by the coefficients of the elements in $S$. Let $\alpha$ be a solution in $L^n$ where $L \supset \C$. Consider $K(\alpha_1,...,\alpha_n) \subset L$. By induction on $n$, we will show that there is a homomorphism $\theta: k(\alpha_1,...,\alpha_n) \rightarrow \C$ such that $\theta|_k = id$. \\
+
+$n = 0$ is clear. Let's do $n=1$. Look at $k(\alpha_1)$. There are two options: 
+\begin{itemize}
+
+\item either $\alpha_1$ is algebraic over $k$, and so $\alpha_1$ solves an equation $f(x) = 0$. 
+Since $\C$ is algebraically closed, there is $\beta \in \C$ solving the same equation. 
+Now the map $\alpha_1 \mapsto \beta$ extends to a homomorphism of $k(\alpha_1) \hookrightarrow \C$
+
+\item $\alpha_1$ is transcendental over $k$. 
+Now we take $\beta \in \C$ a transcendental element over $k$, and map $\alpha_1 \mapsto \beta$.
+\end{itemize}
+
+Now $\theta(\alpha_1,...,\alpha_n) \in \C^n$ is a solution of $S$, since $$0 = \theta(f(\alpha_1,...,\alpha_n)) = f(\theta(\alpha_1),...,\theta(\alpha_n))$$
+\end{proof}
+
+Another version of the theorem is that $Z(S) = \emptyset \iff (S) = \C[x_1,...,x_n] \iff 1 \in (S)$.
+
+\begin{proof}
+
+Assume that $(S)$ is a proper ideal. Choose $\mathfrak{m}$ a maximal ideal containing $(S)$. Look at the field $L = \C[x_1,...,x_n]/ \mathfrak{m}$. We have a solution there since $(x_1+\mathfrak{m}, ... ,x_n+ \mathfrak{m})$ is a solution of $S$, and for $f \in S$ we have
+$f(\overline{x_1}, \overline{x_2}, ..., \overline{x_n}) = \overline{f(x_1,...,x_n)}  = 0$.
+\end{proof}
+
+An even fancier version is the following: $f$ vanishes on $Z(S) \iff  f^n \in (S)$ for some $n>0$.
+
+\begin{proof}[Rabinowitz Trick]
+$f$ vanishes on $Z(S) \iff \{ f(x_1,...,x_n) \cdot y - 1 \} \cup S$ has no solution. But this implies by Hilbert's Nullstellensatz that $1 \in \{f(x_1,...,x_n) \cdot y - 1 \} \cup S$ and so $$1 = h(f(x_1,...,x_n)\cdot y -1) + h_1 f_1 +...h_m f_m$$ for some $f_1,...,f_m \in S$ and $h,h_1,...,h_m \in \C[x_1,...,x_n,y]$. If we plug $y = \frac{1}{f(x_1,...,x_n)}$ we get 
+$$1 = h_1(x_1,...,x_n,\frac{1}{f}) \cdot f_1+...+h_m(x_1,...,x_n,\frac{1}{f}) \cdot f_m $$
+
+Where this equation is in the ring $\C[x_1,...,x_n][\frac{1}{f}]$. Now multiply by $f^n$ for $n>0$ big enough. So we get that $f^n = H(x_1,...,x_m)f_1 + ... +H_m(x_1,...,x_m)f_m$ where now this equality can be considered in $\C[x_1,...,x_n]$.
+\end{proof}
+
+\begin{definition}
+$I \lhd \C[x_1,...,x_n]$. Define 
+$$\sqrt{I} = \{ f \in \C[x_1,...,x_n] \; | \; f^m \in I \; \text{for some} \; m>0 \} $$
+\end{definition}
+
+\begin{corollary}
+$Z(I_1) = Z(I_2) \iff \sqrt{I_1} = \sqrt{I_2}$
+\end{corollary}
+
+\begin{proof}
+If $f \in \sqrt{I_1}$ then $f$ vanishes on $Z(I_1)= Z(I_2)$. By the fancier version, $f^m \in I_2$ for some $m>0$, \ie $f \in \sqrt{I_2}$. The other direction is due to the fact that $Z(I) = Z(\sqrt{I})$.
+\end{proof}
+
+\section{Lecture 2- Part One}
+
+\begin{theorem}[Bezout]
+If $f, g \in \C[x,y]$ are relatively prime, then $$|Z(f) \cap Z(g)| \leq (\deg f ) ( \deg g)$$
+\end{theorem}
+
+\begin{proof}
+We can write $f(x,y) = a_0(x) + a_1(x) \cdot y+ ... +a_n(x) \cdot y^n$
+where $\deg a_i(x) \leq n-i$, and $g(x,y) = b_0(x) + ... +b_m(x) \cdot y^m$. After a linear change of coordinates, we can assume that $a_n, b_m \neq 0$. Fix $x_0 \in \C$. We claim that TFAE:
+
+\begin{itemize}
+\item $f(x_0,y) , g(x_0,y)$ have a common root
+\item $\deg ( \text{gcd}(f(x_0,y), g(x_0,y))) > 0 $
+\item $\deg ( \text{lcm}(f(x_0, y), g(x_0,y))) < n+m$
+\item $\exists \;$ polynomials $\alpha(y), \beta(y)$ of degrees $< m,n$ respectively, such that $$\alpha(y) \cdot f(x_0,y) + \beta(y) \cdot g(x_0,y) = 0 $$
+\item The polynomials $$f(x_0,y), y \cdot f(x_0,y), ..., y^{m-1}f(x_0,y), 
+ g(x_0,y), ... , y^{n-1}g(x_0,y)$$ are linearly dependent.
+\item The determinant of the  $(m+n+2, m+n+2)$ matrix corresponding to the previous assertion is zero. This determinant is called the Resultant of $f(x_0,y), g(x_0,y)$, denoted $\text{Res}(f(x_0,y),g(x_0,y))$.
+\end{itemize}
+
+\begin{claim}
+$\text{Res}(f(x_0,y),g(x_0,y))$ is a polynomial in $x_0$ of degree $\leq m \cdot n$. By our assumption that $a_n,b_m \neq 0$ this is a non-zero polynomial.
+\end{claim}
+
+By this claim, the projection to the $x-$axis of $Z(f) \cap Z(g)$ has size at most $n \cdot m$.
+
+\end{proof}
+
+\subsection{How do curves look like?}
+
+Let $f(x,y) \in \C[x,y]$, and assume $f(0,0) = 0$ (\ie has no free coefficient). Look at the gradient of $f$ and assume it is non-zero. 
+
+$$\nabla f(0,0) = (\frac{\partial f}{\partial x}(0,0), \frac{\partial f}{\partial y}(0,0)) \neq (0,0) $$
+
+which means $f$ has a linear term.\\
+
+By the Implicit function theorem, if $0 < \epsilon << 1$, then $Z(f) \cap B((0,0), \epsilon)$ is a holomorphic manifold. More precisely, if $\frac{\partial f}{\partial x}(0,0) \neq 0$, 
+the projection to the $y-$axis, $$y: \C^2 \rightarrow \C$$
+restricted to $Z(f)$ is a local homeomorphism with a holomorphic inverse, \ie there is a holomorphic map $\varphi : U \rightarrow \C$ where $U$ is open in $\C$, such that 
+$$ Z(f) \cap B((0,0), \epsilon) = \{(\phi(t), t) \; | \; t \in U  \} $$
+
+Assume from now on that $f$ is irreducible.
+
+\begin{definition}
+A point $p \in Z(f)$ is called singular if $\nabla f(p) = (0,0)$, otherwise it is called non-singular.
+\end{definition}
+
+\begin{proposition}
+There are only finitely many singular points.
+\end{proposition}
+
+\begin{proof}
+if $p$ is singular, then $p \in Z(f) \cap Z(\frac{\partial f}{\partial x}$. Since $f$ is irreducible, $\deg (\frac{\partial f}{\partial x}) < \deg(f)$. They are relatively prime, except for $\frac{\partial f}{\partial x} \equiv 0$. In this case, work with $y$. If its derivative is constant zero as well, then $f$ is constant.
+\end{proof}
+
+\begin{observation}
+ $y: Z(f) \setminus Z(\frac{\partial f}{\partial x)} \rightarrow \C$ is a covering map. 
+\end{observation}
+
+What happens for non-singular points for which $\frac{\partial f}{\partial x}(p) = 0$? \\
+
+We have the projections from $Z(f)$, $x$ and $y$, and a holomorphic function $\varphi$ such that $Z(f) = (t, \varphi(t))$ locally.\\ 
+
+How does a holomorphic map look like near a point? 
+
+$$\varphi: B(0, \epsilon)  \rightarrow \C  $$
+
+holomorphic, and so it is either
+\begin{itemize}
+\item  constant
+\item If $\varphi '(0) \neq 0$, and so $\varphi$ looks like $t \mapsto \varphi '(0) \cdot t$
+\item If $\varphi'(0) =0$ but $\varphi''(0) \neq 0$ then $\varphi$ looks like $t \mapsto \frac{\varphi''(0)}{2} t^2$
+\end{itemize}
+
+\subsection{Singular points}
+
+Let $p \in Z(f)$. Assume $p = (0,0)$ is singular, then there exists $\epsilon$ such that $p$ is the only singular point in $Z(f) \cap B(p, \epsilon)$. By taking smaller $\epsilon$ we can assume no other point in $Z(f) \cap B(p, \epsilon)$ has $x-$coordinate $0$.\\
+
+$x: Z(f) \cap B(p,\epsilon) \setminus \{ p \} \rightarrow \C$ is a covering map. Take smaller and smaller circles around $p$, the pre-image is some number of circles (depending on the degree), but these circles become closer and closer to $p$ which has only one pre-image, so the picture looks (topologically) like a few cones with $p$ as their shared tip.
+
+\begin{lemma}
+For every polynomial $f(y)$ of degree $n$ with roots $\alpha_1,...,\alpha_m$, there is $\epsilon$ such that for every polynomial $g(y)$ of degree at most $n$ whose coefficients are at most $\epsilon$ we have that 
+\begin{itemize}
+\item Every root of $f+g$ is within $\delta$ of a root of $f$.
+\item Every root of $f$ is within $\delta$ of a root of $f+g$.
+\end{itemize}
+\end{lemma}
+
+\begin{proof}
+By Rouche's Theorem which says that the number of roots of a polynomial $f$ in $B(z_0, \epsilon)$ is equal to $ \frac{1}{2 \pi i } \oint_{\partial B(z, \epsilon)} \frac{d f(z)}{f(z)}$
+\end{proof}
+
+
+\section{Lecture 2 - Part 2}
+
+\subsection{Polynomials}
+
+\subsubsection{Euclid's algorithm}
+ Input: $(n,m, f(x), g(x))$ with $\deg f \leq n $ and $\deg g \leq m$.\\
+ Output: the g.c.d of $f,g$. \\
+ 
+ \begin{itemize}
+\item If $\deg f < n$, call EA$(n-1,m,f,g)$
+\item if $\deg g < m $, call EA$(n, m-1, f, g)$
+\item If $n=-1$ output $g$.
+\item if $m = -1$ output $f$.
+\item if $n=0$ or $m=0$ output 1.
+\item if $n \leq m$, call $EA(n,m, f, a_ng-b_m \cdot x^{m-n}f)$ 
+\item if $n >m$, similar.
+ \end{itemize}
+
+
+When you write EA as a decision tree: 
+\begin{itemize}
+\item At each stage, the coefficients of the polynomials you work with are polynomials in $a_0, ..., a_n, b_0, ..., b_m$.
+\item Each branching is according to whether some polynomial in $a_0,...,a_n,b_0,...,b_m$ is zero or not.
+\item These polynomials have $\Z-$coefficients.
+\end{itemize}
+
+
+\begin{definition}
+A Boolean combination of algebraic sets is called a constructible set. If each one of the relevant polynomials has coefficients in $\Z$ we say that the constructible set is defined over $\Z$.
+\end{definition}
+
+\begin{corollary}
+The function $$\text{Poly}_{\leq n} \times \text{Poly}_{\leq m} \rightarrow \text{Poly}_{\leq m} $$
+defined by $(f,g) \mapsto \text{g.c.d}(f,g)$ is piecewise polynomial, and the pieces are constructible.
+\end{corollary}
+
+\begin{corollary}
+The subset  
+$$ \{(f,g) \in \text{Poly}_{\leq n} \times \text{Poly}_{\leq m} \; | \; f,g \; \text{have a common root} \: \} \subset \C^{n+m+2}$$
+is constructible
+\end{corollary}
+
+\begin{corollary}
+If $f(x_1,...,x_n,y) , g(x_1,...,x_n,y)$ and let $\Pi: \C^{n+1} \rightarrow \C^n$ given by $(x_1,...,x_n,y) \mapsto (x_1,...,x_n)$. Then $\Pi(Z(\{f , g \}))$ is constructible. (Because having a common root can be understood as having non-zero degree of their g.c.d.).
+\end{corollary}
+
+Similarly, we have 
+
+\begin{corollary}
+If $X \subset \C^{n+1}$ is an algebraic set, $\Pi: \C^{n+1} \rightarrow \C^n$ is the projection, then $\Pi(X)$ is constructible.
+\end{corollary}
+
+This leads us to one of the most important theorems in classical algebraic geometry:
+
+\begin{theorem}[Chevalley]
+If $X \subset \C^{n+1}$ is constructible, $\Pi: \C^{n+1} \rightarrow \C^n$ the projection, then $\Pi(X)$ is constructible.
+\end{theorem}
+
+This follows from- 
+
+\begin{claim}
+If $f_1,...,f_n, g_1,...,g_m \in \C[x]$ then 
+
+$$\{t \; | \; f_i(t) = 0 , g_j(t) \neq 0 \} = \emptyset $$ if and only if $\text{gcd}(f_i) | \prod g_j $ if and only if $\text{gcd}(\text{gcd}(f_i), \prod g_j) = \text{gcd}(f_i)$.
+\end{claim}
+
+Now use induction. \\
+
+\begin{definition}
+A first order formula is any grammatically correct expression you can write using: variables,$0,1$, addition, multiplication, parentheses, equality, $\forall, \exists$, and logical connectors.
+\end{definition}
+\begin{example}
+$(\forall a) (\forall b) (\forall c) ( a \neq 0 \implies (\exists x ) (ax^2+bx+c = 0 ))$.
+\end{example}
+\begin{itemize}
+\item If a formula has no quantifiers it is called quantifier-free. 
+\item If a formula has no free variables, we call it a statement.
+
+\end{itemize}
+
+\begin{remark}
+A quantifier-free formula is a Boolean combination of formulas of the form $f(x_1,...,x_n)=0$ where $f \in \Z[x_1,...,x_n]$. Quantifier-free formulas define constructible sets.
+\end{remark}
+
+Now we can reformulate Chevalley's theorem:\\
+
+If $\phi(x_1,...,x_n,y)$ is quantifier-free, then there is a quantifier-free formula $\psi(x_1,...,x_n)$ such that for any algebraically closed field $F$, the formulas $(\exists y)(\phi(x_1,...,x_n,y))$ and $\psi(x_1,...,x_n)$ are equivalent. By induction we get 
+\begin{corollary}
+Every formula is equivalent to a quantifier-free formula.
+\end{corollary}
+
+\begin{corollary}
+Every statement is equivalent to a statement without variables (or quantifiers), with only parentheses, $\cdot$, $+$, $0$, $1$, $\neg$.
+\end{corollary}
+
+Every such statement is thus a Boolean combination of statements of the form $1+1+...+1 = 0$.
+
+\begin{corollary}
+If $\phi$ is a first-order statement which is true in an algebraically closed $F$ then it is true in all algebraically closed fields of the same characteristic. 
+\end{corollary}
+This is an instance of the Lefschetz principle). \\
+
+
+For example, the nullstellensatz is not a first-order statement, as we quantify over all polynomials, but if we restrict to polynomials of degree at most $500$ for example, then it is true for all alg. closed fields of char. 0.
+
+\begin{corollary}
+If $\phi$ is a first-order statement that is true for all $\overline{\mathbb{F}_p}$, $p$ is prime, then is is true for $\C$.
+\end{corollary}
+
+This is because this statement is equivalent to some Boolean combination of addition of $1$s, and if it is true for all primes, it must reduce to $0=0$.
+
+Let's see a very cool application of this:
+
+\begin{theorem}[Ax-Grothendieck]
+If $f: \C^n \rightarrow \C^n$ is a polynomial map which is injective, then it is onto.
+\end{theorem}
+\begin{proof}
+It is enough to prove the statement for $f: \overline{\mathbb{F}_p} \rightarrow  \overline{\mathbb{F}_p}$. There is $q$ such that $f \in \mathbb{F}_q[x]$ since all the coefficients are in some finite extension, and in this case it is clearly onto if it is one to one. It is also true for $\mathbb{F}_{q^2}$ and so on. But the union of all of these is the algebraic closure.
+\end{proof}
+
+
+\section{Lecture 3 - Part 1}
+
+Let $p\in C=Z(f)$ be a point on a curve,$\pi$ the projection to the $x$ axis and $U$ a small neighbourhood of $p$ such that
+
+\begin{enumerate}
+
+    \item $p$ is  the only point $\in C\cap U$ where $\frac{\partial f}{\partial y}$ is zero, and
+
+    \item $\pi^{-1}(\pi (p))\cap U\cap C = \{p\}$
+
+\end{enumerate}
+
+\begin{observation}
+
+$\pi: U\cap C\backslash \{p\}\rightarrow \mathbb{C}\backslash \{\pi(p)\} $ is a covering map, where $U\cap C\backslash \{p\}$ is a topological manifold (by the implicit function theorem).
+
+\end{observation}
+
+\[
+    B(\pi(p),\epsilon)\backslash\{\pi(p)\} \cong \mathbb{S}^1\times (0,\epsilon]\\
+\]
+\[
+    \pi^{-1}(B(\pi(p),\epsilon)\backslash\{\pi(p)\}) \cong \text{ disjoint union of } \mathbb{S}^1\times (0,\epsilon] \]
+
+\begin{observation}
+
+If the $p_n\in \pi^{-1}(B(\pi(p),\epsilon)\backslash\{\pi(p)\})$ and $\pi(p_n)\rightarrow \pi(p)$, then $p_n\rightarrow p$ (By Lemma 3.6(?))
+
+\end{observation}
+
+\begin{corollary}
+
+\[
+    \pi^{-1}(B(\pi(p),\epsilon)=     \sqcup\text{ } \mathbb{S}^1\times [0,\epsilon]
+    \]
+
+\end{corollary}
+
+\textbf{Example:} $x^2=y^3$. Near zero it is a topological manifold. However, it is not a differential manifold. Hand waving proof: Let $S_{\epsilon}\subset \mathbb{C}^2\cong \mathbb{R}^4$ be a small 3-sphere centered at (0,0) and  $C=Z(x^2-y^3)$. We have
+
+\[
+    S_{\epsilon}=\{(z,w)\; ; \; |z|^2+|w|^2=\epsilon \}
+\] 
+
+\[
+    S_{\epsilon}\cap C = \{(z,w)|\text{ }|z|^2+|w|^2=\epsilon \text{ }|z|^2=|w|^3\} \implies |z|=r_1,\quad|w|=r_2\\ \\
+\]
+
+\[
+    \implies  S_{\epsilon}\cap C  = \{(r_1 e^{i\theta}, r_2e^{i\tau})|2\theta=3\tau \; \; mod (2\pi )\} \\
+\]
+
+\[
+   = \{(r_1 e^{3it}, r_2e^{2it})| \; t \in [0,2\pi] \}
+\]
+
+Hence, $ S_{\epsilon}\cap C$ is homeomorphic to trefoil knot$\subset \mathbb{S}^3$. In particular, for every linear projection $\pi:\mathbb{C}^2(=\mathbb{R}^4)\rightarrow \mathbb{R}^2$, $\pi|_{S_{\epsilon}\cap C}$ is not injective. But, if $X\subset \mathbb{R}^n$ is differential manifold with tangent space $T_p X$ at $p$, then the projection to $T_p X $ is homeomorphism near p.\\
+
+\begin{definition}
+
+The real projective plane is the collection of all lines through the origin of $\mathbb{R}^3$
+
+\end{definition}
+
+We will work with $\mathbb{P}^2(\mathbb{C})=\mathbb{C}^2\cup \mathbb{P}^1(\mathbb{C})$. Suppose $Z(f(x,y))\subset \mathbb{C}^2$ is an affine curve. What is the closure of $Z(f)$ in $\mathbb{P}^2(\mathbb{C})$?\\
+
+ Let $F(x,y,z)$ be the homogenization of $f$: a homogeneous polynomial of degree$=deg(f)$, s.t $F(x,y,1)=f(x,y)$ (to set $F$, replace each monomial $x^n y^m$ by $x^n y^m z^{deg f -m-n}$). $Z(F)$ is a conic set ($p\in Z(F)\implies \alpha p\in Z(F)$ $\forall \alpha \in \mathbb{C}$).\\
+
+ $Z(F)\cap Z(z=1)= Z(f)$. $Z(F)\cap Z(y=1)$ is given by $f(x,y)=0$, $f(\frac{x}{z},\frac{1}{z})=z^{-deg f}g(x,z)$. Equivalently, this is the zero locus
+
+\[
+    F(x,1,z)=z^{deg F}F(\frac{x}{z},\frac{1}{z},1)=z^{deg f}f(\frac{x}{z},\frac{1}{z})=g(x,z) 
+\]
+
+\textbf{Upshot:} The projective closure of an affine curve is an affine curve in any coordinate chart. e.g the closure  of $Z(f)$ intersect
+
+$\mathbb{P}^1(\mathbb{C})=\mathbb{P}^2(\mathbb{C})\backslash\{\mathbb{C}\}$
+
+\section{ Lecture 3 - Part 2}
+
+\begin{definition}
+
+Let $X\subset \mathbb{C}^n$ be an algebraic set. Let $f\in \mathbb{C}[x_1,...,x_n]$. The function $f|_X$ is called a regular function on $X$.
+
+\end{definition}
+
+Let $\mathcal{O}(X)$ be the ring of all regular functions on $X$.
+
+\[
+    \mathcal{O}(X) = \mathbb{C}[x_1,...,x_n]/I(X)
+\]
+
+So in particular $\mathcal{O}(X)$ is a f.g. $\mathbb{C}$-algebra, without nilpotents (a reduced algebra).
+
+\begin{claim}
+
+Any reduced f.g. $\mathbb{C}$-algebra is the algebra of regular functions on an algebraic set.
+
+\end{claim}
+
+\begin{proof}
+
+Let $A$ be a reduced f.g. $\mathbb{C}$-algebra. $A$ is generated by $a_1,...,a_n$. Let $\varphi :\mathbb{C}[x_1,...,x_n]\rightarrow A$, $\varphi(x_i)=a_i$. Let $I=ker(\varphi)$ (reduced$\implies \sqrt{I}=I$). Let $X=Z(I)\subset \mathbb{C}^n$. Then
+
+\[
+    \mathcal{O}(X)=\mathbb{C}[x_1,...,x_n]/\sqrt{I}=\mathbb{C}[x_1,...,x_n]/I \cong A
+\]
+
+\end{proof}
+
+\begin{definition}
+
+Let $X\subset \mathbb{C}^n$, $Y\subset \mathbb{C}^m$ be algebraic sets. A morphism between $X$ and $Y$ is an  $m$-tuple of regular functions $f_1,..,f_m\in \mathcal{O}(X)$ s.t
+
+\[
+    (\forall x\in X)\big((f_1(x),...,f_m(x))\in Y)
+\]
+
+\end{definition}
+
+\textbf{Examples:}
+
+\begin{enumerate}
+
+    \item $\mathbb{C}\rightarrow \{x^2=y^3$, $t\mapsto (t^3,t^2) \}$
+
+    \item If $\mathbb{F}=\overline{\mathbb{F}}_p$, $X\subset \mathbb{F }$ is given by the zero locus of polynomials with coefficients in $\mathbb{F}_p$, the map $X\rightarrow X$ given by $(a_1,..,a_n)\mapsto (a_1^p,..,a_n^p)$ is called the Frobenius map.
+
+\end{enumerate}
+
+\textbf{Construction:} If $f:X\rightarrow Y$ is a regular map and $\varphi\in \mathcal{O}(Y)$, then $f^*(\varphi)=\varphi\circ f:X\rightarrow \mathbb{C}$, $\varphi\circ f\in \mathcal{O}(X)$. So we get a map $f^*:\mathcal{O}(Y)\rightarrow\mathcal{O}(X)$, which is a ring homomorphism.
+
+\begin{claim}
+
+Given algebraic sets $X,Y$ and a ring homomorphism $\rho:\mathcal{O}(Y)\rightarrow\mathcal{O}(X)$, there is a unique regular map $f:X\rightarrow Y$ s.t. $f^*=\rho$.
+
+\end{claim}
+
+\begin{proof}
+
+Suppose  $X\subset \mathbb{C}^n$ is given by $X=Z(f_i)$ (where the ideal $(f_i)$ is already a radical), and $Y\subset \mathbb{C}^m$ is given by $Y=Z(g_i)$ (where the ideal $(g_i)$ is already a radical).
+
+\[
+    \mathcal{O}(Y)=\mathbb{C}[y_1,...,y_m]/(g_i) \quad \mathcal{O}(X)=\mathbb{C}[x_1,...,x_n]/(f_i)\\
+\]
+\[
+    \rho(y_1)=h_1+(f_i)\\
+\]
+\[
+    \rho(y_m)=h_m+(f_i)
+\]
+
+Let $r$ be the tuple $(h_1,...,h_m)$
+
+\begin{claim}
+
+\begin{enumerate}
+
+    \item $r$ is a regular map $X\rightarrow Y$,
+
+    \item $r^*=\rho$ and
+
+    \item $r^*$ is the unique such
+
+\end{enumerate}
+
+\end{claim}
+
+\begin{proof}
+
+We'll prove only 1. 2 and 3 are left to the reader (their proof is similar to the one of 1). Since $\rho$ defines a homomorphism,
+
+\[
+    0+(f_i)=\rho (g_j(y_1,...,y_m)+(g_i))=g_j(\rho(y_1),...,\rho(y_m))+(f_i) = g_j(h_1,...,h_m)+(f_i)\\
+\]
+\[
+    \implies g_j(h_1,...,h_m)\in (f_i)
+\]
+\[
+    \implies g_j(h_1,...,h_m) \text{ vanishes on } X
+\]
+
+
+\end{proof}
+
+\end{proof}
+
+\begin{definition}
+
+A regular map $f:X\rightarrow Y$ between two algebraic sets is called an isomorphism if there is a regular map $g:Y\rightarrow X$ s.t $g\circ f = id_X$ and $f\circ g=id_Y$.
+
+\end{definition}
+
+\begin{definition}
+
+We get a category whose objects are algebraic sets and morphisms are regular maps. This category is called \textbf{The category of affine varieties}.
+
+\end{definition}
+
+\begin{corollary}
+
+(Of claims 6.2 and 6.4) Verities and their morphism are the same as f.g. $\mathbb{C}$-algebras and homomorphisms.
+
+\end{corollary}
+
+\textbf{Fancy version:} The categories of (Affine verities, morphisms) and (reduced, f.g. $\mathbb{C}$-Alg., homomorphisms) are equivalent. \\
+
+\textbf{Example:} $\mathbb{C}\rightarrow (x^2-y^3)$, $t\mapsto (t^3,t^2)$ is regular map, injective, surjective, but not an isomorphism. Here two reasons:
+
+\begin{enumerate}
+
+    \item An inverse would be a polynimial $F(x,y)$ s.t. $(x,y)\mapsto F(x,y)\mapsto (F^3(x,y),F^2(x,y))$ is equal to the identity:
+
+\[
+        F^3(x,y) +(x^2-y^3) = x +(x^2-y^3)\\
+\]
+\[
+        F^2(x,y)+(x^2-y^3) =y+(x^2-y^3)
+\]
+
+    If $F(0,0)\neq 0$ this can't happen.\\
+
+    If $F(0,0) = 0$ then $F^2$ and $F^3$ can't contain linear terms.
+
+    \item Translating to algebra, the claim is that the $\mathbb{C}$-algebras $\mathbb{C}[t]$ and $\mathbb{C}[x,y]/(x^2-y^3)$ are not isomorphic (no proof).
+
+\end{enumerate}
+
+On one hand, from geometric perspective we have $x_0\in X$ where $X$ is an algebraic set, and from an algebraic perspective we have $\{f\in \mathcal{O}(X)|f(x_0)=0\}$, a maximal ideal of a f.g. reduced ring. It is maximal, as it is the kernel of the map $\mathcal{O}(X)\rightarrow \mathbb{C}$, $f\mapsto f(x_0)$.
+
+
+
+\section{Lecture 4}
+
+\begin{theorem}[Nullstellensatz for Algebraic sets]
+Given an algebraic set $X$ there is a canonical order reversing bijection 
+
+$$\{ \ \text{closed subsets of} \; X \} \leftrightarrow \{ \text{radical ideals of} \; \mathcal{O}(X)  \} $$
+\end{theorem}
+\begin{proof}
+$X \subset \C^n$ and both are in bijection with $\{ \text{radical ideals containing} \; I \}$
+\end{proof}
+
+\begin{corollary}
+Maximal ideals of $\mathcal{O}(X)$ are in bijection with points on $X$ given by $x \mapsto \{ f \in \mathcal{O}(X) \; | \; f(x) = 0 \}$.
+\end{corollary}
+
+\subsection{Product of Varieties}
+
+Given $X \subset \C^n, Y \subset \C^m$ algebraic varieties given by the zero sets of $\{f_i(x_1,...,x_n)\}$ and $\{ g_j(x_1,...,x_m) \}$ then we define $X \times Y \subset \C^{n+m}$ to be the algebraic set given by $Z(f_i(z_1,...,z_n), g_j(z_{n+1},...,z{n+m})$.
+
+\begin{claim}
+$\mathcal{O}(X \times Y) = \mathcal{O}(X) \otimes \mathcal{O}(Y)$.
+\end{claim}
+
+\begin{proof}
+$\times$ is a product in the category of algebraic varieties, $\otimes$ is a product in the category of f.g. reduced $\C-$algebras, and finally, these categories are equivalent.
+
+\end{proof}
+
+\begin{definition}
+A projective algebraic set is the zero locus of a bunch of homogeneous polynomials on $n+1$ variables.
+\end{definition}
+
+We denote $\mathbb{P}_i^n(\C) = \{ [x_0,...,x_n] \; | \; x_i \neq 0  \} \subset \mathbb{P}^n(\C) \subset \mathbb{P}^n(\C)$. This is a copy of $\mathbb{P}^n(\C)$.
+
+\begin{theorem}
+$X \subset \mathbb{P}^n(\C)$ is a projective algebraic set $\iff X \cap P_i^n(\C)$ is an affine algebraic set  
+
+\end{theorem} 
+
+\begin{proof}
+If $X$ is given by $Z(F_i(x_0,...,x_n))$ where $F_i$ are homogeneous, then $X \cap \mathbb{P}_0^n(\C)$ is $Z(F_i(1,x_1,...,x_n))$.\\
+
+Now suppose $X \cap \mathbb{P_i}^n(\C)$ is given by $Z(f_{i,j}(x_0,...,\hat{x_i},...,x_n))$ , for each $i,j$ let $F_{ij}=x_i^{\deg f_{ij}+1} f_{ij}(\frac{x_0}{x_i},...,\frac{x_n}{x_i}) $ be the homogenization. The claim now is that $X = Z(F_{ij})$.
+\end{proof}
+
+\begin{definition}
+$X \subset \mathbb{P}^n(\C)$ is a constructible if it is a Boolean combination of projective algebraic sets.
+\end{definition}
+
+\begin{corollary}
+$X \subset \mathbb{P}^n(\C)$ is a constructible set $\iff \; \forall \; i X \cap \mathbb{P}_i^n(\C)$ is constructible
+\end{corollary}
+
+
+\begin{corollary}
+$X \subset \mathbb{P}^n(\C) \times \mathbb{P}^m(\C)$ constructible then its projection to $\mathbb{P}^n(\C)$ is constructible.
+\end{corollary}
+
+
+\begin{definition}[Segre Embedding]
+An embedding from $\mathbb{P}^n(\C) \times \mathbb{P}^m(\C) \rightarrow \mathbb{P}^{nm+n+m}$ which sends product of projective varieties to a single projective variety in a larger space. It is given by $v,w \mapsto vw^T$.
+\end{definition}
+
+\subsection{Euler Relation}
+
+If $f \in \C[x,y,z]$ homog. of degree $k$ then 
+
+
+$$x \frac{\partial f}{\partial x} + y  \frac{\partial f}{\partial y} + z \frac{\partial f}{\partial z} = kf$$
+
+In particular, if $p \in Z(f)$ and $p_z \neq 0$ then $\frac{\partial f}{\partial x} , \frac{\partial f}{\partial y}$ determine $\frac{\partial f}{\partial z}$. Suppose $f \in \C[x,y,z]$ is homogeneous and define $g(x,y)= f(x,y,1)$. If $[a,b,1] \in \mathbb{P}_2^2(\C)$ then $Z(g)$ is singular at $(a,b)$ if and only if $\frac{\partial g}{\partial x}(a,b) = \frac{\partial g}{\partial y}(a,b) =0$ if and only if $
+\frac{\partial f}{\partial x}(p) = \frac{\partial f}{\partial y}(p) = \frac{\partial f}{\partial z}(p) = 0$. More generally if $f_1,...,f_m \in \C[x_0,...,x_n]$ are homog. , $p \in \mathbb{P}^n(\C)$ such that $f_i(p) = 0$ and $\nabla f_i(p)$ linearly independent then $Z(f)$ is a complex manifold near $p$
+
+\begin{theorem}
+Most proj. plane curves are non-singular. The space of proj. plane curves of degree $d$ is $\mathbb{P}( \text{all homo. pol. of deg d in x,y,z}) = \mathbb{P}^{\binom{d+2}{2}}$
+\end{theorem}
+
+\begin{theorem}
+The set $\{ f \in \mathbb{P}^{\binom{d+2}{2} -1} \; | \; Z(f) \; \text{is non-sing.} \}$ is open and dense
+\end{theorem}
+
+
+\begin{proof}
+Consider the set $X = \{ (f,p) \in \mathbb{P}^{\binom{d+2}{2} - 1 } \times \R^2 \; | \; f(p) = 0 , \nabla f(p) = 0 \}$. Now the claim is that this is an algebraic set. A corollary of this claim is that $\pi(X)$ is constructible. Since $\mathbb{P}^n$ is compact, $X$ is compact, hence $\pi(X)$ is closed in the metric topology. Either $\pi(X)$ is empty or $\pi(X)$ is $\mathbb{P}^n(\C)$, so enough to prove there is a single non-singular curve.
+\end{proof}
+
+\section{Lecture 5 - part 1}
+
+\subsection{Proof of Bezout's Theorem}
+
+\begin{definition}
+$Z(f), Z(g)$ are said to intersect transversely at $p \in \mathbb{P}^2$ if $f(p) = g(p)$ and $\nabla f(p) , \nabla g(p)$ are linearly independent. Geometrically, this means that $p$ is a manifold point of $Z(f)$ and $Z(g)$ and the tangent lines to $Z(f), Z(g)$ at $p$ are distinct.
+\end{definition}
+
+\begin{theorem}[Version of Bezout]
+If $f,g \in \C[x,y,z]$ are homogeneous of degrees $n,m$, and every point of of $Z(f) \cap Z(g)$ is a transverse intersection, then $|Z(f) \cap Z(g)| = n \cdot m$.
+
+\end{theorem}
+
+\begin{proof}
+The general idea is to look at the parameter space of pairs of curves, then show that it is true for one point in this space, and then use some continuity argument to control all other points. In particular, we claim that if two curves intersect transversely, we can change them a little, such that they still intersect transversely and the number of intersection points doesn't change (due to Roche's Theorem).\\
+
+
+\begin{lemma}
+Suppose $\pi: X \rightarrow Y$ is a covering map, $X$ compact, then the function $y \mapsto | \pi^{-1}(y)|$ is locally constant
+\end{lemma}
+
+\begin{proof}
+$\pi^{-1}$ is discrete, hence finite. We now need to show that $\{ y \; : \; |\pi^{-1}(y)| = 7  \}$ is open and closed. Denote $x_1,...,x_7$ be the pull-backs of some $y$. Then there are neighbourhoods $V_i$ of $x_i$s such that $\pi|_{V_i}$ are homeomorphisms. Take $U = \cap \pi(V_i)$. Now $\pi$ is a homeomorphism from $V_i \cap \pi^{-1}(U)$ to $U$, and so $|\pi^{-1}(z)| \geq 7$ for all $z \in U$. The other direction of the inequality follows easily. This set is also closed, since its complement is a union of open sets, namely $\bigcup_{n\neq 7} \{y \; | \; |\pi^{-1}(y)| = n  \}.
+$
+\end{proof}
+
+Now we want to show that something is a covering map. 
+
+\begin{definition}
+A $C^{1}$-function $f$ between manifolds $M,N$ is called \'{E}tale at $p \in M$ if $df_p: T_pM \rightarrow T_{f(p)}N$ is an isomorphism. It is easy to see that an \'{E}tale map is a local homeomorphism (Inverse function theorem).
+\end{definition}
+
+We are going to use the following Lemma without proof:
+
+\begin{lemma}
+If $M$ is compact, and $f$ is \'{E}tale, then $f$ is a covering.
+\end{lemma}
+
+Now the trick is: Let $D =\C[\epsilon]/\epsilon^2 $ then in $D$ we have that $(a+b\epsilon)^n := x^n  = a^n + \epsilon \cdot n \cdot a^{n-1} \cdot b = a^n + n \cdot x^{n-1}$. 
+Now if $f$ is a poly, $f(a+b\epsilon) = f(a) + \epsilon f'(a) \cdot b$, and if $f \in \C[x_1,...,x_n]$, 
+then $f(a+b \epsilon) = f(a) + \epsilon \langle \nabla f , b \rangle$.\\
+
+Going back to Bezout, homo. polynomials of deg. $n$ are parametrized by $\Pp^{\binom{n+2}{2}-1}$. 
+
+\begin{lemma}
+$$\{(f,g) \in \Pp^{\binom{n+2}{2}-1} \times \Pp^{\binom{m+2}{2}-1} \; | \; \text{each intersection pt is transverse} \}  $$
+
+is an open, dense and connected space.
+
+\end{lemma}
+
+\begin{proof}
+$X = \{ (f,g,p) \in \Pp^{M} \times \Pp^{N} \times \Pp^2 \; | \; p \; \text{is non transverse intersection} \}$ is closed. Consider $\pi: X \mapsto \Pp^N \times \Pp^M$. $\pi(X)$ is constructible, closed, and not everything, hence its complement is open, dense and connected.
+\end{proof}
+
+\begin{lemma}
+$Y = \{ (f,g,p) \in \Pp^{M} \times \Pp^{N} \times \Pp^2 \; | \; p \; \text{is a transverse intersection point} \}$ is a manifold
+\end{lemma}
+
+\begin{proof}
+$Y$ is the zero locus of the map $\varphi((f,g,p)) = (f(p),g(p))$, intersection with $\pi(X)^c \times \Pp^2$. It is enough to show that the derivative of $\varphi$ is onto. 
+
+$$(f+ \epsilon F, g + \epsilon G, p+\epsilon P) \mapsto ((f+\epsilon F)(p +\epsilon P),(g+\epsilon G)(p+\epsilon P)) $$
+
+and
+
+$$(f+\epsilon F)(p +\epsilon P) = f(p+\epsilon P) + \epsilon F(p+\epsilon P) = f(p)+ \epsilon \langle \nabla f(p), P \rangle +\epsilon F(p)$$
+
+The upshot is that the derivative of $\varphi$ is the map 
+$$(F,G,P) \mapsto (\langle \nabla f(p), P \rangle + F(p), \langle \nabla g(p), P \rangle + G(p)) $$
+and now its restriction to $(0,0,p)$ is onto, since $\nabla f(p), \nabla g(p)$ are linearly independent.
+\end{proof}
+
+\begin{lemma}
+The projection $Y \rightarrow \Pp^N \times \Pp^m$ is \'{E}tale.
+\end{lemma}
+
+\begin{proof}
+By the previous lemma, 
+$$T_{(f,g,p)}Y =  \{ (F,G,P) \; | \; \langle \nabla f(p), P \rangle +F(p) = 0  ,  \langle \nabla g(p), P \rangle +G(p) = 0  \}$$ and $d\pi: T_{(f,g,p)}Y \rightarrow T_f\Pp^N \times T_g \Pp^M $ is just the map $(F,G,P) \mapsto (F,G)$.\\
+
+Since they have the same dimension, it is enough to prove that $d \pi$ is onto. Indeed, $(F,G) = \pi(F,G,P)$ where $P$ is the solution to $$\langle \nabla f(p) , P \rangle = -F(p) $$ and $$\langle \nabla g(p) , P \rangle = -G(p) $$
+which exists since $\nabla f(p), \nabla g(p)$ are linearly independent.
+
+\end{proof}
+
+\begin{lemma}
+$Y \rightarrow \{(f,g) \; | \; f,g \;\text{ intersect transversely}  \} := U $ is a covering map.
+\end{lemma}
+
+\begin{proof}
+Let $\pi$ be the projection. $U$ is the union of compact manifolds with boundary (for example, restricting the angle between the tangents at points of intersection to be at least $\delta$). Say, $U = \bigcup U_i$. For each $i$, the pre-image of $U_i$ is compact, and therefore $\pi: \pi^{-1}(U_i) \rightarrow U_i$ is \'{E}tale, therefore a covering. Hence $\pi: \bigcup \pi^{-1}(U_i) \rightarrow U$ is a covering map.
+\end{proof}
+
+Now Bezout follows.
+
+\end{proof}
+
+\section{Lecture 5 - part 2}
+
+We want to avoid certain kinds of singularities. 
+
+\begin{example}
+$X \subset Y \times \C^n \xrightarrow{\pi} Y$ and $X$ is given by a single equation, $f(y,t) = 0$, where $f \in \mathcal{O}(Y)[t]$ as $\mathcal{O}(Y \times \C = \mathcal{O}(Y) \otimes \C[t] = \mathcal{O}(y)[t]$.
+\end{example}
+
+No points in the fibres go to infinity is equivalent to the fact that $\deg_t f(y,t)$ is constant $\iff$ for $n$ minimal, $f(y,t) = a_0(y)+...+a_n(y) t^n$, $a_n(y)$ is never zero $\iff a_n(y) \in \mathcal{O}(Y)$ is invertible (we can assume it to be 1), and this is true $\iff t \in \mathcal{O}(X)$ satisfies a monic polynomial with coefficients in $\mathcal{O}(Y)$.
+
+\begin{definition}
+Let $S \subset R$ be a ring extension. An element $r \in R$ is called integral over $S$ if it satisfies some monic polynomial with coefficients in $S$.
+\end{definition}
+
+If $S,R$ are finitely generated algebras, then $S \subset R$ is integral $\iff R$ is a finitely generated $S-$module. 
+
+\begin{definition}
+$X \rightarrow Y$ a morphism of affine varieties is called \textbf{finite} if $\mathcal{O}(Y) \subset \mathcal{O}(X)$ and this is an integral ring.
+\end{definition}
+
+\begin{remark}
+This is equivalent to the existence of a sequence 
+$$X \subset Y_1 \times \C \rightarrow Y_1 \subset Y_2 \times \C \rightarrow .... \rightarrow Y_n = Y $$
+Where for each $i, \ Y_i \subset Y_{i+1} \times \C \rightarrow Y_{i+1}$ is as in the example.
+\end{remark}
+
+\begin{theorem}
+Finite maps are surjective
+\end{theorem}
+
+\begin{proof}
+By the remark, it is enough to show that the map in the example is surjective, but a monic polynomial must have a root. But let's prove it algebraically.\\
+
+Let $f: X \rightarrow Y$ be a finite map. We need to show that for any maximal ideal (point in $Y$) $\mathfrak{m}$ in $\mathcal{O}(Y)$, its pre-image is non-trivial. The pre-image is given by $\mathfrak{m} \mathcal{O}(X) \lhd \mathcal{O}(X)$. By assumption,$\mathcal{O}(X)$ is f.g. as an $\mathcal{O}(Y)-$module, say by $a_1,...,a_n$. Assume that $\mathfrak{m}\mathcal{O}(X) = \mathcal{O}(X)$. This will imply that $a_i = \sum m_{ij}a_j$ for $m_i \in \mathfrak{m}$. The map $\varphi: \mathcal{O}(Y)^n \rightarrow \mathcal{O}(X)$ given by $(\alpha_1,...,\alpha_n) \mapsto \alpha_1a_1+...+\alpha_n a_n$ is onto. Denote $M = (m_{ij})$ the matrix consisting of the $m_i$s needed to generate $a_i$. Now look at the matrix $Id-M$. But this is the zero map, as it maps the $a_i$s to zero. Now we have the diagram \\
+
+\begin{tikzcd}
+\mathcal{O}(Y)^n \arrow[d, "adj(I-M)"'] \arrow[rr, "\varphi"] \arrow[dd, "\det(I-M) \cdot I"', bend right=71] &  & \mathcal{O}(X) \arrow[dd, "0", bend left=49] \\
+\mathcal{O}(Y)^n \arrow[rr, "\varphi"] \arrow[d, "I-M"']                                                      &  & \mathcal{O}(X) \arrow[d, "0"]                \\
+\mathcal{O}(Y)^n \arrow[rr, "\varphi"]                                                                        &  & \mathcal{O}(X)                              
+\end{tikzcd}
+
+Which implies $0 = \det(I-M) \equiv 1 \mod \mathfrak{m}$, a contradiction.
+\end{proof}
+
+\begin{corollary}
+Finite maps are closed: If $X \rightarrow Y$ is finite, $Z \subset X$ is Zariski-closed, then $f(Z)$ is closed.
+\end{corollary}
+
+\begin{proof}
+the restriction of $f$ to $Z \rightarrow \overline{f(Z)}^{Zariski}$ is finite.
+
+\end{proof}
+
+\begin{definition}
+If $X,Y \subset \Pp^n$ are projective, and $f: X \rightarrow Y$ a morphism, we say that $f$ is finite if $f: f^{-1}(Y \cap \Pp_i^n) \rightarrow Y \cap \Pp_i^n$ is finite, for every $Y$.
+\end{definition}
+
+In order to show that this is a well-defined notion, we need:
+
+\begin{lemma}
+If $X,Y$ are affine, $Y = \cup Y_i$ is an affine cover of $Y$, then $f: X \rightarrow Y$ is finite $\iff f|_{f^{-1}(Y_i)}: f^{-1}(Y_i) \rightarrow Y_i$ is finite (being finite is a local condition on the target)
+
+\end{lemma}
+
+We will prove this lemma next time.\\
+
+\begin{definition}
+$p \in \Pp^N$ and let $\Pp^{N-1} \subset \Pp^N$ be a copy of $\Pp^{N-1}$ not passing through $p$. Define $\pi_p: \Pp^N \setminus \{ p \} \rightarrow \Pp^{N-1}$ by
+$$\pi_p(q) = \text{intersection point of} \; \Pp^{N-1} \; \text{and} \; \overline{pq} $$
+\end{definition}
+
+\begin{proposition}
+If $X \subset \Pp^{N}$ is projective, $p \not \in X$, then $\pi_p : X \rightarrow \overline{\pi_p(X)}$ is a finite map.
+\end{proposition}
+
+\begin{corollary}
+If $X \subset \Pp^N$ then there is a $d$ and a finite map $X \rightarrow \Pp^d$
+\end{corollary}
+
+(Every projective variety is a branched covering of some $\Pp^d$). This $d$ is going to be our dimension.
+
+\begin{proof}[Proof of corollary]
+If $X = \Pp^N$ we're done. Otherwise choose $p \not \in X$. Look at $\pi_p : X \rightarrow \overline{\pi_(X)} \subset \Pp^{N-1}$, by induction, $\exists$ a finite map $f: \overline{\pi_p(X)} \rightarrow \Pp^d$, and the composition $f \circ \pi_p$ is finite.
+\end{proof}
+
+\section{Lecture 6 - Part 1}
+
+\section{Lecture 6 - Part 2}
+
+
+\section{Lecture 7 - Part 1}
+
+\subsection{History}
+
+Consider the integral 
+
+$$\int_0^x \dfrac{dt}{\sqrt{1-t^2}} = \arcsin(x) := A(x) $$
+
+Which is weird, since on the right we have a transcendental function, but it still satisfies an algebraic equation, namely
+$$A(x)+A(y) = A(x \sqrt{1-y^2} + y \sqrt{1-x^2} )$$
+
+Note that $\arcsin(x_0)$ is the length of the arc of a circle going from $(1,0)$ to the point with its $x$ coordinate being $x_0$. The same question can be asked about an ellipse, which brings us to Elliptic integrals, namely
+
+$$\int_0^x \dfrac{\sqrt{1-k^2x^2}}{\sqrt{1-t^2}} = I(x)$$
+
+Legandre showed that $I(x)+I(y) = I(z)$ where $z$ is a rational function of $$(x, \sqrt{(1-x^2)(1-k^2x^2)}, y , \sqrt{(1-y^2)(1-k^2y^2)} )$$
+
+Euler showed the same for $\int \frac{dt}{\sqrt{f(t)}}$ where $f$ is cubic. Then Abel proved:\\
+
+Suppose $F(x,y)$ has degree $d$, $y(x)$ satisfies $f(x,y(x)) = 0$. And $r(x,y)$ rational function. Define $I(x) := \int_0^x r(t,y(t)) dt$. Then for $N = \binom{d-1}{2}+1$ and any $x_1,...,x_N$ there are $y_1,...,y_N$ depending rationally on $x_i, y(x_i)$, such that $\sum I(x_j) = \sum I(y_j)$.
+
+\subsection{Vector Fields}
+
+Regular (or algebraic) vector fields on $\C^n$ are of the form $\sum f_i \frac{\partial}{\partial x_i}$ where $f_i$ are polynomials. Now, given $X \subset \C^n$ an affine, non-singular variety, a vector field on $X$ is given by $\sum f_i \frac{\partial}{\partial x_i}$ such that for all $x_0 \in X$ we have $\sum f_i(x_0) \frac{\partial}{\partial x_i} \in T_{x_0}X$. We will need them for projective varieties, so let's see what we get. A vector field on $\Pp^1$ is a vector field $v$ such that $v|_{\Pp_0^1}, v|_{\Pp_1^1}$ are regular. How do we compute these things? \\
+
+Remember that $\Pp_0^1 = \{ [1:z] \} \leadsto \frac{\partial}{\partial z}$ and $\Pp_1^1 = \{ [w:1] \} \leadsto \frac{\partial}{\partial w}$. So a vector field on $\Pp^1$ is a pair $f_0(z) \frac{\partial}{\partial z} , f_1(w) \frac{\partial}{\partial w}$ which coincide on $\Pp_0^1 \cap \Pp_1^1$. On the intersection, what is $g(w)$ if we write ${\partial}{\partial z} = g(w) = \frac{\partial}{\partial w}$? We know that $z = \frac{1}{w}$. 
+We have that $$ 1 = \langle \frac{\partial}{\partial z} , z \rangle = \langle g(w) \frac{\partial}{\partial w} , \frac{1}{w} \rangle = g(w)\frac{-1}{w^2} $$
+And so $g(w) = -w^2$. In particular, $\frac{\partial}{\partial z}$ extends to a regular vector field $(\frac{\partial}{\partial z} , -w^2 \frac{\partial}{\partial w})$. Similarly, for $z \frac{\partial}{\partial z}$ and $z^2 \frac{\partial}{\partial z}$ and we will prove that every other one is a linear combination of such.\\
+
+A regular differential on $\C^n$: If $f$ is a function on $\C^n$ then $df$ is a functional on the tangent space,  and for $x_i:\C^n \rightarrow \C$, we have $dx_i$ which returns the $i$'th coordinate of vectors. \\
+
+A regular differential on $\C^n$ is of the form $\sum f_i dx_i$ where $f_i$ are polynomials. If $X \subset \C^n$ is affine, a differential on $X$ is given by $\sum f_i dx_i$.
+
+\begin{example}
+On $\Pp^1$ we have $dz = \frac{-1}{w^2} dw$. After some calculation, we get that if $(f(z)dz, g(w) dw)$ is a regular differential on $\Pp^1$ then $g(w) dw = -f(\frac{1}{w}) \frac{1}{w^2} dw$ but this means that $g(w) = -f(\frac{1}{w}) \frac{1}{w^2}$, but there are no such polynomials. Conclusion - There are no regular differentials on $\Pp^1$.
+
+\end{example}
+
+
+\begin{remark}
+If $C$ is a non singular, projective curve of genus $\geq 2$ then $C$ does not have any regular vector fields, but there are regular differentials.
+\end{remark}
+
+This is a consequence of a theorem by Poincare and Hopf which says that the sum of indices (winding number of vector fields) is independent of the field and is equal to the Euler characteristic. 
+Thus, if $\chi(c) <0$ there are no regular vector fields.\\
+
+\subsection{Integrating Differentials}
+
+If $\omega$ is a differential on $\C^n$ and $\gamma: [0,1] \rightarrow\C^n$ a curve, then $\int_\gamma \omega = \int_0^1  \omega_{\gamma(t)}(\dot{\gamma}(t)) dt$ is well-defined.
+
+\begin{example}
+$C = Z(y^2-f(x))$, and pick $\gamma(t) = (t, \epsilon(t))$ such that $\gamma(t) \in C$. Then
+
+$$ \int_\gamma \frac{dx}{y} = \int_0^1 \frac{dt}{\epsilon(t)} = \int_0^1 \frac{dt}{\sqrt{f(t)}} $$
+
+In our case, $C$ is a torus, and so if $\omega$ is a differential form, then the curve integral is defined up to integral combinations of $\int_{\gamma_1} \omega$ and $\int_{\gamma_2} \omega$,called the periods, where these are the two generating loops of the fundamental group on the torus, since curve integrals are defined up to homotopy. In particular, the inverse of $I$ is a function on $\C$ which is periodic for two complex numbers. We get a function ($p \mapsto \int_{p_0}^p \omega$) from $C \rightarrow \C / \Gamma$, the period lattice.
+\end{example}
+
+\section{Lecture 7 - Part 2}
+
+Let $X \in \C^n$ be an affine variety, and $f \in \mathcal{O}(X)$, then the Rabinovich trick gives a structure of an affine variety on $$X \setminus Z(f) \cong \{ (x,y) \in X \times \C \; | \; y \cdot f(x) =1 \}$$
+such that $\mathcal{O}(X \setminus Z(f)) = \mathcal{O}(X)[\frac{1}{f}]$
+
+\begin{definition}
+$X \subset \C^n$ affine. $f: X \rightarrow \C$ is called *-regular if there is a Zariski open cover, $X = Z(f_1)^c \cup ... \cup Z(f_k)^c $ such that $f|_{Z(f_i)^c}$ is regular.
+\end{definition}
+
+\begin{claim}
+*-regular is regular.
+\end{claim}
+
+\begin{proof}
+For every $U_i := Z(f_i)^c$ we know that $f|_{U_i}$ is given by $\frac{g_i}{f_i^{n_i}}$ where $g_i \in \mathcal{O}(X)$. WLOG, $n_i = n$, and from the Nullstellensatz, $(f_1^n,...,f_k^n)=1$ thus there are $h_1,...,h_k \in \mathcal{O}(X)$ such that $\sum h_i f_i^n = 1$ and so $f = \frac{g_i}{f_i^n} = \frac{g_i h_i}{f_i^n h_i} = \frac{\sum g_i h_i}{ \sum f_i^n h_i} = \sum g_ih_i \in \mathcal{O}(X)$
+\end{proof}
+
+\begin{definition}
+If $U \subset X$ is a Zariski-open set in an affine variety, $f: U \rightarrow \C$ is regular if there exists a finite open cover of $U$ such that $f|_{Z(f_i)^c}$ are regular.
+\end{definition}
+
+The conclusion of the last claim, is that this does not depend on the choice of the cover. Thus we get a map $\{ \; \text{ Zariski Open sets of X} \} \rightarrow \{ \text{Rings} \}$, by taking the regular functions on an open set. This structure is called the structure sheaf of $X$, denoted by $\mathcal{O}_X$. Note that our previous $\mathcal{O}(X)$ is just $\mathcal{O}_X(X)$.
+
+
+\begin{definition}
+Suppose $U \subset Y \subset \Pp^n$ where $U$ is open in $Y$, then $f: U \rightarrow \C$ is called regular if there exists $U = U_1 \cup ... \cup U_m$ such that $U_i$ is open in affine, and $f|_{U_i}$ is regular.\\
+
+Furthermore, $f: U \rightarrow \Pp^n$ is called regular if there exists an affine cover $\Pp^n = U_1 \cup ... \cup U_k$ such that $f|{f^{-1}(U_i)}$ is regular.
+\end{definition} 
+
+
+\begin{thebibliography}{9}
+
+\bibliographystyle{alpha}
+
+
+%\bibitem[ABBGNRS17]{7samurais_part_one}
+%Abert, M., Bergeron, N., Biringer, I., Gelander, T., Nikolov, N., Raimbault, J., Samet, I. (2017). On the growth of $L^2$-invariants for sequences of lattices in Lie groups. Annals of Mathematics, 711-790.
+
+%\bibitem[ABBGNRS16]{7samurais}
+%Abert, M., Bergeron, N., Biringer, I., Gelander, T., Nikolov, N., Raimbault, J., Samet, I. (2016). On the growth of $L^2$-invariants of locally symmetric spaces, II: exotic invariant random subgroups in rank one. arXiv preprint arXiv:1612.09510.
+
+%\bibitem[AGN17]{agn_17}
+%Abert, M., Gelander, T.,  Nikolov, N. (2017). Rank, combinatorial cost, and homology torsion growth in higher rank lattices. Duke Mathematical Journal, 166(15), 2925-2964.
+
+
+%\bibitem[Gr87]{gromov_87}
+%Gromov, M. (1987). Hyperbolic groups, in “Essays in group theory”. Edited by SM Gersten, MSRI Publ. 8.
+
+%\bibitem[GPS87]{gps_87}
+%Gromov, M., Piatetski-Shapiro, I. (1987). Non-arithmetic groups in Lobachevsky spaces. Publications Mathématiques de l'IHÉS, 66, 93-103.
+
+%\bibitem[LBB17]{lbb_17}
+%Boudec, A. L., Bon, N. M. (2017). Locally compact groups whose ergodic or minimal actions are all free. arXiv preprint arXiv:1709.06733.
+
+%\bibitem[Zh19]{zheng19}
+%Zheng, T. (2019). Neretin groups admit no non-trivial invariant random subgroups. arXiv preprint arXiv:1905.07605.
+
+\end{thebibliography}
+
+\end{document}
+
+              
+            
