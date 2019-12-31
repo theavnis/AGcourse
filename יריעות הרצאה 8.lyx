@@ -1,0 +1,988 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage[all,cmtip]{xy}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+יריעות אלגבריות – הרצאה שמינית
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vector}[1]{\overrightarrow{#1}}
+{\overrightarrow{#1}}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בהרצאה הקודמת דיברנו על פונקציות רגולריות על מרחבים פרוייקטיבים.
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא
+\end_layout
+
+\begin_layout Standard
+נ
+\begin_inset Formula 
+\[
+\]
+
+\end_inset
+
+קבע מספרים 
+\begin_inset Formula $n,d$
+\end_inset
+
+.
+ העתקת 
+\begin_inset Formula $\text{veronese}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+V:\p^{n}\ra\p^{\binom{n+1+d}{n+1}-1}
+\]
+
+\end_inset
+
+ע"י 
+\begin_inset Formula 
+\[
+V\left(\left[p_{0}:\ldots:p_{n}\right]\right)_{x_{0}^{d_{0}}\cdots x_{n}^{d_{n}}}=p_{0}^{d_{0}}\cdots p_{n}^{d_{n}}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $x_{0}^{d_{0}}\cdots x_{n}^{d_{n}}$
+\end_inset
+
+ הוא מונום מדרגה 
+\begin_inset Formula $d$
+\end_inset
+
+ ב 
+\begin_inset Formula $x_{0},\ldots,x_{n}$
+\end_inset
+
+.
+ נתבונן לדוגמא בהעתקה עבור 
+\begin_inset Formula $n=1,\ d=2$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+V:\p^{1}\ra\p^{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[t:s\right]\mapsto\left[t^{2}:ts:s^{2}\right]
+\]
+
+\end_inset
+
+בקוארדינטות אפיניות: 
+\begin_inset Formula 
+\[
+s\mapsto\left(s,s^{2}\right)
+\]
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula 
+\[
+H\ss\p^{\binom{n+d}{n}-1}
+\]
+
+\end_inset
+
+בעל–מישור כאשר 
+\begin_inset Formula $H$
+\end_inset
+
+ מוגדרת ע"י 
+\begin_inset Formula 
+\[
+\left(a_{I}\right)_{I\in\binom{n+d}{n}}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $a_{I}\in\c$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+V^{-1}\left(H\right)=Z\left(\sum a_{I}\cdot x^{I}\right)
+\]
+
+\end_inset
+
+)לדוגמא, אם נחזור למקרה הספציפי של 
+\begin_inset Formula $V_{1,2}$
+\end_inset
+
+, נניח כי 
+\begin_inset Formula $H$
+\end_inset
+
+ היא הפונקציונל המוגדר ע"י הוקטור 
+\begin_inset Formula $\left(1,2,3\right)$
+\end_inset
+
+, אזי 
+\begin_inset Formula 
+\[
+V_{1,2}\left(H\right)=\left\{ \left[t:s\right]\mid\left[t^{2}:st:s^{2}\right]\in H\right\} =\left\{ \left[t:s\right]\mid\left\langle \vect{t^{2}}{st}{s^{2}},\vect 123\right\rangle =0\right\} =
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left\{ \left[t:s\right]\mid t^{2}+2st+3s^{2}=0\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $V$
+\end_inset
+
+ היא איזומורפיזם לתמונה שלה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הוכחת הטענה נשארת כתרגיל לקורא.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+אם 
+\begin_inset Formula $f$
+\end_inset
+
+ פולינום הומוגני ב 
+\begin_inset Formula $n+1$
+\end_inset
+
+ משתנים, אזי 
+\begin_inset Formula $\p^{n}-Z\left(f\right)$
+\end_inset
+
+ היא יריעה אפינית 
+\begin_inset Formula 
+\[
+\o_{\p^{n}}\left(\p^{n}-Z\left(f\right)\right)=\left\{ \frac{a\left(x\right)}{f\left(x\right)^{k}}\mid a\in\c\left[x_{0},\ldots,x_{n}\right]\ \text{is homogenous of degree }k\cdot\deg f\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+זה מתקיים אם 
+\begin_inset Formula $\deg f=1$
+\end_inset
+
+: בלי הגבלת הכלליות, 
+\begin_inset Formula $f=x_{0}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+\p^{n}-Z\left(x_{0}\right)=\c^{n}
+\]
+
+\end_inset
+
+תחת ההעתקה 
+\begin_inset Formula 
+\[
+\left[1:t_{1}:\ldots:t_{n}\right]\mapsfrom\left(t_{1},\ldots,t_{n}\right)
+\]
+
+\end_inset
+
+תחת זיהוי זה, הפולינום 
+\begin_inset Formula 
+\[
+g\left(t_{1},\ldots,t_{n}\right)
+\]
+
+\end_inset
+
+נהפך ל 
+\begin_inset Formula 
+\[
+g\left(\frac{x_{1}}{x_{0}},\ldots,\frac{x_{n}}{x_{0}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+עבור 
+\begin_inset Formula $\deg f>1$
+\end_inset
+
+, נקבל ש 
+\begin_inset Formula 
+\[
+Z\left(f\right)=V_{n,d}^{-1}\left(H\right)
+\]
+
+\end_inset
+
+עבור על–מישור 
+\begin_inset Formula $H$
+\end_inset
+
+, אזי 
+\begin_inset Formula 
+\[
+\p^{n}-Z\left(f\right)=V^{-1}\left(\p^{\binom{n+d}{n}-1}-Z\left(H\right)\right)=V^{-1}\left(V\left(\p^{n}\right)-Z\left(H\right)\right)
+\]
+
+\end_inset
+
+אבל 
+\begin_inset Formula $V$
+\end_inset
+
+ הוא איזומורפיזם ולכן 
+\begin_inset Formula 
+\[
+\p^{n}-Z\left(f\right)\cong V\left(\p^{n}\right)-Z\left(H\right)=V\left(\p^{n}\right)\cap\left(\p^{\binom{n+d}{n}-1}-Z\left(H\right)\right)
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $V\left(\p^{n}\right)$
+\end_inset
+
+ היא קבוצה סגורה ולכן אפינית, ו 
+\begin_inset Formula $\left(\p^{\binom{n+d}{n}-1}-Z\left(H\right)\right)$
+\end_inset
+
+ היא יריעה אפינית.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת נתקן משפט מהפעם שעברה:
+\end_layout
+
+\begin_layout Theorem
+כל העתקה רגולרית 
+\begin_inset Formula $\p^{n}\ra\p^{m}$
+\end_inset
+
+ נתונה ע"י קבוצה סגורה מגודל 
+\begin_inset Formula $\left(m+1\right)$
+\end_inset
+
+ של פולינומים הומוגנים מאותה דרגה ב 
+\begin_inset Formula $x_{0},\ldots,x_{n}$
+\end_inset
+
+, כלומר 
+\begin_inset Formula 
+\[
+\left[x_{0}:\ldots:x_{n}\right]\mapsto\left[f_{0}\left(x_{0},\ldots,x_{n}\right):\ldots:f_{m}\left(x_{0},\ldots,x_{n}\right)\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+זה מיוחד ל 
+\begin_inset Formula $\p^{n}$
+\end_inset
+
+.
+ זה לא נכון לכל יריעה פרוייקטיבית 
+\begin_inset Formula $X\ss\p^{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $X=f^{-1}\left(\left[0:\ast:\ldots:\ast\right]\right)$
+\end_inset
+
+ היא קבוצה סגורה ב 
+\begin_inset Formula $\p^{n}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+f:\p^{n}-X\ra\c^{m}
+\]
+
+\end_inset
+
+היא העתקה רגולרית.
+ מההגדרה, יש קבוצה סגורה 
+\begin_inset Formula $Y\ssq\p^{n}$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $\p^{n}-Y$
+\end_inset
+
+ אפינית.
+ בלי הגבלת הכלליות, 
+\begin_inset Formula $Y$
+\end_inset
+
+ היא על–משטח: 
+\begin_inset Formula $f$
+\end_inset
+
+ מצומצמת להעתקה 
+\begin_inset Formula 
+\[
+\p^{n}-Y\ra\c^{m}
+\]
+
+\end_inset
+
+ולכן על 
+\begin_inset Formula $\p^{n}-Y$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+f\left(\left[t_{0}:\ldots:t_{n}\right]\right)=\left(\frac{a_{1}\left(t\right)}{f\left(t\right)^{k_{1}}},\ldots,\frac{a_{m}\left(t\right)}{f\left(t\right)^{k_{m}}}\right)
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula 
+\[
+\deg a_{i}=k_{i}\deg f
+\]
+
+\end_inset
+
+ללא הגבלת הכלליות, 
+\begin_inset Formula $k_{i}=k$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+f\left(\left[t_{0}:\ldots:t_{n}\right]\right)=\left[1:\frac{a_{1}\left(t\right)}{f\left(t\right)^{k_{1}}}:\ldots:\frac{a_{m}\left(t\right)}{f\left(t\right)^{k_{m}}}\right]=\left[f\left(t\right)^{k}:a_{1}\left(t\right):\ldots:a_{m}\left(t\right)\right]
+\]
+
+\end_inset
+
+מרציפות, 
+\begin_inset Formula 
+\[
+f\left(\left[t_{0}:\ldots:t_{n}\right]\right)=\left[f\left(t\right)^{k}:a_{1}\left(t\right):\ldots:a_{m}\left(t\right)\right]
+\]
+
+\end_inset
+
+על 
+\begin_inset Formula $\p^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+יריעה היא אי פריקה אם כל שתי קבוצות פתוחות–זריצקי בה נחתכות.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא ללא–יריעה
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Z\left(x\right)^{c},Z\left(y^{c}\right)\ssq Z\left(xy\right)
+\]
+
+\end_inset
+
+והן לא נחתכות.
+ 
+\end_layout
+
+\begin_layout Definition
+תהי 
+\begin_inset Formula $X$
+\end_inset
+
+ יריעה אי פריקה.
+ פונקציה רציונלית על 
+\begin_inset Formula $X$
+\end_inset
+
+ היא מחלקת שקילות של 
+\begin_inset Formula $\left(U,g\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $U\ss X$
+\end_inset
+
+ היא פתוחה–זריצקי ו 
+\begin_inset Formula $g:U\ra\c$
+\end_inset
+
+ היא רגולרית תחת יחס השקילות 
+\begin_inset Formula 
+\[
+\left(U_{1},g_{1}\right)\sim\left(U_{2},g_{2}\right)
+\]
+
+\end_inset
+
+אם ורק אם 
+\begin_inset Formula 
+\[
+g_{1}\mid_{U_{1}\cap U_{2}}=g_{2}\mid_{U_{1}\cap U_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ברמת האינטואיציה, מה שאנחנו מנסים לומר זה ש 
+\begin_inset Formula $\frac{1}{x}$
+\end_inset
+
+ היא פונקציה רציונלית על הממשיים, למרות שהיא מוגדרת על 
+\begin_inset Formula $\r-\left\{ 0\right\} $
+\end_inset
+
+ בלבד.
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא
+\end_layout
+
+\begin_layout Standard
+אם 
+\begin_inset Formula $X$
+\end_inset
+
+ אפינית, איך נראות הפונקציות הרציונליות על 
+\begin_inset Formula $X$
+\end_inset
+
+? נבחר קבוצה סגורה מקסימלית, כלומר משהו מהצורה 
+\begin_inset Formula $Z\left(f\right)$
+\end_inset
+
+ ונתבונן ב 
+\begin_inset Formula $X-Z\left(f\right)$
+\end_inset
+
+.
+ עליו, הפונקציות הרציונליות הן כל דבר מהצורה 
+\begin_inset Formula $\frac{g\left(x\right)}{f\left(x\right)^{m}}$
+\end_inset
+
+.
+ מכיוון שזה נכון לכל 
+\begin_inset Formula $f$
+\end_inset
+
+, נקבל שהפונקציות הרצינוליות על 
+\begin_inset Formula $X$
+\end_inset
+
+ הן שדה השברים של 
+\begin_inset Formula $\o_{X}\left(X\right)$
+\end_inset
+
+.
+ כלומר, נקבל התאמה 
+\begin_inset Formula 
+\[
+\text{Frac}\o_{X}\left(x\right)\longrightarrow\text{Rat}\left(X\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{f\left(x\right)}{g\left(x\right)}\longmapsto0=\left[\left(X,0\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+מדוע ההתאמה זו חח"ע? אם יש קבוצה פתוחה 
+\begin_inset Formula $U$
+\end_inset
+
+ ) 
+\begin_inset Formula $U\cap Z\left(g\right)=\emptyset$
+\end_inset
+
+( כך ש 
+\begin_inset Formula $\frac{f\left(x\right)}{g\left(x\right)}=0$
+\end_inset
+
+ על 
+\begin_inset Formula $U$
+\end_inset
+
+, אזי 
+\begin_inset Formula $f\left(x\right)=0$
+\end_inset
+
+ על 
+\begin_inset Formula $U$
+\end_inset
+
+ ומכיוון ש 
+\begin_inset Formula $X$
+\end_inset
+
+ אי פריקה, זה אומר ש 
+\begin_inset Formula $f=0$
+\end_inset
+
+ על 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+מדוע ההתאמה על? כי 
+\begin_inset Formula 
+\[
+\frac{f\left(x\right)}{g\left(x\right)}\longmapsto\left(Z\left(g\right)^{c},\frac{f\left(x\right)}{g\left(x\right)}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+לכן, באופן כללי, אוסף הפונקציות הרציונליות על 
+\begin_inset Formula $X$
+\end_inset
+
+ הוא שדה.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+העתקה רציונלית בין שתי יריעות )פרוייקטיביות( היא מחלקת שקילות של העתקות
+ 
+\begin_inset Formula $\left(U,f:U\ra Y\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $U$
+\end_inset
+
+ פתוחה ב 
+\begin_inset Formula $X$
+\end_inset
+
+, תחת אותו יחס שקילות כמקודם.
+ מכיוון שזו לא העתקה אמיתית, נסמן העתקה רציונלית ב 
+\begin_inset Formula 
+\[
+f:X\dashrightarrow Y.
+\]
+
+\end_inset
+
+העתקה כזו נקראת בי–רציונלית אם יש 
+\begin_inset Formula $U\ss X$
+\end_inset
+
+ ו 
+\begin_inset Formula $V\ssq Y$
+\end_inset
+
+ פתוחות כך ש 
+\begin_inset Formula $f$
+\end_inset
+
+ שקולה ל 
+\begin_inset Formula $\left(U,g:U\ra V\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $g$
+\end_inset
+
+ היא איזומורפיזם.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמאות
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\c$
+\end_inset
+
+ בירציונלית ל 
+\begin_inset Formula $\p^{1}$
+\end_inset
+
+ לפי העתקת ההכלה.
+ נבחר קבוצה פתוחה ב 
+\begin_inset Formula $\c$
+\end_inset
+
+, לדוגמא 
+\begin_inset Formula $\c$
+\end_inset
+
+ עצמה.
+ נבחר קבוצה פתוחה בתמונה, לדוגמא 
+\begin_inset Formula $\p^{-1}-\left\{ \infty\right\} =\left\{ \left[1:t\right]\right\} $
+\end_inset
+
+ ואכן 
+\begin_inset Formula $t\mapsto\left[1:t\right]$
+\end_inset
+
+ היא איזומורפיזם.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\c^{2}$
+\end_inset
+
+ בי רציונלית ל 
+\begin_inset Formula $\c^{2}$
+\end_inset
+
+ שבירציונלית ל 
+\begin_inset Formula $\p^{1}\times\p^{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+אם 
+\begin_inset Formula 
+\[
+f:X\dashrightarrow Y
+\]
+
+\end_inset
+
+ היא העתקה בירציונלית, ו 
+\begin_inset Formula 
+\[
+g:Y\dashrightarrow\c
+\]
+
+\end_inset
+
+היא העתקה רציונלית, יש לנו את ה 
+\begin_inset Formula $\text{pull-back}$
+\end_inset
+
+ של 
+\begin_inset Formula $g$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+f^{\ast}\left(g\right):X\dashrightarrow\c.
+\]
+
+\end_inset
+
+אם 
+\begin_inset Formula $f:U\ra V$
+\end_inset
+
+ ו 
+\begin_inset Formula $g:W\ra C$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\left[f^{-1}\left(W\cap V\right),g\circ f\right]$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $f:X\dashrightarrow Y$
+\end_inset
+
+ הוא מורפיזם בירציונלי, נקבל העתקה 
+\begin_inset Formula 
+\[
+\text{Rat}\left(Y\right)\ra\text{Rat}\left(X\right)
+\]
+
+\end_inset
+
+ וזהו איזומורפיזם של שדות.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+כל איזומומורפיזם של שדות מ 
+\begin_inset Formula $\text{Rat}\left(Y\right)$
+\end_inset
+
+ ל 
+\begin_inset Formula $\text{Rat}\left(X\right)$
+\end_inset
+
+ מתאים להעתקה בירציונלית 
+\begin_inset Formula $X\dashrightarrow Y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_body
+\end_document
