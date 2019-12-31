@@ -1,0 +1,659 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ind}{\text{ind}}
+{\text{ind}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+עקומים אלגבריים – הרצאה שמינית
+\end_layout
+
+\begin_layout Standard
+בהרצאה הקודמת דיברנו על אינטגרלים מהצורה 
+\begin_inset Formula $\intop\limits_{0}^{x}\frac{dt}{\sqrt{t^{3}+at+b}}$
+\end_inset
+
+.
+ אמרנו שניתן לכתוב אותו מהצורה 
+\begin_inset Formula 
+\[
+\intop\limits _{0}^{x}\frac{dt}{\sqrt{t^{3}+at+b}}=\intop_{\gamma}\frac{Ax}{y}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula 
+\[
+\gamma\ssq C=Z\left(y^{2}-\left(x^{3}+ax+b\right)\right)
+\]
+
+\end_inset
+
+ נניח כי 
+\begin_inset Formula $C$
+\end_inset
+
+ לא סינגולרית.
+ כלומר, אנו רוצים שהגרדיאנט לא יתאפס: 
+\begin_inset Formula 
+\[
+d\left(y^{2}-x^{3}-ax-b\right)=\left(-3x^{2}-a\right)dx+\left(2y\right)dy
+\]
+
+\end_inset
+
+כלומר, העקום חלק 
+\begin_inset Formula $\iff$
+\end_inset
+
+ ל 
+\begin_inset Formula $x^{3}+ax+b$
+\end_inset
+
+ אין שורשים כפולים.
+ נוכל להתבונן בצמצום ל 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ הפונקציה 
+\begin_inset Formula $y^{2}-x^{3}-ax-b$
+\end_inset
+
+ היא זהותית אפס על 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ לכן תחת צמצום ל 
+\begin_inset Formula $C$
+\end_inset
+
+ נקבל 
+\begin_inset Formula 
+\[
+0\equiv\left(-3x^{2}-a\right)\mid_{C}dx+\left(2y\right)\mid_{C}dy
+\]
+
+\end_inset
+
+נעביר אגפים ונקבל 
+\begin_inset Formula 
+\[
+\frac{dx}{y}=\frac{2dy}{3x^{2}+a}
+\]
+
+\end_inset
+
+נשם לב ש 
+\begin_inset Formula $3x^{2}+a$
+\end_inset
+
+ שונה מאפס עבור 
+\begin_inset Formula $y=0$
+\end_inset
+
+.
+ חילקנו ב 
+\begin_inset Formula $y$
+\end_inset
+
+, אז הסיפור אינו מוגדר היטב ב 
+\begin_inset Formula $y=0$
+\end_inset
+
+, אבל כן בסביבה של 
+\begin_inset Formula $y=0$
+\end_inset
+
+.
+ לכן ניתן להמשיך, וזה יהיה מוגדר אלגברית אפילו בנקודות בהן 
+\begin_inset Formula $y=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Remarks
+\begin_inset Formula $\frac{dx}{y}$
+\end_inset
+
+ ניתן להרחבה גם לתבנית דיפרנציאלית אלגבירת על הסגור הפרוייקטיבי וזה אינו
+ אפס באף נקודה.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+אם 
+\begin_inset Formula $\omega$
+\end_inset
+
+ היא תבנית דיפרנציאלית אחרת על הסגור הפרוייקטיבי 
+\begin_inset Formula $\overline{C}$
+\end_inset
+
+, אזי הן תלויות ליניארית )כפונקציונלים ליניארים על 
+\begin_inset Formula $T_{p}\overline{C}$
+\end_inset
+
+(, ומכיוון ש 
+\begin_inset Formula $\frac{dx}{y}$
+\end_inset
+
+ שונה מאפס ניתן לכתוב 
+\begin_inset Formula 
+\[
+\omega\left(p\right)=f\left(p\right)\frac{dx}{y}\left(p\right)
+\]
+
+\end_inset
+
+מכיוון שאלו שני פונקציונלים ליניאריים על אותו הישר.
+ אם נכתוב אותן בקוארדינטות מקומיות, נקבל ש 
+\begin_inset Formula $f$
+\end_inset
+
+ היא פונקציה רגולרית.
+ קיבלנו פונקציה רגולרית ממרחב פרוייקטיבי למרחב אפיני, אבל הוכחנו שכל פונקציה
+ כזו חייבת להיות קבועה, ולכן 
+\begin_inset Formula $f$
+\end_inset
+
+ קבועה ונקבל שעד כדי כפל בקבוע, יש רק תבנית דיפרנציאלית אחת.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+\begin_inset Formula $C=Z\left(y^{2}-\left(x^{3}+ax+b\right)\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\overline{C}$
+\end_inset
+
+ הוא טורוס )מבחינה טופולוגית(.
+ נסמן את יוצרי החבורה היסודית שלו ב 
+\begin_inset Formula $\gamma_{1},\gamma_{2}$
+\end_inset
+
+.
+ )בשרטוט, 
+\begin_inset Formula $a,b$
+\end_inset
+
+(:
+\end_layout
+
+\begin_layout Remarks
+\begin_inset Graphics
+	filename torus_lec_8.png
+	scale 10
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+\begin_inset Formula $\intop\limits_{p_{0}}^{p}\omega$
+\end_inset
+
+ תלוי במסלול מ 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ ל 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ אבל זה מוגדר היטב עד כדי כפולה שלמה של 
+\begin_inset Formula $\intop\limits_{\gamma_{1}}\omega,\intop\limits_{\gamma_{2}}\omega\in\c$
+\end_inset
+
+.
+ שני מספרים אלו תלויים ליניארית מעל 
+\begin_inset Formula $\r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+יהי 
+\begin_inset Formula $\ell\ss\p^{2}$
+\end_inset
+
+ ישר ו 
+\begin_inset Formula $C=Z\left(y^{2}-\left(x^{3}+ax+b\right)\right)$
+\end_inset
+
+ עקום, ונסמן 
+\begin_inset Formula 
+\[
+\ell\cap C=\left\{ a_{\ell},b_{\ell},c_{\ell}\right\} .
+\]
+
+\end_inset
+
+נבחר 
+\begin_inset Formula $p_{0}\in C$
+\end_inset
+
+, אזי 
+\begin_inset Formula 
+\[
+\intop_{p_{0}}^{a_{\ell}}\frac{dx}{y}+\intop_{p_{0}}^{b\ell}\frac{dx}{y}+\intop_{p_{0}}^{c_{\ell}}\frac{dx}{y}
+\]
+
+\end_inset
+
+אינו תלוי ב 
+\begin_inset Formula $\ell$
+\end_inset
+
+ )ב 
+\begin_inset Formula $\nicefrac{\c}{\text{period lattice}}$
+\end_inset
+
+(.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נרצה להראות שאם 
+\begin_inset Formula $\ell_{t}$
+\end_inset
+
+ )עבור 
+\begin_inset Formula $t\in\p^{1}$
+\end_inset
+
+( משפחת ישרים הנחתכת בנקודה, אזי הפונקציה 
+\begin_inset Formula 
+\[
+t\mapsto\sum_{p\in\ell_{t}\cap C}\intop_{p_{0}}^{p}\omega
+\]
+
+\end_inset
+
+ קבועה.
+ הנה משפט:
+\end_layout
+
+\begin_layout Theorem
+)אבל(.
+ נניח כי 
+\begin_inset Formula $C$
+\end_inset
+
+ עקום פרוייקטיבי ו 
+\begin_inset Formula $\w$
+\end_inset
+
+ היא תבנית דיפרנציאלית אלגברית על 
+\begin_inset Formula $C$
+\end_inset
+
+ ו 
+\begin_inset Formula $f:C\ra\p^{1}$
+\end_inset
+
+, אזי הפונקציה 
+\begin_inset Formula 
+\[
+t\mapsto\sum_{p\in f^{-1}\left(t\right)}\intop_{p_{0}}^{p}\omega
+\]
+
+\end_inset
+
+ קבועה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+נניח כי 
+\begin_inset Formula 
+\[
+f,g:C\ra\p^{1}
+\]
+
+\end_inset
+
+אזי 
+\begin_inset Formula 
+\[
+\p^{1}\ni t\os{\mapsto}F\sum_{x\in f^{-1}\left(t\right)}g\left(x\right)
+\]
+
+\end_inset
+
+היא פונקציה רציונלית מ 
+\begin_inset Formula $\p^{1}$
+\end_inset
+
+ ל 
+\begin_inset Formula $\p^{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נניח כי 
+\begin_inset Formula $f,g,C$
+\end_inset
+
+ מוגדרים מעל 
+\begin_inset Formula $\q$
+\end_inset
+
+.
+ כל הנקודות ב 
+\begin_inset Formula $f^{-1}\left(\pi\right)$
+\end_inset
+
+ הם קוארדינטות ב 
+\begin_inset Formula $\overline{\q\left(\pi\right)}$
+\end_inset
+
+.
+ אזי 
+\begin_inset Formula 
+\[
+F\left(\pi\right)\in\overline{\q\left(\pi\right)}
+\]
+
+\end_inset
+
+אם 
+\begin_inset Formula 
+\[
+\sigma\in\text{Gal}\left(\nf{\overline{\q\left(\pi\right)}}{\q\left(\pi\right)}\right)
+\]
+
+\end_inset
+
+אזי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מפעילה פרמוטציה על 
+\begin_inset Formula $f^{-1}\left(\pi\right)$
+\end_inset
+
+, כלומר 
+\begin_inset Formula 
+\[
+\si\left(F\left(\pi\right)\right)=F\left(\pi\right)
+\]
+
+\end_inset
+
+ולכן למעשה 
+\begin_inset Formula 
+\[
+F\left(\pi\right)\in\q\left(\pi\right).
+\]
+
+\end_inset
+
+כעת ניתן לכתוב 
+\begin_inset Formula 
+\[
+F\left(\pi\right)=\frac{a\left(\pi\right)}{b\left(\pi\right)}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $a\left(x\right),b\left(x\right)\in\q\left[x\right]$
+\end_inset
+
+.
+ נפעיל 
+\begin_inset Formula $\tau\in\text{Gal}\left(\nf{\c}{\q}\right)$
+\end_inset
+
+ ונקבל 
+\begin_inset Formula 
+\[
+F\left(\tau\left(\pi\right)\right)=\tau\left(\frac{a\left(\pi\right)}{b\left(\pi\right)}\right)=\frac{a\left(\tau\left(\pi\right)\right)}{b\left(\tau\left(\pi\right)\right)}\Ra F\left(t\right)=\frac{a\left(t\right)}{b\left(t\right)}
+\]
+
+\end_inset
+
+לכל מספר טרנסצנדנטי 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הלמה מתקיימת גם עבור תבניות דיפרנציאליות.
+ אם 
+\begin_inset Formula $F:C\ra\p^{1}$
+\end_inset
+
+ , 
+\begin_inset Formula $\w$
+\end_inset
+
+ תבנית דיפרנציאלית אלגברית על 
+\begin_inset Formula $C$
+\end_inset
+
+, אזי 
+\begin_inset Formula 
+\[
+t\mapsto\sum_{x\in f^{-1}\left(t\right)}\ub{df\left(x\right)\left(\underset{\underset{T_{x}C}{\in}}{\w\left(x\right)}\right)}{\in T_{t}\p^{1}}
+\]
+
+\end_inset
+
+ היא תבנית דיפרנציאלית אלגברית על 
+\begin_inset Formula $\p^{1}$
+\end_inset
+
+.
+ כעת ניתן להגיע להוכחת המשפט של אבל:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f_{\ast}\w$
+\end_inset
+
+ היא תבנית דיפרנציאלית אלגברית על 
+\begin_inset Formula $\p^{1}$
+\end_inset
+
+, אבל הוכחנו שאין כזו, לכן 
+\begin_inset Formula $f_{\ast}\w=0$
+\end_inset
+
+.
+ מהחלפת משתנים באינטגרציה, נקבל ש 
+\begin_inset Formula 
+\[
+\sum_{p\in C\cap\ell_{1}}\intop_{p_{0}}^{p}\w-\sum_{p\in C\cap\ell_{2}}\intop_{p_{0}}^{p}\w=\left(\ast\right)
+\]
+
+\end_inset
+
+כעת אם 
+\begin_inset Formula 
+\[
+f^{-1}\left(0\right)=\left\{ a_{1},a_{2},a_{3}\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f^{-1}\left(1\right)=\left\{ b_{1},b_{2},b_{3}\right\} 
+\]
+
+\end_inset
+
+אזי 
+\begin_inset Formula 
+\[
+\intop_{a_{1}}^{b_{1}}\w+\intop_{a_{2}}^{b_{2}}\w+\intop_{a_{3}}^{b_{3}}\w=\intop_{0}^{1}f_{\ast}\w=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
