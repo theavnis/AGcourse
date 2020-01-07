@@ -1,0 +1,1009 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ind}{\text{ind}}
+{\text{ind}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\div}[1]{\text{div\left(#1\right)}}
+{\text{div}\left(#1\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\rr}{\text{RR}}
+{\text{RR}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+עקומים אלגבריים – הרצאה תשיעית
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ עקום פרוייקטיבי לא סינגולרי, 
+\begin_inset Formula $\w$
+\end_inset
+
+ תבנית דיפרנציאלית על 
+\begin_inset Formula $\c$
+\end_inset
+
+.
+ ראינו בתרגול שפונקציה רציונלית היא 
+\begin_inset Formula $f:C\ra\p^{1}$
+\end_inset
+
+ ותהי 
+\begin_inset Formula $p_{0}\in C$
+\end_inset
+
+.
+ ראינו את משפט אבל:
+\end_layout
+
+\begin_layout Theorem
+)אבל(: הסכום 
+\begin_inset Formula 
+\[
+\sum_{x\in f^{-1}\left(t\right)}\intop_{p_{0}}^{x}\w
+\]
+
+\end_inset
+
+הוא בלתי תלוי ב 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בפעם השעברה נשאר לנו חוב קטן בהוכחה: 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\sum\intop_{\gamma_{i}}\w=\sum\intop_{0}^{1}\left\langle \w_{\gamma_{i}\left(t\right)},\dot{\gamma}_{i}\left(t\right)\right\rangle =\sum\intop_{0}^{1}\left\langle \omega_{\gamma_{i}\left(t\right)},\left(\text{df}|_{\gamma_{i}\left(t\right)}\right)^{-1}\left(\dot{\gamma}\left(t\right)\right)\right\rangle =
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\sum\intop_{0}^{1}\left\langle \left(\left(\text{df}|_{\gamma_{i}\left(t\right)}\right)^{-1}\right)^{\ast}\omega_{\gamma_{i}\left(t\right)},\dot{\gamma}\left(t\right)\right\rangle =\intop_{0}^{1}\left\langle \sum\left(\left(\text{df}|_{\gamma_{i}\left(t\right)}\right)^{-1}\right)^{\ast}\omega_{\gamma_{i}\left(t\right)},\dot{\gamma}\left(t\right)\right\rangle 
+\]
+
+\end_inset
+
+כעת נגדיר 
+\begin_inset Formula 
+\[
+f_{\ast}\w=\sum\left(\left(\text{df}|_{\gamma_{i}\left(t\right)}\right)^{-1}\right)^{\ast}\omega_{\gamma_{i}\left(t\right)}
+\]
+
+\end_inset
+
+ונקבל סה"כ
+\begin_inset Formula 
+\[
+\sum\intop_{\gamma_{i}}\w=\intop_{\gamma}f_{\ast}\w.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+)דיוויזורים(.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+דיוויזור על 
+\begin_inset Formula $C$
+\end_inset
+
+ הוא סכום פורמלי מהצורה 
+\begin_inset Formula 
+\[
+\sum_{p\in C}n_{p}\left[p\right]
+\]
+
+\end_inset
+
+ כאשר 
+\begin_inset Formula $n_{p}\in\z$
+\end_inset
+
+ וכמעט כולם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ )פרט למספר סופי( הם אפסים.
+ ניתן לחבר ולחסר דיווזורים )קוארדינטה קוארדינטה(.
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+מרחב הדיוויזורים הוא 
+\begin_inset Formula 
+\[
+\text{Div}\left(C\right)=\bigoplus_{p\in C}\z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+דיוויזור של פונקציה: תהי 
+\begin_inset Formula $f:C\ra\p^{1}$
+\end_inset
+
+ פונקציה רציונלית, 
+\begin_inset Formula 
+\[
+\text{div}\left(f\right)=\sum_{p}\text{ord}_{p}\left(f\right)\left[p\right]
+\]
+
+\end_inset
+
+כאשר הסדר של 
+\begin_inset Formula $f$
+\end_inset
+
+ בנקודה 
+\begin_inset Formula $p$
+\end_inset
+
+ הוא חיובי אם 
+\begin_inset Formula $p$
+\end_inset
+
+ היא אפס של 
+\begin_inset Formula $f$
+\end_inset
+
+ )ואז שווה לסדר האפס(, שלילי אם 
+\begin_inset Formula $p$
+\end_inset
+
+ היא קוטב של 
+\begin_inset Formula $f$
+\end_inset
+
+ )ואז שווה לסדר הקוטב( ואפס אחרת.
+\end_layout
+
+\begin_layout Itemize
+שני דיווזורים נקראים שקולים רציונלית אם 
+\begin_inset Formula 
+\[
+D_{1}-D_{2}=\text{div}\left(f\right)
+\]
+
+\end_inset
+
+עבור פונקציה רציונלית 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ כלומר, אם ההפרש שלהם הוא דיוויזור של פונקציה רציונלית.
+\end_layout
+
+\begin_layout Itemize
+הדרגה של דיוויזור 
+\begin_inset Formula 
+\[
+D=\s{p\in C}{}n_{p}\cd(p)
+\]
+
+\end_inset
+
+ הנה 
+\begin_inset Formula 
+\[
+\deg D=\s{p\in C}{}n_{p}\in\z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D\geq0$
+\end_inset
+
+ אם 
+\begin_inset Formula $n_{p}\geq0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+אם 
+\begin_inset Formula $f$
+\end_inset
+
+ פונקציה רציונלית אזי 
+\begin_inset Formula $\deg\left(\text{div}\left(f\right)\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נוכיח במקרה יותר כללי.
+ נניח יש לנו 
+\begin_inset Formula $f:\p^{1}\ra\p^{1}$
+\end_inset
+
+ רציונלית, 
+\begin_inset Formula $f=\frac{a\left(x\right)}{b\left(x\right)}$
+\end_inset
+
+.
+ האפסים של 
+\begin_inset Formula $f$
+\end_inset
+
+ )על העקום( הם האפסים של 
+\begin_inset Formula $a$
+\end_inset
+
+ והקטבים של 
+\begin_inset Formula $f$
+\end_inset
+
+ הם האפסים של 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ אבל יש לנו גם נקודה באינסוף.
+ באינסוף נציב 
+\begin_inset Formula $x=\frac{1}{y}$
+\end_inset
+
+ ואז נקבל שהאפסים והקטבים באינסוף הם הקטבים והאפסים של 
+\begin_inset Formula $f\left(\frac{1}{y}\right)$
+\end_inset
+
+ בסביבת אפס, וזה בדיוק הפוך, ונראה שזה יוצא בדיוק המעלה פחות כמות האפסים,
+ ולכן סה"כ אם יש 
+\begin_inset Formula $m$
+\end_inset
+
+ אפסים ומעלה 
+\begin_inset Formula $n$
+\end_inset
+
+, הסדר באינסוף הוא 
+\begin_inset Formula $n-m$
+\end_inset
+
+ ולכן הסכום יוצא זהה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph*
+שאלה:
+\end_layout
+
+\begin_layout Standard
+נניח 
+\begin_inset Formula $D\geq0$
+\end_inset
+
+.
+ מהם כל הדיווזורים החיוביים ) 
+\begin_inset Formula $\geq0$
+\end_inset
+
+( השקולים ל 
+\begin_inset Formula $D$
+\end_inset
+
+? נגדיר את המרחב הרלוונטי:
+\end_layout
+
+\begin_layout Definition
+)מרחב רימן–רוך של 
+\begin_inset Formula $D$
+\end_inset
+
+( 
+\begin_inset Formula 
+\[
+\text{RR}\left(D\right)=\left\{ f\ \text{rational}\mid\div f+D\geq0\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+נניח ש 
+\begin_inset Formula $\div f=\div g$
+\end_inset
+
+, אזי 
+\begin_inset Formula 
+\[
+\div{\frac{f}{g}}=\text{0}
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula 
+\[
+\frac{f}{g}=\text{const}
+\]
+
+\end_inset
+
+יש לנו העתקה על: 
+\begin_inset Formula 
+\[
+\text{RR}\left(D\right)=\left\{ f\ \text{rational}\mid\div f+D\geq0\right\} -\left\{ 0\right\} \twoheadrightarrow\left\{ \text{divisor \ensuremath{\geq0} equivalent to \ensuremath{D} }\right\} 
+\]
+
+\end_inset
+
+ולכן נקבל ש 
+\begin_inset Formula 
+\[
+\left\{ \geq0\ \text{divisors equivalent to \ensuremath{D}}\right\} =\p\left(\text{RR}\left(D\right)\right)
+\]
+
+\end_inset
+
+ ולכן סה"כ בהנתן עקום 
+\begin_inset Formula $C$
+\end_inset
+
+, אם 
+\begin_inset Formula $n_{p}\geq0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $p$
+\end_inset
+
+ נקבל ש 
+\begin_inset Formula 
+\[
+\text{RR}\left(\sum n_{p}\left[p\right]\right)=\left\{ f\text{ rational \mid\ f has a pole of order a most \ensuremath{n_{p}} at \ensuremath{p}}\right\} 
+\]
+
+\end_inset
+
+וניתן להגדיר את 
+\begin_inset Formula $\text{RR}\left(D\right)$
+\end_inset
+
+ גם עבור 
+\begin_inset Formula $D$
+\end_inset
+
+ כלשהו )ולאו דווקא חיובי(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמאות
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $V$
+\end_inset
+
+ הוא שדה וקטורי )או תבנית דיפרנציאלית(.
+ רציונלי אזי ניתן להגדיר את הדיוויזור שלו.
+ 
+\end_layout
+
+\begin_layout Enumerate
+ניקח 
+\begin_inset Formula $\pd{}z$
+\end_inset
+
+ על 
+\begin_inset Formula $\c$
+\end_inset
+
+.
+ נרחיב אותו לשדה וקטורי רגולרי על 
+\begin_inset Formula $\p^{1}$
+\end_inset
+
+ )הוא יהיה 
+\begin_inset Formula $\pd{}z$
+\end_inset
+
+ על 
+\begin_inset Formula $\p^{1}-\left\{ \infty\right\} $
+\end_inset
+
+ ו 
+\begin_inset Formula $-w^{2}\pd{}w$
+\end_inset
+
+ על 
+\begin_inset Formula $\p^{1}-\left\{ 0\right\} $
+\end_inset
+
+(.
+ אזי 
+\begin_inset Formula 
+\[
+\div{\pd{}z}=2\left[\infty\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+באופן דומה, 
+\begin_inset Formula 
+\[
+\div{dz}=-2\left[\infty\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $V$
+\end_inset
+
+ הוא שדה וקטורי רציונלי, אזי 
+\begin_inset Formula 
+\[
+V\left(t\right)=f\left(t\right)\pd{}z
+\]
+
+\end_inset
+
+עבור פונקציה רציונלית 
+\begin_inset Formula $f$
+\end_inset
+
+ כלשהי.
+ 
+\begin_inset Formula 
+\[
+\text{div}\left(V\right)=\div f+\div{\pd{}z}
+\]
+
+\end_inset
+
+ולכן כל הדיווזורים שמגיעים משדות וקטוריים הם שקולים, ובפרט 
+\begin_inset Formula 
+\[
+\deg\left(\div V\right)=2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+עבור עקום 
+\begin_inset Formula $C$
+\end_inset
+
+ כללי, 
+\begin_inset Formula 
+\[
+\deg\left(\div{\text{Vector field on \ensuremath{C}}}\right)=2-2\cdot\text{genus}\left(C\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+מרחבי רימן–רוך הם ממימד סופי, כלומר 
+\begin_inset Formula 
+\[
+\dim\left(\rr\left(D\right)\right)<\infty.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+בלי הגבלת הכלליות נניח כי 
+\begin_inset Formula $D\geq0$
+\end_inset
+
+.
+ נניח 
+\begin_inset Formula 
+\[
+D=\sum n_{p}\left[p\right]
+\]
+
+\end_inset
+
+ונתבונן בהעתקה 
+\begin_inset Formula 
+\[
+\varphi:\ \rr\left(D\right)\ra\prod_{p}\nf{z^{-n_{p}}\c[[z]]}{\c[[z]]}
+\]
+
+\end_inset
+
+ע,י 
+\begin_inset Formula 
+\[
+f\mapsto\left(\text{prinicipal parts at \ensuremath{p}}\right)
+\]
+
+\end_inset
+
+כלומר מרחב טורי הלורן מודולו...
+ זהו מרחב ממימד 
+\begin_inset Formula $\deg D$
+\end_inset
+
+.
+ זוהי העתקה ליניארית.
+ נניח כי 
+\begin_inset Formula $f\in\ker\varphi$
+\end_inset
+
+.
+ אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ היא רגולרית, ולכן 
+\begin_inset Formula $f$
+\end_inset
+
+ קבועה.
+ מכאן נקבל ש 
+\begin_inset Formula 
+\[
+\dim\rr\left(D\right)\leq\deg D+1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת נראה חישוב מדוייק של מימד מרחב–רימן רוך, ולא רק חסם.
+ קבלו את משפט רימן–רוך!
+\end_layout
+
+\begin_layout Theorem
+)רימן–רוך(.
+ יהי 
+\begin_inset Formula $K$
+\end_inset
+
+ דיוויזור של תבנית דיפרנציאלית.
+ אזי 
+\begin_inset Formula 
+\[
+\dim\rr\left(D\right)-\dim\left(\rr\left(K-D\right)\right)=\deg\left(D\right)+1-\text{genus}\left(C\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+אם 
+\begin_inset Formula $\deg D<0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\rr\left(D\right)=0$
+\end_inset
+
+ ומכאן נובע שאם 
+\begin_inset Formula $\deg D>\deg K=2g-2$
+\end_inset
+
+ אזי 
+\begin_inset Formula 
+\[
+\dim\rr\left(D\right)=\deg\left(D\right)+1-g
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נתחיל מלהציג הוכחה 
+\bar under
+לא שלמה
+\bar default
+ למשפט רימן–רוך, אך היא כן "נכונה רעיונית" ונותנת אינטואיציה טובה:
+\end_layout
+
+\begin_layout Proof
+יהי 
+\begin_inset Formula $D\geq0$
+\end_inset
+
+, ונניח ש 
+\begin_inset Formula $D$
+\end_inset
+
+ הוא סכום של נקודות, כלומר 
+\begin_inset Formula 
+\[
+D=\left[p_{1}\right]+\cdots+\left[p_{n}\right].
+\]
+
+\end_inset
+
+נתבונן ב 
+\begin_inset Formula 
+\[
+\varphi:\rr\left(D\right)\ra\c^{n}
+\]
+
+\end_inset
+
+ע"י 
+\begin_inset Formula 
+\[
+f\mapsto\left(\text{res}_{p_{i}}\left(f\right)\right)
+\]
+
+\end_inset
+
+מאנליזה מרוכבת אנו יודעים שאם 
+\begin_inset Formula $\w$
+\end_inset
+
+ היא תבנית דיפרנציאלית רציונלית על 
+\begin_inset Formula $C$
+\end_inset
+
+, אזי 
+\begin_inset Formula 
+\[
+\sum_{p}\text{res}_{p}\left(\w\right)=0.
+\]
+
+\end_inset
+
+כעת לכל תבנית דיפרצנליאלית רגולרית, נקבל ש 
+\begin_inset Formula 
+\[
+\sum\text{res}_{p}\left(f\right)\cdot w\left(p\right)=\sum_{p}\text{res}_{p}\left(f\cdot\w\right)=0
+\]
+
+\end_inset
+
+ ולכן נקבל יחס ליניארי.
+ לכן נקבל ש 
+\begin_inset Formula 
+\[
+\dim\rr\left(D\right)\leq n+1-\dim\rr\left(K\right)
+\]
+
+\end_inset
+
+אבל מה קורה אם 
+\begin_inset Formula $\w$
+\end_inset
+
+ מתאפסת על כל ה 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+? צריך לספור את התבניות הדיפרצניאליות שרגולריות, ולכן נקבל
+\begin_inset Formula 
+\[
+\dim\rr\left(D\right)\leq n+1-\dim\rr\left(K\right)+\dim\rr\left(K-D\right)
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $\rr\left(K-D\right)$
+\end_inset
+
+ הוא מרחב התבניות הדיפרנציאליות הרגולריות שמתאפסות על 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ לכן נקבל 
+\begin_inset Formula 
+\[
+\dim\rr\left(D\right)-\dim\rr\left(K-D\right)\leq n+1-\dim\rr\left(K\right).
+\]
+
+\end_inset
+
+כעת נשאר להוכיח ש 
+\begin_inset Formula $\dim\rr\left(K\right)=g$
+\end_inset
+
+.
+ נציב בנוסחא הקודמת 
+\begin_inset Formula $D=K-D$
+\end_inset
+
+ ונקבל 
+\begin_inset Formula 
+\[
+\dim\rr\left(K-D\right)-\dim\rr\left(D\right)\leq\deg\left(K-D\right)+1-g
+\]
+
+\end_inset
+
+אבל 
+\begin_inset Formula 
+\[
+\deg\left(K-D\right)=\deg K-\deg D=2g-2-\deg D
+\]
+
+\end_inset
+
+ ולכן נקבל ש 
+\begin_inset Formula 
+\[
+\dim\left(\rr\left(K-D\right)\right)-\dim\rr\left(D\right)=\left(-\deg D+g-1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

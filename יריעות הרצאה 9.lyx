@@ -1,0 +1,749 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage[all,cmtip]{xy}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+יריעות אלגבריות – הרצאה תשיעית
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vector}[1]{\overrightarrow{#1}}
+{\overrightarrow{#1}}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+אם 
+\begin_inset Formula $X\ssq\p^{n}$
+\end_inset
+
+ יריעה פרוייקטיבית, 
+\begin_inset Formula $P\notin X$
+\end_inset
+
+, אזי
+\begin_inset Formula 
+\[
+\pi_{P}:X\ra\p^{n-1}
+\]
+
+\end_inset
+
+היא העתקה סופית.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+בלי הגבלת הכלליות, 
+\begin_inset Formula 
+\[
+P=\left[1:0\cdots:0\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X=Z\left(F\right)
+\]
+
+\end_inset
+
+ היפר–משטח 
+\begin_inset Formula $\deg F=D$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+F\left(P\right)\neq0\ra F=x_{0}^{d}+\cdots
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\pi_{P}\left(\left[\alpha_{0}:\cdots:\alpha_{n}\right]\right)=\left[\alpha_{1}:\cdots:\alpha_{n}\right]
+\]
+
+\end_inset
+
+יהי 
+\begin_inset Formula 
+\[
+U_{1}=\left\{ \left[1:x_{2}:\cdots:x_{n}\right]\mid F\left(\alpha_{0},\ldots,\alpha_{n}\right)=0\ \alpha_{1}=1\right\} =
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left\{ \left(x_{0},x_{2},\ldots,x_{n}\right)\in\c^{n}\mid F\left(x_{0},1,x_{2},\ldots,x\right)=0\right\} =Y
+\]
+
+\end_inset
+
+אפיני.
+ נרצה להראות שההעתקה 
+\begin_inset Formula 
+\[
+Y\ra\c^{n-1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(x_{0},x_{2},\ldots,x_{n}\right)\mapsto\left(x_{1},\ldots,x_{n}\right)
+\]
+
+\end_inset
+
+סופית.
+ כלומר, צריך להראות שהפונקציה 
+\begin_inset Formula $x_{0}\mid_{y}$
+\end_inset
+
+ מקיימת פולינום מתוקן שמקדמיו הם פולינומים ב 
+\begin_inset Formula 
+\[
+x_{2}\mid_{Y},\ldots,x_{n}\mid_{Y}
+\]
+
+\end_inset
+
+המקיימות פולינום 
+\begin_inset Formula $F\left(X_{0},1,X_{2},\ldots,X_{n}\right)$
+\end_inset
+
+ שהוא מתוקן.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+נניח ש 
+\begin_inset Formula $X\ssq\p^{n}$
+\end_inset
+
+.
+ אזי או ש 
+\begin_inset Formula $X=\p^{n}$
+\end_inset
+
+ ואז הכל טוב, או שנבחר 
+\begin_inset Formula $p\notin X$
+\end_inset
+
+ ונסתכל על 
+\begin_inset Formula $\pi_{p}\left(X\right)\ssq\p^{n-1}$
+\end_inset
+
+.
+ נמשיך: 
+\begin_inset Formula 
+\[
+X\ra\pi_{p}X\ra\pi_{q}\pi_{p}X\ra\ldots\ra\p^{d}
+\]
+
+\end_inset
+
+ כלומר ל 
+\begin_inset Formula $X$
+\end_inset
+
+ יש העתקה סופית לתוך מרחב פרוייקטיבי.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נניח כי 
+\begin_inset Formula $X$
+\end_inset
+
+ אי פריקה, אזי אוסף הפונקציות הרציונליות על 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $\text{Rat}\left(X\right)$
+\end_inset
+
+ היא הרחבה נוצרת סופית של 
+\begin_inset Formula $X$
+\end_inset
+
+, כלומר יש 
+\begin_inset Formula $\lambda_{1},\ldots,\lambda_{d}\in\text{Frac}\left(X\right)$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $\c\ssq\c\left(\lambda_{1},\ldots,\lambda_{d}\right)\ssq\text{Rat}\left(X\right)$
+\end_inset
+
+ כאשר ההרחבה הראשונה היא טרנדצנדנטית והשנייה אלגברית.
+ 
+\begin_inset Formula $d$
+\end_inset
+
+ נקראת דרגת הטרנסצנדנטיות של 
+\begin_inset Formula $\text{Rat}\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $X$
+\end_inset
+
+ אי פריקה,
+\begin_inset Formula 
+\[
+\dim X=\text{tr}.\deg\left(\text{Rat}\left(X\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\dim\p^{n}=\dim\c^{n}=n$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+אם 
+\begin_inset Formula $f:X\ra Y$
+\end_inset
+
+ היא סופית, אזי 
+\begin_inset Formula $\dim X=\dim Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+בלי הגבלת הכלליות נניח כי 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ אפיניות.
+ מכך שההעתקה על נקבל ש 
+\begin_inset Formula 
+\[
+\text{Rat}\left(Y\right)\ss\text{Rat}\left(X\right)
+\]
+
+\end_inset
+
+ומכך שהעתקה סופית נקבל שההרחבה היא אלגברית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+אם 
+\begin_inset Formula $X\ssq Y$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\dim X\leq\dim Y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+בלי הגבלת הכלליות 
+\begin_inset Formula $Y\ssq\c^{n}$
+\end_inset
+
+ אפינית.
+ 
+\begin_inset Formula 
+\[
+\text{Rat}\left(Y\right)=\c\left(x_{1}|_{Y},\ldots,x_{n}|_{Y}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{Rat}\left(X\right)=\c\left(x_{1}|_{X},\ldots,x_{n}|_{X}\right)
+\]
+
+\end_inset
+
+וכל יחס אלגברי המתקיים על 
+\begin_inset Formula $x_{i}|_{Y}$
+\end_inset
+
+ מתקיים על 
+\begin_inset Formula $x_{i}|_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+אם 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ אי פריקות, 
+\begin_inset Formula $X\subsetneqq Y$
+\end_inset
+
+ סגורות, אזי 
+\begin_inset Formula $\dim X<\dim Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+בלי הגבלת הכלליות 
+\begin_inset Formula $Y\ssq\c^{n}$
+\end_inset
+
+.
+ נבחר פולינום 
+\begin_inset Formula $f\left(x_{1},\ldots,x_{n}\right)$
+\end_inset
+
+ אשר מתאפס על 
+\begin_inset Formula $X$
+\end_inset
+
+ אבל לא על 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\text{Rat}\left(Y\right)$
+\end_inset
+
+ נוצרת ע"ׁי פונקציות הקוארדינטות.
+ נניח כי 
+\begin_inset Formula 
+\[
+\dim Y=d.
+\]
+
+\end_inset
+
+בלי הגבלת הכלליות, 
+\begin_inset Formula $x_{i}|_{Y}$
+\end_inset
+
+ הם בלתי תלויים אלגברית ו 
+\begin_inset Formula 
+\[
+\nf{\text{Rat}\left(Y\right)}{\c\left(x_{1}|_{Y},\ldots,x_{n}|_{Y}\right)}
+\]
+
+\end_inset
+
+אלגברית, ובפרט 
+\begin_inset Formula $f$
+\end_inset
+
+ מקיימת יחס אלגברי מהצורה 
+\begin_inset Formula 
+\[
+g_{n}\left(x_{i}|_{Y}\right)\cdot f^{n}+\cdots=g_{0}\left(x_{i}\mid_{Y}\right)=0
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $g_{i}$
+\end_inset
+
+ פולינומים ב 
+\begin_inset Formula $d$
+\end_inset
+
+ במשתנים.
+ כאשר נצמצם פונקציות אלו ל 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ אבל 
+\begin_inset Formula $g_{0}\left(x_{i}|_{X}\right)=0$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $x_{1}|_{X},\ldots,x_{d}|_{X}$
+\end_inset
+
+ אינם בלתי תלויים אלגברית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+אם 
+\begin_inset Formula $X=Z\left(f\right)\ssq\c^{n}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $f\in\c\left[x_{1},\ldots,x_{n}\right]$
+\end_inset
+
+ אי פריק, אזי 
+\begin_inset Formula 
+\[
+\dim X=n-1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+בלי הגבלת הכלליות, 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ מופיע ב 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+\text{Rat}\left(X\right)=\c\left(x_{1}|_{X},\ldots,x_{n}|_{X}\right)
+\]
+
+\end_inset
+
+נטען ש 
+\begin_inset Formula $x_{1}|_{x},\ldots,x_{n-1}|_{X}$
+\end_inset
+
+ הם בלתי תלויים אלגברית.
+ נניח שהם לא.
+ אזי יש פולינום 
+\begin_inset Formula $g\left(x_{1},\ldots,x_{n-1}\right)$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+g\left(x_{1}|_{X},\ldots,x_{n-1}|_{X}\right)=0.
+\]
+
+\end_inset
+
+אם נסתכל על 
+\begin_inset Formula $g\left(x_{1},\ldots,x_{n-1}\right)$
+\end_inset
+
+ הוא מתאפס על 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ מה 
+\begin_inset Formula $\text{Nullstelensatz}$
+\end_inset
+
+ נקבל ש 
+\begin_inset Formula $g\in I\left(Z\left(f\right)\right)$
+\end_inset
+
+ ואז נקבל ש 
+\begin_inset Formula $f\mid g^{n}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $n$
+\end_inset
+
+ כלשהו.
+ אבל צד שמאל מערב את 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ וצד ימין לא, בסתירה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+אם 
+\begin_inset Formula $X\ssq\c^{n}$
+\end_inset
+
+ אי פריק וסגור ממימד 
+\begin_inset Formula $n-1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X=Z\left(f\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+יהי 
+\begin_inset Formula $f$
+\end_inset
+
+ פולינום אי פריק המתאפס על 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $X\neq Z\left(f\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula 
+\[
+\dim X<\dim Z\left(f\right)=n-1
+\]
+
+\end_inset
+
+ בסתירה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נרחיב את ההגדרה של מימד:
+\end_layout
+
+\begin_layout Definition
+אם 
+\begin_inset Formula $X$
+\end_inset
+
+ פריק, נגדיר את המימד של 
+\begin_inset Formula $X$
+\end_inset
+
+ להיות המקסימום של מימדי תתי המרחבים האי פריקים שלו, כלומר 
+\begin_inset Formula 
+\[
+\dim X=\max_{Y\ss X\ \text{irred components}}\dim Y.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
