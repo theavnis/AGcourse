@@ -1,0 +1,709 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage[all,cmtip]{xy}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+יריעות אלגבריות – הרצאה עשירית
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vector}[1]{\overrightarrow{#1}}
+{\overrightarrow{#1}}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא
+\end_layout
+
+\begin_layout Standard
+נניח כי 
+\begin_inset Formula $X\ssq\c^{n}$
+\end_inset
+
+ היא יריעה אפינית ו 
+\begin_inset Formula 
+\[
+\pi:\c^{n}\ra\c^{n-1}
+\]
+
+\end_inset
+
+ע"י הטלה על ה 
+\begin_inset Formula $n-1$
+\end_inset
+
+ קוארדינטות האחרונות.
+ נניח כי 
+\begin_inset Formula $\pi\mid_{X}$
+\end_inset
+
+ היא סופית.
+ תהי 
+\begin_inset Formula $f\in\c\left[x_{1},\ldots,x_{n}\right]$
+\end_inset
+
+.
+ אנו יודעים ש 
+\begin_inset Formula 
+\[
+\pi\left(X\cap Z\left(f\right)\right)
+\]
+
+\end_inset
+
+ היא קבוצה סגורה.
+ נתאר זאת כעת באופן מפורש: 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi\mid_{X}$
+\end_inset
+
+ סופית 
+\begin_inset Formula $\Longleftarrow$
+\end_inset
+
+ 
+\begin_inset Formula $x_{1}\mid_{X}$
+\end_inset
+
+ מקיים פולינום מתוקן 
+\begin_inset Formula 
+\[
+x_{1}^{d}+a_{d-1}\left(x_{2},\ldots,x_{n}\right)\cdot X_{1}^{d-1}+\cdots+a_{0}\left(x_{2},\ldots,x_{n}\right)=0
+\]
+
+\end_inset
+
+על 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ לכל 
+\begin_inset Formula $\vector t\in\c^{n-1}$
+\end_inset
+
+ נתבונן במרחב הוקטורי 
+\begin_inset Formula 
+\[
+V_{t}=\nf{\c\left[g\right]}{\left(y^{d}+a_{d-1}\left(\vector t\right)y^{d-1}+\cdots+a_{0}\left(\vector t\right)\right)}
+\]
+
+\end_inset
+
+)אלו הן הפונקציות על 
+\begin_inset Formula $\pi^{-1}\left(t\right)$
+\end_inset
+
+(.
+ 
+\begin_inset Formula $V_{t}$
+\end_inset
+
+ הוא מרחב וקטורי.
+ ניתן לבחור )מקומית בטופולוגיית זריצקי( בסיס ל 
+\begin_inset Formula $V_{t}$
+\end_inset
+
+ המשתנה בצורה פולינומיאלית.
+ הבחירה 
+\begin_inset Formula 
+\[
+\left\{ 1,y,y^{2},\ldots,y^{d-1}\right\} 
+\]
+
+\end_inset
+
+מגדירה את כל המרחבים הוקטורים האלו.
+ לכל 
+\begin_inset Formula $t\in\c^{n-1}$
+\end_inset
+
+ נתבונן בהעתקות הליניאריות: 
+\begin_inset Formula 
+\[
+T_{t}:V_{t}\longrightarrow V_{t}
+\]
+
+\end_inset
+
+ע"י 
+\begin_inset Formula 
+\[
+g+\left(\cdots\right)\longmapsto f\cdot g+\left(\cdots\right)
+\]
+
+\end_inset
+
+ כעת: 
+\end_layout
+
+\begin_layout Enumerate
+זהו בסיס, 
+\begin_inset Formula $T_{t}$
+\end_inset
+
+ נתונה ע"י מטריצה עם מקדמים שהם פולינומים ב 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+\pi\left(Z\left(f\right)\right)=\left\{ t\in\c^{n-1}\mid T_{t}\ \text{not invertible}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נשם לב ש 
+\begin_inset Formula 
+\[
+\pi\left(X\cap Z\left(f\right)\right)=\pi\left(X\right)\cap Z\left(t\mapsto\det T_{t}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+אם 
+\begin_inset Formula $X\ssq\c^{n}$
+\end_inset
+
+ ו 
+\begin_inset Formula $f\in\o_{X}\left(X\right)$
+\end_inset
+
+ לא קבוע, אזי 
+\begin_inset Formula 
+\[
+\dim Z\left(f\right)=\dim\left(X\right)-1
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נוכיח באינדוקציה על 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ 
+\begin_inset Formula $n=1$
+\end_inset
+
+ ברור.
+ אחרי מספר משחקים, ניתן להניח שההטלה 
+\begin_inset Formula 
+\[
+\pi:\c^{n}\ra\c^{n-1}
+\]
+
+\end_inset
+
+ היא סופית על 
+\begin_inset Formula $X$
+\end_inset
+
+.
+  ראשית, 
+\begin_inset Formula 
+\[
+\dim X=\dim\left(\pi\left(X\right)\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dim\left(X\cap Z\left(f\right)\right)=\dim\left(\pi\left(X\cap Z\left(f\right)\right)\right)=\dim\left(\pi\left(X\right)\cap Z\left(\text{one polynomial}\right)\right)\ssq\c^{n-1}
+\]
+
+\end_inset
+
+מהאינדוקציה, נקבל ש 
+\begin_inset Formula 
+\[
+\dim\left(X\cap Z\left(f\right)\right)=\dim\left(\pi\left(X\right)\right)-1=\dim X-1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+כעת זה מאפשר לנו דרך נוספת להגדיר מימד, בתור אורך השרשרת המקסימלית של יריעות
+ אי פריקות 
+\begin_inset Formula 
+\[
+X_{k}\subsetneqq\cdots\subsetneqq X_{1}\subsetneqq X
+\]
+
+\end_inset
+
+אבל זה מתאים לאידיאלים ראשוניים בחוג הקוארדינטות.
+ זה מאפשר לנו להגדיר מימד )מימד קרול( לכל החוגים, ולא רק לאלגברות נוצרות
+ סופית.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+יהי 
+\begin_inset Formula $f:X\ra Y$
+\end_inset
+
+ מורפיזם של יריעות ונניח כי 
+\begin_inset Formula $X$
+\end_inset
+
+ כי פריקה.
+ אזי:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $f$
+\end_inset
+
+ על אז 
+\begin_inset Formula 
+\[
+\dim f^{-1}\left(y\right)\geq\dim X-\dim Y.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $f$
+\end_inset
+
+ דומיננטית )התמונה מכילה קבוצה פתוחה זריצקי( אזי יש קבוצה פתוחה 
+\begin_inset Formula $U\ss Y$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+\dim f^{-1}\left(y\right)=\dim X-\dim Y
+\]
+
+\end_inset
+
+לכל 
+\begin_inset Formula $y\in U$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+בלי הגבלת הכלליות, 
+\begin_inset Formula $Y\ss\c^{n}$
+\end_inset
+
+.
+ נבחר העתקה סופית 
+\begin_inset Formula $Y\ra\c^{\dim Y}$
+\end_inset
+
+.
+ בהנתן 
+\begin_inset Formula $y$
+\end_inset
+
+, יש 
+\begin_inset Formula $\dim Y$
+\end_inset
+
+ פולינומים 
+\begin_inset Formula $g_{1},\ldots,g_{d}$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+Z\left(f_{1},\ldots,f_{d}\right)
+\]
+
+\end_inset
+
+ החא קבוצה סופית של נקודות המכילה את 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+Z\left(g_{1}\circ f,\ldots,g_{\dim Y}\circ f\right)\ssq X
+\]
+
+\end_inset
+
+ היא תת יריעה, וחלק מהרכיבים האי פריקים שלה הם הרכיבים האי פריקים של 
+\begin_inset Formula $f^{-1}\left(y\right)$
+\end_inset
+
+.
+ )כי הקבוצה הזו היא 
+\begin_inset Formula $f^{-1}\left(Z\left(g_{1},\ldots,g_{d}\right)\right)$
+\end_inset
+
+(.
+ מהמשפט, נקבל ש 
+\begin_inset Formula 
+\[
+\dim\left(\text{each component of \ensuremath{Z\left(\cdots\right)}}\right)=\dim X-\dim Y.
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dim Z\left(g_{1}\circ f,\ldots,g_{\dim\left(Y\right)}\circ f,g_{\dim Y}\circ f\right)
+\]
+
+\end_inset
+
+ומכיוון ש 
+\begin_inset Formula $g_{\dim\left(Y\right)}\circ f$
+\end_inset
+
+ מתאפס על 
+\begin_inset Formula $f^{-1}\left(Y\right)$
+\end_inset
+
+ ולכן זה גדול/שווה מ 
+\begin_inset Formula 
+\[
+\dim Z\left(g_{1}\circ f,\ldots,g_{\dim Y-1}\circ f\right)-1
+\]
+
+\end_inset
+
+בלי הגבלת הכלליות 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ אפיניים.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ דומונניטית 
+\begin_inset Formula $\La$
+\end_inset
+
+ 
+\begin_inset Formula $\text{Rat}\left(Y\right)\ss\text{Rat}\left(X\right)$
+\end_inset
+
+.
+ יהי 
+\begin_inset Formula 
+\[
+c=\dim X-\dim Y.
+\]
+
+\end_inset
+
+אזי יש 
+\begin_inset Formula 
+\[
+t_{1},\ldots,t_{c}\in\o_{X}\left(X\right)
+\]
+
+\end_inset
+
+כך ש 
+\begin_inset Formula 
+\[
+\text{Rat}\left(Y\right)\left(t_{1},\ldots,t_{c}\right)\ss\text{Rat}\left(X\right)
+\]
+
+\end_inset
+
+ היא הרחבה אלגברית.
+ נבחר יוצרים 
+\begin_inset Formula $f_{1},\ldots,f_{N}$
+\end_inset
+
+ של 
+\begin_inset Formula $\o_{X}\left(X\right)$
+\end_inset
+
+.
+ לכל 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ מקיים יחסים כלשהם מהצורה 
+\begin_inset Formula 
+\[
+\left(\ast\right)\ a_{0}\left(t_{1},\ldots,t_{c}\right)+a_{i}^{i}\left(t_{1},\ldots,t_{c}\right)\cdot f_{i}+\cdots+a_{d_{i}}^{i}\left(\vector t\right)\cdot f_{i}^{d_{i}}
+\]
+
+\end_inset
+
+ כאשר 
+\begin_inset Formula $a_{j}^{i}$
+\end_inset
+
+ הם פולנומים עם מקדמים ב 
+\begin_inset Formula $\o_{Y}\left(Y\right)$
+\end_inset
+
+.
+ תהי 
+\begin_inset Formula $U$
+\end_inset
+
+ קבוצת כל ה 
+\begin_inset Formula $y\in U$
+\end_inset
+
+ עבורם 
+\begin_inset Formula 
+\[
+a_{d_{i}}^{i}\left(y\right)\neq0
+\]
+
+\end_inset
+
+אם 
+\begin_inset Formula $y\in U$
+\end_inset
+
+, אזי 
+\begin_inset Formula $f_{i}\mid_{f^{-1}\left(y\right)}$
+\end_inset
+
+ יוצרים את 
+\begin_inset Formula $\o_{f^{-1}\left(y\right)}\left(f^{-1}\left(y\right)\right)$
+\end_inset
+
+.
+ צמצום 
+\begin_inset Formula $\left(\ast\right)$
+\end_inset
+
+ ל 
+\begin_inset Formula $f^{-1}\left(y\right)$
+\end_inset
+
+ יביא לנו משוואה פולינומית עבור 
+\begin_inset Formula $f_{i}\mid_{f^{-1}\left(y\right)}$
+\end_inset
+
+ עם מקדמים שהם שהם פולינומים ב 
+\begin_inset Formula $t_{i}\mid_{f^{-1}\left(y\right)}$
+\end_inset
+
+.
+ בפרט נקבל שכל איבר ש 
+\begin_inset Formula $\o_{f^{-1}\left(y\right)}f^{-1}\left(y\right)$
+\end_inset
+
+ הוא אלגברי מעל 
+\begin_inset Formula $t_{1}\mid_{f^{-1}\left(y\right)},\ldots,t_{c}\mid_{f^{-1}\left(y\right)}$
+\end_inset
+
+.
+ לכן, ל
+\begin_inset Formula 
+\[
+\text{Rat}\left(f^{-1}\left(y\right)\right)
+\]
+
+\end_inset
+
+יש דרגת טרנצנדנטיות לכל היותר 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ לכן 
+\begin_inset Formula $\dim f^{-1}\left(y\right)\leq c$
+\end_inset
+
+.
+ אבל מהחלק הקודם, נקבל ש 
+\begin_inset Formula $\dim f^{-1}\left(y\right)\geq c$
+\end_inset
+
+, ולכן סיימנו.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

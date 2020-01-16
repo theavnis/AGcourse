@@ -1,0 +1,827 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ind}{\text{ind}}
+{\text{ind}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\div}[1]{\text{div\left(#1\right)}}
+{\text{div}\left(#1\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\rr}{\text{RR}}
+{\text{RR}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+עקומים אלגבריים – הרצאה עשירית
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ עקום ו 
+\begin_inset Formula $D$
+\end_inset
+
+ דיוויזור עליו.
+ אנו מסתכלים על המרחב 
+\begin_inset Formula 
+\[
+L\left(D\right)=\left\{ f\in\text{Rat}\left(C\right)\mid\div f\geq-D\right\} 
+\]
+
+\end_inset
+
+ונסמן 
+\begin_inset Formula 
+\[
+\ell\left(D\right)=\dim L\left(D\right)
+\]
+
+\end_inset
+
+מטרת ההרצאה הזו היא לחשב את 
+\begin_inset Formula $L\left(D\right)$
+\end_inset
+
+.
+ נניח כי 
+\begin_inset Formula $L\left(D\right)\neq0$
+\end_inset
+
+, אזי יש 
+\begin_inset Formula $D'\sim D$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $D'\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+דיוויזור 
+\begin_inset Formula $D$
+\end_inset
+
+ יקרא אפקטיבי אם יש 
+\begin_inset Formula $D'\sim D$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $D'\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נניח כעת כי 
+\begin_inset Formula $C$
+\end_inset
+
+ עקום פרוייקטיבי מישורי ולא סינגולרי, 
+\begin_inset Formula $C=Z\left(f\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\deg f=d$
+\end_inset
+
+.
+ נניח כי 
+\begin_inset Formula 
+\[
+\left[0:1:0\right]\notin C,\ \left|C\cap\left\{ \left[x:y:0\right]\right\} \right|=d.
+\]
+
+\end_inset
+
+כלומר, הישר באינסוף לא משיק לעקום )מה נעשה אם הוא כן? נזיז אותו קצת!(.
+ נסמן ב 
+\begin_inset Formula 
+\[
+\pi:C\ra\p^{1}
+\]
+
+\end_inset
+
+ את ההטלה מ 
+\begin_inset Formula $\left[0:1:0\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\pi$
+\end_inset
+
+ היא העתקה סופית )מכיוון ש 
+\begin_inset Formula $\left[0:1:0\right]\notin C$
+\end_inset
+
+( ו 
+\begin_inset Formula 
+\[
+\p^{2}=\c^{2}\cup\ell_{\infty}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula 
+\[
+C^{2}=\left\{ \left[x:y:1\right]\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\ell_{\infty}=\left\{ \left[x:y:0\right]\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\pi\mid_{\c^{2}\cap C}$
+\end_inset
+
+ היא ההטלה על ציר 
+\begin_inset Formula $x$
+\end_inset
+
+, ונסמן 
+\begin_inset Formula 
+\[
+C_{\infty}=C\cap\ell_{\infty}
+\]
+
+\end_inset
+
+ ומתקיים 
+\begin_inset Formula 
+\[
+\pi\left(C_{\infty}\right)=\left[1:0\right]\in\p^{1}
+\]
+
+\end_inset
+
+ נניח כעת כי 
+\begin_inset Formula $\pi$
+\end_inset
+
+ אינה מסועפת מעל 
+\begin_inset Formula $\left[1:0\right]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+תנו דוגמא לתבנית דיפרנציאלית על 
+\begin_inset Formula $C$
+\end_inset
+
+: 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $dx$
+\end_inset
+
+ תבנית דיפרנציאלית רציונלית על 
+\begin_inset Formula $\mathbb{P}^{1}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\pi^{\ast}dx$
+\end_inset
+
+ תבנית דיפרנציאלית רציונלית על 
+\begin_inset Formula $C$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\pi^{\ast}dx$
+\end_inset
+
+ חסרת קטבים על 
+\begin_inset Formula $\c^{2}\cap C$
+\end_inset
+
+ ויש לה קוטב כפול )כמו ל 
+\begin_inset Formula $dx$
+\end_inset
+
+( ב 
+\begin_inset Formula $C_{\infty}$
+\end_inset
+
+.
+ האפסים של 
+\begin_inset Formula $\pi^{\ast}dx\mid_{\c^{2}\cap C}$
+\end_inset
+
+ הם הנקודות בהנן הישר המשיק ל 
+\begin_inset Formula $C$
+\end_inset
+
+ הוא ציר ה 
+\begin_inset Formula $y$
+\end_inset
+
+, כלומר אלו האפסים של 
+\begin_inset Formula $\pd fx$
+\end_inset
+
+.
+ כל זה ביחד, 
+\begin_inset Formula $\div{\pi^{\ast}dx}$
+\end_inset
+
+ הוא הסכום של 
+\begin_inset Formula $d\left(d-1\right)$
+\end_inset
+
+ נקודות פחות 
+\begin_inset Formula $2d$
+\end_inset
+
+ נקודות.
+ הדרגה הכוללת היא 
+\begin_inset Formula 
+\[
+d\left(d-1\right)-2d=d\left(d-3\right)=2\binom{d-1}{2}-2=2\cdot\text{genus}-2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+מצא את כל התבניות הדיפרנציאליות הרגולריות על 
+\begin_inset Formula $C$
+\end_inset
+
+ )כמו 
+\begin_inset Formula $L\left(K\right)$
+\end_inset
+
+(.
+ נתבונן ב 
+\begin_inset Formula 
+\[
+\omega=-\frac{\pi^{\ast}dx}{\pd fx}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\omega$
+\end_inset
+
+ חסרת אפסים או קטבים על 
+\begin_inset Formula $\c^{2}\cap C$
+\end_inset
+
+.
+ ל 
+\begin_inset Formula $\omega$
+\end_inset
+
+ יש אפסים מדרגה 
+\begin_inset Formula $d-3$
+\end_inset
+
+ על 
+\begin_inset Formula $C_{\infty}$
+\end_inset
+
+.
+ כל תבנית דיפרנציאלית רגולרית היא מהצורה 
+\begin_inset Formula $g\cdot\omega$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $g$
+\end_inset
+
+ היא פונקציה רציונלית ללא קטבים ב 
+\begin_inset Formula $C\cap\c^{2}$
+\end_inset
+
+ )פולינום( ובעלת דרגה לכל היותר 
+\begin_inset Formula $d-3$
+\end_inset
+
+ ב 
+\begin_inset Formula $C_{\infty}$
+\end_inset
+
+.
+ למרחב זה יש מימד 
+\begin_inset Formula 
+\[
+\binom{d-1}{2}=\text{genus}\left(C\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+בהנתן 
+\begin_inset Formula $\c^{2}\cap C\lssq D\geq0$
+\end_inset
+
+, חשבו את 
+\begin_inset Formula $L\left(D\right)$
+\end_inset
+
+.
+ נקח 
+\begin_inset Formula $m\gg1$
+\end_inset
+
+.
+ נבחר פולינום 
+\begin_inset Formula $g$
+\end_inset
+
+ מדרגה 
+\begin_inset Formula $m$
+\end_inset
+
+ אשר מתאפס על 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+\text{div}_{C}\left(g\right)=D+E-mC_{\infty}.
+\]
+
+\end_inset
+
+יהי 
+\begin_inset Formula $h$
+\end_inset
+
+ פולינום מדרגה קטנה/שווה ל 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+\div h=E+F-mC_{\infty}
+\]
+
+\end_inset
+
+) 
+\begin_inset Formula $F\geq0$
+\end_inset
+
+(.
+ 
+\begin_inset Formula 
+\[
+\div{\frac{h}{g}}=E+F-mC_{\infty}-\left(D+E-mC_{\infty}\right)=F-D\geq-D
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{h}{g}\in L\left(D\right)
+\]
+
+\end_inset
+
+ניתן לבחור 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ 
+\begin_inset Formula $D+E$
+\end_inset
+
+ היא קבוצת האפסים המשותפת של פולינום 
+\begin_inset Formula $f$
+\end_inset
+
+ מדרגה 
+\begin_inset Formula $d$
+\end_inset
+
+ ופולינום 
+\begin_inset Formula $g$
+\end_inset
+
+ מדרגה 
+\begin_inset Formula $m$
+\end_inset
+
+ ולכן 
+\begin_inset Formula 
+\[
+\deg\left(D+E\right)=m\cdot d
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\deg\left(E\right)=m\cdot d-\deg D=md-n
+\]
+
+\end_inset
+
+המרחב 
+\begin_inset Formula 
+\[
+\left\{ \varphi|_{C}\mid\varphi\ \text{polynomial},\ \deg\varphi\leq m\right\} 
+\]
+
+\end_inset
+
+שווה ל }מרחב הפולינום מדרגה קטנה/שווה ל 
+\begin_inset Formula $m$
+\end_inset
+
+{ מודולו}המרחב של כל הפולינומים מדרגה לכל היותר 
+\begin_inset Formula $m-d$
+\end_inset
+
+{.
+ ניתן לחשב את המימד של זה: 
+\begin_inset Formula 
+\[
+\binom{m+2}{2}-\binom{m-d+2}{2}
+\]
+
+\end_inset
+
+במרחב זה אנו צריכים לפתור 
+\begin_inset Formula $md-n$
+\end_inset
+
+ משוואות ליניאריות.
+ לכן יש מרחב פתרונות מגודל 
+\begin_inset Formula 
+\[
+B\geq\binom{m+2}{2}-\binom{m-d+2}{2}-md+n=...=\frac{1}{2}\left(-d^{2}+3d+2n\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=n-\frac{d\left(d-3\right)}{2}=n-g+1.
+\]
+
+\end_inset
+
+נזכיר כי בפעם שעברה הראנו הוכחה לא שלמה לרימן רוך.
+ אבל החלק הראשון היה נכון, ושם הראנו שאם 
+\begin_inset Formula $D\geq0$
+\end_inset
+
+ אזי המימד חסום ע"י 
+\begin_inset Formula $\ell\left(D\right)\leq n-g+1$
+\end_inset
+
+, ולכן המימד הוא בדיוק 
+\begin_inset Formula 
+\[
+\boldsymbol{\ell\left(D\right)=n-g+1.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הבנו את כל הדיוויזורים האי–שליליים והוכחנו עבורם את רימן רוך )הוכחה קונסטרוקטיבי
+ת(: 
+\begin_inset Formula 
+\[
+\ell\left(D\right)-\ell\left(K-D\right)=n-g+1.
+\]
+
+\end_inset
+
+עבור 
+\begin_inset Formula $D$
+\end_inset
+
+ אפקטיבי.
+ הוכחה זו נכונה גם אם 
+\begin_inset Formula $K-D$
+\end_inset
+
+ אפקטיבי )כי הנוסחא אנטי–סימטרית לזה(.
+ לכן מה שחסר לנו להוכחה מלאה של המשפט הוא המקרה בוא יש 
+\begin_inset Formula $D$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $\ell\left(D\right)=\ell\left(K-D\right)=0$
+\end_inset
+
+.
+ צריך להראות שאם 
+\begin_inset Formula 
+\[
+\ell\left(D\right)=\ell\left(K-D\right)=0
+\]
+
+\end_inset
+
+אזי 
+\begin_inset Formula 
+\[
+\deg\left(D\right)=g-1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+אם 
+\begin_inset Formula $\deg D\geq g$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ell\left(D\right)>0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+לא ניתן כרגע הוכחה מלאה, אך נתחיל עם הטיעון.
+ מספיק להראות שכל דיוויזור מהצורה 
+\begin_inset Formula 
+\[
+\left[p_{1}\right]+\cdots+\left[p_{g+1}\right]-\left[q\right]
+\]
+
+\end_inset
+
+ הוא אפקטיבי.
+ יהי 
+\begin_inset Formula $m\gg1$
+\end_inset
+
+, נבחר פולינום 
+\begin_inset Formula $g$
+\end_inset
+
+ מדרגה 
+\begin_inset Formula $m$
+\end_inset
+
+ כך שהדיוויזור של 
+\begin_inset Formula $g$
+\end_inset
+
+ הוא 
+\begin_inset Formula 
+\[
+\div g=\left[p_{1}\right]+\cdots+\left[p_{g+1}\right]+E-mC_{\infty}
+\]
+
+\end_inset
+
+נבחר פולינום 
+\begin_inset Formula $h$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+\div h=E+\left[q\right]-mC_{\infty}
+\]
+
+\end_inset
+
+)קיים כזה מחשבון מימדים( ואז 
+\begin_inset Formula 
+\[
+\div{\frac{h}{g}}\geq\left[p_{1}\right]+\cdots+\left[p_{q+1}\right]-\left[q\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נחזור לנושא של אינטגרלים אבליים.
+ 
+\begin_inset Formula 
+\[
+\sum_{i=1}^{g+1}\intop_{\left[p\right]}^{\left[p_{i}\right]}\omega
+\]
+
+\end_inset
+
+נתבונן לדוגמא באינטגרל 
+\begin_inset Formula 
+\[
+\intop_{0}^{f\left(x,y\right)}\frac{dt}{\sqrt{t^{3}+at+b}}=\intop_{0}^{x}\frac{dt}{\sqrt{t^{3}+at+b}}+\intop_{0}^{y}\frac{dt}{\sqrt{t^{3}+at+b}}
+\]
+
+\end_inset
+
+ובשפה של דיוויזורים נוכל לרשום 
+\begin_inset Formula 
+\[
+I\left(\left[f\left(x,y\right)\right]-\left[0\right]\right)=I\left(\left[x\right]-\left[0\right]+\left[y\right]-\left[0\right]\right)
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula 
+\[
+\sum_{1}^{g+1}\left[p_{i}\right]-\left(g+1\right)\left[p\right]\sim\sum_{1}^{g}\left[q_{i}\right]-g\left[p\right]
+\]
+
+\end_inset
+
+ונקבל סה"כ 
+\begin_inset Formula 
+\[
+\left[q_{1}\right]+\cdots+\left[q_{g}\right]-g\left[p\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
