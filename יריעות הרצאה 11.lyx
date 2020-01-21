@@ -1,0 +1,860 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage[all,cmtip]{xy}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+יריעות אלגבריות – הרצאה 
+\begin_inset Formula $11$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vector}[1]{\overrightarrow{#1}}
+{\overrightarrow{#1}}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא
+\end_layout
+
+\begin_layout Standard
+נתבונן בעקום 
+\begin_inset Formula 
+\[
+y^{2}=x^{2}\left(x+1\right)
+\]
+
+\end_inset
+
+מעל הממשיים.
+ נרצה להראות שזה נראה כמו חיתוך שני ישרים בסביבת ראשית הצירים.
+ נגדיר 
+\begin_inset Formula 
+\[
+x\la tx
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y\la ty
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+t\ra0
+\]
+
+\end_inset
+
+נקבל 
+\begin_inset Formula 
+\[
+t^{2}y^{2}=t^{2}x^{2}\left(tx+1\right)
+\]
+
+\end_inset
+
+נצמצם ונקבל
+\begin_inset Formula 
+\[
+y^{2}=x^{2}\left(tx+1\right)
+\]
+
+\end_inset
+
+כעת נשאיף 
+\begin_inset Formula $t\ra0$
+\end_inset
+
+ ונקבל שבאזור הראשית זה מתנהג כמו 
+\begin_inset Formula 
+\[
+y^{2}=x^{2}
+\]
+
+\end_inset
+
+כלומר 
+\begin_inset Formula 
+\[
+\left(y-x\right)\left(x-y\right)=0
+\]
+
+\end_inset
+
+ואכן קיבלנו התנהגות כזו.
+ נכליל דוגמא זו.
+\end_layout
+
+\begin_layout Subsubsection*
+בנייה
+\end_layout
+
+\begin_layout Standard
+תהי 
+\begin_inset Formula $X\ssq\c^{n}$
+\end_inset
+
+ יריעה אפינית ו 
+\begin_inset Formula $O\in X$
+\end_inset
+
+.
+ נגדיר 
+\begin_inset Formula 
+\[
+Y\ssq\c^{n}\times\left(\c-\left\{ 0\right\} \right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Y=\left\{ \left(\overrightarrow{x},t\right)\in\c^{n}\times\c^{\times}\mid t\cdot\overrightarrow{x}\in X\right\} 
+\]
+
+\end_inset
+
+ נתבונן בסגור של 
+\begin_inset Formula $Y$
+\end_inset
+
+ ו 
+\begin_inset Formula $\c^{n}\times\c$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula 
+\[
+C_{O}X=Y\cap\c^{n}\times\left\{ 0\right\} 
+\]
+
+\end_inset
+
+ כאשר 
+\begin_inset Formula $C_{O}X$
+\end_inset
+
+ היא העקום המשיק ל 
+\begin_inset Formula $X$
+\end_inset
+
+ ב 
+\begin_inset Formula $O$
+\end_inset
+
+.
+ נניח 
+\begin_inset Formula $X=Z\left(I\right)$
+\end_inset
+
+.
+ אזי 
+\begin_inset Formula 
+\[
+\o\left(\c^{n}\right)=\c\left[x_{1},\ldots,x_{n}\right]
+\]
+
+\end_inset
+
+ומהטריק של רבינוביץ
+\begin_inset Formula 
+\[
+\o\left(\c^{n}\times\c^{\times}\right)=\c\left[x_{1},\ldots,x_{n},y,\frac{1}{y}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\c^{n}\times\c^{\times}\lssq Y=Z\left(\ub{\left\{ f\left(tx\right)\mid f\in I\right\} }J\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+I\left(\overline{Y}\right)=\left\{ g\in\c\left[x_{1},\ldots,x_{n},y\right]\mid g\in J\ \text{as an element of}\ \c\left[x_{1},\ldots,x_{n},y,y^{-1}\right]\right\} =
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=J\cap\c\left[x_{!},\ldots,x_{n},y\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\overline{Y}=Z\left(J\cap\c\left[x_{1},\ldots,x_{n},y\right]\right)
+\]
+
+\end_inset
+
+ אם 
+\begin_inset Formula $f\in J$
+\end_inset
+
+, ניתן להכפיל זאת בחזקה מסויימת על 
+\begin_inset Formula $Y$
+\end_inset
+
+, כך ש 
+\begin_inset Formula $y^{N}\cdot f\in\c\left[x_{1},\ldots,x_{n},y\right]$
+\end_inset
+
+.
+ לכל 
+\begin_inset Formula $f\in I$
+\end_inset
+
+, נגדיר 
+\begin_inset Formula $f\left(xt\right)\in I\left(Y\right)$
+\end_inset
+
+ ולכן נקבל 
+\begin_inset Formula 
+\[
+t^{k}f\left(xt\right)\in I\left(Y\right)
+\]
+
+\end_inset
+
+וכעת 
+\begin_inset Formula 
+\[
+\left\{ t^{k}\cdot f\left(x\cdot t\right)\mid t^{k}\cdot f\left(x\cdot t\right)\in\c\left[x_{1},\ldots,x_{n},t\right]\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f\left(0\right)=0
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+f\left(x\right)=\sum_{i=k}^{n}f_{i}
+\]
+
+\end_inset
+
+עבור 
+\begin_inset Formula $f_{k}\neq0$
+\end_inset
+
+ ו 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ פולינום מדרגה 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+f\left(tk\right)=t^{k}f_{k}\left(x\right)+t^{k-1}f_{k+1}\left(x\right)+\cdots+t^{N}f_{N}\left(x\right)\in I\left(\overline{Y}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+t^{k-1}f_{k}\left(x\right)+t^{k-2}f_{k+1}\left(x\right)+\cdots+t^{N-1}f_{N}\left(x\right)\in I\left(\overline{Y}\right)
+\]
+
+\end_inset
+
+וכך הלאה.
+ מסתבר שהמשוואה הלא טריוויאלית היחידה המתקבלת על 
+\begin_inset Formula $C_{0}X$
+\end_inset
+
+ מהמשוואות שלמעלה היא המשוואה 
+\begin_inset Formula 
+\[
+f_{k}\left(x\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+איך עוברים מ 
+\begin_inset Formula $X$
+\end_inset
+
+ ל 
+\begin_inset Formula $C_{0}X$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $f\in I$
+\end_inset
+
+ )מספיק ליוצרים( נכתוב 
+\begin_inset Formula 
+\[
+f=f_{k}\left(x\right)+\cdots+f_{N}\left(X\right)
+\]
+
+\end_inset
+
+ כאשר 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ הומוגנים מדרגה 
+\begin_inset Formula $i$
+\end_inset
+
+ ו 
+\begin_inset Formula $f_{k}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+נוסיף את המשוואות 
+\begin_inset Formula $f_{k}\left(x\right)=0$
+\end_inset
+
+ ל 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C_{0}X=Z\left(S\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+בחזרה לדוגמא מתחילת השיעור
+\end_layout
+
+\begin_layout Definition
+נתבונן ב 
+\begin_inset Formula 
+\[
+y^{2}=x^{3}+x^{2}
+\]
+
+\end_inset
+
+ניקח את הגורם ההומוגני מהמעלה הנמוכה ביותר, נזרוק את השאר, ונקבל 
+\begin_inset Formula 
+\[
+y^{2}=x^{2}.
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+אם 
+\begin_inset Formula 
+\[
+f=f_{k}\left(x\right)+\cdots+f_{N}\left(x\right)
+\]
+
+\end_inset
+
+כמקודם, אזי 
+\begin_inset Formula $f_{k}$
+\end_inset
+
+ נקרא ה 
+\begin_inset Formula $\text{inital piece}$
+\end_inset
+
+ של 
+\begin_inset Formula $f$
+\end_inset
+
+ ומסומן ע"י 
+\begin_inset Formula $f_{\text{init}}$
+\end_inset
+
+ץ
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+אם 
+\begin_inset Formula $X$
+\end_inset
+
+ אי פריקה, 
+\begin_inset Formula 
+\[
+\dim C_{x}X=\dim X.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\dim\overline{Y}=\dim Y=\dim X+1.
+\]
+
+\end_inset
+
+
+\begin_inset Formula $C_{x}X$
+\end_inset
+
+ הוא היפר–משטח ב 
+\begin_inset Formula $\overline{Y}$
+\end_inset
+
+, ולכן 
+\begin_inset Formula 
+\[
+\dim C_{x}X=\dim\overline{Y}-1=\dim X.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+נתבונן בקבוצה 
+\begin_inset Formula 
+\[
+\left\{ \text{\deg1 part of \ensuremath{f}\mid\ensuremath{f\in I\left(X\right)}}\right\} 
+\]
+
+\end_inset
+
+מתקיים 
+\begin_inset Formula 
+\[
+\left\{ \text{\deg1 part of \ensuremath{f}\mid\ensuremath{f\in I\left(X\right)}}\right\} \ss\left\{ f_{\text{init}}\mid f\in I\left(X\right)\right\} 
+\]
+
+\end_inset
+
+)כי יש פולינומים עם גורם התחלתי מדרגה גבוהה מ 
+\begin_inset Formula $1$
+\end_inset
+
+(, ולכן נקבל ש 
+\begin_inset Formula 
+\[
+Z\left(\left\{ \text{\deg1 part of \ensuremath{f}\mid\ensuremath{f\in I\left(X\right)}}\right\} \right)\lss Z\left(\left\{ f_{\text{init}}\mid f\in I\left(X\right)\right\} \right)=C_{0}X
+\]
+
+\end_inset
+
+ נשם לב ש 
+\begin_inset Formula $f_{\text{init}}$
+\end_inset
+
+ הוא בדיוק 
+\begin_inset Formula $\gr f$
+\end_inset
+
+, ונקבל 
+\begin_inset Formula 
+\[
+Z\left(\gr f\left(0\right)\mid f\in I\left(X\right)\right)
+\]
+
+\end_inset
+
+מרחב זה נקרא 
+\series bold
+המרחב המשיק ל 
+\begin_inset Formula $X$
+\end_inset
+
+ ב
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $0$
+\end_inset
+
+ ויסומן ב 
+\begin_inset Formula $T_{0}X$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא
+\end_layout
+
+\begin_layout Standard
+נכתוב 
+\begin_inset Formula $X=\ \ \ y^{2}=x^{3}+x^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{0}X=Z\left(x^{2}=y^{2}\right)$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+T_{0}X=Z\left(0\right)=\c^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $x\in X$
+\end_inset
+
+ תקרא לא סינגולרית אם 
+\begin_inset Formula $T_{x}X=C_{x}X$
+\end_inset
+
+.
+ זה קורה אם ורק אם 
+\begin_inset Formula 
+\[
+\dim T_{x}X=\dim X
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+מה הלאה?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T_{x}X$
+\end_inset
+
+ ו 
+\begin_inset Formula $C_{x}X$
+\end_inset
+
+ איתם תלויים בשיכון )עד כדי איזומורפיזם( של 
+\begin_inset Formula $X$
+\end_inset
+
+ ב 
+\begin_inset Formula $\c^{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula 
+\[
+f:X\ra Y
+\]
+
+\end_inset
+
+ו 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ נקבל העתקה 
+\begin_inset Formula 
+\[
+C\left(f\right):\ C_{x}X\ra C_{f\left(x\right)}Y
+\]
+
+\end_inset
+
+והעתקה 
+\begin_inset Formula 
+\[
+T\left(f\right):T_{x}X\ra T_{f\left(x\right)}Y
+\]
+
+\end_inset
+
+)ה 
+\begin_inset Formula $\text{derivative}$
+\end_inset
+
+ של 
+\begin_inset Formula $f$
+\end_inset
+
+ ב 
+\begin_inset Formula $x$
+\end_inset
+
+(.
+ העתקה זו מתקבלת עם כל התכונות שנצפה להן מנגזרת.
+ )כלל לייבניץ וכו'(.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $C\ssq\c^{n}$
+\end_inset
+
+ האיחוד של כל הצירים.
+ אזי 
+\begin_inset Formula $C$
+\end_inset
+
+ אינה ניתנת לשיכון ב 
+\begin_inset Formula $\c^{n-1}$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula 
+\[
+f:C\ra\c^{n-1}
+\]
+
+\end_inset
+
+שיכון אזי 
+\begin_inset Formula 
+\[
+T_{0}f:T_{0}C\ra T_{f\left(0\right)}\c^{n-1}
+\]
+
+\end_inset
+
+הוא שיכון אבל 
+\begin_inset Formula $T_{0}C=\c^{n}$
+\end_inset
+
+ ו 
+\begin_inset Formula $T_{f\left(0\right)}\c^{n-1}=\c^{n-1}$
+\end_inset
+
+ כי 
+\begin_inset Formula 
+\[
+I\left(C\right)=\left\langle \text{all monomials \ensuremath{x_{1}^{a_{1}}\cdots x_{n}^{a_{n}}} where at list two \ensuremath{a_{i}} are nonzero}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1084 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ind}{\text{ind}}
+{\text{ind}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\div}[1]{\text{div\left(#1\right)}}
+{\text{div}\left(#1\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\rr}{\text{RR}}
+{\text{RR}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\f}{\mathbb{F}}
+{\mathbb{F}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\fp}{\overline{\mathbb{F}_{p}}}
+{\overline{\mathbb{F}_{p}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\fq}{\overline{\mathbb{F}_{q}}}
+{\overline{\mathbb{F}_{q}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\gal}[2]{\text{Gal}\left(\nf{#1}{#2}\right)}
+{\text{Gal}\left(\nf{#1}{#2}\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\gall}{\text{Gal}}
+{\text{Gal}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+עקומים אלגבריים – הרצאה 
+\begin_inset Formula $11$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הוכחנו את משפט רימן רוך לכל עקום פרוייקטיבי ולא סינגולרי.
+ יהי 
+\begin_inset Formula $D\geq0$
+\end_inset
+
+ דיוויזור, הראנו ש:
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $D\geq0$
+\end_inset
+
+ אפקטיבי, 
+\begin_inset Formula 
+\[
+\ell\left(D\right)-\ell\left(K-D\right)\leq\deg D-g+1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $D\geq0$
+\end_inset
+
+ אפקטיבי, 
+\begin_inset Formula 
+\[
+\ell\left(D\right)\geq\deg D-g+1
+\]
+
+\end_inset
+
+והראנו זאת באופן מפורש.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נניח ואנו מתעניינים בהעתקות 
+\begin_inset Formula $C\ra\p^{2}$
+\end_inset
+
+ עבור עקומים מגנוס גבוה.
+ לא יהיה לזה שיכון מישורי חלק, אבל כן נוכל להגדיר העתקה כך שנקודות הסינגולריות
+ יראו מהצורה 
+\begin_inset Formula $\times$
+\end_inset
+
+ )כלומר מקומית כמו 
+\begin_inset Formula $xy=0$
+\end_inset
+
+(.
+ לכן נראה להכליל את ההגדרה של תבניות דיפרנציאליות והדיוויזור הקנוני.
+ נגדיר כך תבנית דיפרנציאלית על הנקודות הלא סינגולריות, כך שעל נקודות הסינגולריות
+ היא מתאפסת.
+ לכן נוכיח את רימן רוך גם עבור עקומים פרוייקטיבים )לא בהכרח לא סינגולריים(.
+ 
+\end_layout
+
+\begin_layout Remarks
+הוכחנו את רימן רוך מעל המרוכבים, אבל הוא נכון מעל כל שדה סגור אלגברית )מכל
+ מאפיין!(.
+ מה שחסר לנו לכך הוא להגדיר בצורה נכונה 
+\begin_inset Formula $\text{Res}_{f}\left(\w\right)$
+\end_inset
+
+, ואז להוכיח את היחס 
+\begin_inset Formula $\sum\limits_{f}\text{Res}_{f}\left(\w\right)=0$
+\end_inset
+
+.
+ נתחיל מלהוכיח עבור 
+\begin_inset Formula $\p^{1}$
+\end_inset
+
+, ומכיוון שלכל עקום יש העתקה ל 
+\begin_inset Formula $\p^{1}$
+\end_inset
+
+ נוכל להכליל זאת.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בהרצאה זו נדבר על עקומים מעל שדות סופיים.
+ 
+\begin_inset Formula $C$
+\end_inset
+
+ יהיה עקום פרוייקטיבי מעל 
+\begin_inset Formula $\overline{\mathbb{F}_{p}}$
+\end_inset
+
+.
+ בלי הגבלת הכלליות, נניח כי 
+\begin_inset Formula $C$
+\end_inset
+
+ מוגדר מעל 
+\begin_inset Formula $\f_{q}$
+\end_inset
+
+ )עבור 
+\begin_inset Formula $q=p^{N}$
+\end_inset
+
+(.
+ אם נתבונן על הפתרונות מעל הסגור האלגברי, 
+\begin_inset Formula $C\left(\overline{\f_{p}}\right)$
+\end_inset
+
+, נקבל שזוהי קבוצה בת מנייה.
+ אבל יש לה מבנה אלגברי נוסף: 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+C\left(\fp\right)=\bigcup_{n}C\left(\f_{q^{n}}\right)
+\]
+
+\end_inset
+
+ כאשר 
+\begin_inset Formula 
+\[
+C\left(\f_{q^{n}}\right)=\left\{ \left[x_{0}:\cdots:x_{k}\right]\in\p^{k}\left(\f_{q^{n}}\right)\mid\left[x_{0}:\ldots:x_{k}\right]\in C\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+אם נסתכל על חבורת גלואה האבסולוטית, 
+\begin_inset Formula 
+\[
+\text{Gal}_{\f_{q}}=\text{Gal}\left(\nf{\overline{\f_{q}}}{\f_{q}}\right)
+\]
+
+\end_inset
+
+היא פועלת על 
+\begin_inset Formula $C\left(\overline{\f_{q}}\right)$
+\end_inset
+
+ וכן על דיווזורים, פונקציות רגולריות וכו'.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+בפרט היא פועלת על קבוצת הדיוויזורים.
+\end_layout
+
+\begin_layout Enumerate
+נזכר באוטומורפיזם פרוביניוס, 
+\begin_inset Formula $x\mapsto x^{q}$
+\end_inset
+
+.
+ לכן למעשה 
+\begin_inset Formula $C\left(\f_{q^{n}}\right)$
+\end_inset
+
+ זו בדיוק קבוצת נקודות השבת של 
+\begin_inset Formula $C\left(\fq\right)$
+\end_inset
+
+ תחת פעולת פרוביניוס 
+\begin_inset Formula $x\mapsto x^{q^{n}}$
+\end_inset
+
+.
+ כלומר, 
+\begin_inset Formula 
+\[
+C\left(\f_{q^{n}}\right)=C\left(\fp\right)^{\text{Frob}^{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+נאמר שדיוויזור 
+\begin_inset Formula $D$
+\end_inset
+
+ מוגדר מעל 
+\begin_inset Formula $\f_{q^{n}}$
+\end_inset
+
+ אם הוא אינווריאנטי תחת 
+\begin_inset Formula $\text{Frob}^{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+נגדיר את קבוצת הדיוויזורים המוגדרים מעל 
+\begin_inset Formula $\f_{q^{n}}$
+\end_inset
+
+ ב 
+\begin_inset Formula $\text{Div}\left(\f_{q^{n}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+דיוויזורים אפקטיביים מדרגה 
+\begin_inset Formula $1$
+\end_inset
+
+ המוגדרים מעל 
+\begin_inset Formula $\f_{q}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נתבונן בקבוצת הדיוויזורים האפקטיביים על 
+\begin_inset Formula $C$
+\end_inset
+
+ מדרגה 
+\begin_inset Formula $1$
+\end_inset
+
+ המוגדרים מעל 
+\begin_inset Formula $\f_{q}$
+\end_inset
+
+.
+ דיוויזור אפקטיבי מדרגה 
+\begin_inset Formula $1$
+\end_inset
+
+ זו פשוט נקודה.
+ העובדה שהוא מוגדר מעל 
+\begin_inset Formula $\f_{q}$
+\end_inset
+
+ אומר שהנקודה אינווריאנטית תחת פרוביניוס.
+ לכן נקבל התאמה חח"ע ועל בין הדיוויזורים האפקטיבים מדרגה 
+\begin_inset Formula $1$
+\end_inset
+
+ המוגדרים מעל 
+\begin_inset Formula $\f_{q}$
+\end_inset
+
+ ל 
+\begin_inset Formula $C\left(\f_{q}\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+דיוויזורים אפקטיביים מדרגה 
+\begin_inset Formula $2$
+\end_inset
+
+ המוגדרים מעל 
+\begin_inset Formula $\f_{q}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+יש לנו שתי אופציות לדיוויזורים כאלו.
+ הם יכולים להיות מהצורה 
+\begin_inset Formula $\left[x\right]+\left[y\right]$
+\end_inset
+
+ או מהצורה 
+\begin_inset Formula $2\left[x\right]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+אם נתבונן בדיוויזור מהצורה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $2\left[x\right]$
+\end_inset
+
+, זה מתנהג בעצם בדיוק כמו במקרה של דיוויזור מדרגה 
+\begin_inset Formula $1$
+\end_inset
+
+ ונקבל התאמה ל 
+\begin_inset Formula $C\left(\f_{q}\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+אם נתבונן בדיוויזור מהצורה 
+\begin_inset Formula $\left[x\right]+\left[y\right]$
+\end_inset
+
+, נקבל שחבורת גלואה יכולה להחליף ביניהם.
+ לכן יש שתי אופציות, או ש 
+\begin_inset Formula $x,y\in C\left(\f_{q}\right)$
+\end_inset
+
+, או שזה יהיה אינווריאנטי תחת הריבוע של הפרוביניוס, כלומר נקבל התאמה ל 
+\begin_inset Formula $C\left(\f_{q^{2}}\right)-\c\left(\f_{q}\right)$
+\end_inset
+
+.
+ לכן נקבל ש )נסמן ב 
+\begin_inset Formula $\text{Eff}^{2}$
+\end_inset
+
+ את קבוצת הדיוויזורים האפקטיביים מדרגה 
+\begin_inset Formula $2$
+\end_inset
+
+( 
+\begin_inset Formula 
+\[
+\left|\text{Eff}^{2}\left(\f_{q}\right)\right|=\left|C\left(\f_{q}\right)\right|+\binom{\left|C\left(\f_{q}\right)\right|}{2}+\frac{\left|C\left(\f_{q^{n}}\right)\right|-\left|C\left(\f_{q}\right)\right|}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+באופן כללי, לספור נקודות על עקום זה מעניין.
+ לספור דיוויזורים זה קל.
+ לכן נתרגם באופן כללי מבעיה אחת לשנייה:
+\end_layout
+
+\begin_layout Subsubsection*
+המקרה הכללי
+\end_layout
+
+\begin_layout Standard
+נסמן ב 
+\begin_inset Formula 
+\[
+Z_{C}\left(t\right)=\sum_{n}\left|C\left(\f_{q^{n}}\right)\right|\cdot t^{n}=\sum_{O\in\nf{C\left(\fq\right)}{\gall_{\f_{q}}}}\left|O\right|\left(t^{\left|O\right|}+t^{2\left|O\right|}+t^{3\left|O\right|}+\cdots\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\sum_{O\in\nf{C\left(\fq\right)}{\gall_{\f_{q}}}}\frac{\left|O\right|\cdot t^{\left|O\right|}}{1-t^{\left|O\right|}}=\sum t\frac{d}{dt}\log\left(\frac{1}{1-t^{\left|O\right|}}\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=t\cdot\frac{d}{dt}\left(\prod_{_{O\in\nf{C\left(\fq\right)}{\gall_{\f_{q}}}}}\frac{1}{1-t^{\left|O\right|}}\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=t\cdot\frac{d}{dt}\log\left(\prod\left(1+t^{\left|O\right|}+t^{2\left|O\right|}+\cdots\right)\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=t\cdot\frac{d}{dt}\log\left(\sum_{D\in\text{Div}^{\geq0}\left(\f_{q}\right)}t^{\deg\left(D\right)}\right)
+\]
+
+\end_inset
+
+נסמן 
+\begin_inset Formula 
+\[
+\zeta_{C}\left(t\right)=\sum_{D\in\text{Div}^{\geq0}\left(\f_{q}\right)}t^{\deg\left(D\right)}=\sum_{i\geq2g-2}\left|\text{Div}_{i}^{\geq0}\left(\f_{q}\right)\right|t^{i}+\sum_{2g-2<i}\left|\text{Div}_{i}^{\geq0}\left(\f_{q}\right)\right|t^{i}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $\text{Div}_{i}^{\geq0}$
+\end_inset
+
+ זו קבוצת הדיוויזורים האפקטיביים מדרגה 
+\begin_inset Formula $i$
+\end_inset
+
+ המוגדרים מעל...
+ באופן כללי, המחובר השמאלי הוא פולינום מדרגה 
+\begin_inset Formula $2g-2$
+\end_inset
+
+ ונסמן את המחובר הימני ב 
+\begin_inset Formula $\left(\ast\right)$
+\end_inset
+
+.
+ נקבל 
+\begin_inset Formula 
+\[
+\left|\text{Div}_{i}^{\geq0}\left(\f_{q}\right)\right|=\sum_{D\in\text{Div}_{i}^{\geq0}\left(\f_{q}\right)/\sim}\left|\left\{ \text{ how many effective divisior are equivalent to \ensuremath{D}}\right\} \right|.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+כל דיוויזור מדרגה גדולה מ 
+\begin_inset Formula $g$
+\end_inset
+
+ שקול לדיוויזור אפקטיבי.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+מרימן רוך נקבל ש 
+\begin_inset Formula $\dim\left\{ f\mid\div f+D\geq0\right\} =\ell\left(D\right)\geq\deg\left(D\right)-g+1>1$
+\end_inset
+
+ גורר ש 
+\begin_inset Formula $D$
+\end_inset
+
+ שקול לדיוויזור אפקטיבי.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נקבל כעת ש 
+\begin_inset Formula 
+\[
+\left|\text{Div}_{i}^{\geq0}\left(\f_{q}\right)\right|=\sum_{D\in\text{Div}_{i}^{\geq0}\left(\f_{q}\right)/\sim}\left|\left\{ \text{how many effective divisors are equivalent to \ensuremath{D} }\right\} \right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula 
+\[
+\left\{ \text{how many effective divisors are equivalent to \ensuremath{D} }\right\} =\nf{\left\{ f\neq0\mid\div f+D\geq0\right\} }{\text{scalar moltiplication}}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\p\left(L\left(D\right)\right)=\p^{\ell\left(D\right)-1}
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula $D,E$
+\end_inset
+
+ מוגדרים מעל 
+\begin_inset Formula $\f_{q}$
+\end_inset
+
+ ו 
+\begin_inset Formula $D\sim E$
+\end_inset
+
+.
+ אזי יש פונקציה רציונלית המוגדרת מעל 
+\begin_inset Formula $\f_{q}$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $D=\div f+E$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+יהי 
+\begin_inset Formula $D\in\text{Div}\left(\f_{q}\right)$
+\end_inset
+
+.
+ יש התאמה חח"ע ועל בין הקבוצות
+\begin_inset Formula 
+\[
+\left\{ \text{effective divisors equivalent to \ensuremath{D} and defined over \ensuremath{\f_{q}}}\right\} \longleftrightarrow\p^{\ell\left(D\right)-1}\left(\f_{q}\right)
+\]
+
+\end_inset
+
+כעת אם 
+\begin_inset Formula $\deg D>2g-2$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\deg\left(K-D\right)<0$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\ell\left(K-D\right)=0$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\ell\left(D\right)\geq\deg D-g+1$
+\end_inset
+
+.
+ כמו כן, 
+\begin_inset Formula 
+\[
+\p^{n}\left(\f_{q}\right)=\frac{q^{n+1}-1}{q-1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\zeta_{C}\left(t\right)=\sum_{\nf{\text{Div}^{i}\left(\f_{q}\right)}{\sim}}\frac{q^{i-g+1}-1}{q-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula $i>g$
+\end_inset
+
+, נבחר נקודה 
+\begin_inset Formula $x\in C\left(\f_{q}\right)$
+\end_inset
+
+, אזי 
+\begin_inset Formula 
+\[
+\nf{\text{Div}^{i}\left(\f_{q}\right)}{\sim}\ra\nf{\text{Div}^{i+1}\left(\f_{q}\right)}{\sim}
+\]
+
+\end_inset
+
+ע"י 
+\begin_inset Formula 
+\[
+D\mapsto D+\left[x\right]
+\]
+
+\end_inset
+
+וזוהי העתקה חח"ע ועל.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+רימן רוך.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נקבל 
+\begin_inset Formula 
+\[
+\zeta_{C}\left(t\right)=\text{polynomial of degree \ensuremath{2g-2} }+
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++\sum\left|\left\{ \text{effective divisors of degree \ensuremath{2g-1} defined over \ensuremath{\f_{q}}}\right\} \right|\cdot\frac{q^{i-g+1}-1}{q-1}t^{i}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\text{polynomial of degree \ensuremath{2g-2} }+\frac{\text{somthing}}{1-qt}-\frac{\text{somthing}}{1-t}=\frac{P\left(t\right)}{\left(1-qt\right)\left(1-t\right)}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $P\left(t\right)$
+\end_inset
+
+ פולינום מדרגה 
+\begin_inset Formula $2d$
+\end_inset
+
+.
+ מה זה אומר לנו בנוגע למספר הנקודות? 
+\begin_inset Formula 
+\[
+Z_{X}\left(t\right)=t\cdot\frac{d}{dt}\log\left(\frac{P\left(t\right)}{\left(1-qt\right)\left(1-t\right)}\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=t\cdot\frac{d}{dt}\log\left(\frac{\prod\limits_{1}^{2g}\left(1-\alpha_{i}t\right)}{\left(1-qt\right)\left(1-t\right)}\right)=\sum t\cdot\frac{d}{dt}\left(\sum\log\left(1-\alpha_{i}t\right)\right)-\log\left(1-t\right)-\log\left(1-qt\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\sum_{1}^{2g}\frac{-\alpha_{i}t}{1-\alpha_{i}t}+\frac{t}{1-t}+\frac{qt}{1-qt}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum\left(\alpha_{1}^{n}+\cdots+\alpha_{2g}^{n}+1+g^{n}\right)t^{n}
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+כלומר:
+\series bold
+ יש מספרים מרוכבים 
+\begin_inset Formula $\alpha_{1},\ldots,\alpha_{2g}$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+\left|C\left(\f_{q^{n}}\right)\right|=\ub{q+1}{\left|\p^{1}\left(\f_{q^{n}}\right)\right|}-\left(\sum\alpha_{i}^{n}\right)
+\]
+
+\end_inset
+
+
+\series default
+ואכן הרכיב השני הוא "טעות": 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+)
+\begin_inset Formula $\text{Weil}$
+\end_inset
+
+( עבור 
+\begin_inset Formula $C$
+\end_inset
+
+ אי פריק, 
+\series bold
+י
+\series default
+ש מספרים מרוכבים 
+\begin_inset Formula $\alpha_{1},\ldots,\alpha_{2g}$
+\end_inset
+
+ כך ש 
+\series bold
+
+\begin_inset Formula 
+\[
+\left|C\left(\f_{q^{n}}\right)\right|=\ub{q+1}{\left|\p^{1}\left(\f_{q^{n}}\right)\right|}-\left(\sum\alpha_{i}^{n}\right)
+\]
+
+\end_inset
+
+
+\series default
+ו 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\left|\alpha_{i}\right|=\sqrt{q}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+סיכום השיעור
+\end_layout
+
+\begin_layout Enumerate
+יש יחס פורמלי בין 
+\begin_inset Formula $\left|C\left(\f_{q^{n}}\right)\right|$
+\end_inset
+
+ ודיוויזורים מדרגה 
+\begin_inset Formula $k$
+\end_inset
+
+ המוגדרים מעל 
+\begin_inset Formula $\f_{q}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $i>2g-2$
+\end_inset
+
+, דיוויזורים אפקטיביים מדרגה 
+\begin_inset Formula $i$
+\end_inset
+
+ הם קלים להבנה )ממשפט רימן רוך(.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|C\left(\f_{q^{n}}\right)\right|$
+\end_inset
+
+ היא סדרה רקרוסיבית והאיברים שווים בערך ל 
+\begin_inset Formula $q^{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\end_layout
+
+\end_body
+\end_document
