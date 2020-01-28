@@ -1,0 +1,579 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage[all,cmtip]{xy}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+יריעות אלגבריות – הרצאה 
+\begin_inset Formula $12$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vector}[1]{\overrightarrow{#1}}
+{\overrightarrow{#1}}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+תהי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ נקודה ביריעה.
+ יהי 
+\begin_inset Formula $\o_{X,x}$
+\end_inset
+
+ אוסף ה"נבטים" של פונקציות רגולריות המוגדרות בקבוצה פתוחה )זריצקי( כלשהי
+ המכילה את 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ כלומר, 
+\begin_inset Formula 
+\[
+\o_{X,x}=\nf{\left\{ \left(f,U\right)\mid x\in U\ \text{open},\ f\in\o_{X}\left(U\right)\right\} }{\left(f,U\right)\sim\left(g,V\right)\ \text{if \ensuremath{f\mid_{U\cap V}=g\mid_{U\cap V}}}}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left\{ f\in\text{Rat}\left(X\right)\mid f\text{ is regular at }x\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+לדוגמא, 
+\begin_inset Formula 
+\[
+\left\{ \frac{1}{1-t},\frac{1}{1-2t},\ldots\right\} \in\o_{\c,0}
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+\begin_inset Formula $\o_{X,x}$
+\end_inset
+
+ לא חייב להיות נוצר סופית, אך זה נותרי.
+ כמו כן, 
+\begin_inset Formula 
+\[
+\mathfrak{M}_{X,x}=\left\{ f\in\o_{X,x}\mid f\left(x\right)=0\right\} 
+\]
+
+\end_inset
+
+הוא אידיאל.
+ בבירור 
+\begin_inset Formula 
+\[
+\nf{\o_{X,x}}{\mathfrak{M}_{X,x}}\cong\c
+\]
+
+\end_inset
+
+ ולכן זה מקסימלי.
+ למעשה, זהו האידיאל המקסימלי היחיד! כלומר, 
+\begin_inset Formula $\o_{X,x}$
+\end_inset
+
+ חוג מקומי.
+ נניח כי 
+\begin_inset Formula $X\ssq\c^{n}$
+\end_inset
+
+ אפיני ונתון כקבוצת האפסים של אידיאל רדיקלי 
+\begin_inset Formula $X=Z\left(I\right)$
+\end_inset
+
+.
+ נניח כי 
+\begin_inset Formula $x=0$
+\end_inset
+
+.
+ הראנו שהמרחב המשיק 
+\begin_inset Formula $T_{0}X$
+\end_inset
+
+ הוא קבוצת האפסים המשותפת של כל הגורמים הלינאריים של איברים ב 
+\begin_inset Formula $I$
+\end_inset
+
+.
+ נסמן קבוצה זו ב 
+\begin_inset Formula $I^{\left(1\right)}$
+\end_inset
+
+.
+ ניתן לכן להתייחס ל 
+\begin_inset Formula $T_{x}X$
+\end_inset
+
+ כאל גרעין של העתקה ליניארית.
+ לכן ניתן לכתוב את המרחב הדואלי 
+\begin_inset Formula 
+\[
+\left(T_{x}X\right)^{\ast}=\nf{\left(\c^{n}\right)^{\ast}}{I^{\left(1\right)}}=\nf{\c\left[x_{1},\ldots,x_{n}\right]^{\left(1\right)}}{I^{\left(1\right)}}
+\]
+
+\end_inset
+
+יהי 
+\begin_inset Formula $m$
+\end_inset
+
+ האידיאל המקסימלי ב 
+\begin_inset Formula $\o_{X}\left(X\right)$
+\end_inset
+
+ המתאים לנקודה 
+\begin_inset Formula $0\in X$
+\end_inset
+
+ ו 
+\begin_inset Formula $M$
+\end_inset
+
+ האידיאל המקסימלי ב 
+\begin_inset Formula $\c\left[x_{1},\ldots,x_{n}\right]$
+\end_inset
+
+ המתאים ל 
+\begin_inset Formula $0\in\c^{n}$
+\end_inset
+
+ )אלו הפולינומים המאפסים ב 
+\begin_inset Formula $0$
+\end_inset
+
+(.
+ לכן נקבל ש 
+\begin_inset Formula 
+\[
+\left(T_{x}X\right)^{\ast}=\nf{M^{\left(1\right)}}{I^{\left(1\right)}}=\nf m{m^{2}}
+\]
+
+\end_inset
+
+כאשר המעבר השני מתקבל ע"י 
+\begin_inset Formula 
+\[
+f\in\nf{M^{\left(1\right)}}{I^{\left(1\right)}}=\nf{M^{\left(1\right)}+M^{2}}{I^{\left(1\right)}+M^{2}}
+\]
+
+\end_inset
+
+אבל 
+\begin_inset Formula $M^{\left(1\right)}+M^{2}=M$
+\end_inset
+
+ ולכן נקבל 
+\begin_inset Formula 
+\[
+\nf{M^{\left(1\right)}}{I^{\left(1\right)}}=\nf M{I^{\left(1\right)}}+M^{2}
+\]
+
+\end_inset
+
+כעת נתבונן ב 
+\begin_inset Formula 
+\[
+f\mapsto f\mid_{X}\in\nf m{m^{2}}
+\]
+
+\end_inset
+
+נרצה להראות שזה איזומורפיזם.
+ זה בבירור על.
+ מה הגרעין? פונקציות שישלחו לאפס הן פונקציות שכשנצמצם אותן ל 
+\begin_inset Formula $X$
+\end_inset
+
+ הן מכפלה של שתי פונקציות המתאפסות על 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ נרים את שתי הפונקציות האלו וכך נראה שזה חח"ע.
+ כמו כן, 
+\begin_inset Formula 
+\[
+\nf m{m^{2}}=\nf{\mathfrak{M}_{X,x}}{\mathfrak{M}_{X,x}^{2}}
+\]
+
+\end_inset
+
+ כי
+\begin_inset Formula 
+\[
+\mathfrak{M}_{X,x}=m\cdot\o_{X,x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נסכם: 
+\begin_inset Formula 
+\[
+T_{x}X=\left(\nf{\mathfrak{M}_{X,x}}{\mathfrak{M}_{X,x}^{2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+\begin_inset Formula $\nf{\mathfrak{M}_{X,x}}{\mathfrak{M}_{X,x}^{2}}$
+\end_inset
+
+ נקרא המרחב הקו–משיר.
+ אם 
+\begin_inset Formula $f:X\ra Y$
+\end_inset
+
+ מורפיזם, אזי מתקבלת העתקה 
+\begin_inset Formula 
+\[
+f^{\ast}:\o_{Y,f\left(x\right)}\longrightarrow\o_{X,x}
+\]
+
+\end_inset
+
+כאשר אם נצמצם אותה ל 
+\begin_inset Formula 
+\[
+f^{\ast}:\mathfrak{M}_{Y,f\left(x\right)}\ra\mathfrak{M}_{X,x}
+\]
+
+\end_inset
+
+נקבל את ההעתקה הקו–משיקה: 
+\begin_inset Formula 
+\[
+f^{\ast}:\nf{\mathfrak{M}_{Y,f\left(x\right)}}{\mathfrak{M}_{Y,f\left(x\right)}^{2}}\ra\nf{\mathfrak{M}_{X,x}}{\mathfrak{M}_{X,x}^{2}}
+\]
+
+\end_inset
+
+ואת ההעתקה הדואלית 
+\begin_inset Formula 
+\[
+df:\left(\nf{\mathfrak{M}_{X,x}}{\mathfrak{M}_{X,x}^{2}}\right)^{\ast}\ra\left(\nf{\mathfrak{M}_{Y,f\left(x\right)}}{\mathfrak{M}_{Y,f\left(x\right)}^{2}}\right)^{\ast}
+\]
+
+\end_inset
+
+והן נקראות הנגזרות של 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ כל מה שאנחנו מכירים על נגזרות ממשיך לעבוד )כלל השרשרת, כלל לייבניץ וכו'(.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+נניח כי 
+\begin_inset Formula $\c^{n}\lssq X=Z\left(I\right)=Z\left(\left\langle f_{1},\ldots,f_{n}\right\rangle \right)$
+\end_inset
+
+.
+ קבוצת הנקודות הלא סינגולריות בקבוצה 
+\begin_inset Formula 
+\[
+\left\{ p\in X\mid\text{rank}\left(\gr f_{1}\left(p\right),\ldots,\gr f_{m}\left(p\right)\right)=n-\dim\left(X\right)\right\} =
+\]
+
+\end_inset
+
+) 
+\begin_inset Formula $n-\dim X$
+\end_inset
+
+ זו הדרגה המקסימלית האפשרית( 
+\begin_inset Formula 
+\[
+=\left\{ p\in X\mid\text{rank}\left(\gr f_{1}\left(p\right),\ldots,\gr f_{m}\left(p\right)\right)\geq n-\dim X\right\} 
+\]
+
+\end_inset
+
+כלומר זוהי מטריצה שהרכיבים שלה הן 
+\begin_inset Formula $\pd{f_{i}}{x_{j}}\left(p\right)$
+\end_inset
+
+ הם פולינומים ב 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ זוהי קבוצה פתוחה )"או שהפולינום )המינור( הזה לא מתאפס או שזה לא מתאפס או
+ ש...(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+קבוצת הנקודות הלא סינגולריות 
+\begin_inset Formula $X^{ns}$
+\end_inset
+
+ היא לא ריקה )תמיד!(.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+רוב ההיפר–משטחים מדרגה 
+\begin_inset Formula $d$
+\end_inset
+
+ ב 
+\begin_inset Formula $\p^{n}$
+\end_inset
+
+ הם חלקים )כלומר, אין להם נקודות אי סינגולריות(.
+ ב "רוב" מתכוונים לכך שקבוצת ההיפר משטחים ב 
+\begin_inset Formula $\p^{n}$
+\end_inset
+
+ מדרגה 
+\begin_inset Formula $d$
+\end_inset
+
+ שיש להם נקודה סינגולריית היא תת קבוצה )ממש( סגורה זריצקי ב 
+\begin_inset Formula $\p^{N}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $N=\binom{n+d-1}{n-1}-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נסתכל בזגות 
+\begin_inset Formula 
+\[
+\left\{ \left(f,p\right)\in\p^{N}\times\p^{n}\mid p\,\text{is singular point in \ensuremath{Z\left(f\right)}}\right\} 
+\]
+
+\end_inset
+
+נתבונן בשתי הטלות של הקבוצה הזו.
+ 
+\begin_inset Formula 
+\[
+\pi_{1}:\left(f,p\right)\mapsto f\in\p^{N}
+\]
+
+\end_inset
+
+ו 
+\begin_inset Formula 
+\[
+\pi_{2}:\left(f,p\right)\mapsto p\in\p^{n}
+\]
+
+\end_inset
+
+כעת לכל 
+\begin_inset Formula $p\in\p^{n}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\pi_{2}^{-1}\left(p\right)=\p^{N-n-1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dim X=n+N-n-1=N-1
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula 
+\[
+\dim\left(\pi_{1}X\right)\leq\dim X=N-1<\dim\p^{N}
+\]
+
+\end_inset
+
+ ולכן 
+\begin_inset Formula 
+\[
+\pi_{1}X
+\]
+
+\end_inset
+
+ היא תת קבוצה ממש.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1032 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "C:/Users/ITAY/Desktop/קיצורים ליקס.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ind}{\text{ind}}
+{\text{ind}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\div}[1]{\text{div\left(#1\right)}}
+{\text{div}\left(#1\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Div}{\text{Div}}
+{\text{Div}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\rr}{\text{RR}}
+{\text{RR}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\f}{\mathbb{F}}
+{\mathbb{F}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\fp}{\overline{\mathbb{F}_{p}}}
+{\overline{\mathbb{F}_{p}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\fq}{\overline{\mathbb{F}_{q}}}
+{\overline{\mathbb{F}_{q}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\gal}[2]{\text{Gal}\left(\nf{#1}{#2}\right)}
+{\text{Gal}\left(\nf{#1}{#2}\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\gall}{\text{Gal}}
+{\text{Gal}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+עקומים אלגבריים – הרצאה 
+\begin_inset Formula $12$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בהרצאה זו נמשיך לדבר על ספירת נקודות בעקומים.
+ בפעם שעבר, לקחנו עקום פרוייקטיבי 
+\begin_inset Formula $C$
+\end_inset
+
+ לא סינגולרי מעל 
+\begin_inset Formula $\f_{q}$
+\end_inset
+
+.
+ הגדרנו מעין פונקציית זטא: 
+\begin_inset Formula 
+\[
+Z\left(t\right)=\sum_{0\leq D\in\Div\left(C\right)\left(\f_{q}\right)}t^{\deg D}
+\]
+
+\end_inset
+
+נגדיר את חבורת פיקארד 
+\begin_inset Formula 
+\[
+\text{Pic}\left(C\right)\left(\f_{q}\right)=\nf{\Div\left(C\right)\left(\f_{q}\right)}{\sim}
+\]
+
+\end_inset
+
+ואז נקבל ש 
+\begin_inset Formula 
+\[
+Z\left(t\right)=\sum_{D\in\text{Pic}\left(C\right)\left(\f_{q}\right)}\frac{q^{\ell\left(D\right)}-1}{q-1}t^{\deg\left(D\right)}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\sum_{D\in\text{Pic}\left(C\right)\left(\f_{q}\right),0\leq\deg D\leq2g-2}\frac{q^{\ell\left(D\right)}-1}{q-1}t^{\deg D}+\sum_{\deg D>2g-2}\frac{q^{\deg D-g+1}-1}{q-1}t^{\deg D}
+\]
+
+\end_inset
+
+כעת אנו יודעים לחשב את המחובר הימני.
+ נגדיר 
+\begin_inset Formula 
+\[
+\text{Pic}^{0}\left(C\right)\left(\f_{q}\right)=\nf{\Div^{0}\left(C\right)\left(\f_{q}\right)}{\sim}
+\]
+
+\end_inset
+
+ואז נקבל שהמחובר הימני הוא בדיוק 
+\begin_inset Formula 
+\[
+\left|\text{Pic}^{0}\left(C\right)\left(\f_{q}\right)\right|\sum_{d>2g-2}\frac{q^{d}-1}{q-1}t^{d}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{1}{q-1}\left|\text{Pic}^{0}\left(C\right)\left(\f_{q}\right)\right|\cdot\frac{q^{2g-1}t^{2g-1}}{1-q+1}-\frac{t^{d}}{1-t}.
+\]
+
+\end_inset
+
+לכן סה"כ, 
+\begin_inset Formula 
+\[
+Z\left(t\right)=\frac{F\left(t\right)}{\left(1-t\right)\left(1-qt\right)}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $F\left(t\right)$
+\end_inset
+
+ פולינום מדרגה 
+\begin_inset Formula $2g$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+דוגמא
+\end_layout
+
+\begin_layout Standard
+אנו רוצים לחשב את גודל העקום 
+\begin_inset Formula 
+\[
+y^{2}=x^{3}-2x
+\]
+
+\end_inset
+
+ מעל 
+\begin_inset Formula $\f_{3^{100}}$
+\end_inset
+
+.
+ זה עקום אליפטי, ולכן מגנוס 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ לכן 
+\begin_inset Formula $F\left(t\right)$
+\end_inset
+
+ יהיה מדרגה לכל היותר 
+\begin_inset Formula $2$
+\end_inset
+
+.
+ נוכל לכתוב 
+\begin_inset Formula 
+\[
+Z\left(t\right)=\frac{a+bt+ct^{2}}{\left(1-t\right)\left(1-qt\right)}
+\]
+
+\end_inset
+
+סמן ב 
+\begin_inset Formula $\alpha,\beta$
+\end_inset
+
+ את שורשי הפולינום.
+ אזי מתקיים 
+\begin_inset Formula 
+\[
+\left|X\left(\f_{3^{100}}\right)\right|=3^{100}+1-\alpha^{100}\beta^{100}
+\]
+
+\end_inset
+
+ למעשה, מספיק לדעת לחשב את 
+\begin_inset Formula $\left|X\left(|\f_{3}\right)\right|,\left|X\left(\f_{9}\right)\right|,\left|X\left(\f_{26}\right)\right|$
+\end_inset
+
+.
+ מכיוון שקל לראות שאם נציב 
+\begin_inset Formula $t=0$
+\end_inset
+
+ נקבל 
+\begin_inset Formula $Z\left(0\right)=1$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $a=1$
+\end_inset
+
+, מספיק לדעת את 
+\begin_inset Formula $\left|X\left(\f_{3}\right)\right|$
+\end_inset
+
+ ואת 
+\begin_inset Formula $\left|X\left(\f_{q}\right)\right|$
+\end_inset
+
+.
+ נחזור ל 
+\begin_inset Formula 
+\[
+Z\left(t\right)=\sum_{D\in\text{Pic}\left(C\right)\left(\f_{q}\right),0\leq\deg D\leq2g-2}\frac{q^{\ell\left(D\right)}-1}{q-1}t^{\deg D}+\sum_{\deg D>2g-2}\frac{q^{\deg D-g+1}-1}{q-1}t^{\deg D}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{1}{q-1}\left(\sum_{D\in\text{Pic}\left(C\right)\left(\f_{q}\right),0\leq\deg D\leq2g-2}q^{\ell\left(D\right)}t^{\deg D}-\sum_{0\leq\deg D\leq2g-2}t^{\deg D}+\sum\cdots\right)
+\]
+
+\end_inset
+
+נסמן 
+\begin_inset Formula 
+\[
+S\left(t\right)=\sum_{D\in\text{Pic}\left(C\right)\left(\f_{q}\right),0\leq\deg D\leq2g-2}q^{\ell\left(D\right)}t^{\deg D}
+\]
+
+\end_inset
+
+ונקבל 
+\begin_inset Formula 
+\[
+S\left(t\right)=\sum_{D\in\text{Pic}\left(C\right)\left(\f_{q}\right),0\leq\deg D\leq2g-2}q^{\ell\left(D\right)}t^{\deg D}=\sum_{o\leq\deg D\leq2g-2}q^{\ell\left(K-D\right)}t^{\deg\left(K-D\right)}
+\]
+
+\end_inset
+
+ )החלפנו את 
+\begin_inset Formula $D$
+\end_inset
+
+ ב 
+\begin_inset Formula $K-D$
+\end_inset
+
+(.
+ ומרימן רוך נקבל ש 
+\begin_inset Formula 
+\[
+=\sum q^{\ell\left(D\right)-\deg D+g-1}t^{2g-2-\deg D}=q^{g-1}t^{2g-2}\sum q^{\ell\left(D\right)}\frac{1}{\left(qt\right)^{\deg D}}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=q^{g-1}t^{2g-2}S\left(\frac{1}{q^{t}}\right)
+\]
+
+\end_inset
+
+מסתבר )ניתן להוכיח ע"י חישוב טורים גאומטריים( שגם שאר 
+\begin_inset Formula $Z\left(t\right)$
+\end_inset
+
+ מקיימת אותה משוואה פונקציונלית, ולכן סה"כ 
+\begin_inset Formula $Z\left(t\right)$
+\end_inset
+
+ מקיימת אותה.
+ סה"כ נסכם:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+Z\left(t\right)=q^{g-1}t^{2g-2}Z\left(\frac{1}{q^{t}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+Z\left(t\right)=\frac{F\left(t\right)}{\left(1-t\right)\left(1-qt\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+משתי הנקודות הקודמות נובע ש 
+\begin_inset Formula 
+\[
+F\left(t\right)=q^{g}t^{2g}F\left(\frac{1}{q^{t}}\right)
+\]
+
+\end_inset
+
+ וזה "מבטל לנו דרגת חופש נוספת".
+ לכן בדוגמא הקודמת, 
+\begin_inset Formula 
+\[
+F\left(t\right)=1+bt+qt^{2}
+\]
+
+\end_inset
+
+ולכן מספיק לחשב את 
+\begin_inset Formula $\left|X\left(\f_{3}\right)\right|$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+מהנקודה הקודמת, קבוצת השורשים של 
+\begin_inset Formula $F\left(t\right)$
+\end_inset
+
+ אינווריאנטית תחת ההעתקה 
+\begin_inset Formula 
+\[
+\alpha\mapsto\frac{q}{a}
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת נציג משפט גדול וחשוב של 
+\begin_inset Formula $\text{Weil}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Theorem
+כל השורשים של 
+\begin_inset Formula $F\left(t\right)$
+\end_inset
+
+ בעלי ערך מוחלט 
+\begin_inset Formula $q^{\frac{1}{2}}$
+\end_inset
+
+.
+ לכן, 
+\begin_inset Formula 
+\[
+\left|\left|X\left(\f_{q}\right)\right|-q-1\right|\leq2g\cdot q^{\frac{1}{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+)הוכחה של 
+\begin_inset Formula $\text{Stepanov}$
+\end_inset
+
+(.
+ הצעד הראשון יהיה להראות 
+\begin_inset Formula 
+\[
+\left|X\left(\f_{q^{2}}\right)\right|\leq q^{2}+1+\left(2g+1\right)\cdot q
+\]
+
+\end_inset
+
+הרעיון הוא לבנות פולינום מדרגה נמוכה המתאפסים על 
+\begin_inset Formula $X\left(\f_{q^{2}}\right)$
+\end_inset
+
+.
+ נבחר נקודה 
+\begin_inset Formula $x\in X\left(\f_{q}\right)$
+\end_inset
+
+.
+ תהי 
+\begin_inset Formula 
+\[
+F:X\ra X
+\]
+
+\end_inset
+
+ העתקת פרוביניוס 
+\begin_inset Formula 
+\[
+\left[x:y:z\right]\mapsto\left[x^{q}:y^{q}:z^{q}\right]
+\]
+
+\end_inset
+
+יהי 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ העקום 
+\begin_inset Formula 
+\[
+X_{1}=\left\{ \left(x,F\left(x\right)\right)\in X\times X\mid x\in X\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X_{2}=\left\{ \left(F\left(x\right),x\right)\in X\times X\mid x\in X\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X_{1},X_{2}\cong X,\ \left|X_{1}\cap X_{2}\right|=\left|X\left(\f_{q^{2}}\right)\right|
+\]
+
+\end_inset
+
+נבחר 
+\begin_inset Formula $\ast\in X\left(\f_{q}\right)$
+\end_inset
+
+, ויהי 
+\begin_inset Formula 
+\[
+P_{d}=L\left(d\left[\ast\right]\right)
+\]
+
+\end_inset
+
+וזוהי קבוצת הפונקציות הרציונליות על 
+\begin_inset Formula $X$
+\end_inset
+
+ שיש להן קוטב ב 
+\begin_inset Formula $\ast$
+\end_inset
+
+ מדרגה קטנה/שווה ל 
+\begin_inset Formula $d$
+\end_inset
+
+ ורגולריות אחרת.
+ משפט רימן–רוך אומר ש 
+\begin_inset Formula 
+\[
+\dim P_{d}=d-g+1
+\]
+
+\end_inset
+
+נתבונן ב 
+\begin_inset Formula 
+\[
+P_{d}\otimes P_{\ell}\longrightarrow\text{Rat}\left(X\times X\right)\longrightarrow\text{Rat}\left(X_{1}\right)\cong\text{Rat}\left(X\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f\otimes g\longmapsto\left(\left(x,y\right)\mapsto f\left(x\right)g\left(y\right)\right)\longmapsto f\left(x\right)\cdot g\left(Fx\right)
+\]
+
+\end_inset
+
+התמונה של ההעתקה הזו היא בתוך 
+\begin_inset Formula $L\left(\left(d+eq\right)\left[x\right]\right)$
+\end_inset
+
+.
+ כעת נבחר 
+\begin_inset Formula $d,e$
+\end_inset
+
+ כך ש 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+ההעתקה 
+\begin_inset Formula 
+\[
+P_{d}\otimes P_{\ell}\longrightarrow\text{Rat}\left(X_{1}\right)
+\]
+
+\end_inset
+
+ חח"ע.
+\end_layout
+
+\begin_layout Enumerate
+ההעתקה 
+\begin_inset Formula 
+\[
+P_{d}\otimes P_{\ell}\ra\text{Rat}\left(X_{2}\right)
+\]
+
+\end_inset
+
+היא לא חח"ע.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+נניח כי אנו יכולים לעשות זאת.
+ מ 
+\begin_inset Formula $\left(2\right)$
+\end_inset
+
+ נקבל שיש פונקציה רציונלית 
+\begin_inset Formula 
+\[
+h\in\text{Rat}\left(X\times X\right)
+\]
+
+\end_inset
+
+ שמתאפסת על 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ )בפרט, מתאפסת על 
+\begin_inset Formula $X_{1}\cap X_{2}$
+\end_inset
+
+( אבל לא מתאפסת על 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+.
+ אזי 
+\begin_inset Formula 
+\[
+h\mid_{X_{1}}\in L\left(\left(d+eq\right)\left[\ast\right]\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left|X_{1}\cap X_{2}\right|\leq\left|\text{zeros of \ensuremath{h\mid_{X_{1}}}}\leq d+\ell q\right|
+\]
+
+\end_inset
+
+נראה שניתן לבחור 
+\begin_inset Formula $d,e$
+\end_inset
+
+ כאלו ע"י 
+\begin_inset Formula 
+\[
+d=q-1,\ e=1+2g
+\]
+
+\end_inset
+
+ במקרה זה, 
+\begin_inset Formula 
+\[
+\left|X_{1}\cap X_{2}\right|\leq d+eq=q-1+\left(1+2g\right)q=q^{2}+\left(2g+1\right)q-1
+\]
+
+\end_inset
+
+כעת צריך להוכיח את 
+\begin_inset Formula $\left(1\right)$
+\end_inset
+
+ ו 
+\begin_inset Formula $\left(2\right)$
+\end_inset
+
+.
+ נתחיל מהוכחת 
+\begin_inset Formula $\left(2\right)$
+\end_inset
+
+: מכיוון ש 
+\begin_inset Formula 
+\[
+\dim\left(P_{d}\otimes P_{\ell}\right)=\left(d-q+1\right)\left(e-g+1\right)=q^{2}-g^{2}+q-g
+\]
+
+\end_inset
+
+ו 
+\begin_inset Formula 
+\[
+\dim\left(L\left(\ell+qd\right)\right)=q+qd-g+1=q+2g+1\left(q-1\right)-g+1=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=q^{2}+g=1
+\]
+
+\end_inset
+
+ואם 
+\begin_inset Formula $q$
+\end_inset
+
+ גדול מספיק, אזי 
+\begin_inset Formula 
+\[
+\dim\left(P_{d}\otimes P_{\ell}\right)>\dim\left(L\left(q+qd\left[\ast\right]\right)\right)
+\]
+
+\end_inset
+
+ואז ההעתקה לא יכולה להיות חח"ע.
+ הוכחת 
+\begin_inset Formula $\left(1\right)$
+\end_inset
+
+ תשאר כתרגיל לבית.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $\text{ord}_{\ast}\left(f\right)=\alpha$
+\end_inset
+
+ ו 
+\begin_inset Formula $\text{ord}_{\ast}\left(g\right)=\beta$
+\end_inset
+
+ אזי 
+\begin_inset Formula 
+\[
+\text{ord}_{\ast}\left(f\otimes g\mid_{X_{1}}\right)=\text{ord}_{\ast}\left(f\left(x\right)\cdot g\left(F\left(x\right)\right)\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum f_{i}\otimes g_{i}\mid_{X_{1}}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{ord}_{\ast}\left(f_{i}\otimes g_{i}\right)=\alpha_{i}+q\beta_{i}
+\]
+
+\end_inset
+
+נתבונן בזוגות 
+\begin_inset Formula $\left\{ \left(\alpha_{i},\beta_{i}\right)\right\} $
+\end_inset
+
+ ונבחר 
+\begin_inset Formula $\left(\alpha,\beta\right)$
+\end_inset
+
+ כך ש 
+\begin_inset Formula 
+\[
+\alpha+q\beta
+\]
+
+\end_inset
+
+ מקסימלי.
+ במקרה זה, נתבונן בביטויים עם 
+\begin_inset Formula $\alpha_{i}=\alpha$
+\end_inset
+
+ ו 
+\begin_inset Formula $\beta_{i}=\beta$
+\end_inset
+
+.
+ במקרה זה, מכיוון ש 
+\begin_inset Formula 
+\[
+\alpha\leq d<q
+\]
+
+\end_inset
+
+נקבל שכולם בעלי אותם 
+\begin_inset Formula $\alpha_{i},\beta_{i}$
+\end_inset
+
+.
+ יהי 
+\begin_inset Formula $f^{\ast}$
+\end_inset
+
+ בעל קוטב מסדר 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ ו 
+\begin_inset Formula $g^{\ast}$
+\end_inset
+
+ בעל קוטב מסדר 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+f_{i}=c_{i}\cdot f^{\ast}+\text{lower order terms}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+g_{i}=d_{i}\cdot g^{\ast}+\cdots
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{ord}_{\ast}\left(\sum_{i\in I}f_{i}\otimes g_{i}\right)<\alpha+q\beta
+\]
+
+\end_inset
+
+ו 
+\begin_inset Formula 
+\[
+\text{ord}_{\ast}\left(\sum_{i\in I}f_{i}\otimes g_{i}\right)=\text{ord}_{\ast}\left(\sum\left(\sum c_{i}d_{i}\right)f^{\ast}\otimes g^{\ast}\right)
+\]
+
+\end_inset
+
+ ולכן 
+\begin_inset Formula 
+\[
+\sum c_{i}d_{i}=0
+\]
+
+\end_inset
+
+ולכן סה"כ 
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}f_{i}\otimes g_{i}=\sum_{1}^{n}f_{i}\otimes g_{i}-\sum_{i\in I}c_{i}d_{i}^{\ast}\otimes g^{\ast}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\sum_{i\in I}f_{i}\otimes g_{i}+\sum_{i\in I}f_{i}\otimes g_{i}-\sum_{i\in I}c_{i}f^{\ast}\otimes d_{i}g^{\ast}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\sum_{i\in I^{c}}f_{i}\otimes g_{i}+\sum_{i\in I}\left(f_{i}-c_{i}f^{\ast}\right)\otimes\left(g_{i}-d_{i}g^{\ast}\right)
+\]
+
+\end_inset
+
+כאשר למחוברים הימנים יש קטבים מסדר נמוך יותר.
+ נמשיך באינדוקציה.
+ 
+\end_layout
+
+\begin_layout Proof
+הוכחנו עד כה ש 
+\begin_inset Formula 
+\[
+q^{2}+1+\sum_{i=1}^{2g}\lambda_{i}^{2}=\left|X\left(\f_{q^{2}}\right)\right|\leq q^{2}+1+\left(2g+1\right)q
+\]
+
+\end_inset
+
+אבל ניתן לחזור על התהליך לכל 
+\begin_inset Formula $n$
+\end_inset
+
+ ולקבל 
+\begin_inset Formula 
+\[
+q^{2n}+1+\sum_{i=1}^{2g}\lambda_{i}^{2n}=\left|X\left(\f_{q^{2}}\right)\right|\leq q^{2n}+1+\left(2g+1\right)q^{n}
+\]
+
+\end_inset
+
+כעת 
+\begin_inset Formula 
+\[
+\sum_{i=1}^{2g}\lambda_{i}^{2n}\leq\left(2g+1\right)q^{n}
+\]
+
+\end_inset
+
+ נשאיף 
+\begin_inset Formula $n\ra\infty$
+\end_inset
+
+ ונקבל 
+\begin_inset Formula 
+\[
+\left|\lambda_{i}\right|\leq q^{\frac{1}{2}}
+\]
+
+\end_inset
+
+אבל מהמשוואה הפונקציונלית יש לנו סימטריה וקיבלנו ש 
+\begin_inset Formula $\frac{q}{\lambda_{i}}$
+\end_inset
+
+ הוא גם שורש, ולכן 
+\begin_inset Formula 
+\[
+\left|\frac{q}{\lambda_{i}}\right|\leq q^{\frac{1}{2}}
+\]
+
+\end_inset
+
+ ולכן 
+\begin_inset Formula 
+\[
+\left|\lambda_{i}\right|\geq q^{\frac{1}{2}}
+\]
+
+\end_inset
+
+ולכן סה"כ 
+\begin_inset Formula 
+\[
+\left|\lambda_{i}\right|=q^{\frac{1}{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
